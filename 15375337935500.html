@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <title>
     
-  数学建模 - 程序猿CubeTian
+  1、安装aircrack-ng - 程序猿CubeTian
   
 
   </title>
@@ -78,30 +78,97 @@ $(document).ready(function(event) {
 </nav>
   <div id="main">
     <div id="content"> 
-<div class="blog-index">
+<div>
+	<article class="hentry" role="article">
+	<header>
+			  	<h1 class="entry-title">1、安装aircrack-ng</h1>
+				<p class="meta"><time datetime="2018-09-21T20:43:13+08:00" pubdate data-updated="true">2018/09/21</time></p>
+			 </header>
+		  	<div class="entry-content">
+			  	<p>命令：brew install aircrack-ng</p>
 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15662129253478.html">数学与计算机</a></h1>
-			<p class="meta"><time datetime="2019-08-19T19:08:45+08:00" 
-			pubdate data-updated="true">2019/08/19</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	
+<p>注意，如果没安装brew,访问：<a href="https://brew.sh%EF%BC%8C%E9%A6%96%E9%A1%B5%E4%B8%8A%E6%9C%89%E5%AE%89%E8%A3%85brew%E7%9A%84%E5%91%BD%E4%BB%A4%EF%BC%8C%E6%88%91%E5%AE%89%E8%A3%85%E6%97%B6%EF%BC%88201706%EF%BC%89%E5%91%BD%E4%BB%A4%E5%A6%82%E4%B8%8B%EF%BC%9A">https://brew.sh，首页上有安装brew的命令，我安装时（201706）命令如下：</a></p>
+
+<p>/usr/bin/ruby -e &quot;$(curl -fsSLhttps://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</p>
+
+<p>2、添加airport快链</p>
+
+<p>命令：ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport</p>
+
+<p>3、使用mac自带的airport选取mac地址</p>
+
+<p>命令：airport -s</p>
+
+<p>选择CHANNEL的数值，比如：11</p>
+
+<p>4、监听选定的频道获取到握手的包</p>
+
+<p>命令：airport en0 sniff 11</p>
+
+<p>运行一段时间，就可以在/tmp收获以.cap结尾的分析包，结束之后会提示保存的.cap文件位置</p>
+
+<p>注意：（1）尽可能不要运行太长时间，否则.cap文件会比较大；</p>
+
+<p>（2）可以使用ctr+c结束运行(我刚开始就不知道🙈)；</p>
+
+<p>（3）如果提示权限问题，则使用 sudo airport en0 sniff 11</p>
+
+<p>5、用 aircrack-ng分析cap包</p>
+
+<p>命令：sudo aircrack-ng  /tmp/airportSniff******.cap</p>
+
+<p>找到有(1 handshake)的那一行记录，记录下BSSID（比如是:10:02:22:23:7v:6f）。</p>
+
+<p>建议直接搜索，否则能看晕，如果没有搜索到，请重新执行第4步；</p>
+
+<p>6、开始暴力破解</p>
+
+<p>命令：sudo aircrack-ng-wpojie.txt-b10:02:22:23:7v:6f/tmp/airportSniff******.cap</p>
+
+<p>注意：.txt为破解字典</p>
+
+<p>如果有碰撞到密码，程序会停止，并显示密码。</p>
+
+<p>作者：世觋<br/>
+链接：<a href="https://www.jianshu.com/p/fe27189f8691">https://www.jianshu.com/p/fe27189f8691</a><br/>
+來源：简书<br/>
+简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。</p>
+
+			</div>
+
+		
+	  
+		<footer>
+		 <p class="meta">
+
+			<strong>Categories:</strong>&nbsp; 
+			<span class="categories">
+			
+			    <a class='category' href='%E8%AE%A1%E7%AE%97%E6%9C%BA.html'>计算机</a>&nbsp;
+			 
+			</span>
+		    </p>
+		    <p class="meta">
+		      
+		 </p>
+	    
+		<div class="sharing">
+		  
+          
+
+          
 
 		</div>
 
-		
-
-	</article>
-  
-	<div class="pagination">
-	
-<a href="archives.html">Blog Archives</a>
-	 
+	    <p class="meta">
 	    
-	</div>
+	        <a class="basic-alignment left" href="15623137342353.html" 
+	        title="Previous Post: 计算机三级知识点">&laquo; 计算机三级知识点</a>
+	    
+	    
+	    </p>
+	  </footer>
+	</article>
 </div>
  <aside class="sidebar"> 
 
