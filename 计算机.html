@@ -82,6 +82,108 @@ $(document).ready(function(event) {
 
 	<article>
 		 <header>
+		  	<h1 class="entry-title"><a href="15679893433260.html">scipy 模块参考书</a></h1>
+			<p class="meta"><time datetime="2019-09-09T08:35:43+08:00" 
+			pubdate data-updated="true">2019/09/09</time></p>
+		 </header>
+	  	<div class="entry-content">
+		  	
+		  	<p><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/index.html">SciPy Tutorial</a></p>
+
+<ul>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/general.html">Introduction</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/basic.html">Basic functions</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/special.html">Special functions(scipy.special)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/integrate.html">Integration(scipy.integrate)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/optimize.html">Optimization(scipy.optimize)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/interpolate.html">Interpolation(scipy.interpolate)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/fftpack.html">Fourier Transforms(scipy.fftpack)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/signal.html">Signal Processing(scipy.signal)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/linalg.html">Linear Algebra(scipy.linagle)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/arpack.html">Sparse Eigenvalue Problems with ARPACK</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/csgraph.html">Compressed Sparse Graph Routines(scipy.sparse.csgraph)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/spatial.html">Spatial data structures and algorithms(scipy.spatial)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats.html">Statistics(scipy.stats)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/ndimage.html">Multidimensional image processing(scipy.ndimage)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/io.html">File IO(scipy.io)</a></li>
+</ul>
+
+<pre><code class="language-text">import numpy as np
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+</code></pre>
+
+<p>scipy 主要有15个子模块<br/>
+`from scipy import cluster, constants, fftpack, integrate, interpolate, io, linalg, ndimage, odr, optimize, signal, sparse, spatial, special, stats</p>
+
+<h2 id="toc_0">`</h2>
+
+<h2 id="toc_1">常量 <a href="https://docs.scipy.org/doc/scipy/reference/constants.html#module-scipy.constants">Constants(scipy.constants)</a></h2>
+
+<p>主要包含数学常数\(\pi\)(pi)以及一些物理常数 </p>
+
+<hr/>
+
+<h2 id="toc_2">基本函数</h2>
+
+<h3 id="toc_3">np.r_ np.c_ 拼接</h3>
+
+<pre><code class="language-text">&gt;&gt;&gt; np.r_[3,[0]*5,-1:1:10j]
+array([ 3.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        , -1.        , -0.77777778, -0.55555556, -0.33333333,
+       -0.11111111,  0.11111111,  0.33333333,  0.55555556,  0.77777778,
+        1.        ])
+</code></pre>
+
+<p>将切片对象转换为沿第一轴的连接。(横向拼接)</p>
+
+<pre><code class="language-text">&gt;&gt;&gt; np.c_[np.array([1,2,3]), np.array([4,5,6])]
+array([[1, 4],
+       [2, 5],
+       [3, 6]])
+</code></pre>
+
+<p>将切片对象转换为沿第二轴的连接。(竖向拼接)<br/>
+复数10j作为切片语​​法中的步长。这种非标准用法允许将数字解释为在范围内产生的点数而不是步长</p>
+
+<h3 id="toc_4">np.mgrid 网格生成</h3>
+
+<pre><code class="language-text">&gt;&gt;&gt; np.mgrid[0:5:4j,0:5:4j]
+array([[[ 0.    ,  0.    ,  0.    ,  0.    ],
+        [ 1.6667,  1.6667,  1.6667,  1.6667],
+        [ 3.3333,  3.3333,  3.3333,  3.3333],
+        [ 5.    ,  5.    ,  5.    ,  5.    ]],
+       [[ 0.    ,  1.6667,  3.3333,  5.    ],
+        [ 0.    ,  1.6667,  3.3333,  5.    ],
+        [ 0.    ,  1.6667,  3.3333,  5.    ],
+        [ 0.    ,  1.6667,  3.3333,  5.    ]]])
+</code></pre>
+
+<h2 id="toc_5">积分 (scipy.integrate)</h2>
+
+<p>此模块可用用于各种包括反常积分在内的定积分的求解<br/>
+\(I(a, b)=\int_{0}^{1} a x^{2}+b d x\)</p>
+
+<pre><code class="language-text">&gt;&gt;&gt; from scipy.integrate import quad
+&gt;&gt;&gt; def integrand(x, a, b):
+...     return a*x**2 + b
+...
+&gt;&gt;&gt; a = 2
+&gt;&gt;&gt; b = 1
+&gt;&gt;&gt; I = quad(integrand, 0, 1, args=(a,b))
+&gt;&gt;&gt; I
+(1.6666666666666667, 1.8503717077085944e-14)
+</code></pre>
+
+
+		</div>
+
+		
+
+	</article>
+ 
+	<article>
+		 <header>
 		  	<h1 class="entry-title"><a href="15678538813115.html">爬虫学习</a></h1>
 			<p class="meta"><time datetime="2019-09-07T18:58:01+08:00" 
 			pubdate data-updated="true">2019/09/07</time></p>
@@ -1155,7 +1257,7 @@ None, finally, lambda, pass, with</li>
 	  <ul id="recent_posts">
 	  
 	      <li class="post">
-	        <a href="%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1.html"><strong>数学建模&nbsp;(2)</strong></a>
+	        <a href="%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1.html"><strong>数学建模&nbsp;(3)</strong></a>
 	        
 	        
 	        
@@ -1169,7 +1271,7 @@ None, finally, lambda, pass, with</li>
 	      </li>
 	  
 	      <li class="post">
-	        <a href="%E8%AE%A1%E7%AE%97%E6%9C%BA.html"><strong>计算机&nbsp;(7)</strong></a>
+	        <a href="%E8%AE%A1%E7%AE%97%E6%9C%BA.html"><strong>计算机&nbsp;(8)</strong></a>
 	        
 	        
 	        
@@ -1180,6 +1282,18 @@ None, finally, lambda, pass, with</li>
 	<section>
 	  <h1>Recent Posts</h1>
 	  <ul id="recent_posts">
+	  
+	      
+		      <li class="post">
+		        <a href="15679893433260.html">scipy 模块参考书</a>
+		      </li>
+	     
+	  
+	      
+		      <li class="post">
+		        <a href="15679868479784.html">数值分析</a>
+		      </li>
+	     
 	  
 	      
 		      <li class="post">
@@ -1200,16 +1314,8 @@ None, finally, lambda, pass, with</li>
 	     
 	  
 	      
-		      <li class="post">
-		        <a href="15673304578082.html">SAS基础</a>
-		      </li>
-	     
 	  
 	      
-		      <li class="post">
-		        <a href="15670727988571.html">复变函数整理</a>
-		      </li>
-	     
 	  
 	      
 	  

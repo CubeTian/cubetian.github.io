@@ -4,7 +4,7 @@
   <title><![CDATA[程序猿CubeTian]]></title>
   <link href="https://cubetian.github.io/atom.xml" rel="self"/>
   <link href="https://cubetian.github.io/"/>
-  <updated>2019-09-08T10:42:33+08:00</updated>
+  <updated>2019-09-09T09:38:28+08:00</updated>
   <id>https://cubetian.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -12,6 +12,113 @@
   </author>
   <generator uri="http://www.coderforart.com/">CoderForArt</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[scipy 模块参考书]]></title>
+    <link href="https://cubetian.github.io/15679893433260.html"/>
+    <updated>2019-09-09T08:35:43+08:00</updated>
+    <id>https://cubetian.github.io/15679893433260.html</id>
+    <content type="html"><![CDATA[
+<p><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/index.html">SciPy Tutorial</a></p>
+
+<ul>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/general.html">Introduction</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/basic.html">Basic functions</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/special.html">Special functions(scipy.special)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/integrate.html">Integration(scipy.integrate)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/optimize.html">Optimization(scipy.optimize)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/interpolate.html">Interpolation(scipy.interpolate)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/fftpack.html">Fourier Transforms(scipy.fftpack)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/signal.html">Signal Processing(scipy.signal)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/linalg.html">Linear Algebra(scipy.linagle)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/arpack.html">Sparse Eigenvalue Problems with ARPACK</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/csgraph.html">Compressed Sparse Graph Routines(scipy.sparse.csgraph)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/spatial.html">Spatial data structures and algorithms(scipy.spatial)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats.html">Statistics(scipy.stats)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/ndimage.html">Multidimensional image processing(scipy.ndimage)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/io.html">File IO(scipy.io)</a></li>
+</ul>
+
+<pre><code class="language-text">import numpy as np
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+</code></pre>
+
+<p>scipy 主要有15个子模块<br/>
+`from scipy import cluster, constants, fftpack, integrate, interpolate, io, linalg, ndimage, odr, optimize, signal, sparse, spatial, special, stats</p>
+
+<h2 id="toc_0">`</h2>
+
+<h2 id="toc_1">常量 <a href="https://docs.scipy.org/doc/scipy/reference/constants.html#module-scipy.constants">Constants(scipy.constants)</a></h2>
+
+<p>主要包含数学常数\(\pi\)(pi)以及一些物理常数 </p>
+
+<hr/>
+
+<h2 id="toc_2">基本函数</h2>
+
+<h3 id="toc_3">np.r_ np.c_ 拼接</h3>
+
+<pre><code class="language-text">&gt;&gt;&gt; np.r_[3,[0]*5,-1:1:10j]
+array([ 3.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        , -1.        , -0.77777778, -0.55555556, -0.33333333,
+       -0.11111111,  0.11111111,  0.33333333,  0.55555556,  0.77777778,
+        1.        ])
+</code></pre>
+
+<p>将切片对象转换为沿第一轴的连接。(横向拼接)</p>
+
+<pre><code class="language-text">&gt;&gt;&gt; np.c_[np.array([1,2,3]), np.array([4,5,6])]
+array([[1, 4],
+       [2, 5],
+       [3, 6]])
+</code></pre>
+
+<p>将切片对象转换为沿第二轴的连接。(竖向拼接)<br/>
+复数10j作为切片语​​法中的步长。这种非标准用法允许将数字解释为在范围内产生的点数而不是步长</p>
+
+<h3 id="toc_4">np.mgrid 网格生成</h3>
+
+<pre><code class="language-text">&gt;&gt;&gt; np.mgrid[0:5:4j,0:5:4j]
+array([[[ 0.    ,  0.    ,  0.    ,  0.    ],
+        [ 1.6667,  1.6667,  1.6667,  1.6667],
+        [ 3.3333,  3.3333,  3.3333,  3.3333],
+        [ 5.    ,  5.    ,  5.    ,  5.    ]],
+       [[ 0.    ,  1.6667,  3.3333,  5.    ],
+        [ 0.    ,  1.6667,  3.3333,  5.    ],
+        [ 0.    ,  1.6667,  3.3333,  5.    ],
+        [ 0.    ,  1.6667,  3.3333,  5.    ]]])
+</code></pre>
+
+<h2 id="toc_5">积分 (scipy.integrate)</h2>
+
+<p>此模块可用用于各种包括反常积分在内的定积分的求解<br/>
+\(I(a, b)=\int_{0}^{1} a x^{2}+b d x\)</p>
+
+<pre><code class="language-text">&gt;&gt;&gt; from scipy.integrate import quad
+&gt;&gt;&gt; def integrand(x, a, b):
+...     return a*x**2 + b
+...
+&gt;&gt;&gt; a = 2
+&gt;&gt;&gt; b = 1
+&gt;&gt;&gt; I = quad(integrand, 0, 1, args=(a,b))
+&gt;&gt;&gt; I
+(1.6666666666666667, 1.8503717077085944e-14)
+</code></pre>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[数值分析]]></title>
+    <link href="https://cubetian.github.io/15679868479784.html"/>
+    <updated>2019-09-09T07:54:07+08:00</updated>
+    <id>https://cubetian.github.io/15679868479784.html</id>
+    <content type="html"><![CDATA[
+<h2 id="toc_0">插值</h2>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[爬虫学习]]></title>

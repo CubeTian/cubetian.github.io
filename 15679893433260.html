@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <title>
     
-  wifi 相关 - 程序猿CubeTian
+  scipy 模块参考书 - 程序猿CubeTian
   
 
   </title>
@@ -81,55 +81,96 @@ $(document).ready(function(event) {
 <div>
 	<article class="hentry" role="article">
 	<header>
-			  	<h1 class="entry-title">wifi 相关</h1>
-				<p class="meta"><time datetime="2018-09-21T20:43:13+08:00" pubdate data-updated="true">2018/09/21</time></p>
+			  	<h1 class="entry-title">scipy 模块参考书</h1>
+				<p class="meta"><time datetime="2019-09-09T08:35:43+08:00" pubdate data-updated="true">2019/09/09</time></p>
 			 </header>
 		  	<div class="entry-content">
-			  	<p>1、安装aircrack-ng</p>
+			  	<p><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/index.html">SciPy Tutorial</a></p>
 
-<p>命令：brew install aircrack-ng</p>
+<ul>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/general.html">Introduction</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/basic.html">Basic functions</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/special.html">Special functions(scipy.special)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/integrate.html">Integration(scipy.integrate)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/optimize.html">Optimization(scipy.optimize)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/interpolate.html">Interpolation(scipy.interpolate)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/fftpack.html">Fourier Transforms(scipy.fftpack)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/signal.html">Signal Processing(scipy.signal)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/linalg.html">Linear Algebra(scipy.linagle)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/arpack.html">Sparse Eigenvalue Problems with ARPACK</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/csgraph.html">Compressed Sparse Graph Routines(scipy.sparse.csgraph)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/spatial.html">Spatial data structures and algorithms(scipy.spatial)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats.html">Statistics(scipy.stats)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/ndimage.html">Multidimensional image processing(scipy.ndimage)</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/io.html">File IO(scipy.io)</a></li>
+</ul>
 
-<p>注意，如果没安装brew,访问：<a href="https://brew.sh%EF%BC%8C%E9%A6%96%E9%A1%B5%E4%B8%8A%E6%9C%89%E5%AE%89%E8%A3%85brew%E7%9A%84%E5%91%BD%E4%BB%A4%EF%BC%8C%E6%88%91%E5%AE%89%E8%A3%85%E6%97%B6%EF%BC%88201706%EF%BC%89%E5%91%BD%E4%BB%A4%E5%A6%82%E4%B8%8B%EF%BC%9A">https://brew.sh，首页上有安装brew的命令，我安装时（201706）命令如下：</a></p>
+<pre><code class="language-text">import numpy as np
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+</code></pre>
 
-<p>/usr/bin/ruby -e &quot;$(curl -fsSLhttps://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</p>
+<p>scipy 主要有15个子模块<br/>
+`from scipy import cluster, constants, fftpack, integrate, interpolate, io, linalg, ndimage, odr, optimize, signal, sparse, spatial, special, stats</p>
 
-<p>2、添加airport快链</p>
+<h2 id="toc_0">`</h2>
 
-<p>命令：ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport</p>
+<h2 id="toc_1">常量 <a href="https://docs.scipy.org/doc/scipy/reference/constants.html#module-scipy.constants">Constants(scipy.constants)</a></h2>
 
-<p>3、使用mac自带的airport选取mac地址</p>
+<p>主要包含数学常数\(\pi\)(pi)以及一些物理常数 </p>
 
-<p>命令：airport -s</p>
+<hr/>
 
-<p>选择CHANNEL的数值，比如：11</p>
+<h2 id="toc_2">基本函数</h2>
 
-<p>4、监听选定的频道获取到握手的包</p>
+<h3 id="toc_3">np.r_ np.c_ 拼接</h3>
 
-<p>命令：airport en0 sniff 11</p>
+<pre><code class="language-text">&gt;&gt;&gt; np.r_[3,[0]*5,-1:1:10j]
+array([ 3.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+        0.        , -1.        , -0.77777778, -0.55555556, -0.33333333,
+       -0.11111111,  0.11111111,  0.33333333,  0.55555556,  0.77777778,
+        1.        ])
+</code></pre>
 
-<p>运行一段时间，就可以在/tmp收获以.cap结尾的分析包，结束之后会提示保存的.cap文件位置</p>
+<p>将切片对象转换为沿第一轴的连接。(横向拼接)</p>
 
-<p>注意：（1）尽可能不要运行太长时间，否则.cap文件会比较大；</p>
+<pre><code class="language-text">&gt;&gt;&gt; np.c_[np.array([1,2,3]), np.array([4,5,6])]
+array([[1, 4],
+       [2, 5],
+       [3, 6]])
+</code></pre>
 
-<p>（2）可以使用ctr+c结束运行(我刚开始就不知道🙈)；</p>
+<p>将切片对象转换为沿第二轴的连接。(竖向拼接)<br/>
+复数10j作为切片语​​法中的步长。这种非标准用法允许将数字解释为在范围内产生的点数而不是步长</p>
 
-<p>（3）如果提示权限问题，则使用 sudo airport en0 sniff 11</p>
+<h3 id="toc_4">np.mgrid 网格生成</h3>
 
-<p>5、用 aircrack-ng分析cap包</p>
+<pre><code class="language-text">&gt;&gt;&gt; np.mgrid[0:5:4j,0:5:4j]
+array([[[ 0.    ,  0.    ,  0.    ,  0.    ],
+        [ 1.6667,  1.6667,  1.6667,  1.6667],
+        [ 3.3333,  3.3333,  3.3333,  3.3333],
+        [ 5.    ,  5.    ,  5.    ,  5.    ]],
+       [[ 0.    ,  1.6667,  3.3333,  5.    ],
+        [ 0.    ,  1.6667,  3.3333,  5.    ],
+        [ 0.    ,  1.6667,  3.3333,  5.    ],
+        [ 0.    ,  1.6667,  3.3333,  5.    ]]])
+</code></pre>
 
-<p>命令：sudo aircrack-ng  /tmp/airportSniff******.cap</p>
+<h2 id="toc_5">积分 (scipy.integrate)</h2>
 
-<p>找到有(1 handshake)的那一行记录，记录下BSSID（比如是:10:02:22:23:7v:6f）。</p>
+<p>此模块可用用于各种包括反常积分在内的定积分的求解<br/>
+\(I(a, b)=\int_{0}^{1} a x^{2}+b d x\)</p>
 
-<p>建议直接搜索，否则能看晕，如果没有搜索到，请重新执行第4步；</p>
-
-<p>6、开始暴力破解</p>
-
-<p>命令：sudo aircrack-ng-wpojie.txt-b10:02:22:23:7v:6f/tmp/airportSniff******.cap</p>
-
-<p>注意：.txt为破解字典</p>
-
-<p>如果有碰撞到密码，程序会停止，并显示密码。</p>
+<pre><code class="language-text">&gt;&gt;&gt; from scipy.integrate import quad
+&gt;&gt;&gt; def integrand(x, a, b):
+...     return a*x**2 + b
+...
+&gt;&gt;&gt; a = 2
+&gt;&gt;&gt; b = 1
+&gt;&gt;&gt; I = quad(integrand, 0, 1, args=(a,b))
+&gt;&gt;&gt; I
+(1.6666666666666667, 1.8503717077085944e-14)
+</code></pre>
 
 			</div>
 
@@ -159,9 +200,9 @@ $(document).ready(function(event) {
 
 	    <p class="meta">
 	    
-	        <a class="basic-alignment left" href="15623137342353.html" 
-	        title="Previous Post: 计算机三级知识点">&laquo; 计算机三级知识点</a>
 	    
+	        <a class="basic-alignment right" href="15679868479784.html" 
+	        title="Next Post: 数值分析">数值分析 &raquo;</a>
 	    
 	    </p>
 	  </footer>
