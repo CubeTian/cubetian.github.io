@@ -4,7 +4,7 @@
   <title><![CDATA[程序猿CubeTian]]></title>
   <link href="https://cubetian.github.io/atom.xml" rel="self"/>
   <link href="https://cubetian.github.io/"/>
-  <updated>2019-09-09T09:38:28+08:00</updated>
+  <updated>2019-09-09T11:10:29+08:00</updated>
   <id>https://cubetian.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -12,6 +12,69 @@
   </author>
   <generator uri="http://www.coderforart.com/">CoderForArt</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[sklearn 模块参考书]]></title>
+    <link href="https://cubetian.github.io/15679981303848.html"/>
+    <updated>2019-09-09T11:02:10+08:00</updated>
+    <id>https://cubetian.github.io/15679981303848.html</id>
+    <content type="html"><![CDATA[
+<p>sklearn 全称 scikit learn 是机器学习领域当中最知名的python模块之一</p>
+
+<p>sklearn 包含了很多种机器学习的方式：</p>
+
+<ul>
+<li>Classification 分类</li>
+<li>Regression 回归</li>
+<li>Clustering 非监督分类</li>
+<li>Dimensionality reduction 数据降维</li>
+<li>Model Selection 模型选择</li>
+<li>Preprocessing 数据预处理</li>
+</ul>
+
+<h2 id="toc_0">选择模型</h2>
+
+<p>sklearn 中包含了众多的学习模型，我们需要根据实际问题选择适合的模型<br/>
+这里有一张流程图帮助大家，根据实际问题，选择合适的模型<br/>
+<img src="media/15679981303848/15679984183443.jpg" alt=""/></p>
+
+<p>这里，本人还未完全熟悉所有学习方式，拷贝了sam‘s note 的相关链接</p>
+
+<ul>
+<li>2017/06/11   <a href="https://qinqianshan.com/machine_learning/sklearn/meachine-learning1-description/">【1】简介--1--机器学习</a></li>
+<li>2017/06/11   <a href="https://qinqianshan.com/machine_learning/sklearn/meachine-learning2-sklearn/">【1】简介--2--sklearn简介</a></li>
+<li>2018/08/14   <a href="https://qinqianshan.com/machine_learning/sklearn/supervised-learning/">【2】监督学习</a></li>
+<li>2017/06/14   <a href="https://qinqianshan.com/machine_learning/sklearn/supervised-learning-classify/">【2】监督学习--1--分类</a></li>
+<li>2018/08/28   <a href="https://qinqianshan.com/machine_learning/sklearn/sklearn-knn/">【2】监督学习--1--分类-K近邻分类器</a></li>
+<li>2018/08/28   <a href="https://qinqianshan.com/machine_learning/sklearn/sklearn-decisiontree/">【2】监督学习--1--分类-决策树(DecisionTreeClassifier)</a></li>
+<li>2018/08/28   <a href="https://qinqianshan.com/machine_learning/sklearn/sklearn-naivebayes/">【2】监督学习--1--分类-贝叶斯(naive_bayes)</a></li>
+<li>2018/08/28   <a href="https://qinqianshan.com/machine_learning/sklearn/sklearn-naivebayes/">【2】监督学习--1--分类-支持向量机(svm)</a></li>
+<li>2017/06/15   <a href="https://qinqianshan.com/machine_learning/sklearn/supervised-learning-logistic/">【2】监督学习--2--回归</a></li>
+<li>2018/08/22   <a href="https://qinqianshan.com/machine_learning/sklearn/sklearn-polynomialfeatures/">【2】监督学习--3--多项式变形--PolynomialFeatures</a></li>
+<li>2017/06/11   <a href="https://qinqianshan.com/machine_learning/sklearn/unsupervised-learning-cluster/">【3】无监督学习概述</a></li>
+<li>2017/07/08   <a href="https://qinqianshan.com/machine_learning/sklearn/clustering-introduction/">【3】无监督学习--3--聚类--概述</a></li>
+<li>2018/07/05   <a href="https://qinqianshan.com/machine_learning/sklearn/cluster-kmeans/">【3】无监督学习--3--聚类--基于距离--kmeans</a></li>
+<li>2017/07/08   <a href="https://qinqianshan.com/machine_learning/sklearn/hierarchical-clustering/">【3】无监督学习--3--聚类--层次聚类</a></li>
+<li>2018/05/16   <a href="https://qinqianshan.com/machine_learning/sklearn/cross-validation/">【4.1.1】模型选择与评估--1--交叉检验（Cross Validation）</a></li>
+<li>2018/08/17   <a href="https://qinqianshan.com/machine_learning/sklearn/quantifying-the-quality-of-predictions/">【4.3.1】量化预测结果</a></li>
+<li>2018/09/21   <a href="https://qinqianshan.com/machine_learning/sklearn/precision-recall-f-measure/">【4.3.2.3】量化预测结果--分类变量--准确率，召回和F-措施</a></li>
+<li>2018/09/21   <a href="https://qinqianshan.com/machine_learning/sklearn/classification-metrics/">【4.3.2.1】量化预测结果--分类变量</a></li>
+<li>2018/07/05   <a href="https://qinqianshan.com/machine_learning/sklearn/clustering-performance-evaluation/">【4.3.2.9】量化预测结果--分类变量--MCC、RI</a></li>
+<li>2017/02/07   <a href="https://qinqianshan.com/machine_learning/sklearn/roc-curve-and-auc-evaluation-index/">【4.3.2.2】量化预测结果--分类变量--ROC曲线和AUC评价指标</a></li>
+<li>2018/08/17   <a href="https://qinqianshan.com/machine_learning/sklearn/model-persistence/">【4.4.1】模型的保存与调用</a></li>
+<li>2018/08/17   <a href="https://qinqianshan.com/machine_learning/sklearn/underfitting-overfitting/">【4.5.1】验证曲线--欠拟合和过拟合</a></li>
+<li>2018/08/17   <a href="https://qinqianshan.com/machine_learning/sklearn/plotting-validation-curves/">【4.5.2】验证曲线--绘制验证曲线</a></li>
+<li>2018/08/17   <a href="https://qinqianshan.com/machine_learning/sklearn/plotting-learning-curves/">【4.5.3】验证曲线--绘制学习曲线</a></li>
+<li>2018/05/13   <a href="https://qinqianshan.com/machine_learning/sklearn/one-hot-encoding-in-scikit-learn/">【5】数据集转化--3--预处理数据-One Hot Encoding in Scikit-Learn</a></li>
+<li>2017/07/07   <a href="https://qinqianshan.com/machine_learning/sklearn/1-plotting-cross-validated-predictions/">【9】例子--1--general--Plotting Cross-Validated Predictions（交叉验证预测）</a></li>
+<li>2017/07/08   <a href="https://qinqianshan.com/machine_learning/sklearn/concatenating-multiple-feature-extraction-methods/">【9】例子--1--general--混合多重方法获得feature</a></li>
+<li>2017/07/08   <a href="https://qinqianshan.com/machine_learning/sklearn/chaining-pca-and-logistic-regression/">【9】例子--1--general--PCA与逻辑回归的搭配</a></li>
+<li>2017/07/07   <a href="https://qinqianshan.com/machine_learning/sklearn/isotonic-regression/">【9】例子--1--general--保序回归(Isotonic Regression)</a></li>
+<li>2017/07/07   <a href="https://qinqianshan.com/machine_learning/sklearn/mac_sklearn_matplotlib/">【10】报错-1-Mac运行sklearn的matplotlib问题</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[scipy 模块参考书]]></title>
@@ -44,20 +107,22 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 </code></pre>
 
-<p>scipy 主要有15个子模块<br/>
-`from scipy import cluster, constants, fftpack, integrate, interpolate, io, linalg, ndimage, odr, optimize, signal, sparse, spatial, special, stats</p>
+<p>scipy 主要有15个子模块</p>
 
-<h2 id="toc_0">`</h2>
+<pre><code class="language-text">from scipy import cluster, constants, fftpack, integrate, interpolate, io, linalg, ndimage, odr, optimize, signal, sparse, spatial, special, stats
+</code></pre>
 
-<h2 id="toc_1">常量 <a href="https://docs.scipy.org/doc/scipy/reference/constants.html#module-scipy.constants">Constants(scipy.constants)</a></h2>
+<hr/>
+
+<h2 id="toc_0">常量 <a href="https://docs.scipy.org/doc/scipy/reference/constants.html#module-scipy.constants">Constants(scipy.constants)</a></h2>
 
 <p>主要包含数学常数\(\pi\)(pi)以及一些物理常数 </p>
 
 <hr/>
 
-<h2 id="toc_2">基本函数</h2>
+<h2 id="toc_1">基本函数</h2>
 
-<h3 id="toc_3">np.r_ np.c_ 拼接</h3>
+<h3 id="toc_2">np.r_ np.c_ 拼接</h3>
 
 <pre><code class="language-text">&gt;&gt;&gt; np.r_[3,[0]*5,-1:1:10j]
 array([ 3.        ,  0.        ,  0.        ,  0.        ,  0.        ,
@@ -77,7 +142,7 @@ array([[1, 4],
 <p>将切片对象转换为沿第二轴的连接。(竖向拼接)<br/>
 复数10j作为切片语​​法中的步长。这种非标准用法允许将数字解释为在范围内产生的点数而不是步长</p>
 
-<h3 id="toc_4">np.mgrid 网格生成</h3>
+<h3 id="toc_3">np.mgrid 网格生成</h3>
 
 <pre><code class="language-text">&gt;&gt;&gt; np.mgrid[0:5:4j,0:5:4j]
 array([[[ 0.    ,  0.    ,  0.    ,  0.    ],
@@ -90,7 +155,7 @@ array([[[ 0.    ,  0.    ,  0.    ,  0.    ],
         [ 0.    ,  1.6667,  3.3333,  5.    ]]])
 </code></pre>
 
-<h2 id="toc_5">积分 (scipy.integrate)</h2>
+<h2 id="toc_4">积分 (scipy.integrate)</h2>
 
 <p>此模块可用用于各种包括反常积分在内的定积分的求解<br/>
 \(I(a, b)=\int_{0}^{1} a x^{2}+b d x\)</p>
@@ -105,6 +170,122 @@ array([[[ 0.    ,  0.    ,  0.    ,  0.    ],
 &gt;&gt;&gt; I
 (1.6666666666666667, 1.8503717077085944e-14)
 </code></pre>
+
+<hr/>
+
+<p>常微分方程求解 scipy.integrate.ode<br/>
+BerkeleyMadonna 推荐使用，常微分方程求解器</p>
+
+<h2 id="toc_5">线性代数相关</h2>
+
+<pre><code class="language-text">from scipy import linalg
+</code></pre>
+
+<h3 id="toc_6">范数</h3>
+
+<p>向量的范数<br/>
+\(\|\mathbf{x}\|=\left\{\begin{array}{cl}{\max \left|x_{i}\right|} &amp; {\text { ord }=\inf } \\ {\min \left|x_{i}\right|} &amp; {\text { ord }=-\inf } \\ {\left(\sum_{i}\left|x_{i}\right|^{\text {ord }}\right)^{1 / \operatorname{ord}}} &amp; { | \text { ord } |&lt;\infty}\end{array}\right.\)<br/>
+矩阵的范数<br/>
+\(\|\mathbf{A}\|=\left\{\begin{aligned} \max _{i} \sum_{j}\left|a_{i j}\right| &amp; \text { ord }=\text { inf } \\ \min _{i} \sum_{j}\left|a_{i j}\right| &amp; \text { ord }=-\inf \\ \max _{j} \sum_{i}\left|a_{i j}\right| &amp; \text { ord }=1 \\ \min _{j} \sum_{i}\left|a_{i j}\right| &amp; \text { ord }=-1 \\ \max \sigma_{i} &amp; \text { ord }=2 \\ \min \sigma_{i} &amp; \text { ord }=-2 \\ \sqrt{\operatorname{trace}\left(\mathbf{A}^{H} \mathbf{A}\right)} &amp; \text { ord }=\text { &#39;fro }^{\prime} \end{aligned}\right.\)<br/>
+例：</p>
+
+<pre><code class="language-text">&gt;&gt;&gt; import numpy as np
+&gt;&gt;&gt; from scipy import linalg
+&gt;&gt;&gt; A=np.array([[1,2],[3,4]])
+&gt;&gt;&gt; A
+array([[1, 2],
+      [3, 4]])
+&gt;&gt;&gt; linalg.norm(A)
+5.4772255750516612
+&gt;&gt;&gt; linalg.norm(A,&#39;fro&#39;) # frobenius norm is the default
+5.4772255750516612
+&gt;&gt;&gt; linalg.norm(A,1) # L1 norm (max column sum)
+6
+&gt;&gt;&gt; linalg.norm(A,-1)
+4
+&gt;&gt;&gt; linalg.norm(A,np.inf) # L inf norm (max row sum)
+7
+</code></pre>
+
+<h3 id="toc_7">特征值与特征向量</h3>
+
+<pre><code class="language-text">&gt;&gt;&gt; import numpy as np
+&gt;&gt;&gt; from scipy import linalg
+&gt;&gt;&gt; A = np.array([[1, 2], [3, 4]])
+&gt;&gt;&gt; la, v = linalg.eig(A)
+&gt;&gt;&gt; l1, l2 = la
+&gt;&gt;&gt; print(l1, l2)   # eigenvalues
+(-0.3722813232690143+0j) (5.372281323269014+0j)
+&gt;&gt;&gt; print(v[:, 0])   # first eigenvector
+[-0.82456484  0.56576746]
+&gt;&gt;&gt; print(v[:, 1])   # second eigenvector
+[-0.41597356 -0.90937671]
+</code></pre>
+
+<h3 id="toc_8">LU分解</h3>
+
+<p>\(A=PLU\)</p>
+
+<pre><code class="language-text">&gt;&gt;&gt; from scipy.linalg import lu
+&gt;&gt;&gt; A = np.array([[2, 5, 8, 7], [5, 2, 2, 8], [7, 5, 6, 6], [5, 4, 4, 8]])
+&gt;&gt;&gt; p, l, u = lu(A)
+</code></pre>
+
+<h3 id="toc_9">追赶法</h3>
+
+<p>\(a_{i} x_{i-1}+b_{i} x_{i}+c_{i} x_{i+1}=d_{i}\)<br/>
+where \(a_{1}=0\) and \(c_{n}=0\)<br/>
+\(\left[\begin{array}{ccccc}{b_{1}} &amp; {c_{1}} &amp; {} &amp; {} &amp; {0} \\ {a_{2}} &amp; {b_{2}} &amp; {c_{2}} &amp; {} &amp; {} \\ {} &amp; {a_{3}} &amp; {b_{3}} &amp; {\ddots} &amp; {} \\ {} &amp; {} &amp; {\ddots} &amp; {\ddots} &amp; {c_{n-1}} \\ {0} &amp; {} &amp; {} &amp; {a_{n}} &amp; {b_{n}}\end{array}\right]\left[\begin{array}{c}{x_{1}} \\ {x_{2}} \\ {x_{3}} \\ {\vdots} \\ {x_{n}}\end{array}\right]=\left[\begin{array}{c}{d_{1}} \\ {d_{2}} \\ {d_{3}} \\ {\vdots} \\ {d_{n}}\end{array}\right]\)</p>
+
+<pre><code class="language-text">import numpy as np
+
+## Tri Diagonal Matrix Algorithm(a.k.a Thomas algorithm) solver
+def TDMAsolver(a, b, c, d):
+    &#39;&#39;&#39;
+    TDMA solver, a b c d can be NumPy array type or Python list type.
+    refer to http://en.wikipedia.org/wiki/Tridiagonal_matrix_algorithm
+    and to http://www.cfd-online.com/Wiki/Tridiagonal_matrix_algorithm_-_TDMA_(Thomas_algorithm)
+    &#39;&#39;&#39;
+    nf = len(d) # number of equations
+    ac, bc, cc, dc = map(np.array, (a, b, c, d)) # copy arrays
+    for it in range(1, nf):
+        mc = ac[it-1]/bc[it-1]
+        bc[it] = bc[it] - mc*cc[it-1] 
+        dc[it] = dc[it] - mc*dc[it-1]
+                
+    xc = bc
+    xc[-1] = dc[-1]/bc[-1]
+
+    for il in range(nf-2, -1, -1):
+        xc[il] = (dc[il]-cc[il]*xc[il+1])/bc[il]
+
+    return xc
+</code></pre>
+
+<p>例：</p>
+
+<pre><code class="language-text">A = np.array([[10,2,0,0],[3,10,4,0],[0,1,7,5],[0,0,3,4]],dtype=float)   
+
+a = np.array([3.,1,3]) 
+b = np.array([10.,10.,7.,4.])
+c = np.array([2.,4.,5.])
+d = np.array([3,4,5,6.])
+
+print(TDMAsolver(a, b, c, d))
+&gt;&gt; [ 0.14877589  0.75612053 -1.00188324  2.25141243]
+#compare against numpy linear algebra library
+print(np.linalg.solve(A, d))
+&gt;&gt; [ 0.14877589  0.75612053 -1.00188324  2.25141243]
+</code></pre>
+
+<h3 id="toc_10">对角线元素</h3>
+
+<pre><code class="language-text">numpy.diag(v,k=0)
+</code></pre>
+
+<p>如果v是一个二维的矩阵，则返回对角线元素组成的向量<br/>
+如果v是一个一维的向量，则返回对角线为该向量的矩阵<br/>
+k表示偏移量，正数为右移，负数为左移</p>
 
 ]]></content>
   </entry>
