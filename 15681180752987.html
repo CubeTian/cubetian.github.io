@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <title>
     
-  计算机二级python - 程序猿CubeTian
+  蚁群优化算法学习笔记 - 程序猿CubeTian
   
 
   </title>
@@ -81,28 +81,103 @@ $(document).ready(function(event) {
 <div>
 	<article class="hentry" role="article">
 	<header>
-			  	<h1 class="entry-title">计算机二级python</h1>
-				<p class="meta"><time datetime="2019-08-11T14:06:14+08:00" pubdate data-updated="true">2019/08/11</time></p>
+			  	<h1 class="entry-title">蚁群优化算法学习笔记</h1>
+				<p class="meta"><time datetime="2019-09-10T20:21:15+08:00" pubdate data-updated="true">2019/09/10</time></p>
 			 </header>
 		  	<div class="entry-content">
-			  	<ul>
-<li>注释 #</li>
-<li>续行符 反斜杠 \</li>
-<li>命名 大小字母、下划线、数字、汉字<br/>
-但首字母不能是数字</li>
-<li>保留字：<br/>
-False, True, and, as, break, continue, def, del, elif, else, except, for, from, global, if, import, in, not, or, return, try, while (22个，2个大写)<br/>
-None, finally, lambda, pass, with</li>
-<li>jieba.lcut(s,cut_all=True)<br/>
-*0x4DC0 是一个十六进制数，它对应的 Unicode 编码是中国古老的《易经》六十四卦的第一卦，请输出第 51 卦（震卦）对应的 Unicode 编码的二进制、十进制、八进制和十六进制格式。
-<code>print(&quot;二进制{0:b}、十进制{0:d}、八进制{0:o}、十六进制{0:x}&quot;.format(0x4DC0+50))
-</code></li>
-<li>字符串的索引：<br/>
-正向索引：最左侧字符序号为0，向右依次递增，最右侧为L-1<br/>
-反向索引：最右侧字符序号为-1，向左依次递减，最左侧为-L</li>
-<li>字符串的索引：<br/>
-切片部分必须连续，[a=0,b=L-1,step=1] </li>
-</ul>
+			  	<p>本人阅读《蚁群优化算法》-马良等过程中的笔记<br/>
+前五章的目录</p>
+
+<ol>
+<li>引论
+<ol>
+<li>组合优化与计算复杂性</li>
+<li>来自自然界的几类优化方法</li>
+</ol></li>
+<li>蚁群算法原理
+<ol>
+<li>基本思想</li>
+<li>研究概况</li>
+</ol></li>
+<li>标准的TSP的蚁群算法
+<ol>
+<li>TSP概述</li>
+<li>经典方法</li>
+<li>遗传算法与模拟退火</li>
+<li>蚁群算法</li>
+<li>元胞蚁群算法及其收敛性</li>
+</ol></li>
+<li>扩展旅行商问题的蚁群算法
+<ol>
+<li>瓶颈TSP及其求解</li>
+<li>最小比率TSP及其求解</li>
+<li>时间约束TSP及其求解</li>
+<li>多目标TSP及其求解</li>
+</ol></li>
+<li>车辆路径问题的蚁群算法
+<ol>
+<li>VRP概述</li>
+<li>CVRP及其求解</li>
+<li>多目标VRP及其求解</li>
+<li>VRPTW及其求解</li>
+<li>VRPSTW及其求解</li>
+<li>FVRP及其求解<br/>
+看完目录前五章，首先有好多英文缩写看不明白，接着看</li>
+</ol></li>
+</ol>
+
+<h2 id="toc_0">第一章 引论</h2>
+
+<p>1.1 组合优化与计算复杂性<br/>
+最优化分连续变量与离散变量，离散变量的问题往往称为组合优化<br/>
+局部搜索法是基于贪婪思想，利用领域函数进行搜索的，局部搜索法可能落入局部最优点，或由于步长和初始点选择不好而错过最优点。<br/>
+依据一定概率，对于步长问题，可以采用变步长方法，在接近最优点附近，采取某种策略改变步长<br/>
+对于初始点问题，可以采用随机生成的一些初始点，从每个初始点出发进行搜索，找到各自的最优解，再从这些最优解中选择一个最好的结果</p>
+
+<p>典型组合优化难题<br/>
+    1. 旅行商问题（TSP）：所有可能的路线最多有（n-1）!/2 条<br/>
+    2. 图着色问题（GCP）：记图的最大顶点读书为\(\Delta\) ，则图的最小着色数以\(\Delta + 1\)为上界<br/>
+    3. 工件排序问题（JSP）：NP难题（NP-hard）<br/>
+    4. 二次分配问题（QAP）：目标函数非线性<br/>
+    5. 度约束最小树问题（DCMSTP）：最小生成树问题（不懂）<br/>
+上述典型问题及等价问题，普遍认为没有多项式算法求解</p>
+
+<p>1.2 来自自然界的几类优化方法<br/>
+计算智能系统是在神经网络、模糊系统、进化计算</p>
+
+<ol>
+<li>遗传算法的基本步骤（GA）：
+<ol>
+<li>问题的染色体表示</li>
+<li>初始解组（种群）的生成</li>
+<li>计算解组中各个解的适值函数（代价函数）</li>
+<li>从解组中随机抽取两个解作为父母代</li>
+<li>对父母代实施遗传操作（交叉、变异等）以产生一个后代解</li>
+<li>按某种规则，用该后代解替换原解组中的某个解</li>
+<li>按当前解组符合停机条件则算法终止，否则，转步骤1<br/>
+结果的好坏主要依赖于遗传代数和解组规模<br/></li>
+</ol></li>
+<li>模拟退火算法基本步骤（SA）：<br/>
+物体内部服从Boltzman分布
+<ol>
+<li>选择初始状态H（初始解）、初始温度、降温次数等</li>
+<li>生成H的领域状态H‘，并计算两种状态下的目标函数f(H&#39;)-f(H)</li>
+<li>按接受概率置换H为H‘</li>
+<li>重复步骤2和步骤3直至停机条件满足</li>
+</ol></li>
+<li>禁忌搜索法（TS）在搜索过程中使用记忆功能</li>
+<li>人工神经网络</li>
+<li>蚁群系统：信息激素，轨迹，自催化行为，增强型学习系统</li>
+<li>微粒群算法（PSO）：
+<ol>
+<li>依照初始化过程，对微粒群的随机位置和速度进行初始设定</li>
+<li>计算每个微粒的适应值</li>
+<li>对每个微粒，将其适应值与所经历过的最好位置进行比较，若较好，则将其作为当前的最好位置</li>
+<li>对每个微粒，将其适应值与全局所经历的最好位置的适应值进行比较，若较好，则将其作为当前的的全局最好位置</li>
+<li>对微粒的速度和位置进行进化</li>
+<li>若未到达结束条件（通常为足够好的适应值或最大代数），则返回步骤2</li>
+</ol></li>
+</ol>
 
 			</div>
 
@@ -114,7 +189,7 @@ None, finally, lambda, pass, with</li>
 			<strong>Categories:</strong>&nbsp; 
 			<span class="categories">
 			
-			    <a class='category' href='%E8%AE%A1%E7%AE%97%E6%9C%BA.html'>计算机</a>&nbsp;
+			    <a class='category' href='%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1.html'>数学建模</a>&nbsp;
 			 
 			</span>
 		    </p>
@@ -132,12 +207,12 @@ None, finally, lambda, pass, with</li>
 
 	    <p class="meta">
 	    
-	        <a class="basic-alignment left" href="15662129253478.html" 
-	        title="Previous Post: 数学与计算机">&laquo; 数学与计算机</a>
+	        <a class="basic-alignment left" href="15681237931017.html" 
+	        title="Previous Post: itertools 模块">&laquo; itertools 模块</a>
 	    
 	    
-	        <a class="basic-alignment right" href="15653132926815.html" 
-	        title="Next Post: 计算机二级 公共知识">计算机二级 公共知识 &raquo;</a>
+	        <a class="basic-alignment right" href="15681170584422.html" 
+	        title="Next Post: 手表使用评价">手表使用评价 &raquo;</a>
 	    
 	    </p>
 	  </footer>

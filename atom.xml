@@ -4,7 +4,7 @@
   <title><![CDATA[程序猿CubeTian]]></title>
   <link href="https://cubetian.github.io/atom.xml" rel="self"/>
   <link href="https://cubetian.github.io/"/>
-  <updated>2019-09-10T20:20:08+08:00</updated>
+  <updated>2019-09-10T23:01:07+08:00</updated>
   <id>https://cubetian.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -12,6 +12,333 @@
   </author>
   <generator uri="http://www.coderforart.com/">CoderForArt</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[itertools 模块]]></title>
+    <link href="https://cubetian.github.io/15681237931017.html"/>
+    <updated>2019-09-10T21:56:33+08:00</updated>
+    <id>https://cubetian.github.io/15681237931017.html</id>
+    <content type="html"><![CDATA[
+<p>在解决优化问题的过程中，经常需要遍历所有的情况，不仅需要考虑内存的问题，所需要迭代内容的生成也是一件很麻烦的事情，我曾经尝试过网格生成等方法，效果并不理想，十分复杂，直到我发现了它<br/>
+原教程地址：<a href="http://funhacks.net/2017/02/13/itertools/">高效的 itertools 模块</a><br/>
+itertools 是python的一个很小的模块，是python标准库中的，不需要另外安装<br/>
+首先介绍迭代器的三种类型</p>
+
+<ul>
+<li>无限迭代器：生成一个无限序列，比如自然数序列 <code>1, 2, 3, 4, ...</code>；</li>
+<li>有限迭代器：接收一个或多个序列（sequence）作为参数，进行组合、分组和过滤等；</li>
+<li>组合生成器：序列的排列、组合，求序列的笛卡儿积等；</li>
+</ul>
+
+<h2 id="toc_0">无限迭代器</h2>
+
+<p>itertools 模块提供了三个函数（事实上，它们是类）用于生成一个无限序列迭代器：</p>
+
+<ul>
+<li><p>count(firstval=0, step=1)</p>
+<p>创建一个从 firstval (默认值为 0) 开始，以 step (默认值为 1) 为步长的的无限整数迭代器</p></li>
+<li><p>cycle(iterable)</p>
+<p>对 iterable 中的元素反复执行循环，返回迭代器</p></li>
+<li><p>repeat(object [,times]</p>
+<p>反复生成 object，如果给定 times，则重复次数为 times，否则为无限</p></li>
+</ul>
+
+<p>下面，让我们看看一些例子。</p>
+
+<h3 id="toc_1">count</h3>
+
+<p>count() 接收两个参数，第一个参数指定开始值，默认为0，第二个参数指定步长，默认为1:</p>
+
+<pre><code class="language-text">&gt;&gt;&gt; import itertools
+&gt;&gt;&gt;
+&gt;&gt;&gt; nums = itertools.count()
+&gt;&gt;&gt; for i in nums:
+...     if i &gt; 6:
+...         break
+...     print i
+...
+0
+1
+2
+3
+4
+5
+6
+&gt;&gt;&gt; nums = itertools.count(10, 2)    # 指定开始值和步长
+&gt;&gt;&gt; for i in nums:
+...     if i &gt; 20:
+...         break
+...     print i
+...
+10
+12
+14
+16
+18
+20
+</code></pre>
+
+<h3 id="toc_2">cycle</h3>
+
+<p>cycle() 用于对iterable中的元素反复执行循环：</p>
+
+<pre><code class="language-text">&gt;&gt;&gt; import itertools
+&gt;&gt;&gt;
+&gt;&gt;&gt; cycle_strings = itertools.cycle(&#39;ABC&#39;)
+&gt;&gt;&gt; i = 1
+&gt;&gt;&gt; for string in cycle_strings:
+...     if i == 10:
+...         break
+...     print i, string
+...     i += 1
+...
+1 A
+2 B
+3 C
+4 A
+5 B
+6 C
+7 A
+8 B
+9 C
+</code></pre>
+
+<h3 id="toc_3">repeat</h3>
+
+<p>repeat() 用于反复生成一个object：</p>
+
+<pre><code class="language-text">&gt;&gt;&gt; import itertools
+&gt;&gt;&gt;
+&gt;&gt;&gt; for item in itertools.repeat(&#39;hello world&#39;, 3):
+...     print item
+...
+hello world
+hello world
+hello world
+&gt;&gt;&gt;
+&gt;&gt;&gt; for item in itertools.repeat([1, 2, 3, 4], 3):
+...     print item
+...
+[1, 2, 3, 4]
+[1, 2, 3, 4]
+[1, 2, 3, 4]
+</code></pre>
+
+<h2 id="toc_4">有限迭代器</h2>
+
+<p>itertools 模块提供了多个函数（类），接收一个或多个迭代对象作为参数，对它们进行组合、分组和过滤等：</p>
+
+<ul>
+<li>chain() 连接</li>
+<li>compress()</li>
+<li>dropwhile()</li>
+<li>groupby()</li>
+<li>ifilter()</li>
+<li>ifilterfalse()</li>
+<li>islice()</li>
+<li>imap()</li>
+<li>starmap()</li>
+<li>tee()</li>
+<li>takewhile()</li>
+<li>izip()</li>
+<li>izip_longest()</li>
+</ul>
+
+<h2 id="toc_5">组合生成器</h2>
+
+<p>itertools 模块还提供了多个组合生成器函数，用于求序列的排列、组合等：</p>
+
+<ul>
+<li>product</li>
+<li>permutations</li>
+<li>combinations</li>
+<li>combinations_with_replacement</li>
+</ul>
+
+<h3 id="toc_6">product</h3>
+
+<p>product 用于求多个可迭代对象的笛卡尔积，它跟嵌套的for循环等价，它的一般使用形式如下：</p>
+
+<pre><code class="language-text">product(iter1, iter2, ... iterN, [repeat=1])
+</code></pre>
+
+<p>其中，repeat是一个关键字参数，用于指定重复生成序列的次数，</p>
+
+<pre><code class="language-text">&gt;&gt;&gt; from itertools import product
+&gt;&gt;&gt;
+&gt;&gt;&gt; for item in product(&#39;ABCD&#39;, &#39;xy&#39;):
+...     print item
+...
+(&#39;A&#39;, &#39;x&#39;)
+(&#39;A&#39;, &#39;y&#39;)
+(&#39;B&#39;, &#39;x&#39;)
+(&#39;B&#39;, &#39;y&#39;)
+(&#39;C&#39;, &#39;x&#39;)
+(&#39;C&#39;, &#39;y&#39;)
+(&#39;D&#39;, &#39;x&#39;)
+(&#39;D&#39;, &#39;y&#39;)
+&gt;&gt;&gt;
+&gt;&gt;&gt; list(product(&#39;ab&#39;, range(3)))
+[(&#39;a&#39;, 0), (&#39;a&#39;, 1), (&#39;a&#39;, 2), (&#39;b&#39;, 0), (&#39;b&#39;, 1), (&#39;b&#39;, 2)]
+&gt;&gt;&gt;
+&gt;&gt;&gt; list(product((0,1), (0,1), (0,1)))
+[(0, 0, 0), (0, 0, 1), (0, 1, 0), (0, 1, 1), (1, 0, 0), (1, 0, 1), (1, 1, 0), (1, 1, 1)]
+&gt;&gt;&gt;
+&gt;&gt;&gt; list(product(&#39;ABC&#39;, repeat=2))
+[(&#39;A&#39;, &#39;A&#39;), (&#39;A&#39;, &#39;B&#39;), (&#39;A&#39;, &#39;C&#39;), (&#39;B&#39;, &#39;A&#39;), (&#39;B&#39;, &#39;B&#39;), (&#39;B&#39;, &#39;C&#39;), (&#39;C&#39;, &#39;A&#39;), (&#39;C&#39;, &#39;B&#39;), (&#39;C&#39;, &#39;C&#39;)]
+&gt;&gt;&gt;
+</code></pre>
+
+<h3 id="toc_7">permutation</h3>
+
+<p>permutation 用于生成一个排列，它的一般使用形式如下：</p>
+
+<pre><code class="language-text">permutations(iterable[, r])
+</code></pre>
+
+<p>其中，r 指定生成排列的元素的长度，如果不指定，则默认为可迭代对象的元素长度。</p>
+
+<pre><code class="language-text">&gt;&gt;&gt; from itertools import permutations
+&gt;&gt;&gt;
+&gt;&gt;&gt; permutations(&#39;ABC&#39;, 2)
+&lt;itertools.permutations object at 0x1074d9c50&gt;
+&gt;&gt;&gt;
+&gt;&gt;&gt; list(permutations(&#39;ABC&#39;, 2))
+[(&#39;A&#39;, &#39;B&#39;), (&#39;A&#39;, &#39;C&#39;), (&#39;B&#39;, &#39;A&#39;), (&#39;B&#39;, &#39;C&#39;), (&#39;C&#39;, &#39;A&#39;), (&#39;C&#39;, &#39;B&#39;)]
+&gt;&gt;&gt;
+&gt;&gt;&gt; list(permutations(&#39;ABC&#39;))
+[(&#39;A&#39;, &#39;B&#39;, &#39;C&#39;), (&#39;A&#39;, &#39;C&#39;, &#39;B&#39;), (&#39;B&#39;, &#39;A&#39;, &#39;C&#39;), (&#39;B&#39;, &#39;C&#39;, &#39;A&#39;), (&#39;C&#39;, &#39;A&#39;, &#39;B&#39;), (&#39;C&#39;, &#39;B&#39;, &#39;A&#39;)]
+&gt;&gt;&gt;
+</code></pre>
+
+<h3 id="toc_8">combination</h3>
+
+<p>combinations(不放回) 用于求序列的组合，它的使用形式如下：</p>
+
+<pre><code class="language-text">combinations(iterable, r)
+</code></pre>
+
+<p>其中，r指定生成组合的元素的长度</p>
+
+<pre><code class="language-text">&gt;&gt;&gt; from itertools import combinations
+&gt;&gt;&gt;
+&gt;&gt;&gt; list(combinations(&#39;ABC&#39;, 2))
+[(&#39;A&#39;, &#39;B&#39;), (&#39;A&#39;, &#39;C&#39;), (&#39;B&#39;, &#39;C&#39;)]
+</code></pre>
+
+<p>combinations_with_replacement（放回抽取） 和 combinations 类似，但它生成的组合包含自身元素。</p>
+
+<pre><code class="language-text">&gt;&gt;&gt; from itertools import combinations_with_replacement
+&gt;&gt;&gt;
+&gt;&gt;&gt; list(combinations_with_replacement(&#39;ABC&#39;, 2))
+[(&#39;A&#39;, &#39;A&#39;), (&#39;A&#39;, &#39;B&#39;), (&#39;A&#39;, &#39;C&#39;), (&#39;B&#39;, &#39;B&#39;), (&#39;B&#39;, &#39;C&#39;), (&#39;C&#39;, &#39;C&#39;)]
+</code></pre>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[蚁群优化算法学习笔记]]></title>
+    <link href="https://cubetian.github.io/15681180752987.html"/>
+    <updated>2019-09-10T20:21:15+08:00</updated>
+    <id>https://cubetian.github.io/15681180752987.html</id>
+    <content type="html"><![CDATA[
+<p>本人阅读《蚁群优化算法》-马良等过程中的笔记<br/>
+前五章的目录</p>
+
+<ol>
+<li>引论
+<ol>
+<li>组合优化与计算复杂性</li>
+<li>来自自然界的几类优化方法</li>
+</ol></li>
+<li>蚁群算法原理
+<ol>
+<li>基本思想</li>
+<li>研究概况</li>
+</ol></li>
+<li>标准的TSP的蚁群算法
+<ol>
+<li>TSP概述</li>
+<li>经典方法</li>
+<li>遗传算法与模拟退火</li>
+<li>蚁群算法</li>
+<li>元胞蚁群算法及其收敛性</li>
+</ol></li>
+<li>扩展旅行商问题的蚁群算法
+<ol>
+<li>瓶颈TSP及其求解</li>
+<li>最小比率TSP及其求解</li>
+<li>时间约束TSP及其求解</li>
+<li>多目标TSP及其求解</li>
+</ol></li>
+<li>车辆路径问题的蚁群算法
+<ol>
+<li>VRP概述</li>
+<li>CVRP及其求解</li>
+<li>多目标VRP及其求解</li>
+<li>VRPTW及其求解</li>
+<li>VRPSTW及其求解</li>
+<li>FVRP及其求解<br/>
+看完目录前五章，首先有好多英文缩写看不明白，接着看</li>
+</ol></li>
+</ol>
+
+<h2 id="toc_0">第一章 引论</h2>
+
+<p>1.1 组合优化与计算复杂性<br/>
+最优化分连续变量与离散变量，离散变量的问题往往称为组合优化<br/>
+局部搜索法是基于贪婪思想，利用领域函数进行搜索的，局部搜索法可能落入局部最优点，或由于步长和初始点选择不好而错过最优点。<br/>
+依据一定概率，对于步长问题，可以采用变步长方法，在接近最优点附近，采取某种策略改变步长<br/>
+对于初始点问题，可以采用随机生成的一些初始点，从每个初始点出发进行搜索，找到各自的最优解，再从这些最优解中选择一个最好的结果</p>
+
+<p>典型组合优化难题<br/>
+    1. 旅行商问题（TSP）：所有可能的路线最多有（n-1）!/2 条<br/>
+    2. 图着色问题（GCP）：记图的最大顶点读书为\(\Delta\) ，则图的最小着色数以\(\Delta + 1\)为上界<br/>
+    3. 工件排序问题（JSP）：NP难题（NP-hard）<br/>
+    4. 二次分配问题（QAP）：目标函数非线性<br/>
+    5. 度约束最小树问题（DCMSTP）：最小生成树问题（不懂）<br/>
+上述典型问题及等价问题，普遍认为没有多项式算法求解</p>
+
+<p>1.2 来自自然界的几类优化方法<br/>
+计算智能系统是在神经网络、模糊系统、进化计算</p>
+
+<ol>
+<li>遗传算法的基本步骤（GA）：
+<ol>
+<li>问题的染色体表示</li>
+<li>初始解组（种群）的生成</li>
+<li>计算解组中各个解的适值函数（代价函数）</li>
+<li>从解组中随机抽取两个解作为父母代</li>
+<li>对父母代实施遗传操作（交叉、变异等）以产生一个后代解</li>
+<li>按某种规则，用该后代解替换原解组中的某个解</li>
+<li>按当前解组符合停机条件则算法终止，否则，转步骤1<br/>
+结果的好坏主要依赖于遗传代数和解组规模<br/></li>
+</ol></li>
+<li>模拟退火算法基本步骤（SA）：<br/>
+物体内部服从Boltzman分布
+<ol>
+<li>选择初始状态H（初始解）、初始温度、降温次数等</li>
+<li>生成H的领域状态H‘，并计算两种状态下的目标函数f(H&#39;)-f(H)</li>
+<li>按接受概率置换H为H‘</li>
+<li>重复步骤2和步骤3直至停机条件满足</li>
+</ol></li>
+<li>禁忌搜索法（TS）在搜索过程中使用记忆功能</li>
+<li>人工神经网络</li>
+<li>蚁群系统：信息激素，轨迹，自催化行为，增强型学习系统</li>
+<li>微粒群算法（PSO）：
+<ol>
+<li>依照初始化过程，对微粒群的随机位置和速度进行初始设定</li>
+<li>计算每个微粒的适应值</li>
+<li>对每个微粒，将其适应值与所经历过的最好位置进行比较，若较好，则将其作为当前的最好位置</li>
+<li>对每个微粒，将其适应值与全局所经历的最好位置的适应值进行比较，若较好，则将其作为当前的的全局最好位置</li>
+<li>对微粒的速度和位置进行进化</li>
+<li>若未到达结束条件（通常为足够好的适应值或最大代数），则返回步骤2</li>
+</ol></li>
+</ol>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[手表使用评价]]></title>
@@ -383,7 +710,27 @@ k表示偏移量，正数为右移，负数为左移</p>
     <updated>2019-09-09T07:54:07+08:00</updated>
     <id>https://cubetian.github.io/15679868479784.html</id>
     <content type="html"><![CDATA[
-<h2 id="toc_0">插值</h2>
+<h2 id="toc_0">灵敏度分析和误差分析</h2>
+
+<h3 id="toc_1">灵敏度分析</h3>
+
+<p><strong>敏感度分析</strong>（Sensitivity analysis）是研究数学模型或系统(数值或其他)输出中的不确定性如何在其输入中被分配到不同的不确定性来源。<a href="https://zh.wikipedia.org/wiki/%E6%95%8F%E6%84%9F%E5%BA%A6%E5%88%86%E6%9E%90#cite_note-1">[1]</a><a href="https://zh.wikipedia.org/wiki/%E6%95%8F%E6%84%9F%E5%BA%A6%E5%88%86%E6%9E%90#cite_note-2">[2]</a>一个相关的实践是不确定度分析，它更注重不确定度的量化和不确定度的传播;理想情况下，不确定度和灵敏度分析应该同时进行。</p>
+
+<p>在其他假设下重新计算结果以确定变量在敏感性分析下的影响的过程可用于一系列目的，<a href="https://zh.wikipedia.org/wiki/%E6%95%8F%E6%84%9F%E5%BA%A6%E5%88%86%E6%9E%90#cite_note-3">[3]</a>包括：</p>
+
+<ul>
+<li>在存在不确定性的情况下测试模型或系统结果的稳健性。</li>
+<li>增加对系统或模型中输入和输出变量之间关系的理解。</li>
+<li>通过识别导致输出中存在显着不确定性的模型输入来减少不确定性，因此应该成为关注的焦点，以便提高稳健性（可能通过进一步的研究）。</li>
+<li>搜索模型中的错误（通过遇到输入和输出之间的意外关系）。</li>
+<li>模型简化 - 修复对输出没有影响的模型输入，或识别和删除模型结构的冗余部分。</li>
+<li>加强建模人员与决策者之间的沟通（例如，通过提出更可信，可理解，引人注目或具有说服力的建议）。</li>
+<li>在输入因子空间中查找模型输出为最大值或最小值或满足某个最佳标准的区域。</li>
+<li>在校准具有大量参数的模型的情况下，主要灵敏度测试可以通过关注敏感参数来简化校准阶段。不知道参数的敏感性会导致无用的时间花在非敏感的时间上。<a href="https://zh.wikipedia.org/wiki/%E6%95%8F%E6%84%9F%E5%BA%A6%E5%88%86%E6%9E%90#cite_note-4">[4]</a></li>
+<li>寻求识别观测，模型输入和预测或预测之间的重要联系，从而开发出更好的模型。<a href="https://zh.wikipedia.org/wiki/%E6%95%8F%E6%84%9F%E5%BA%A6%E5%88%86%E6%9E%90#cite_note-5">[5]</a><a href="https://zh.wikipedia.org/wiki/%E6%95%8F%E6%84%9F%E5%BA%A6%E5%88%86%E6%9E%90#cite_note-6">[6]</a></li>
+</ul>
+
+<p>（from wiki）</p>
 
 ]]></content>
   </entry>
