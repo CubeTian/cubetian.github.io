@@ -82,6 +82,71 @@ $(document).ready(function(event) {
 
 	<article>
 		 <header>
+		  	<h1 class="entry-title"><a href="15685969611776.html">SAS DATA步之全揭秘</a></h1>
+			<p class="meta"><time datetime="2019-09-16T09:22:41+08:00" 
+			pubdate data-updated="true">2019/09/16</time></p>
+		 </header>
+	  	<div class="entry-content">
+		  	
+		  	<p>一些概念</p>
+
+<ul>
+<li>程序数据向量（PDV）</li>
+<li>SAS自动变量名及其使用</li>
+<li>理解DATA步内部处理过程</li>
+<li>代码编译期间发生的事情</li>
+<li>程序执行期间实际发生了什么</li>
+<li>如何获取和存储变量属性</li>
+</ul>
+
+<p>DATA时建立SAS数据集的主要方法之一。一些涉及数据处理和创建数据集的任务可能只能通过DATA步才能解决<br/>
+DATA步分编译和执行两个阶段，PDV贯穿SAS编译和执行的两个阶段，决定了信息在DATA步中的存储及变化</p>
+
+<p>编译阶段包括：</p>
+
+<ul>
+<li>编译SAS语句，包括检查语法</li>
+<li>创建一个输入缓存区（input buffer）（如果需要读入原始数据文件）、一个PDV和描述性信息</li>
+</ul>
+
+<p>执行阶段包括：</p>
+
+<ul>
+<li>计算DATA步迭代的次数（从DATA语句开始）</li>
+<li>将PDV中所有变量设成缺失值并初始化自动变量</li>
+<li>读取输入观测（从原始文件或SAS数据集）</li>
+<li>执行附加的处理或计算语句</li>
+<li>将一条数据记录写入输出数据集并返回到DATA步语句</li>
+</ul>
+
+<p>PDV贯穿编译的执行阶段：</p>
+
+<ul>
+<li>PDV是内存的一个临时逻辑区域，SAS建立数据集时，每条观察值只有一次机会用的PDV</li>
+<li>包含所有变量的当前值</li>
+<li>包含两个自动变量：_N_和_ERROR_</li>
+</ul>
+
+<p>DATA步<br/>
+一个DATA步包含SAS语言的一组语句，这些语句具有以下功能</p>
+
+<ul>
+<li>从外部文件读入数据</li>
+<li>将数据写入外部文件</li>
+<li>读入SAS数据集和SAS视图</li>
+<li>创建SAS数据集和SAS视图<br/>
+一旦数据可以以SAS数据集的形式访问，就可以通过SAS过程步来分析数据和写报告</li>
+</ul>
+
+
+		</div>
+
+		
+
+	</article>
+ 
+	<article>
+		 <header>
 		  	<h1 class="entry-title"><a href="15681180752987.html">蚁群优化算法学习笔记</a></h1>
 			<p class="meta"><time datetime="2019-09-10T20:21:15+08:00" 
 			pubdate data-updated="true">2019/09/10</time></p>
@@ -228,14 +293,17 @@ $(document).ready(function(event) {
  
 	<article>
 		 <header>
-		  	<h1 class="entry-title"><a href="15673304578082.html">SAS基础</a></h1>
+		  	<h1 class="entry-title"><a href="15673304578082.html">SAS程序结构</a></h1>
 			<p class="meta"><time datetime="2019-09-01T17:34:17+08:00" 
 			pubdate data-updated="true">2019/09/01</time></p>
 		 </header>
 	  	<div class="entry-content">
 		  	
-		  	<p>数据步<br/>
-DATA;  数据集的创建<br/>
+		  	<p>DATA步-PROC步-OUTPUT步</p>
+
+<h3 id="toc_0">DATA步：此步骤涉及将所需数据集加载到SAS存储器中并识别数据集的变量（也称为列）。 它还捕获记录（也称为观察或主体）。</h3>
+
+<p>DATA;  数据集的创建<br/>
 INFILE ‘文件路径’<br/>
 INPUT;  定义变量<br/>
 CARDS;<br/>
@@ -245,6 +313,54 @@ RUN;<br/>
 过程步<br/>
 proc ;<br/>
 run;</p>
+
+<h2 id="toc_1">SAS 概述</h2>
+
+<p>SAS常用组件<br/>
+Base 核心模块<br/>
+Graph 图表<br/>
+Stat 统计分析：方差分析、回归、多变量分析、生存分析、心理分析<br/>
+Or 行动调查<br/>
+Ets 计量经济学和时间序列分析<br/>
+IML CInteractive 矩阵语言<br/>
+AF 应用设施<br/>
+QC 质量控制<br/>
+INSIGHT 数据挖掘<br/>
+PH 临床试验分析<br/>
+Enterprise Miner 数据挖掘</p>
+
+<p>SAS的窗口</p>
+
+<ol>
+<li>日志窗口：执行窗口，可以检查SAS程序的执行</li>
+<li>编辑器窗口：写所有代码，像记事本，默认提交后清除文本，可在工具-选项-编辑器中调整</li>
+<li>输出窗口：可以看到程序的输出</li>
+<li>结果窗口：</li>
+<li>资源管理器窗口</li>
+</ol>
+
+<p>SAS库</p>
+
+<ol>
+<li><p>临时库(WORK库)：这是SAS的默认库。如果我们创建的数据不选择其他库将默认存储于临时库。可以在资源管理器窗口看到WORK库。如果在关闭或者重启SAS前没有将该数据存储于一个永久库，数据将会丢失。</p>
+<h2 id="toc_2">SAS Enterprise Guide</h2>
+<p>学习教程的过程中，您将学习以下内容：</p></li>
+</ol>
+
+<ul>
+<li>创建和保存项目</li>
+<li>向项目添加 SAS 数据</li>
+<li>从文本文件导入数据</li>
+<li>创建和修改列表报表</li>
+<li>创建条形图和饼图</li>
+<li>使用查询连接表</li>
+<li>使用查询创建计算列</li>
+<li>生成汇总统计量表</li>
+<li>基于数据运行线性模型分析</li>
+<li>将多个报表组合成单个文档</li>
+</ul>
+
+<p>在继续相应教程之前，您需要首先了解一些有关 SAS Enterprise Guide 和 SAS 软件之间的关系。</p>
 
 
 		</div>
@@ -290,7 +406,7 @@ run;</p>
 	      </li>
 	  
 	      <li class="post">
-	        <a href="%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1.html"><strong>数学建模&nbsp;(4)</strong></a>
+	        <a href="%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1.html"><strong>数学建模&nbsp;(5)</strong></a>
 	        
 	        
 	        
@@ -304,7 +420,7 @@ run;</p>
 	      </li>
 	  
 	      <li class="post">
-	        <a href="%E8%AE%A1%E7%AE%97%E6%9C%BA.html"><strong>计算机&nbsp;(10)</strong></a>
+	        <a href="%E8%AE%A1%E7%AE%97%E6%9C%BA.html"><strong>计算机&nbsp;(11)</strong></a>
 	        
 	        
 	        
@@ -315,6 +431,18 @@ run;</p>
 	<section>
 	  <h1>Recent Posts</h1>
 	  <ul id="recent_posts">
+	  
+	      
+		      <li class="post">
+		        <a href="15685969611776.html">SAS DATA步之全揭秘</a>
+		      </li>
+	     
+	  
+	      
+		      <li class="post">
+		        <a href="15682069194444.html">地图相关</a>
+		      </li>
+	     
 	  
 	      
 		      <li class="post">
@@ -335,16 +463,6 @@ run;</p>
 	     
 	  
 	      
-		      <li class="post">
-		        <a href="15680140350374.html">想要的书目录</a>
-		      </li>
-	     
-	  
-	      
-		      <li class="post">
-		        <a href="15680029212149.html">雅思阅读</a>
-		      </li>
-	     
 	  
 	      
 	  

@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <title>
     
-  计算机三级知识点 - 程序猿CubeTian
+  SAS DATA步之全揭秘 - 程序猿CubeTian
   
 
   </title>
@@ -81,36 +81,59 @@ $(document).ready(function(event) {
 <div>
 	<article class="hentry" role="article">
 	<header>
-			  	<h1 class="entry-title">计算机三级知识点</h1>
-				<p class="meta"><time datetime="2019-07-05T16:02:14+08:00" pubdate data-updated="true">2019/07/05</time></p>
+			  	<h1 class="entry-title">SAS DATA步之全揭秘</h1>
+				<p class="meta"><time datetime="2019-09-16T09:22:41+08:00" pubdate data-updated="true">2019/09/16</time></p>
 			 </header>
 		  	<div class="entry-content">
-			  	<p>1.1.1 计算机网络的分类<br/>
-目标：资源共享<br/>
-1.局域网（LAN）<br/>
-有限的地理范围、高数据传输效率（10Mbps～10Gbps）、易于建立、维护与扩展<br/>
-<strong>介质访问方法</strong>的角度：<br/>
-共享介质式（集线器）与交换式（交换机）<br/>
-<strong>传输介质类型</strong>角度：有线、无线<br/>
-2.城域网（MAN Metropolitan）几十公里范围内<br/>
-3.广域网又称远程网 几十公里到几千公里<br/>
-1.1.2 网络结构特点<br/>
-1.逻辑功能：资源子网和通信子网<br/>
-2.电话交换网（PSTN）有线电视网（CATV）无线城域网（WMAN）或无线局域网（WLAN）</p>
+			  	<p>一些概念</p>
 
-<p>实训任务一：宽带城域网的结构<br/>
-设计一个宽带城域网将涉及“三个平台和一个出口”，即网络平台、业务平台、管理平台与城市宽带出口等问题。<br/>
-核心层（又称核心交换层）：<br/>
-1为汇聚层的网络提供高速分组转发，提供具有QoS保障能力<br/>
-2提供城市的宽带IP出口<br/>
-3提供访问Internet所需要的路由访问<br/>
-汇聚层：<br/>
-1汇聚接入层的用户流量<br/>
-2进行本地处理<br/>
-3用户流量转发到核心交换层或本地进行路由处理<br/>
-接入层<br/>
-连接最终用户<br/>
-三层结构思想：上层负责下层的数据汇聚；核心提供出口与QOS、汇聚本地路由、接入服务用户</p>
+<ul>
+<li>程序数据向量（PDV）</li>
+<li>SAS自动变量名及其使用</li>
+<li>理解DATA步内部处理过程</li>
+<li>代码编译期间发生的事情</li>
+<li>程序执行期间实际发生了什么</li>
+<li>如何获取和存储变量属性</li>
+</ul>
+
+<p>DATA时建立SAS数据集的主要方法之一。一些涉及数据处理和创建数据集的任务可能只能通过DATA步才能解决<br/>
+DATA步分编译和执行两个阶段，PDV贯穿SAS编译和执行的两个阶段，决定了信息在DATA步中的存储及变化</p>
+
+<p>编译阶段包括：</p>
+
+<ul>
+<li>编译SAS语句，包括检查语法</li>
+<li>创建一个输入缓存区（input buffer）（如果需要读入原始数据文件）、一个PDV和描述性信息</li>
+</ul>
+
+<p>执行阶段包括：</p>
+
+<ul>
+<li>计算DATA步迭代的次数（从DATA语句开始）</li>
+<li>将PDV中所有变量设成缺失值并初始化自动变量</li>
+<li>读取输入观测（从原始文件或SAS数据集）</li>
+<li>执行附加的处理或计算语句</li>
+<li>将一条数据记录写入输出数据集并返回到DATA步语句</li>
+</ul>
+
+<p>PDV贯穿编译的执行阶段：</p>
+
+<ul>
+<li>PDV是内存的一个临时逻辑区域，SAS建立数据集时，每条观察值只有一次机会用的PDV</li>
+<li>包含所有变量的当前值</li>
+<li>包含两个自动变量：_N_和_ERROR_</li>
+</ul>
+
+<p>DATA步<br/>
+一个DATA步包含SAS语言的一组语句，这些语句具有以下功能</p>
+
+<ul>
+<li>从外部文件读入数据</li>
+<li>将数据写入外部文件</li>
+<li>读入SAS数据集和SAS视图</li>
+<li>创建SAS数据集和SAS视图<br/>
+一旦数据可以以SAS数据集的形式访问，就可以通过SAS过程步来分析数据和写报告</li>
+</ul>
 
 			</div>
 
@@ -122,7 +145,7 @@ $(document).ready(function(event) {
 			<strong>Categories:</strong>&nbsp; 
 			<span class="categories">
 			
-			    <a class='category' href='%E8%AE%A1%E7%AE%97%E6%9C%BA.html'>计算机</a>&nbsp;
+			    <a class='category' href='%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1.html'>数学建模</a>&nbsp;
 			 
 			</span>
 		    </p>
@@ -140,12 +163,9 @@ $(document).ready(function(event) {
 
 	    <p class="meta">
 	    
-	        <a class="basic-alignment left" href="15653132926815.html" 
-	        title="Previous Post: 计算机二级 公共知识">&laquo; 计算机二级 公共知识</a>
 	    
-	    
-	        <a class="basic-alignment right" href="15375337935500.html" 
-	        title="Next Post: wifi 相关">wifi 相关 &raquo;</a>
+	        <a class="basic-alignment right" href="15682069194444.html" 
+	        title="Next Post: 地图相关">地图相关 &raquo;</a>
 	    
 	    </p>
 	  </footer>

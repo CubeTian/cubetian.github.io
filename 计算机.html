@@ -82,6 +82,43 @@ $(document).ready(function(event) {
 
 	<article>
 		 <header>
+		  	<h1 class="entry-title"><a href="15682069194444.html">地图相关</a></h1>
+			<p class="meta"><time datetime="2019-09-11T21:01:59+08:00" 
+			pubdate data-updated="true">2019/09/11</time></p>
+		 </header>
+	  	<div class="entry-content">
+		  	
+		  	<p>在描述数据时，如果有一张热力地图，将是一件非常棒的事情，在这里我在尝试用python制作地图</p>
+
+<h2 id="toc_0">pyecharts</h2>
+
+<p>pyecharts 将不再自带地图 js 文件。如用户需要用到地图图表，可自行安装对应的地图文件包。<br/>
+全球国家地图: echarts-countries-pypkg (1.9MB): 世界地图和 213 个国家，包括中国地图<br/>
+中国省级地图: echarts-china-provinces-pypkg (730KB)：23 个省，5 个自治区<br/>
+中国市级地图: echarts-china-cities-pypkg (3.8MB)：370 个中国城市<br/>
+中国县区级地图: echarts-china-counties-pypkg (4.1MB)：2882 个中国县·区<br/>
+中国区域地图: echarts-china-misc-pypkg (148KB)：11 个中国区域地图，比如华南、华北。</p>
+
+<pre><code class="language-text">如果提示缺少这个就安装一下
+pip  install pyecharts_snapshot
+pip install echarts-countries-pypkg
+pip install echarts-china-provinces-pypkg
+pip install echarts-china-cities-pypkg
+pip install echarts-china-counties-pypkg
+pip install echarts-china-misc-pypkg
+</code></pre>
+
+<h2 id="toc_1">Basemap</h2>
+
+
+		</div>
+
+		
+
+	</article>
+ 
+	<article>
+		 <header>
 		  	<h1 class="entry-title"><a href="15681237931017.html">itertools 模块</a></h1>
 			<p class="meta"><time datetime="2019-09-10T21:56:33+08:00" 
 			pubdate data-updated="true">2019/09/10</time></p>
@@ -1598,72 +1635,9 @@ None, finally, lambda, pass, with</li>
 		
 
 	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15375337935500.html">wifi 相关</a></h1>
-			<p class="meta"><time datetime="2018-09-21T20:43:13+08:00" 
-			pubdate data-updated="true">2018/09/21</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<h2 id="toc_0">使用大功率无线网卡抓取cap包用于密码破解（macos）</h2>
-
-<p>1、安装aircrack-ng</p>
-
-<p>命令：brew install aircrack-ng</p>
-
-<p>注意，如果没安装brew,访问：<a href="https://brew.sh%EF%BC%8C%E9%A6%96%E9%A1%B5%E4%B8%8A%E6%9C%89%E5%AE%89%E8%A3%85brew%E7%9A%84%E5%91%BD%E4%BB%A4%EF%BC%8C%E6%88%91%E5%AE%89%E8%A3%85%E6%97%B6%EF%BC%88201706%EF%BC%89%E5%91%BD%E4%BB%A4%E5%A6%82%E4%B8%8B%EF%BC%9A">https://brew.sh，首页上有安装brew的命令，我安装时（201706）命令如下：</a></p>
-
-<p>/usr/bin/ruby -e &quot;$(curl -fsSLhttps://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</p>
-
-<p>2、添加airport快链</p>
-
-<p>命令：ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport</p>
-
-<p>3、使用mac自带的airport选取mac地址</p>
-
-<p>命令：airport -s</p>
-
-<p>选择CHANNEL的数值，比如：11</p>
-
-<p>4、监听选定的频道获取到握手的包</p>
-
-<p>命令：airport en0 sniff 11</p>
-
-<p>运行一段时间，就可以在/tmp收获以.cap结尾的分析包，结束之后会提示保存的.cap文件位置</p>
-
-<p>注意：（1）尽可能不要运行太长时间，否则.cap文件会比较大；</p>
-
-<p>（2）可以使用ctr+c结束运行(我刚开始就不知道🙈)；</p>
-
-<p>（3）如果提示权限问题，则使用 sudo airport en0 sniff 11</p>
-
-<p>5、用 aircrack-ng分析cap包</p>
-
-<p>命令：sudo aircrack-ng  /tmp/airportSniff******.cap</p>
-
-<p>找到有(1 handshake)的那一行记录，记录下BSSID（比如是:10:02:22:23:7v:6f）。</p>
-
-<p>建议直接搜索，否则能看晕，如果没有搜索到，请重新执行第4步；</p>
-
-<p>6、开始暴力破解</p>
-
-<p>命令：sudo aircrack-ng-wpojie.txt-b10:02:22:23:7v:6f/tmp/airportSniff******.cap</p>
-
-<p>注意：.txt为破解字典</p>
-
-<p>如果有碰撞到密码，程序会停止，并显示密码。</p>
-
-
-		</div>
-
-		
-
-	</article>
   
 	<div class="pagination">
-	
+	 <a class="prev" href="计算机_1.html">&larr; Older</a> 
 <a href="archives.html">Blog Archives</a>
 	 
 	    
@@ -1683,7 +1657,7 @@ None, finally, lambda, pass, with</li>
 	      </li>
 	  
 	      <li class="post">
-	        <a href="%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1.html"><strong>数学建模&nbsp;(4)</strong></a>
+	        <a href="%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1.html"><strong>数学建模&nbsp;(5)</strong></a>
 	        
 	        
 	        
@@ -1697,7 +1671,7 @@ None, finally, lambda, pass, with</li>
 	      </li>
 	  
 	      <li class="post">
-	        <a href="%E8%AE%A1%E7%AE%97%E6%9C%BA.html"><strong>计算机&nbsp;(10)</strong></a>
+	        <a href="%E8%AE%A1%E7%AE%97%E6%9C%BA.html"><strong>计算机&nbsp;(11)</strong></a>
 	        
 	        
 	        
@@ -1708,6 +1682,18 @@ None, finally, lambda, pass, with</li>
 	<section>
 	  <h1>Recent Posts</h1>
 	  <ul id="recent_posts">
+	  
+	      
+		      <li class="post">
+		        <a href="15685969611776.html">SAS DATA步之全揭秘</a>
+		      </li>
+	     
+	  
+	      
+		      <li class="post">
+		        <a href="15682069194444.html">地图相关</a>
+		      </li>
+	     
 	  
 	      
 		      <li class="post">
@@ -1728,16 +1714,6 @@ None, finally, lambda, pass, with</li>
 	     
 	  
 	      
-		      <li class="post">
-		        <a href="15680140350374.html">想要的书目录</a>
-		      </li>
-	     
-	  
-	      
-		      <li class="post">
-		        <a href="15680029212149.html">雅思阅读</a>
-		      </li>
-	     
 	  
 	      
 	  

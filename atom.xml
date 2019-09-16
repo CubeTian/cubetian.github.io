@@ -4,7 +4,7 @@
   <title><![CDATA[程序猿CubeTian]]></title>
   <link href="https://cubetian.github.io/atom.xml" rel="self"/>
   <link href="https://cubetian.github.io/"/>
-  <updated>2019-09-10T23:01:07+08:00</updated>
+  <updated>2019-09-16T17:10:56+08:00</updated>
   <id>https://cubetian.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -12,6 +12,96 @@
   </author>
   <generator uri="http://www.coderforart.com/">CoderForArt</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[SAS DATA步之全揭秘]]></title>
+    <link href="https://cubetian.github.io/15685969611776.html"/>
+    <updated>2019-09-16T09:22:41+08:00</updated>
+    <id>https://cubetian.github.io/15685969611776.html</id>
+    <content type="html"><![CDATA[
+<p>一些概念</p>
+
+<ul>
+<li>程序数据向量（PDV）</li>
+<li>SAS自动变量名及其使用</li>
+<li>理解DATA步内部处理过程</li>
+<li>代码编译期间发生的事情</li>
+<li>程序执行期间实际发生了什么</li>
+<li>如何获取和存储变量属性</li>
+</ul>
+
+<p>DATA时建立SAS数据集的主要方法之一。一些涉及数据处理和创建数据集的任务可能只能通过DATA步才能解决<br/>
+DATA步分编译和执行两个阶段，PDV贯穿SAS编译和执行的两个阶段，决定了信息在DATA步中的存储及变化</p>
+
+<p>编译阶段包括：</p>
+
+<ul>
+<li>编译SAS语句，包括检查语法</li>
+<li>创建一个输入缓存区（input buffer）（如果需要读入原始数据文件）、一个PDV和描述性信息</li>
+</ul>
+
+<p>执行阶段包括：</p>
+
+<ul>
+<li>计算DATA步迭代的次数（从DATA语句开始）</li>
+<li>将PDV中所有变量设成缺失值并初始化自动变量</li>
+<li>读取输入观测（从原始文件或SAS数据集）</li>
+<li>执行附加的处理或计算语句</li>
+<li>将一条数据记录写入输出数据集并返回到DATA步语句</li>
+</ul>
+
+<p>PDV贯穿编译的执行阶段：</p>
+
+<ul>
+<li>PDV是内存的一个临时逻辑区域，SAS建立数据集时，每条观察值只有一次机会用的PDV</li>
+<li>包含所有变量的当前值</li>
+<li>包含两个自动变量：_N_和_ERROR_</li>
+</ul>
+
+<p>DATA步<br/>
+一个DATA步包含SAS语言的一组语句，这些语句具有以下功能</p>
+
+<ul>
+<li>从外部文件读入数据</li>
+<li>将数据写入外部文件</li>
+<li>读入SAS数据集和SAS视图</li>
+<li>创建SAS数据集和SAS视图<br/>
+一旦数据可以以SAS数据集的形式访问，就可以通过SAS过程步来分析数据和写报告</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[地图相关]]></title>
+    <link href="https://cubetian.github.io/15682069194444.html"/>
+    <updated>2019-09-11T21:01:59+08:00</updated>
+    <id>https://cubetian.github.io/15682069194444.html</id>
+    <content type="html"><![CDATA[
+<p>在描述数据时，如果有一张热力地图，将是一件非常棒的事情，在这里我在尝试用python制作地图</p>
+
+<h2 id="toc_0">pyecharts</h2>
+
+<p>pyecharts 将不再自带地图 js 文件。如用户需要用到地图图表，可自行安装对应的地图文件包。<br/>
+全球国家地图: echarts-countries-pypkg (1.9MB): 世界地图和 213 个国家，包括中国地图<br/>
+中国省级地图: echarts-china-provinces-pypkg (730KB)：23 个省，5 个自治区<br/>
+中国市级地图: echarts-china-cities-pypkg (3.8MB)：370 个中国城市<br/>
+中国县区级地图: echarts-china-counties-pypkg (4.1MB)：2882 个中国县·区<br/>
+中国区域地图: echarts-china-misc-pypkg (148KB)：11 个中国区域地图，比如华南、华北。</p>
+
+<pre><code class="language-text">如果提示缺少这个就安装一下
+pip  install pyecharts_snapshot
+pip install echarts-countries-pypkg
+pip install echarts-china-provinces-pypkg
+pip install echarts-china-cities-pypkg
+pip install echarts-china-counties-pypkg
+pip install echarts-china-misc-pypkg
+</code></pre>
+
+<h2 id="toc_1">Basemap</h2>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[itertools 模块]]></title>
@@ -782,13 +872,16 @@ content 二进制编码内容</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[SAS基础]]></title>
+    <title type="html"><![CDATA[SAS程序结构]]></title>
     <link href="https://cubetian.github.io/15673304578082.html"/>
     <updated>2019-09-01T17:34:17+08:00</updated>
     <id>https://cubetian.github.io/15673304578082.html</id>
     <content type="html"><![CDATA[
-<p>数据步<br/>
-DATA;  数据集的创建<br/>
+<p>DATA步-PROC步-OUTPUT步</p>
+
+<h3 id="toc_0">DATA步：此步骤涉及将所需数据集加载到SAS存储器中并识别数据集的变量（也称为列）。 它还捕获记录（也称为观察或主体）。</h3>
+
+<p>DATA;  数据集的创建<br/>
 INFILE ‘文件路径’<br/>
 INPUT;  定义变量<br/>
 CARDS;<br/>
@@ -798,6 +891,54 @@ RUN;<br/>
 过程步<br/>
 proc ;<br/>
 run;</p>
+
+<h2 id="toc_1">SAS 概述</h2>
+
+<p>SAS常用组件<br/>
+Base 核心模块<br/>
+Graph 图表<br/>
+Stat 统计分析：方差分析、回归、多变量分析、生存分析、心理分析<br/>
+Or 行动调查<br/>
+Ets 计量经济学和时间序列分析<br/>
+IML CInteractive 矩阵语言<br/>
+AF 应用设施<br/>
+QC 质量控制<br/>
+INSIGHT 数据挖掘<br/>
+PH 临床试验分析<br/>
+Enterprise Miner 数据挖掘</p>
+
+<p>SAS的窗口</p>
+
+<ol>
+<li>日志窗口：执行窗口，可以检查SAS程序的执行</li>
+<li>编辑器窗口：写所有代码，像记事本，默认提交后清除文本，可在工具-选项-编辑器中调整</li>
+<li>输出窗口：可以看到程序的输出</li>
+<li>结果窗口：</li>
+<li>资源管理器窗口</li>
+</ol>
+
+<p>SAS库</p>
+
+<ol>
+<li><p>临时库(WORK库)：这是SAS的默认库。如果我们创建的数据不选择其他库将默认存储于临时库。可以在资源管理器窗口看到WORK库。如果在关闭或者重启SAS前没有将该数据存储于一个永久库，数据将会丢失。</p>
+<h2 id="toc_2">SAS Enterprise Guide</h2>
+<p>学习教程的过程中，您将学习以下内容：</p></li>
+</ol>
+
+<ul>
+<li>创建和保存项目</li>
+<li>向项目添加 SAS 数据</li>
+<li>从文本文件导入数据</li>
+<li>创建和修改列表报表</li>
+<li>创建条形图和饼图</li>
+<li>使用查询连接表</li>
+<li>使用查询创建计算列</li>
+<li>生成汇总统计量表</li>
+<li>基于数据运行线性模型分析</li>
+<li>将多个报表组合成单个文档</li>
+</ul>
+
+<p>在继续相应教程之前，您需要首先了解一些有关 SAS Enterprise Guide 和 SAS 软件之间的关系。</p>
 
 ]]></content>
   </entry>
@@ -1763,63 +1904,6 @@ None, finally, lambda, pass, with</li>
 接入层<br/>
 连接最终用户<br/>
 三层结构思想：上层负责下层的数据汇聚；核心提供出口与QOS、汇聚本地路由、接入服务用户</p>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[wifi 相关]]></title>
-    <link href="https://cubetian.github.io/15375337935500.html"/>
-    <updated>2018-09-21T20:43:13+08:00</updated>
-    <id>https://cubetian.github.io/15375337935500.html</id>
-    <content type="html"><![CDATA[
-<h2 id="toc_0">使用大功率无线网卡抓取cap包用于密码破解（macos）</h2>
-
-<p>1、安装aircrack-ng</p>
-
-<p>命令：brew install aircrack-ng</p>
-
-<p>注意，如果没安装brew,访问：<a href="https://brew.sh%EF%BC%8C%E9%A6%96%E9%A1%B5%E4%B8%8A%E6%9C%89%E5%AE%89%E8%A3%85brew%E7%9A%84%E5%91%BD%E4%BB%A4%EF%BC%8C%E6%88%91%E5%AE%89%E8%A3%85%E6%97%B6%EF%BC%88201706%EF%BC%89%E5%91%BD%E4%BB%A4%E5%A6%82%E4%B8%8B%EF%BC%9A">https://brew.sh，首页上有安装brew的命令，我安装时（201706）命令如下：</a></p>
-
-<p>/usr/bin/ruby -e &quot;$(curl -fsSLhttps://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</p>
-
-<p>2、添加airport快链</p>
-
-<p>命令：ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport</p>
-
-<p>3、使用mac自带的airport选取mac地址</p>
-
-<p>命令：airport -s</p>
-
-<p>选择CHANNEL的数值，比如：11</p>
-
-<p>4、监听选定的频道获取到握手的包</p>
-
-<p>命令：airport en0 sniff 11</p>
-
-<p>运行一段时间，就可以在/tmp收获以.cap结尾的分析包，结束之后会提示保存的.cap文件位置</p>
-
-<p>注意：（1）尽可能不要运行太长时间，否则.cap文件会比较大；</p>
-
-<p>（2）可以使用ctr+c结束运行(我刚开始就不知道🙈)；</p>
-
-<p>（3）如果提示权限问题，则使用 sudo airport en0 sniff 11</p>
-
-<p>5、用 aircrack-ng分析cap包</p>
-
-<p>命令：sudo aircrack-ng  /tmp/airportSniff******.cap</p>
-
-<p>找到有(1 handshake)的那一行记录，记录下BSSID（比如是:10:02:22:23:7v:6f）。</p>
-
-<p>建议直接搜索，否则能看晕，如果没有搜索到，请重新执行第4步；</p>
-
-<p>6、开始暴力破解</p>
-
-<p>命令：sudo aircrack-ng-wpojie.txt-b10:02:22:23:7v:6f/tmp/airportSniff******.cap</p>
-
-<p>注意：.txt为破解字典</p>
-
-<p>如果有碰撞到密码，程序会停止，并显示密码。</p>
 
 ]]></content>
   </entry>

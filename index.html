@@ -82,6 +82,108 @@ $(document).ready(function(event) {
 
 	<article>
 		 <header>
+		  	<h1 class="entry-title"><a href="15685969611776.html">SAS DATA步之全揭秘</a></h1>
+			<p class="meta"><time datetime="2019-09-16T09:22:41+08:00" 
+			pubdate data-updated="true">2019/09/16</time></p>
+		 </header>
+	  	<div class="entry-content">
+		  	
+		  	<p>一些概念</p>
+
+<ul>
+<li>程序数据向量（PDV）</li>
+<li>SAS自动变量名及其使用</li>
+<li>理解DATA步内部处理过程</li>
+<li>代码编译期间发生的事情</li>
+<li>程序执行期间实际发生了什么</li>
+<li>如何获取和存储变量属性</li>
+</ul>
+
+<p>DATA时建立SAS数据集的主要方法之一。一些涉及数据处理和创建数据集的任务可能只能通过DATA步才能解决<br/>
+DATA步分编译和执行两个阶段，PDV贯穿SAS编译和执行的两个阶段，决定了信息在DATA步中的存储及变化</p>
+
+<p>编译阶段包括：</p>
+
+<ul>
+<li>编译SAS语句，包括检查语法</li>
+<li>创建一个输入缓存区（input buffer）（如果需要读入原始数据文件）、一个PDV和描述性信息</li>
+</ul>
+
+<p>执行阶段包括：</p>
+
+<ul>
+<li>计算DATA步迭代的次数（从DATA语句开始）</li>
+<li>将PDV中所有变量设成缺失值并初始化自动变量</li>
+<li>读取输入观测（从原始文件或SAS数据集）</li>
+<li>执行附加的处理或计算语句</li>
+<li>将一条数据记录写入输出数据集并返回到DATA步语句</li>
+</ul>
+
+<p>PDV贯穿编译的执行阶段：</p>
+
+<ul>
+<li>PDV是内存的一个临时逻辑区域，SAS建立数据集时，每条观察值只有一次机会用的PDV</li>
+<li>包含所有变量的当前值</li>
+<li>包含两个自动变量：_N_和_ERROR_</li>
+</ul>
+
+<p>DATA步<br/>
+一个DATA步包含SAS语言的一组语句，这些语句具有以下功能</p>
+
+<ul>
+<li>从外部文件读入数据</li>
+<li>将数据写入外部文件</li>
+<li>读入SAS数据集和SAS视图</li>
+<li>创建SAS数据集和SAS视图<br/>
+一旦数据可以以SAS数据集的形式访问，就可以通过SAS过程步来分析数据和写报告</li>
+</ul>
+
+
+		</div>
+
+		
+
+	</article>
+ 
+	<article>
+		 <header>
+		  	<h1 class="entry-title"><a href="15682069194444.html">地图相关</a></h1>
+			<p class="meta"><time datetime="2019-09-11T21:01:59+08:00" 
+			pubdate data-updated="true">2019/09/11</time></p>
+		 </header>
+	  	<div class="entry-content">
+		  	
+		  	<p>在描述数据时，如果有一张热力地图，将是一件非常棒的事情，在这里我在尝试用python制作地图</p>
+
+<h2 id="toc_0">pyecharts</h2>
+
+<p>pyecharts 将不再自带地图 js 文件。如用户需要用到地图图表，可自行安装对应的地图文件包。<br/>
+全球国家地图: echarts-countries-pypkg (1.9MB): 世界地图和 213 个国家，包括中国地图<br/>
+中国省级地图: echarts-china-provinces-pypkg (730KB)：23 个省，5 个自治区<br/>
+中国市级地图: echarts-china-cities-pypkg (3.8MB)：370 个中国城市<br/>
+中国县区级地图: echarts-china-counties-pypkg (4.1MB)：2882 个中国县·区<br/>
+中国区域地图: echarts-china-misc-pypkg (148KB)：11 个中国区域地图，比如华南、华北。</p>
+
+<pre><code class="language-text">如果提示缺少这个就安装一下
+pip  install pyecharts_snapshot
+pip install echarts-countries-pypkg
+pip install echarts-china-provinces-pypkg
+pip install echarts-china-cities-pypkg
+pip install echarts-china-counties-pypkg
+pip install echarts-china-misc-pypkg
+</code></pre>
+
+<h2 id="toc_1">Basemap</h2>
+
+
+		</div>
+
+		
+
+	</article>
+ 
+	<article>
+		 <header>
 		  	<h1 class="entry-title"><a href="15681237931017.html">itertools 模块</a></h1>
 			<p class="meta"><time datetime="2019-09-10T21:56:33+08:00" 
 			pubdate data-updated="true">2019/09/10</time></p>
@@ -849,51 +951,6 @@ k表示偏移量，正数为右移，负数为左移</p>
 		
 
 	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15678538813115.html">爬虫学习</a></h1>
-			<p class="meta"><time datetime="2019-09-07T18:58:01+08:00" 
-			pubdate data-updated="true">2019/09/07</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p>r = request.get(url)</p>
-
-<p>r (response)的五个属性<br/>
-status_code 200表示成功，404表示失败<br/>
-text 响应内容的字符串形式，即，url对应的网页内容<br/>
-encoding 内容编码方式<br/>
-apparent_encoding 备选编码方式</p>
-
-<p>如果header中不存在charset，则认为编码为ISO-8859-1但不能解析中文<br/>
-content 二进制编码内容</p>
-
-
-		</div>
-
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15675882890776.html">合同</a></h1>
-			<p class="meta"><time datetime="2019-09-04T17:11:29+08:00" 
-			pubdate data-updated="true">2019/09/04</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p>\(ax^2+2bxy+cy^2=d\)<br/>
-\(x=x&#39;cos\the - y&#39;sin\)<br/>
-\(y=x&#39;sin + y&#39;\)</p>
-
-
-		</div>
-
-		
-
-	</article>
   
 	<div class="pagination">
 	 <a class="prev" href="all_1.html">&larr; Older</a> 
@@ -916,7 +973,7 @@ content 二进制编码内容</p>
 	      </li>
 	  
 	      <li class="post">
-	        <a href="%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1.html"><strong>数学建模&nbsp;(4)</strong></a>
+	        <a href="%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1.html"><strong>数学建模&nbsp;(5)</strong></a>
 	        
 	        
 	        
@@ -930,7 +987,7 @@ content 二进制编码内容</p>
 	      </li>
 	  
 	      <li class="post">
-	        <a href="%E8%AE%A1%E7%AE%97%E6%9C%BA.html"><strong>计算机&nbsp;(10)</strong></a>
+	        <a href="%E8%AE%A1%E7%AE%97%E6%9C%BA.html"><strong>计算机&nbsp;(11)</strong></a>
 	        
 	        
 	        
@@ -941,6 +998,18 @@ content 二进制编码内容</p>
 	<section>
 	  <h1>Recent Posts</h1>
 	  <ul id="recent_posts">
+	  
+	      
+		      <li class="post">
+		        <a href="15685969611776.html">SAS DATA步之全揭秘</a>
+		      </li>
+	     
+	  
+	      
+		      <li class="post">
+		        <a href="15682069194444.html">地图相关</a>
+		      </li>
+	     
 	  
 	      
 		      <li class="post">
@@ -961,16 +1030,6 @@ content 二进制编码内容</p>
 	     
 	  
 	      
-		      <li class="post">
-		        <a href="15680140350374.html">想要的书目录</a>
-		      </li>
-	     
-	  
-	      
-		      <li class="post">
-		        <a href="15680029212149.html">雅思阅读</a>
-		      </li>
-	     
 	  
 	      
 	  
