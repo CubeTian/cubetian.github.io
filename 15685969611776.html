@@ -135,6 +135,31 @@ DATA步分编译和执行两个阶段，PDV贯穿SAS编译和执行的两个阶�
 一旦数据可以以SAS数据集的形式访问，就可以通过SAS过程步来分析数据和写报告</li>
 </ul>
 
+<p>可以运用DATA步：</p>
+
+<ul>
+<li>创建SAS数据集（SAS数据集或SAS视图）</li>
+<li>根据包含原始数据（外部文件）和文件创建SAS数据集</li>
+<li>通过提取子集、合并、修改和更新已经存在数据集的方式来创建新的数据集</li>
+<li>分析、处理或展现数据</li>
+<li>为新变量赋值（在有公式计算的情况下）</li>
+<li>撰写报告或将文件写入磁盘或磁带</li>
+<li>信息检索</li>
+<li>文件管理<br/>
+DATA步以‘DATA’语句开始（即显示的表明数据步的开始），以‘RUN’语句结束，在结束时会编译或执行RUN语句。在数据步最后一个观察值读取前，‘RUN’的功能都是以非显示的形式执行RETURN功能，去继续循环的操作。
+<img src="media/15685969611776/15687662911534.png" alt=""/>
+编译阶段<br/>
+如上所示，DATA步的第一个阶段就为编译阶段。在编译阶段SAS的任务如下：</li>
+<li>自动将SAS语句编译成将会在后面执行的机器语言</li>
+<li>确定每个变量的类型和长度</li>
+<li>确定变量是否有必要进行类型转换</li>
+<li>如果有INPUT语句，为外部文件新建读取内存缓存区</li>
+<li>创建PDV（Program Data Vector）</li>
+<li>创建数据集和变量属性的描述性信息</li>
+<li>处理语句，该项任务仅限于编译阶段；这为编译器如何新建变量提供信息；事实上，他们决定了如何在PDV内建立变量及信息；这些信息包括：DROP；KEEP；RENAME；RETAIN；RHERE；LABEL；LENGTH；FORMAT；ARRAY；BY；ATTRIB</li>
+<li>创建自动变量：包括_N_,_ERROR_,RND=,IN=,FIRST,LAST,POINT=</li>
+</ul>
+
 			</div>
 
 		
@@ -163,6 +188,9 @@ DATA步分编译和执行两个阶段，PDV贯穿SAS编译和执行的两个阶�
 
 	    <p class="meta">
 	    
+	        <a class="basic-alignment left" href="15686818191570.html" 
+	        title="Previous Post: LATEX 定理、命题环境">&laquo; LATEX 定理、命题环境</a>
+	    
 	    
 	        <a class="basic-alignment right" href="15682069194444.html" 
 	        title="Next Post: 地图相关">地图相关 &raquo;</a>
@@ -178,7 +206,7 @@ DATA步分编译和执行两个阶段，PDV贯穿SAS编译和执行的两个阶�
 	  <ul id="recent_posts">
 	  
 	      <li class="post">
-	        <a href="%E5%85%B6%E4%BB%96.html"><strong>其他&nbsp;(3)</strong></a>
+	        <a href="%E5%85%B6%E4%BB%96.html"><strong>其他&nbsp;(4)</strong></a>
 	        
 	        
 	        
@@ -213,6 +241,12 @@ DATA步分编译和执行两个阶段，PDV贯穿SAS编译和执行的两个阶�
 	  
 	      
 		      <li class="post">
+		        <a href="15686818191570.html">LATEX 定理、命题环境</a>
+		      </li>
+	     
+	  
+	      
+		      <li class="post">
 		        <a href="15685969611776.html">SAS DATA步之全揭秘</a>
 		      </li>
 	     
@@ -232,12 +266,6 @@ DATA步分编译和执行两个阶段，PDV贯穿SAS编译和执行的两个阶�
 	      
 		      <li class="post">
 		        <a href="15681180752987.html">蚁群优化算法学习笔记</a>
-		      </li>
-	     
-	  
-	      
-		      <li class="post">
-		        <a href="15681170584422.html">手表使用评价</a>
 		      </li>
 	     
 	  

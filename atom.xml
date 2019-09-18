@@ -4,7 +4,7 @@
   <title><![CDATA[程序猿CubeTian]]></title>
   <link href="https://cubetian.github.io/atom.xml" rel="self"/>
   <link href="https://cubetian.github.io/"/>
-  <updated>2019-09-16T17:10:56+08:00</updated>
+  <updated>2019-09-18T08:37:46+08:00</updated>
   <id>https://cubetian.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -12,6 +12,187 @@
   </author>
   <generator uri="http://www.coderforart.com/">CoderForArt</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[LATEX 定理、命题环境]]></title>
+    <link href="https://cubetian.github.io/15686818191570.html"/>
+    <updated>2019-09-17T08:56:59+08:00</updated>
+    <id>https://cubetian.github.io/15686818191570.html</id>
+    <content type="html"><![CDATA[
+<p>在LaTex中需要有关定理、公理、命题、引理、定义等时，常用如下命令</p>
+
+<ul>
+<li><strong>\newtheorem</strong>{定理环境名}{标题}[主计数器名] </li>
+<li><strong>\newtheorem</strong>{theorem}{Theorem}[Chapter]</li>
+</ul>
+
+<p>意思就是定义一个以Theorem为标题的theorem环境,计数以章节数为主.</p>
+
+<p> </p>
+
+<p><strong>\begin{theorem}[均值不等式]</strong></p>
+
+<p>设\(A,B\)是两个实数, 则\(2AB\leq 2 A^2+B^2\).</p>
+
+<p><strong>\end{theorem}</strong></p>
+
+<p>如果需要输出中文,使用定义theorem如下</p>
+
+<p><strong>\newtheorem{theorem}{\hspace{2em}定理}[chaptet]</strong></p>
+
+<p>另外在{\hspace{2em}定理}中还可以输入更改字体的命令来改变定理的字体</p>
+
+<p><strong>其他中文模式：</strong></p>
+
+<ul>
+<li><strong>\newtheorem{Definition}{\hspace{2em}定义}[chapter]</strong></li>
+<li><strong>\newtheorem{theorem}{\hspace{2em}定理}[chapter]</strong></li>
+<li><strong>\newtheorem{lemma}{\hspace{2em}引理}[chapter]</strong></li>
+<li><strong>\newtheorem{Proof}{证明}[chapter]</strong></li>
+</ul>
+
+<p>前面提到的定理、公理、命题、引理、定义的一套命令可以用这个</p>
+
+<p>% Theorem style</p>
+
+<ul>
+<li>\newtheoremstyle{mystyle}{3pt}{3pt}{\kaishu}{0cm}{\heiti2 }{}{1em}{}  \theoremstyle{mystyle}</li>
+<li>\newtheorem{definition}{\hspace{2em}定义}[chapter] % </li>
+<li>没有章, 只有节, 把上面的[chapter]改成[section] </li>
+</ul>
+
+<p><strong>文章中可以直接使用的范例：</strong></p>
+
+<p><strong>\newtheorem{theorem}[definition]{\hspace{2em}定理} </strong></p>
+
+<p><strong>\newtheorem{axiom}[definition]{\hspace{2em}公理} </strong></p>
+
+<p><strong>\newtheorem{lemma}[definition]{\hspace{2em}引理} </strong></p>
+
+<p><strong>\newtheorem{proposition}[definition]{\hspace{2em}命题} </strong></p>
+
+<p><strong>\newtheorem{corollary}[definition]{\hspace{2em}推论} </strong></p>
+
+<p><strong> \newtheorem{remark}{\hspace{2em}注}[chapter]</strong></p>
+
+<p> </p>
+
+<hr/>
+
+<p> </p>
+
+<p><strong>Latex-定理定义的排版</strong></p>
+
+<p>\newtheorem{thm}{Theorem}[section]</p>
+
+<p>\newtheorem{prop}{Proposition}[section]</p>
+
+<p>以上定理和命题分别计数，如果命题也用定理的计数器，可以这样定义：</p>
+
+<p>\newtheorem{prop}[thm]{Proposition}</p>
+
+<p>引用：</p>
+
+<p>\begin{thm}[附加标题,如定理名称，作者]</p>
+
+<p>文本</p>
+
+<p>\end{thm}</p>
+
+<p>较短的证明可以用</p>
+
+<p>\begin{proof}[标题]</p>
+
+<p>证明内容。</p>
+
+<p>\end{proof}</p>
+
+<p> </p>
+
+<p>如果有[标题]选项，则显示这个标题(斜体)，否则自动打印斜体的Proof，并在证明结束时自动生成证毕符号口。</p>
+
+<p>如果使用\proof命令，则需要在结束时手动加上结束命令\qed。</p>
+
+<p>当然你可以重定义证毕符号，例如：</p>
+
+<p>\renewcommand*{\qedsymbol}{[证毕]}</p>
+
+<p>\begin{proof}[证:]</p>
+
+<p>证明正文。</p>
+
+<p>\end{proof}</p>
+
+<p>注意：</p>
+
+<p>\begin{proof}...\end{proof}&quot; role=&quot;presentation&quot; style=&quot;margin: 0px; padding: 0px; display: inline; font-weight: normal; line-height: normal; font-size: 14px; text-align: left; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; position: relative;&quot;&gt;<br/>
+\begin{proof}...\end{proof}</p>
+
+<p>环境需要\usepackage{amsthm}宏包的支持</p>
+
+<p> </p>
+
+<h2 id="toc_0"> </h2>
+
+<h2 id="toc_1">首先你要先使用宏包 ntheorem</h2>
+
+<h2 id="toc_2"> </h2>
+
+<h2 id="toc_3">\usepackage[amsmath,thmmarks]{ntheorem}</h2>
+
+<h2 id="toc_4">% 定理类环境宏包，其中 amsmath 选项</h2>
+
+<p>% 用来兼容 AMS LaTeX 的宏包</p>
+
+<h2 id="toc_5"> %=== 配合上面的ntheorem宏包产生各种定理结构,重定义一些</h2>
+
+<h2 id="toc_6">%正文相关标题 ===</h2>
+
+<p>\theoremstyle{plain}<br/>
+\theoremheaderfont{\normalfont\rmfamily\CJKfamily{hei}}<br/>
+\theorembodyfont{\normalfont\rm\CJKfamily{kai}} \theoremindent0em<br/>
+\theoremseparator{\hspace{1em}} \theoremnumbering{arabic}<br/>
+%\theoremsymbol{}          %定理结束时自动添加的标志</p>
+
+<p> </p>
+
+<p><strong>\newtheorem{theorem}{Theorem}<br/>
+\newtheorem{corollary}{Corollary}<br/>
+......<br/>
+\begin{theorem}<br/>
+......<br/>
+\end{theorem}<br/>
+......</strong></p>
+
+<p><strong>\begin{corollary}<br/>
+......<br/>
+\end{corollary}</strong></p>
+
+<p>这样的输出结果就是各自编号的定理和推论了，定义、命题等等也类似可以这么使用。如果你希望定理和推论一起编号，前面可以改为这样（意思是corollary也使用theorem的编号）：</p>
+
+<p><strong>\newtheorem{theorem}{Theorem}<br/>
+\newtheorem{corollary}[theorem]{Corollary}</strong></p>
+
+<p>最后，如果你希望使用Theorem 1.4.2这样的编号，可以这么使用：</p>
+
+<p><strong>\newtheorem{theorem}{Theorem}[subsection] \newtheorem{corollary}[theorem]{Corollary}</strong></p>
+
+<p>前面的subsection改为section将输出Theorem 4.2这样的编号。</p>
+
+<p> </p>
+
+<p><strong>\newtheorem{theorem}{Theorem}[subsection] \newtheorem{corollary}[theorem]{Corollary}</strong></p>
+
+<p>前面的subsection改为section将输出Theorem 4.2这样的编号。</p>
+
+<p>如何让定理，推理等用同一计数器：</p>
+
+<p>\newtheorem{thm}{Theorem}[section] %如果不采用章节号做前缀，则不用[section]<br/>
+\newtheorem{defn}[thm]{Definition} %这句定义使得defn环境和thm共享编号<br/>
+\newtheorem{lem}[thm]{Lemma} %这句定义使得lem环境和thm共享编号</p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[SAS DATA步之全揭秘]]></title>
@@ -67,6 +248,31 @@ DATA步分编译和执行两个阶段，PDV贯穿SAS编译和执行的两个阶�
 <li>读入SAS数据集和SAS视图</li>
 <li>创建SAS数据集和SAS视图<br/>
 一旦数据可以以SAS数据集的形式访问，就可以通过SAS过程步来分析数据和写报告</li>
+</ul>
+
+<p>可以运用DATA步：</p>
+
+<ul>
+<li>创建SAS数据集（SAS数据集或SAS视图）</li>
+<li>根据包含原始数据（外部文件）和文件创建SAS数据集</li>
+<li>通过提取子集、合并、修改和更新已经存在数据集的方式来创建新的数据集</li>
+<li>分析、处理或展现数据</li>
+<li>为新变量赋值（在有公式计算的情况下）</li>
+<li>撰写报告或将文件写入磁盘或磁带</li>
+<li>信息检索</li>
+<li>文件管理<br/>
+DATA步以‘DATA’语句开始（即显示的表明数据步的开始），以‘RUN’语句结束，在结束时会编译或执行RUN语句。在数据步最后一个观察值读取前，‘RUN’的功能都是以非显示的形式执行RETURN功能，去继续循环的操作。
+<img src="media/15685969611776/15687662911534.png" alt=""/>
+编译阶段<br/>
+如上所示，DATA步的第一个阶段就为编译阶段。在编译阶段SAS的任务如下：</li>
+<li>自动将SAS语句编译成将会在后面执行的机器语言</li>
+<li>确定每个变量的类型和长度</li>
+<li>确定变量是否有必要进行类型转换</li>
+<li>如果有INPUT语句，为外部文件新建读取内存缓存区</li>
+<li>创建PDV（Program Data Vector）</li>
+<li>创建数据集和变量属性的描述性信息</li>
+<li>处理语句，该项任务仅限于编译阶段；这为编译器如何新建变量提供信息；事实上，他们决定了如何在PDV内建立变量及信息；这些信息包括：DROP；KEEP；RENAME；RETAIN；RHERE；LABEL；LENGTH；FORMAT；ARRAY；BY；ATTRIB</li>
+<li>创建自动变量：包括_N_,_ERROR_,RND=,IN=,FIRST,LAST,POINT=</li>
 </ul>
 
 ]]></content>
@@ -1868,42 +2074,6 @@ None, finally, lambda, pass, with</li>
 </ol></li>
 </ol></li>
 </ol>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[计算机三级知识点]]></title>
-    <link href="https://cubetian.github.io/15623137342353.html"/>
-    <updated>2019-07-05T16:02:14+08:00</updated>
-    <id>https://cubetian.github.io/15623137342353.html</id>
-    <content type="html"><![CDATA[
-<p>1.1.1 计算机网络的分类<br/>
-目标：资源共享<br/>
-1.局域网（LAN）<br/>
-有限的地理范围、高数据传输效率（10Mbps～10Gbps）、易于建立、维护与扩展<br/>
-<strong>介质访问方法</strong>的角度：<br/>
-共享介质式（集线器）与交换式（交换机）<br/>
-<strong>传输介质类型</strong>角度：有线、无线<br/>
-2.城域网（MAN Metropolitan）几十公里范围内<br/>
-3.广域网又称远程网 几十公里到几千公里<br/>
-1.1.2 网络结构特点<br/>
-1.逻辑功能：资源子网和通信子网<br/>
-2.电话交换网（PSTN）有线电视网（CATV）无线城域网（WMAN）或无线局域网（WLAN）</p>
-
-<p>实训任务一：宽带城域网的结构<br/>
-设计一个宽带城域网将涉及“三个平台和一个出口”，即网络平台、业务平台、管理平台与城市宽带出口等问题。<br/>
-核心层（又称核心交换层）：<br/>
-1为汇聚层的网络提供高速分组转发，提供具有QoS保障能力<br/>
-2提供城市的宽带IP出口<br/>
-3提供访问Internet所需要的路由访问<br/>
-汇聚层：<br/>
-1汇聚接入层的用户流量<br/>
-2进行本地处理<br/>
-3用户流量转发到核心交换层或本地进行路由处理<br/>
-接入层<br/>
-连接最终用户<br/>
-三层结构思想：上层负责下层的数据汇聚；核心提供出口与QOS、汇聚本地路由、接入服务用户</p>
 
 ]]></content>
   </entry>
