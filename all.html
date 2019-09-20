@@ -269,6 +269,25 @@ $(document).ready(function(event) {
  
 	<article>
 		 <header>
+		  	<h1 class="entry-title"><a href="15682182289509.html">赛前感想</a></h1>
+			<p class="meta"><time datetime="2019-09-16T17:24:22+08:00" 
+			pubdate data-updated="true">2019/09/16</time></p>
+		 </header>
+	  	<div class="entry-content">
+		  	
+		  	<p>现在是12:10，醒来后的晚上2019年全国大学生数学建模竞赛就要开始了，赛前就发生了很多事情，我的电脑因为一个模块的问题被我搞来搞去，python出现了很大问题，同伴的电脑因为一些硬件问题，不得不借用其他同学的电脑，所以需要重新安装许多东西，也是刚刚，我才结束完两个电脑的准备工作。<br/>
+现在的心情当然是非常激动，也非常疲惫，这是大三的一次建模竞赛，也几乎是我能够获得国家级奖项的唯一机会，我一定要把握这次机会。明天还有两门十分重要的课程，如果落下来，也势必对我这学期的学习会产生很大影响。<br/>
+不管那么多了，还是先睡觉了💤</p>
+
+
+		</div>
+
+		
+
+	</article>
+ 
+	<article>
+		 <header>
 		  	<h1 class="entry-title"><a href="15685969611776.html">SAS DATA步之全揭秘</a></h1>
 			<p class="meta"><time datetime="2019-09-16T09:22:41+08:00" 
 			pubdate data-updated="true">2019/09/16</time></p>
@@ -906,226 +925,6 @@ not given 可以共存<br/>
 		
 
 	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15679893433260.html">scipy 模块参考书</a></h1>
-			<p class="meta"><time datetime="2019-09-09T08:35:43+08:00" 
-			pubdate data-updated="true">2019/09/09</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/index.html">SciPy Tutorial</a></p>
-
-<ul>
-<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/general.html">Introduction</a></li>
-<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/basic.html">Basic functions</a></li>
-<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/special.html">Special functions(scipy.special)</a></li>
-<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/integrate.html">Integration(scipy.integrate)</a></li>
-<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/optimize.html">Optimization(scipy.optimize)</a></li>
-<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/interpolate.html">Interpolation(scipy.interpolate)</a></li>
-<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/fftpack.html">Fourier Transforms(scipy.fftpack)</a></li>
-<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/signal.html">Signal Processing(scipy.signal)</a></li>
-<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/linalg.html">Linear Algebra(scipy.linagle)</a></li>
-<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/arpack.html">Sparse Eigenvalue Problems with ARPACK</a></li>
-<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/csgraph.html">Compressed Sparse Graph Routines(scipy.sparse.csgraph)</a></li>
-<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/spatial.html">Spatial data structures and algorithms(scipy.spatial)</a></li>
-<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats.html">Statistics(scipy.stats)</a></li>
-<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/ndimage.html">Multidimensional image processing(scipy.ndimage)</a></li>
-<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/io.html">File IO(scipy.io)</a></li>
-</ul>
-
-<pre><code class="language-text">import numpy as np
-import matplotlib as mpl
-import matplotlib.pyplot as plt
-</code></pre>
-
-<p>scipy 主要有15个子模块</p>
-
-<pre><code class="language-text">from scipy import cluster, constants, fftpack, integrate, interpolate, io, linalg, ndimage, odr, optimize, signal, sparse, spatial, special, stats
-</code></pre>
-
-<hr/>
-
-<h2 id="toc_0">常量 <a href="https://docs.scipy.org/doc/scipy/reference/constants.html#module-scipy.constants">Constants(scipy.constants)</a></h2>
-
-<p>主要包含数学常数\(\pi\)(pi)以及一些物理常数 </p>
-
-<hr/>
-
-<h2 id="toc_1">基本函数</h2>
-
-<h3 id="toc_2">np.r_ np.c_ 拼接</h3>
-
-<pre><code class="language-text">&gt;&gt;&gt; np.r_[3,[0]*5,-1:1:10j]
-array([ 3.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        , -1.        , -0.77777778, -0.55555556, -0.33333333,
-       -0.11111111,  0.11111111,  0.33333333,  0.55555556,  0.77777778,
-        1.        ])
-</code></pre>
-
-<p>将切片对象转换为沿第一轴的连接。(横向拼接)</p>
-
-<pre><code class="language-text">&gt;&gt;&gt; np.c_[np.array([1,2,3]), np.array([4,5,6])]
-array([[1, 4],
-       [2, 5],
-       [3, 6]])
-</code></pre>
-
-<p>将切片对象转换为沿第二轴的连接。(竖向拼接)<br/>
-复数10j作为切片语​​法中的步长。这种非标准用法允许将数字解释为在范围内产生的点数而不是步长</p>
-
-<h3 id="toc_3">np.mgrid 网格生成</h3>
-
-<pre><code class="language-text">&gt;&gt;&gt; np.mgrid[0:5:4j,0:5:4j]
-array([[[ 0.    ,  0.    ,  0.    ,  0.    ],
-        [ 1.6667,  1.6667,  1.6667,  1.6667],
-        [ 3.3333,  3.3333,  3.3333,  3.3333],
-        [ 5.    ,  5.    ,  5.    ,  5.    ]],
-       [[ 0.    ,  1.6667,  3.3333,  5.    ],
-        [ 0.    ,  1.6667,  3.3333,  5.    ],
-        [ 0.    ,  1.6667,  3.3333,  5.    ],
-        [ 0.    ,  1.6667,  3.3333,  5.    ]]])
-</code></pre>
-
-<h2 id="toc_4">积分 (scipy.integrate)</h2>
-
-<p>此模块可用用于各种包括反常积分在内的定积分的求解<br/>
-\(I(a, b)=\int_{0}^{1} a x^{2}+b d x\)</p>
-
-<pre><code class="language-text">&gt;&gt;&gt; from scipy.integrate import quad
-&gt;&gt;&gt; def integrand(x, a, b):
-...     return a*x**2 + b
-...
-&gt;&gt;&gt; a = 2
-&gt;&gt;&gt; b = 1
-&gt;&gt;&gt; I = quad(integrand, 0, 1, args=(a,b))
-&gt;&gt;&gt; I
-(1.6666666666666667, 1.8503717077085944e-14)
-</code></pre>
-
-<hr/>
-
-<p>常微分方程求解 scipy.integrate.ode<br/>
-BerkeleyMadonna 推荐使用，常微分方程求解器</p>
-
-<h2 id="toc_5">线性代数相关</h2>
-
-<pre><code class="language-text">from scipy import linalg
-</code></pre>
-
-<h3 id="toc_6">范数</h3>
-
-<p>向量的范数<br/>
-\(\|\mathbf{x}\|=\left\{\begin{array}{cl}{\max \left|x_{i}\right|} &amp; {\text { ord }=\inf } \\ {\min \left|x_{i}\right|} &amp; {\text { ord }=-\inf } \\ {\left(\sum_{i}\left|x_{i}\right|^{\text {ord }}\right)^{1 / \operatorname{ord}}} &amp; { | \text { ord } |&lt;\infty}\end{array}\right.\)<br/>
-矩阵的范数<br/>
-\(\|\mathbf{A}\|=\left\{\begin{aligned} \max _{i} \sum_{j}\left|a_{i j}\right| &amp; \text { ord }=\text { inf } \\ \min _{i} \sum_{j}\left|a_{i j}\right| &amp; \text { ord }=-\inf \\ \max _{j} \sum_{i}\left|a_{i j}\right| &amp; \text { ord }=1 \\ \min _{j} \sum_{i}\left|a_{i j}\right| &amp; \text { ord }=-1 \\ \max \sigma_{i} &amp; \text { ord }=2 \\ \min \sigma_{i} &amp; \text { ord }=-2 \\ \sqrt{\operatorname{trace}\left(\mathbf{A}^{H} \mathbf{A}\right)} &amp; \text { ord }=\text { &#39;fro }^{\prime} \end{aligned}\right.\)<br/>
-例：</p>
-
-<pre><code class="language-text">&gt;&gt;&gt; import numpy as np
-&gt;&gt;&gt; from scipy import linalg
-&gt;&gt;&gt; A=np.array([[1,2],[3,4]])
-&gt;&gt;&gt; A
-array([[1, 2],
-      [3, 4]])
-&gt;&gt;&gt; linalg.norm(A)
-5.4772255750516612
-&gt;&gt;&gt; linalg.norm(A,&#39;fro&#39;) # frobenius norm is the default
-5.4772255750516612
-&gt;&gt;&gt; linalg.norm(A,1) # L1 norm (max column sum)
-6
-&gt;&gt;&gt; linalg.norm(A,-1)
-4
-&gt;&gt;&gt; linalg.norm(A,np.inf) # L inf norm (max row sum)
-7
-</code></pre>
-
-<h3 id="toc_7">特征值与特征向量</h3>
-
-<pre><code class="language-text">&gt;&gt;&gt; import numpy as np
-&gt;&gt;&gt; from scipy import linalg
-&gt;&gt;&gt; A = np.array([[1, 2], [3, 4]])
-&gt;&gt;&gt; la, v = linalg.eig(A)
-&gt;&gt;&gt; l1, l2 = la
-&gt;&gt;&gt; print(l1, l2)   # eigenvalues
-(-0.3722813232690143+0j) (5.372281323269014+0j)
-&gt;&gt;&gt; print(v[:, 0])   # first eigenvector
-[-0.82456484  0.56576746]
-&gt;&gt;&gt; print(v[:, 1])   # second eigenvector
-[-0.41597356 -0.90937671]
-</code></pre>
-
-<h3 id="toc_8">LU分解</h3>
-
-<p>\(A=PLU\)</p>
-
-<pre><code class="language-text">&gt;&gt;&gt; from scipy.linalg import lu
-&gt;&gt;&gt; A = np.array([[2, 5, 8, 7], [5, 2, 2, 8], [7, 5, 6, 6], [5, 4, 4, 8]])
-&gt;&gt;&gt; p, l, u = lu(A)
-</code></pre>
-
-<h3 id="toc_9">追赶法</h3>
-
-<p>\(a_{i} x_{i-1}+b_{i} x_{i}+c_{i} x_{i+1}=d_{i}\)<br/>
-where \(a_{1}=0\) and \(c_{n}=0\)<br/>
-\(\left[\begin{array}{ccccc}{b_{1}} &amp; {c_{1}} &amp; {} &amp; {} &amp; {0} \\ {a_{2}} &amp; {b_{2}} &amp; {c_{2}} &amp; {} &amp; {} \\ {} &amp; {a_{3}} &amp; {b_{3}} &amp; {\ddots} &amp; {} \\ {} &amp; {} &amp; {\ddots} &amp; {\ddots} &amp; {c_{n-1}} \\ {0} &amp; {} &amp; {} &amp; {a_{n}} &amp; {b_{n}}\end{array}\right]\left[\begin{array}{c}{x_{1}} \\ {x_{2}} \\ {x_{3}} \\ {\vdots} \\ {x_{n}}\end{array}\right]=\left[\begin{array}{c}{d_{1}} \\ {d_{2}} \\ {d_{3}} \\ {\vdots} \\ {d_{n}}\end{array}\right]\)</p>
-
-<pre><code class="language-text">import numpy as np
-
-## Tri Diagonal Matrix Algorithm(a.k.a Thomas algorithm) solver
-def TDMAsolver(a, b, c, d):
-    &#39;&#39;&#39;
-    TDMA solver, a b c d can be NumPy array type or Python list type.
-    refer to http://en.wikipedia.org/wiki/Tridiagonal_matrix_algorithm
-    and to http://www.cfd-online.com/Wiki/Tridiagonal_matrix_algorithm_-_TDMA_(Thomas_algorithm)
-    &#39;&#39;&#39;
-    nf = len(d) # number of equations
-    ac, bc, cc, dc = map(np.array, (a, b, c, d)) # copy arrays
-    for it in range(1, nf):
-        mc = ac[it-1]/bc[it-1]
-        bc[it] = bc[it] - mc*cc[it-1] 
-        dc[it] = dc[it] - mc*dc[it-1]
-                
-    xc = bc
-    xc[-1] = dc[-1]/bc[-1]
-
-    for il in range(nf-2, -1, -1):
-        xc[il] = (dc[il]-cc[il]*xc[il+1])/bc[il]
-
-    return xc
-</code></pre>
-
-<p>例：</p>
-
-<pre><code class="language-text">A = np.array([[10,2,0,0],[3,10,4,0],[0,1,7,5],[0,0,3,4]],dtype=float)   
-
-a = np.array([3.,1,3]) 
-b = np.array([10.,10.,7.,4.])
-c = np.array([2.,4.,5.])
-d = np.array([3,4,5,6.])
-
-print(TDMAsolver(a, b, c, d))
-&gt;&gt; [ 0.14877589  0.75612053 -1.00188324  2.25141243]
-#compare against numpy linear algebra library
-print(np.linalg.solve(A, d))
-&gt;&gt; [ 0.14877589  0.75612053 -1.00188324  2.25141243]
-</code></pre>
-
-<h3 id="toc_10">对角线元素</h3>
-
-<pre><code class="language-text">numpy.diag(v,k=0)
-</code></pre>
-
-<p>如果v是一个二维的矩阵，则返回对角线元素组成的向量<br/>
-如果v是一个一维的向量，则返回对角线为该向量的矩阵<br/>
-k表示偏移量，正数为右移，负数为左移</p>
-
-
-		</div>
-
-		
-
-	</article>
   
 	<div class="pagination">
 	 <a class="prev" href="all_1.html">&larr; Older</a> 
@@ -1141,7 +940,7 @@ k表示偏移量，正数为右移，负数为左移</p>
 	  <ul id="recent_posts">
 	  
 	      <li class="post">
-	        <a href="%E5%85%B6%E4%BB%96.html"><strong>其他&nbsp;(4)</strong></a>
+	        <a href="%E5%85%B6%E4%BB%96.html"><strong>其他&nbsp;(6)</strong></a>
 	        
 	        
 	        
@@ -1167,6 +966,13 @@ k表示偏移量，正数为右移，负数为左移</p>
 	        
 	        
 	      </li>
+	  
+	      <li class="post">
+	        <a href="%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/%E8%AE%A1%E7%AE%97%E7%89%A9%E7%90%86.html"><strong>数值分析/计算物理&nbsp;(4)</strong></a>
+	        
+	        
+	        
+	      </li>
 	   
 	  </ul>
 	</section>
@@ -1177,6 +983,12 @@ k表示偏移量，正数为右移，负数为左移</p>
 	      
 		      <li class="post">
 		        <a href="15686818191570.html">LATEX 定理、命题环境</a>
+		      </li>
+	     
+	  
+	      
+		      <li class="post">
+		        <a href="15682182289509.html">赛前感想</a>
 		      </li>
 	     
 	  
@@ -1195,12 +1007,6 @@ k表示偏移量，正数为右移，负数为左移</p>
 	      
 		      <li class="post">
 		        <a href="15681237931017.html">itertools 模块</a>
-		      </li>
-	     
-	  
-	      
-		      <li class="post">
-		        <a href="15681180752987.html">蚁群优化算法学习笔记</a>
 		      </li>
 	     
 	  
