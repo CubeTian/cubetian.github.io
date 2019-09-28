@@ -4,7 +4,7 @@
   <title><![CDATA[程序猿CubeTian]]></title>
   <link href="https://cubetian.github.io/atom.xml" rel="self"/>
   <link href="https://cubetian.github.io/"/>
-  <updated>2019-09-20T13:59:09+08:00</updated>
+  <updated>2019-09-28T19:36:52+08:00</updated>
   <id>https://cubetian.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://www.coderforart.com/">CoderForArt</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[树莓派入门笔记]]></title>
+    <link href="https://cubetian.github.io/15696705812938.html"/>
+    <updated>2019-09-28T19:36:21+08:00</updated>
+    <id>https://cubetian.github.io/15696705812938.html</id>
+    <content type="html"><![CDATA[
+<p>本尊要开始接触树莓派啦</p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[LATEX 定理、命题环境]]></title>
@@ -705,6 +716,8 @@ hello world
 <li>非线性方程组数值方法 范金燕，袁亚湘 著 2018年3月</li>
 </ol>
 
+<p>《信息与计算科学》丛书</p>
+
 ]]></content>
   </entry>
   
@@ -1168,6 +1181,8 @@ Enterprise Miner 数据挖掘</p>
 <p>/*<br/><br/>
  *   */</p>
 
+<h3 id="toc_5">从外部文件中导入数据</h3>
+
 ]]></content>
   </entry>
   
@@ -1211,34 +1226,6 @@ Enterprise Miner 数据挖掘</p>
     <updated>2019-08-19T19:08:45+08:00</updated>
     <id>https://cubetian.github.io/15662129253478.html</id>
     <content type="html"><![CDATA[
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[计算机二级python]]></title>
-    <link href="https://cubetian.github.io/15655035745414.html"/>
-    <updated>2019-08-11T14:06:14+08:00</updated>
-    <id>https://cubetian.github.io/15655035745414.html</id>
-    <content type="html"><![CDATA[
-<ul>
-<li>注释 #</li>
-<li>续行符 反斜杠 \</li>
-<li>命名 大小字母、下划线、数字、汉字<br/>
-但首字母不能是数字</li>
-<li>保留字：<br/>
-False, True, and, as, break, continue, def, del, elif, else, except, for, from, global, if, import, in, not, or, return, try, while (22个，2个大写)<br/>
-None, finally, lambda, pass, with</li>
-<li>jieba.lcut(s,cut_all=True)<br/>
-*0x4DC0 是一个十六进制数，它对应的 Unicode 编码是中国古老的《易经》六十四卦的第一卦，请输出第 51 卦（震卦）对应的 Unicode 编码的二进制、十进制、八进制和十六进制格式。
-<code>print(&quot;二进制{0:b}、十进制{0:d}、八进制{0:o}、十六进制{0:x}&quot;.format(0x4DC0+50))
-</code></li>
-<li>字符串的索引：<br/>
-正向索引：最左侧字符序号为0，向右依次递增，最右侧为L-1<br/>
-反向索引：最右侧字符序号为-1，向左依次递减，最左侧为-L</li>
-<li>字符串的索引：<br/>
-切片部分必须连续，[a=0,b=L-1,step=1] </li>
-</ul>
 
 ]]></content>
   </entry>

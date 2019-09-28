@@ -102,6 +102,16 @@ None, finally, lambda, pass, with</li>
 反向索引：最右侧字符序号为-1，向左依次递减，最左侧为-L</li>
 <li>字符串的索引：<br/>
 切片部分必须连续，[a=0,b=L-1,step=1] </li>
+<li>文件操作
+<code>
+f = open(&#39;file.csv&#39;,&#39;r&#39;,encoding=&#39;GB2312&#39;)<br/>
+ls = []<br/>
+for line in f.readlines():<br/>
+line.replace(&#39;\n&#39;,&#39;&#39;)<br/>
+ls.append(line.split(&#39;,&#39;))
+</code></li>
+<li>字典操作<br/>
+d[key] = d.get(key,0)</li>
 </ul>
 
 			</div>
@@ -171,7 +181,7 @@ None, finally, lambda, pass, with</li>
 	      </li>
 	  
 	      <li class="post">
-	        <a href="%E8%AE%A1%E7%AE%97%E6%9C%BA.html"><strong>计算机&nbsp;(11)</strong></a>
+	        <a href="%E8%AE%A1%E7%AE%97%E6%9C%BA.html"><strong>计算机&nbsp;(12)</strong></a>
 	        
 	        
 	        
@@ -189,6 +199,12 @@ None, finally, lambda, pass, with</li>
 	<section>
 	  <h1>Recent Posts</h1>
 	  <ul id="recent_posts">
+	  
+	      
+		      <li class="post">
+		        <a href="15696705812938.html">树莓派入门笔记</a>
+		      </li>
+	     
 	  
 	      
 		      <li class="post">
@@ -211,12 +227,6 @@ None, finally, lambda, pass, with</li>
 	      
 		      <li class="post">
 		        <a href="15682069194444.html">地图相关</a>
-		      </li>
-	     
-	  
-	      
-		      <li class="post">
-		        <a href="15681237931017.html">itertools 模块</a>
 		      </li>
 	     
 	  
