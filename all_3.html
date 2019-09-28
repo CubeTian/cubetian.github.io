@@ -1,222 +1,461 @@
-<!doctype html>
-<html lang="zh-cn">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,minimum-scale=1" />
-    <title>
-        
-      程序猿CubeTian
-      
-    </title>
-    
-    
-    
-    <link href="atom.xml" rel="alternate" title="程序猿CubeTian" type="application/atom+xml">
-    <script src="https://cdn.bootcss.com/moment.js/2.24.0/moment.min.js"></script>
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>  
+	  
+  	程序猿CubeTian
+  	
+	</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="asset/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <div class="head">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="blogname">程序猿CubeTian</div>
-            <nav>
-              
-                <div class="item"><a target="self" href="index.html">Home</a></div>
-              
-                <div class="item"><a target="_self" href="archives.html">Archives</a></div>
-              
-            </nav>
-          </div>
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="atom.xml" rel="alternate" title="程序猿CubeTian" type="application/atom+xml">
+
+	<link href="asset/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="asset/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<script src="asset/javascripts/jquery.min.js"></script>
+	<script src="asset/highlightjs/highlight.pack.js"></script>
+	<link href="asset/highlightjs/styles/solarized_dark.css" media="screen, projection" rel="stylesheet" type="text/css">
+<script>hljs.initHighlightingOnLoad();</script>
+
+	<!--[if lt IE 9]><script src="asset/javascripts/html5.js"></script><![endif]-->
+	<!-- <link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'> -->
+	<style type="text/css">
+/* latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Nunito-Light'), url(asset/font/1TiHc9yag0wq3lDO9cw0voX0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Nunito-Regular'), url(asset/font/6TbRXKWJjpj6V2v_WyRbMX-_kf6ByYO6CLYdB4HQE-Y.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Nunito-Bold'), url(asset/font/TttUCfJ272GBgSKaOaD7KoX0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+	</style>
+	
+	<style type="text/css">
+	.container .left-col{ opacity: 1;}
+	#pagenavi a{ font-size: 1.3em;}
+	#pagenavi .next:before{ top: 3px;}
+	#pagenavi .prev:before{ top: 3px;}
+	.container .mid-col .mid-col-container #content .archives .title{ font-size: 1.5em;}
+	.container .mid-col .mid-col-container #content article{ padding: 15px 0px;}
+	#header .subtitle {
+		line-height: 1.2em;
+		padding-top: 8px;
+	}
+	article pre{ background: none; border: none; padding: 0;}
+	article .entry-content{text-align: left;}
+	.share-comment{ padding: 25px 0px; clear: both;}
+	hr{ margin: 20px 0px;border: 0; border-top:solid 1px #ddd;}
+	</style>
+  
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+				<header id="header" class="inner">
+				 
+					
+					<h1><a href="index.html">程序猿CubeTian</a></h1>
+					<p class="subtitle">众所周知，数学研究只需要一支笔和一堆草稿纸</p>
+					<nav id="main-nav">
+						<ul class="main">
+						
+						  <li id=""><a target="self" href="index.html">Home</a></li>
+						
+						  <li id=""><a target="_self" href="archives.html">Archives</a></li>
+						
+						</ul>
+					</nav>
+
+					<nav id="sub-nav">
+						<div class="social">
+
+
+
+
+
+
+
+
+
+
+
+
+
+								
+
+								<a class="rss" href="atom.xml" title="RSS">RSS</a>
+							
+						</div>
+					</nav>
+				</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			<div class="mid-col-container"> <div id="content" class="inner">
+<div itemscope itemtype="http://schema.org/Blog">
+
+
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2019-08-24T21:30:13+08:00" itemprop="datePublished">2019/08/24</time>
+			</div>
+			<div class="tags">posted in 
+			
+			    <a class='category' href='%E8%AE%A1%E7%AE%97%E6%9C%BA.html'>计算机</a>&nbsp;
+			 
+			</div>
+		</div>
+		<h1 class="title" itemprop="name"><a href="15666534139692.html" itemprop="url">
+		MYsql 学习教程</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2019-08-19T19:08:45+08:00" itemprop="datePublished">2019/08/19</time>
+			</div>
+			<div class="tags">posted in 
+			
+			    <a class='category' href='%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1.html'>数学建模</a>&nbsp;
+			 
+			</div>
+		</div>
+		<h1 class="title" itemprop="name"><a href="15662129253478.html" itemprop="url">
+		数学与计算机</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2019-07-31T19:41:26+08:00" itemprop="datePublished">2019/07/31</time>
+			</div>
+			<div class="tags">posted in 
+			
+			    <a class='category' href='%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/%E8%AE%A1%E7%AE%97%E7%89%A9%E7%90%86.html'>数值分析/计算物理</a>&nbsp;
+			 
+			</div>
+		</div>
+		<h1 class="title" itemprop="name"><a href="15645732861970.html" itemprop="url">
+		PDE（Walter/njdx）</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<h2 id="toc_0">第四章 边界问题</h2>
+
+<p>在本章中，我们最终谈及有限区间\(0&lt;x&lt;l\) 的物理上的现实案例.</p>
+
+<h3 id="toc_1">变量离散，Dirichlet条件</h3>
+
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2019-07-03T15:23:19+08:00" itemprop="datePublished">2019/07/03</time>
+			</div>
+			<div class="tags">posted in 
+			
+			    <a class='category' href='%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/%E8%AE%A1%E7%AE%97%E7%89%A9%E7%90%86.html'>数值分析/计算物理</a>&nbsp;
+			 
+			</div>
+		</div>
+		<h1 class="title" itemprop="name"><a href="15621385998065.html" itemprop="url">
+		课程二:偏微分方程数值方法</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<p>主讲人:张强教授(南京大学)<br/>
+课程大纲:<br/>
+1) 有限差分方法介绍:导数离散，格式构造基本过程(p6)、相容性(p20)、稳定性(p26)、收敛性(p38)<br/>
+2) 抛物方程的有限差分方法(1): CN格式(p44)、DF格式(p51)、跳点格式、数值健壮表现<br/>
+3) 抛物方程的有限差分方法(I): 变系数扩散问题、积分插值方法、高维格式<br/>
+4) 双曲方程的有限差分方法(I): 迎风格式、Lax-Wendroff格式、数值色散分析<br/>
+5)双 曲方程的有限差分方法(I): CFL方法、数值黏性分析方法、其他<br/>
+6)非线性双 曲守恒律的数值方法:守恒型格式、有限体积格式、TVD修正技术<br/>
+7)边 界条件的数值离散:拋物方程的自然边界离散技术、人工边界条件<br/>
+8)椭圆方 程的数值方法:有限差分方法、离散最大值原理、有限元方法<br/>
+9) 对流扩散方程的数值方法<br/>
+10)间断有限元方法简介</p>
+
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2019-07-05T16:02:14+08:00" itemprop="datePublished">2019/07/05</time>
+			</div>
+			<div class="tags">posted in 
+			
+			    <a class='category' href='%E8%AE%A1%E7%AE%97%E6%9C%BA.html'>计算机</a>&nbsp;
+			 
+			</div>
+		</div>
+		<h1 class="title" itemprop="name"><a href="15623137342353.html" itemprop="url">
+		计算机三级知识点</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<p>1.1.1 计算机网络的分类<br/>
+目标：资源共享<br/>
+1.局域网（LAN）<br/>
+有限的地理范围、高数据传输效率（10Mbps～10Gbps）、易于建立、维护与扩展<br/>
+<strong>介质访问方法</strong>的角度：<br/>
+共享介质式（集线器）与交换式（交换机）<br/>
+<strong>传输介质类型</strong>角度：有线、无线<br/>
+2.城域网（MAN Metropolitan）几十公里范围内<br/>
+3.广域网又称远程网 几十公里到几千公里<br/>
+1.1.2 网络结构特点<br/>
+1.逻辑功能：资源子网和通信子网<br/>
+2.电话交换网（PSTN）有线电视网（CATV）无线城域网（WMAN）或无线局域网（WLAN）</p>
+
+<p>实训任务一：宽带城域网的结构<br/>
+设计一个宽带城域网将涉及“三个平台和一个出口”，即网络平台、业务平台、管理平台与城市宽带出口等问题。<br/>
+核心层（又称核心交换层）：<br/>
+1为汇聚层的网络提供高速分组转发，提供具有QoS保障能力<br/>
+2提供城市的宽带IP出口<br/>
+3提供访问Internet所需要的路由访问<br/>
+汇聚层：<br/>
+1汇聚接入层的用户流量<br/>
+2进行本地处理<br/>
+3用户流量转发到核心交换层或本地进行路由处理<br/>
+接入层<br/>
+连接最终用户<br/>
+三层结构思想：上层负责下层的数据汇聚；核心提供出口与QOS、汇聚本地路由、接入服务用户</p>
+
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2019-06-18T22:24:46+08:00" itemprop="datePublished">2019/06/18</time>
+			</div>
+			<div class="tags">posted in 
+			
+			    <a class='category' href='%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/%E8%AE%A1%E7%AE%97%E7%89%A9%E7%90%86.html'>数值分析/计算物理</a>&nbsp;
+			 
+			</div>
+		</div>
+		<h1 class="title" itemprop="name"><a href="15608678868641.html" itemprop="url">
+		数学模型代码整合</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<p>y=lagr(x0,y0,x) 拉格朗日插值 自编函数<br/>
+y=interp1(x0,y0,x) 分段线性插值<br/>
+y=interp1(x0,y0,x,&#39;spline&#39;) 或 y=spline(x0,y0,x)</p>
+
+<h2 id="toc_0">无约束优化</h2>
+
+<p>P1,P2为自定函数f中的参数<br/>
+x 点 fv 值 ef 结束信息（1 收敛 -1 不收敛 0 达到最大次数） out 相关结构信息<br/>
+[x,fv,ef,out]=fminbnd(@f,v1,v2,opt,P1,P2,...)   v1 下界 v2 上界<br/>
+[x,fv,ef,out,grad,hess]=fminunc(@f,x0,opt,P1,P2,...)<br/>
+[x,fv,ef,out]=fminsearch(@f,x0,opt,P1,P2,...)</p>
+
+<h2 id="toc_1">二次优化</h2>
+
+<p>[x,fv,ef,out,lag]=quadprog(H,c,A1,b1,A2,b2,v1,v2,x0,opt)<br/>
+[x,fv,ef,out,lambda]=linprog(c,A1,b1,A2,b2,v1,v2,x0,opt)<br/>
+min \(z = c^T x\)<br/>
+min \(z = \frac{1}{2}x^T H x + c^T x\)<br/>
+\(A_1 x \le b_1\)<br/>
+\(A_2 x = b_2\)<br/>
+\(v1\le x\le v2\) </p>
+
+<h2 id="toc_2">非线性优化</h2>
+
+<p>[x,fv,ef,out,lag,grad,hess]=fmincon(@f,x0,A1,b1,A2,b2,v1,v2,@c,opt)<br/>
+min \(z=f(x)\)<br/>
+\(c_1 \le 0\)<br/>
+\(c_2 = 0\)<br/>
+\(A_1 x \le b_1\)<br/>
+\(A_2 x = b_2\)<br/>
+\(v_1 \le x \le v_2\)<br/>
+其中 f至少输出一个参数 然后依次为梯度g、黑塞矩阵H 以二元函数为例<br/>
+\(g=[\frac{\partial f}{\partial x},\frac{\partial f }{\partial y}]\)<br/>
+\(H = [\frac{\partial^2 f}{\partial ^2 x},\frac{\partial^2 f}{\partial  x \partial y};\frac{\partial^2 f}{\partial  x \partial y},\frac{\partial^2 f}{\partial ^2 y};]\)<br/>
+c至少输出两个 [cneq ceq]=c(x)<br/>
+cneq 表示不等式约束部分<br/>
+ceq 表示等式约束部分</p>
+
+<p>所有的多个变量都用向量x表示<br/>
+多个函数也用向量表示<br/>
+opt后P1,P2 等缺省 表示 自定义的函数中的参数<br/>
+[] 表示缺省<br/>
+特别的 非线性可将线性条件也放入c中<br/>
+即：fmincon(@f,x0,[],[],[],[],[],[],@c,opt) 六个[]</p>
+
+<p>给出一个lingo程序</p>
+
+<p>model:<br/>
+sets:<br/>
+stocks/a,b,c/:p,mean,x;<br/>
+stst(stocks,stocks):cov;<br/>
+!stst(stocks,stocks)/a,a a,b a,c <br/>
+                             b,a b,b b,c <br/>
+                             c,a c,b c,c/:cov;<br/>
+endsets<br/>
+data:<br/>
+money=5000;<br/>
+target=1000;<br/>
+p=20 35 30;<br/>
+mean=5 8 10;<br/>
+cov = 4 2.5 -10<br/>
+        2.5 36 -15<br/>
+        -10 -15 100;<br/>
+enddata<br/>
+min = @sum(stst(i,j):cov(i,j)<em>x(i)</em>x(j));<br/>
+@sum(stocks:p<em>x)&lt;money;<br/>
+@sum(stocks:mean</em>x)&gt;=target;<br/>
+end</p>
+
+<h2 id="toc_3">统计基础</h2>
+
+<p>分布： unif exp norm chi2 t f bino poiss<br/>
+功能：pdf cdf inv stat(均值与方差) rnd<br/>
+\(pdf(x,\mu , \sigma)\)   x可以为多个点组成的向量<br/>
+\(cdf(x,\mu,\sigma)\)<br/>
+\(inv(\alpha,\mu,\sigma)\) \(\alpha\)也可以是向量<br/>
+\([\mu,\sigma^2]=stat(P1,P2)\) P1，P2为分布的参数<br/>
+rnd(a,b,m,n)  [a,b]上的m×n的矩阵随机数</p>
+
+<h2 id="toc_4">参数估计</h2>
+
+<p>[mu sigma muci sigmaci]=normfit(x,alpha)<br/>
+ ci 表示区间估计<br/>
+ [h,sig,ci]= <br/>
+ h=0接受原假设 h=1拒绝原假设<br/>
+ sig是在假设H0下的概率\(P{|Z|\ge|z|}\)<br/>
+ ci是\(\mu_0\)的置信区间</p>
+
+<p>ztest test ttest2<br/>
+ jbtest kstest lillietest</p>
+
+<h2 id="toc_5">回归分析</h2>
+
+<p>b=regress(y,X)<br/>
+\(b=(\hat{\beta_0},\hat{\beta_1})\)<br/>
+y是因变量数组<br/>
+X=[ones(n,1),x&#39;]    1与自变量组成的输入矩阵，n是数据容量<br/>
+[b,bint,r,rint,s]=regress(y‘,X,alpha)<br/>
+b 回归系数 bint 回归系数的置信区间<br/>
+r 残差 rint 残差的置信区间<br/>
+s 四个统计量 \(R^2,F,p,s^2\)<br/>
+\(R^2=U/S\) 决定系数<br/>
+\(F=\frac{U}{\frac{Q}{n-2}}\)统计量<br/>
+p:F(1,n-2)分布大于F值的概率<br/>
+\(s^2\)剩余方差</p>
+
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2019-04-14T08:12:08+08:00" itemprop="datePublished">2019/04/14</time>
+			</div>
+			<div class="tags">posted in 
+			
+			    <a class='category' href='%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/%E8%AE%A1%E7%AE%97%E7%89%A9%E7%90%86.html'>数值分析/计算物理</a>&nbsp;
+			 
+			</div>
+		</div>
+		<h1 class="title" itemprop="name"><a href="15551995220068.html" itemprop="url">
+		数值线性代数第一次学习</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<h2 id="toc_0">前言</h2>
+
+<p>数值线性代数是本人学校曾经开展的一门课程，该课程现由数学模型和数值分析两门课程各自涉及一部分内容。由于本人对计算数学有需求，先通过陈中文老师的课件自学，并将自己的一些总结分享出来。</p>
+
+
+			
+			
+		</div>
+
+	</article>
+  
+
+</div>
+<nav id="pagenavi">
+	 <a class="prev" href="all_2.html">Prev</a>  
+	 <a class="next" href="all_4.html">Next</a> 
+	<div class="center"><a href="archives.html">Blog Archives</a></div>
+
+</nav>
+
+</div>
+
+
+
         </div>
-      </div>
-      <hr>
-    </div> <div class="container" id="category">
+			<footer id="footer" class="inner">Copyright &copy; 2014
+Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a> &nbsp;&nbsp; 
+Theme by <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a>
+      </footer>
+		</div>
+	</div>
+
   
     
-      <div class="article huge">
-        <div class="featureimg" style="background-image: url('asset/defaultfeaimg.jpg')"></div>
-        <div class="row content">
-          <div class="col-md-2"></div>
-          <div class="col-md-10 main">
-            <div class="row">
-              <div class="col-md-10 post">
-                <div class="headline"><a href="15375337935500.html">wifi 相关</a></div>
-                
-                <div class="time">$[timeformat('2018-09-21T20:43:13+08:00')]</div>
-                <div class="body">
-                    <h2 id="toc_0">使用大功率无线网卡抓取cap包用于密码破解（macos）</h2>
 
-<p>1、安装aircrack-ng</p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
 
-<p>命令：brew install aircrack-ng</p>
-
-<p>注意，如果没安装brew,访问：<a href="https://brew.sh%EF%BC%8C%E9%A6%96%E9%A1%B5%E4%B8%8A%E6%9C%89%E5%AE%89%E8%A3%85brew%E7%9A%84%E5%91%BD%E4%BB%A4%EF%BC%8C%E6%88%91%E5%AE%89%E8%A3%85%E6%97%B6%EF%BC%88201706%EF%BC%89%E5%91%BD%E4%BB%A4%E5%A6%82%E4%B8%8B%EF%BC%9A">https://brew.sh，首页上有安装brew的命令，我安装时（201706）命令如下：</a></p>
-
-<p>/usr/bin/ruby -e &quot;$(curl -fsSLhttps://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</p>
-
-<p>2、添加airport快链</p>
-
-<p>命令：ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport</p>
-
-<p>3、使用mac自带的airport选取mac地址</p>
-
-<p>命令：airport -s</p>
-
-<p>选择CHANNEL的数值，比如：11</p>
-
-<p>4、监听选定的频道获取到握手的包</p>
-
-<p>命令：airport en0 sniff 11</p>
-
-<p>运行一段时间，就可以在/tmp收获以.cap结尾的分析包，结束之后会提示保存的.cap文件位置</p>
-
-<p>注意：（1）尽可能不要运行太长时间，否则.cap文件会比较大；</p>
-
-<p>（2）可以使用ctr+c结束运行(我刚开始就不知道🙈)；</p>
-
-<p>（3）如果提示权限问题，则使用 sudo airport en0 sniff 11</p>
-
-<p>5、用 aircrack-ng分析cap包</p>
-
-<p>命令：sudo aircrack-ng  /tmp/airportSniff******.cap</p>
-
-<p>找到有(1 handshake)的那一行记录，记录下BSSID（比如是:10:02:22:23:7v:6f）。</p>
-
-<p>建议直接搜索，否则能看晕，如果没有搜索到，请重新执行第4步；</p>
-
-<p>6、开始暴力破解</p>
-
-<p>命令：sudo aircrack-ng-wpojie.txt-b10:02:22:23:7v:6f/tmp/airportSniff******.cap</p>
-
-<p>注意：.txt为破解字典</p>
-
-<p>如果有碰撞到密码，程序会停止，并显示密码。</p>
-
-                </div>
-                <div class="bottom">
-                  <a href="15375337935500.html" class="continue float-right">
-                    继续阅读
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="otherposts row">
-    
-  
-    
-        <div class="col-md-6">
-          <a href="15679893433260.html" class="item">
-            <div class="article normal">
-              <div class="featureimg" style="background-image: url('asset/defaultfeaimg.jpg')"></div>
-              <div class="articleinfo">
-                <div class="headline">scipy 模块参考书</div>
-                
-              </div>
-            </div>
-          </a>
-        </div>
-    
-  
-    
-        <div class="col-md-6">
-          <a href="15678538813115.html" class="item">
-            <div class="article normal">
-              <div class="featureimg" style="background-image: url('asset/defaultfeaimg.jpg')"></div>
-              <div class="articleinfo">
-                <div class="headline">爬虫学习</div>
-                
-              </div>
-            </div>
-          </a>
-        </div>
-    
-  
-    
-        <div class="col-md-6">
-          <a href="15675882890776.html" class="item">
-            <div class="article normal">
-              <div class="featureimg" style="background-image: url('asset/defaultfeaimg.jpg')"></div>
-              <div class="articleinfo">
-                <div class="headline">合同</div>
-                
-              </div>
-            </div>
-          </a>
-        </div>
-    
-  
-    
-        <div class="col-md-6">
-          <a href="15675205901094.html" class="item">
-            <div class="article normal">
-              <div class="featureimg" style="background-image: url('asset/defaultfeaimg.jpg')"></div>
-              <div class="articleinfo">
-                <div class="headline">SAS安装教程</div>
-                
-              </div>
-            </div>
-          </a>
-        </div>
-    
-   
-  </div>
-  <div class="pagenavi">
-    <div class="item"><a href="all_2.html">更新文章</a></div>
-    <div class="item"> · </div>
-    <div class="item"><a href="all_4.html">旧有文章</a></div>
-  </div>
- </div>
- <script>
-   let category = new Vue({
-    el: '#category',
-    data: {},
-    methods: {
-      indexOddandEven(index) {
-        return index%2 ? 'odd' : 'even';
-      },
-      timeformat(raw) {
-        return moment(raw).format("YYYY 年 MM 月 DD 日");
-      }
-    },
-    delimiters: ['$[', ']']
-  })
- </script>
-      <div class="container">
-      <hr>
-      <div class="footer" id="footer">
-        <div class="slogan">众所周知，数学研究只需要一支笔和一堆草稿纸</div>
-        <div class="meta">
-          <p>又是学习的一天</p>
-          <p>「程序猿CubeTian」使用 <a href="https://zh.mweb.im/" target="_blank">MWeb</a> 和 <a href="https://github.com/Astrian/reflect-white-mweb-theme" target="_blank">Reflect White</a> 搭建。</p>
-        </div>
-      </div>
-      <script>
-        let footer = new Vue({
-          el: '#footer',
-          data: {
-            message: 'hello'
-          },
-          delimiters: ['$[', ']']
-        })
-      </script>
-    </div>
-  </div>
 </body>
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<style></style>
 </html>

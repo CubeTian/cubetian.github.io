@@ -4,10 +4,10 @@
   <title><![CDATA[程序猿CubeTian]]></title>
   <link href="https://cubetian.github.io/atom.xml" rel="self"/>
   <link href="https://cubetian.github.io/"/>
-  <updated>2019-09-28T19:50:46+08:00</updated>
+  <updated>2019-09-28T19:53:36+08:00</updated>
   <id>https://cubetian.github.io/</id>
   <author>
-    <name><![CDATA[CubeTian]]></name>
+    <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.coderforart.com/">CoderForArt</generator>
@@ -16,11 +16,9 @@
   <entry>
     <title type="html"><![CDATA[树莓派入门笔记]]></title>
     <link href="https://cubetian.github.io/15696705812938.html"/>
-    <meta name="description" content="CubeTian" /><author><name><![CDATA[CubeTian]]></name></author>
     <updated>2019-09-28T19:36:21+08:00</updated>
     <id>https://cubetian.github.io/15696705812938.html</id>
     <content type="html"><![CDATA[
-    <img src="" />
 <p>本尊要开始接触树莓派啦</p>
 
 ]]></content>
@@ -29,11 +27,9 @@
   <entry>
     <title type="html"><![CDATA[想要的书目录]]></title>
     <link href="https://cubetian.github.io/15680140350374.html"/>
-    <meta name="description" content="CubeTian" /><author><name><![CDATA[CubeTian]]></name></author>
     <updated>2019-09-09T15:27:15+08:00</updated>
     <id>https://cubetian.github.io/15680140350374.html</id>
     <content type="html"><![CDATA[
-    <img src="" />
 <p>《运筹与管理科学丛书》的部分专著：</p>
 
 <ol>
@@ -76,11 +72,9 @@
   <entry>
     <title type="html"><![CDATA[SAS程序结构]]></title>
     <link href="https://cubetian.github.io/15673304578082.html"/>
-    <meta name="description" content="CubeTian" /><author><name><![CDATA[CubeTian]]></name></author>
     <updated>2019-09-01T17:34:17+08:00</updated>
     <id>https://cubetian.github.io/15673304578082.html</id>
     <content type="html"><![CDATA[
-    <img src="" />
 <p>DATA步-PROC步-OUTPUT步</p>
 
 <h3 id="toc_0">DATA步：此步骤涉及将所需数据集加载到SAS存储器中并识别数据集的变量（也称为列）。 它还捕获记录（也称为观察或主体）。</h3>
@@ -161,11 +155,9 @@ Enterprise Miner 数据挖掘</p>
   <entry>
     <title type="html"><![CDATA[计算机二级python]]></title>
     <link href="https://cubetian.github.io/15655035745414.html"/>
-    <meta name="description" content="CubeTian" /><author><name><![CDATA[CubeTian]]></name></author>
     <updated>2019-08-11T14:06:14+08:00</updated>
     <id>https://cubetian.github.io/15655035745414.html</id>
     <content type="html"><![CDATA[
-    <img src="" />
 <ul>
 <li>注释 #</li>
 <li>续行符 反斜杠 \</li>
@@ -201,11 +193,9 @@ d[key] = d.get(key,0)</li>
   <entry>
     <title type="html"><![CDATA[计算机二级 公共知识]]></title>
     <link href="https://cubetian.github.io/15653132926815.html"/>
-    <meta name="description" content="CubeTian" /><author><name><![CDATA[CubeTian]]></name></author>
     <updated>2019-08-09T09:14:52+08:00</updated>
     <id>https://cubetian.github.io/15653132926815.html</id>
     <content type="html"><![CDATA[
-    <img src="" />
 <h2 id="toc_0">程序设计基础</h2>
 
 <ol>
@@ -1060,11 +1050,9 @@ d[key] = d.get(key,0)</li>
   <entry>
     <title type="html"><![CDATA[SAS DATA步之全揭秘]]></title>
     <link href="https://cubetian.github.io/15685969611776.html"/>
-    <meta name="description" content="CubeTian" /><author><name><![CDATA[CubeTian]]></name></author>
     <updated>2019-09-16T09:22:41+08:00</updated>
     <id>https://cubetian.github.io/15685969611776.html</id>
     <content type="html"><![CDATA[
-    <img src="" />
 <p>一些概念</p>
 
 <ul>
@@ -1146,11 +1134,9 @@ DATA步以‘DATA’语句开始（即显示的表明数据步的开始），以
   <entry>
     <title type="html"><![CDATA[LATEX 定理、命题环境]]></title>
     <link href="https://cubetian.github.io/15686818191570.html"/>
-    <meta name="description" content="CubeTian" /><author><name><![CDATA[CubeTian]]></name></author>
     <updated>2019-09-17T08:56:59+08:00</updated>
     <id>https://cubetian.github.io/15686818191570.html</id>
     <content type="html"><![CDATA[
-    <img src="" />
 <p>在LaTex中需要有关定理、公理、命题、引理、定义等时，常用如下命令</p>
 
 <ul>
@@ -1329,11 +1315,9 @@ DATA步以‘DATA’语句开始（即显示的表明数据步的开始），以
   <entry>
     <title type="html"><![CDATA[赛前感想]]></title>
     <link href="https://cubetian.github.io/15682182289509.html"/>
-    <meta name="description" content="CubeTian" /><author><name><![CDATA[CubeTian]]></name></author>
     <updated>2019-09-12T00:10:28+08:00</updated>
     <id>https://cubetian.github.io/15682182289509.html</id>
     <content type="html"><![CDATA[
-    <img src="" />
 <p>现在是12:10，醒来后的晚上2019年全国大学生数学建模竞赛就要开始了，赛前就发生了很多事情，我的电脑因为一个模块的问题被我搞来搞去，python出现了很大问题，同伴的电脑因为一些硬件问题，不得不借用其他同学的电脑，所以需要重新安装许多东西，也是刚刚，我才结束完两个电脑的准备工作。<br/>
 现在的心情当然是非常激动，也非常疲惫，这是大三的一次建模竞赛，也几乎是我能够获得国家级奖项的唯一机会，我一定要把握这次机会。明天还有两门十分重要的课程，如果落下来，也势必对我这学期的学习会产生很大影响。<br/>
 不管那么多了，还是先睡觉了💤</p>
@@ -1344,11 +1328,9 @@ DATA步以‘DATA’语句开始（即显示的表明数据步的开始），以
   <entry>
     <title type="html"><![CDATA[地图相关]]></title>
     <link href="https://cubetian.github.io/15682069194444.html"/>
-    <meta name="description" content="CubeTian" /><author><name><![CDATA[CubeTian]]></name></author>
     <updated>2019-09-11T21:01:59+08:00</updated>
     <id>https://cubetian.github.io/15682069194444.html</id>
     <content type="html"><![CDATA[
-    <img src="" />
 <p>在描述数据时，如果有一张热力地图，将是一件非常棒的事情，在这里我在尝试用python制作地图</p>
 
 <h2 id="toc_0">pyecharts</h2>
@@ -1377,11 +1359,9 @@ pip install echarts-china-misc-pypkg
   <entry>
     <title type="html"><![CDATA[itertools 模块]]></title>
     <link href="https://cubetian.github.io/15681237931017.html"/>
-    <meta name="description" content="CubeTian" /><author><name><![CDATA[CubeTian]]></name></author>
     <updated>2019-09-10T21:56:33+08:00</updated>
     <id>https://cubetian.github.io/15681237931017.html</id>
     <content type="html"><![CDATA[
-    <img src="" />
 <p>在解决优化问题的过程中，经常需要遍历所有的情况，不仅需要考虑内存的问题，所需要迭代内容的生成也是一件很麻烦的事情，我曾经尝试过网格生成等方法，效果并不理想，十分复杂，直到我发现了它<br/>
 原教程地址：<a href="http://funhacks.net/2017/02/13/itertools/">高效的 itertools 模块</a><br/>
 itertools 是python的一个很小的模块，是python标准库中的，不需要另外安装<br/>
@@ -1603,11 +1583,9 @@ hello world
   <entry>
     <title type="html"><![CDATA[蚁群优化算法学习笔记]]></title>
     <link href="https://cubetian.github.io/15681180752987.html"/>
-    <meta name="description" content="CubeTian" /><author><name><![CDATA[CubeTian]]></name></author>
     <updated>2019-09-10T20:21:15+08:00</updated>
     <id>https://cubetian.github.io/15681180752987.html</id>
     <content type="html"><![CDATA[
-    <img src="" />
 <p>本人阅读《蚁群优化算法》-马良等过程中的笔记<br/>
 前五章的目录</p>
 
@@ -1708,11 +1686,9 @@ hello world
   <entry>
     <title type="html"><![CDATA[数值分析]]></title>
     <link href="https://cubetian.github.io/15679868479784.html"/>
-    <meta name="description" content="CubeTian" /><author><name><![CDATA[CubeTian]]></name></author>
     <updated>2019-09-09T07:54:07+08:00</updated>
     <id>https://cubetian.github.io/15679868479784.html</id>
     <content type="html"><![CDATA[
-    <img src="" />
 <h2 id="toc_0">灵敏度分析和误差分析</h2>
 
 <h3 id="toc_1">灵敏度分析</h3>
@@ -1741,11 +1717,9 @@ hello world
   <entry>
     <title type="html"><![CDATA[手表使用评价]]></title>
     <link href="https://cubetian.github.io/15681170584422.html"/>
-    <meta name="description" content="CubeTian" /><author><name><![CDATA[CubeTian]]></name></author>
     <updated>2019-09-10T20:04:18+08:00</updated>
     <id>https://cubetian.github.io/15681170584422.html</id>
     <content type="html"><![CDATA[
-    <img src="" />
 <p>最初在b站看到有关pebble的视频后，非常希望有这样一款造型简单，续航之间长，有时间和小题提醒功能就够了的手表，非常遗憾的是，pebble在中国境内不能给顺畅的使用，且有许多问题，不建议中国用户购买。<br/>
 在淘宝搜寻过后，锁定在一款vla腕表，设计符合我的要求，价格便宜，且兼容ios。<br/>
 毕竟是学生，在一番挣扎之后还是买了最便宜的cityA款，售价199，一般会有10元的优惠券。<br/>
@@ -1759,11 +1733,9 @@ hello world
   <entry>
     <title type="html"><![CDATA[雅思阅读]]></title>
     <link href="https://cubetian.github.io/15680029212149.html"/>
-    <meta name="description" content="CubeTian" /><author><name><![CDATA[CubeTian]]></name></author>
     <updated>2019-09-09T12:22:01+08:00</updated>
     <id>https://cubetian.github.io/15680029212149.html</id>
     <content type="html"><![CDATA[
-    <img src="" />
 <p>雅思阅读开始可以分题型练习<br/>
 题型主要有填空题、判断题、选择题、匹配题<br/>
 填空题分为给选项的和不给选项的，不给选项的题型较容易，优先做，一般题目会涉及一大段或连续的几小段，填空一定填原词，甚至不需要修改形式，“”内的内容很有可能就是要填的<br/>
@@ -1789,11 +1761,9 @@ not given 可以共存<br/>
   <entry>
     <title type="html"><![CDATA[sklearn 模块参考书]]></title>
     <link href="https://cubetian.github.io/15679981303848.html"/>
-    <meta name="description" content="CubeTian" /><author><name><![CDATA[CubeTian]]></name></author>
     <updated>2019-09-09T11:02:10+08:00</updated>
     <id>https://cubetian.github.io/15679981303848.html</id>
     <content type="html"><![CDATA[
-    <img src="" />
 <p>sklearn 全称 scikit learn 是机器学习领域当中最知名的python模块之一</p>
 
 <p>sklearn 包含了很多种机器学习的方式：</p>
@@ -1854,11 +1824,9 @@ not given 可以共存<br/>
   <entry>
     <title type="html"><![CDATA[wifi 相关]]></title>
     <link href="https://cubetian.github.io/15375337935500.html"/>
-    <meta name="description" content="CubeTian" /><author><name><![CDATA[CubeTian]]></name></author>
     <updated>2018-09-21T20:43:13+08:00</updated>
     <id>https://cubetian.github.io/15375337935500.html</id>
     <content type="html"><![CDATA[
-    <img src="" />
 <h2 id="toc_0">使用大功率无线网卡抓取cap包用于密码破解（macos）</h2>
 
 <p>1、安装aircrack-ng</p>
@@ -1913,11 +1881,9 @@ not given 可以共存<br/>
   <entry>
     <title type="html"><![CDATA[scipy 模块参考书]]></title>
     <link href="https://cubetian.github.io/15679893433260.html"/>
-    <meta name="description" content="CubeTian" /><author><name><![CDATA[CubeTian]]></name></author>
     <updated>2019-09-09T08:35:43+08:00</updated>
     <id>https://cubetian.github.io/15679893433260.html</id>
     <content type="html"><![CDATA[
-    <img src="" />
 <p><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/index.html">SciPy Tutorial</a></p>
 
 <ul>
@@ -2129,11 +2095,9 @@ k表示偏移量，正数为右移，负数为左移</p>
   <entry>
     <title type="html"><![CDATA[爬虫学习]]></title>
     <link href="https://cubetian.github.io/15678538813115.html"/>
-    <meta name="description" content="CubeTian" /><author><name><![CDATA[CubeTian]]></name></author>
     <updated>2019-09-07T18:58:01+08:00</updated>
     <id>https://cubetian.github.io/15678538813115.html</id>
     <content type="html"><![CDATA[
-    <img src="" />
 <p>r = request.get(url)</p>
 
 <p>r (response)的五个属性<br/>
@@ -2151,11 +2115,9 @@ content 二进制编码内容</p>
   <entry>
     <title type="html"><![CDATA[合同]]></title>
     <link href="https://cubetian.github.io/15675882890776.html"/>
-    <meta name="description" content="CubeTian" /><author><name><![CDATA[CubeTian]]></name></author>
     <updated>2019-09-04T17:11:29+08:00</updated>
     <id>https://cubetian.github.io/15675882890776.html</id>
     <content type="html"><![CDATA[
-    <img src="" />
 <p>\(ax^2+2bxy+cy^2=d\)<br/>
 \(x=x&#39;cos\the - y&#39;sin\)<br/>
 \(y=x&#39;sin + y&#39;\)</p>
@@ -2166,11 +2128,9 @@ content 二进制编码内容</p>
   <entry>
     <title type="html"><![CDATA[SAS安装教程]]></title>
     <link href="https://cubetian.github.io/15675205901094.html"/>
-    <meta name="description" content="CubeTian" /><author><name><![CDATA[CubeTian]]></name></author>
     <updated>2019-09-03T22:23:10+08:00</updated>
     <id>https://cubetian.github.io/15675205901094.html</id>
     <content type="html"><![CDATA[
-    <img src="" />
 <p>sas统计软件是我院一门很受欢迎的课程，由于商用版过于庞大，安装激活困难，这里提供sas的另一版本，SAS University，为大学生学习的版本</p>
 
 <p>SAS University 的<a href="https://www.sas.com/en_us/software/university-edition.html">官方网站</a>上有免费的下载渠道</p>

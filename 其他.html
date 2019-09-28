@@ -1,59 +1,140 @@
-<!doctype html>
-<html lang="zh-cn">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,minimum-scale=1" />
-    <title>
-        
-      其他 - 程序猿CubeTian
-      
-    </title>
-    
-    
-    
-    <link href="atom.xml" rel="alternate" title="程序猿CubeTian" type="application/atom+xml">
-    <script src="https://cdn.bootcss.com/moment.js/2.24.0/moment.min.js"></script>
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>  
+	  
+  	其他 - 程序猿CubeTian
+  	
+	</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="asset/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <div class="head">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="blogname">程序猿CubeTian</div>
-            <nav>
-              
-                <div class="item"><a target="self" href="index.html">Home</a></div>
-              
-                <div class="item"><a target="_self" href="archives.html">Archives</a></div>
-              
-            </nav>
-          </div>
-        </div>
-      </div>
-      <hr>
-    </div> <div class="container" id="category">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="atom.xml" rel="alternate" title="程序猿CubeTian" type="application/atom+xml">
+
+	<link href="asset/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="asset/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<script src="asset/javascripts/jquery.min.js"></script>
+	<script src="asset/highlightjs/highlight.pack.js"></script>
+	<link href="asset/highlightjs/styles/solarized_dark.css" media="screen, projection" rel="stylesheet" type="text/css">
+<script>hljs.initHighlightingOnLoad();</script>
+
+	<!--[if lt IE 9]><script src="asset/javascripts/html5.js"></script><![endif]-->
+	<!-- <link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'> -->
+	<style type="text/css">
+/* latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Nunito-Light'), url(asset/font/1TiHc9yag0wq3lDO9cw0voX0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Nunito-Regular'), url(asset/font/6TbRXKWJjpj6V2v_WyRbMX-_kf6ByYO6CLYdB4HQE-Y.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Nunito-Bold'), url(asset/font/TttUCfJ272GBgSKaOaD7KoX0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+	</style>
+	
+	<style type="text/css">
+	.container .left-col{ opacity: 1;}
+	#pagenavi a{ font-size: 1.3em;}
+	#pagenavi .next:before{ top: 3px;}
+	#pagenavi .prev:before{ top: 3px;}
+	.container .mid-col .mid-col-container #content .archives .title{ font-size: 1.5em;}
+	.container .mid-col .mid-col-container #content article{ padding: 15px 0px;}
+	#header .subtitle {
+		line-height: 1.2em;
+		padding-top: 8px;
+	}
+	article pre{ background: none; border: none; padding: 0;}
+	article .entry-content{text-align: left;}
+	.share-comment{ padding: 25px 0px; clear: both;}
+	hr{ margin: 20px 0px;border: 0; border-top:solid 1px #ddd;}
+	</style>
   
-    
-      <div class="article huge">
-        <div class="featureimg" style="background-image: url('asset/defaultfeaimg.jpg')"></div>
-        <div class="row content">
-          <div class="col-md-2"></div>
-          <div class="col-md-10 main">
-            <div class="row">
-              <div class="col-md-10 post">
-                <div class="headline"><a href="15680140350374.html">想要的书目录</a></div>
-                
-                <div class="time">$[timeformat('2019-09-09T15:27:15+08:00')]</div>
-                <div class="body">
-                    <p>《运筹与管理科学丛书》的部分专著：</p>
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+				<header id="header" class="inner">
+				 
+					
+					<h1><a href="index.html">程序猿CubeTian</a></h1>
+					<p class="subtitle">众所周知，数学研究只需要一支笔和一堆草稿纸</p>
+					<nav id="main-nav">
+						<ul class="main">
+						
+						  <li id=""><a target="self" href="index.html">Home</a></li>
+						
+						  <li id=""><a target="_self" href="archives.html">Archives</a></li>
+						
+						</ul>
+					</nav>
+
+					<nav id="sub-nav">
+						<div class="social">
+
+
+
+
+
+
+
+
+
+
+
+
+
+								
+
+								<a class="rss" href="atom.xml" title="RSS">RSS</a>
+							
+						</div>
+					</nav>
+				</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			<div class="mid-col-container"> <div id="content" class="inner">
+<div itemscope itemtype="http://schema.org/Blog">
+
+
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2019-09-09T15:27:15+08:00" itemprop="datePublished">2019/09/09</time>
+			</div>
+			<div class="tags">posted in 
+			
+			    <a class='category' href='%E5%85%B6%E4%BB%96.html'>其他</a>&nbsp;
+			 
+			</div>
+		</div>
+		<h1 class="title" itemprop="name"><a href="15680140350374.html" itemprop="url">
+		想要的书目录</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<p>《运筹与管理科学丛书》的部分专著：</p>
 
 <ol>
 <li>非线性优化计算方法 袁亚湘 著 2008年2月 9787030208835</li>
@@ -89,122 +170,371 @@
 
 <p>《信息与计算科学》丛书</p>
 
-                </div>
-                <div class="bottom">
-                  <a href="15680140350374.html" class="continue float-right">
-                    继续阅读
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2019-09-17T08:56:59+08:00" itemprop="datePublished">2019/09/17</time>
+			</div>
+			<div class="tags">posted in 
+			
+			    <a class='category' href='%E5%85%B6%E4%BB%96.html'>其他</a>&nbsp;
+			 
+			</div>
+		</div>
+		<h1 class="title" itemprop="name"><a href="15686818191570.html" itemprop="url">
+		LATEX 定理、命题环境</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<p>在LaTex中需要有关定理、公理、命题、引理、定义等时，常用如下命令</p>
+
+<ul>
+<li><strong>\newtheorem</strong>{定理环境名}{标题}[主计数器名] </li>
+<li><strong>\newtheorem</strong>{theorem}{Theorem}[Chapter]</li>
+</ul>
+
+<p>意思就是定义一个以Theorem为标题的theorem环境,计数以章节数为主.</p>
+
+<p> </p>
+
+<p><strong>\begin{theorem}[均值不等式]</strong></p>
+
+<p>设\(A,B\)是两个实数, 则\(2AB\leq 2 A^2+B^2\).</p>
+
+<p><strong>\end{theorem}</strong></p>
+
+<p>如果需要输出中文,使用定义theorem如下</p>
+
+<p><strong>\newtheorem{theorem}{\hspace{2em}定理}[chaptet]</strong></p>
+
+<p>另外在{\hspace{2em}定理}中还可以输入更改字体的命令来改变定理的字体</p>
+
+<p><strong>其他中文模式：</strong></p>
+
+<ul>
+<li><strong>\newtheorem{Definition}{\hspace{2em}定义}[chapter]</strong></li>
+<li><strong>\newtheorem{theorem}{\hspace{2em}定理}[chapter]</strong></li>
+<li><strong>\newtheorem{lemma}{\hspace{2em}引理}[chapter]</strong></li>
+<li><strong>\newtheorem{Proof}{证明}[chapter]</strong></li>
+</ul>
+
+<p>前面提到的定理、公理、命题、引理、定义的一套命令可以用这个</p>
+
+<p>% Theorem style</p>
+
+<ul>
+<li>\newtheoremstyle{mystyle}{3pt}{3pt}{\kaishu}{0cm}{\heiti2 }{}{1em}{}  \theoremstyle{mystyle}</li>
+<li>\newtheorem{definition}{\hspace{2em}定义}[chapter] % </li>
+<li>没有章, 只有节, 把上面的[chapter]改成[section] </li>
+</ul>
+
+<p><strong>文章中可以直接使用的范例：</strong></p>
+
+<p><strong>\newtheorem{theorem}[definition]{\hspace{2em}定理} </strong></p>
+
+<p><strong>\newtheorem{axiom}[definition]{\hspace{2em}公理} </strong></p>
+
+<p><strong>\newtheorem{lemma}[definition]{\hspace{2em}引理} </strong></p>
+
+<p><strong>\newtheorem{proposition}[definition]{\hspace{2em}命题} </strong></p>
+
+<p><strong>\newtheorem{corollary}[definition]{\hspace{2em}推论} </strong></p>
+
+<p><strong> \newtheorem{remark}{\hspace{2em}注}[chapter]</strong></p>
+
+<p> </p>
+
+<hr/>
+
+<p> </p>
+
+<p><strong>Latex-定理定义的排版</strong></p>
+
+<p>\newtheorem{thm}{Theorem}[section]</p>
+
+<p>\newtheorem{prop}{Proposition}[section]</p>
+
+<p>以上定理和命题分别计数，如果命题也用定理的计数器，可以这样定义：</p>
+
+<p>\newtheorem{prop}[thm]{Proposition}</p>
+
+<p>引用：</p>
+
+<p>\begin{thm}[附加标题,如定理名称，作者]</p>
+
+<p>文本</p>
+
+<p>\end{thm}</p>
+
+<p>较短的证明可以用</p>
+
+<p>\begin{proof}[标题]</p>
+
+<p>证明内容。</p>
+
+<p>\end{proof}</p>
+
+<p> </p>
+
+<p>如果有[标题]选项，则显示这个标题(斜体)，否则自动打印斜体的Proof，并在证明结束时自动生成证毕符号口。</p>
+
+<p>如果使用\proof命令，则需要在结束时手动加上结束命令\qed。</p>
+
+<p>当然你可以重定义证毕符号，例如：</p>
+
+<p>\renewcommand*{\qedsymbol}{[证毕]}</p>
+
+<p>\begin{proof}[证:]</p>
+
+<p>证明正文。</p>
+
+<p>\end{proof}</p>
+
+<p>注意：</p>
+
+<p>\begin{proof}...\end{proof}&quot; role=&quot;presentation&quot; style=&quot;margin: 0px; padding: 0px; display: inline; font-weight: normal; line-height: normal; font-size: 14px; text-align: left; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; position: relative;&quot;&gt;<br/>
+\begin{proof}...\end{proof}</p>
+
+<p>环境需要\usepackage{amsthm}宏包的支持</p>
+
+<p> </p>
+
+<h2 id="toc_0"> </h2>
+
+<h2 id="toc_1">首先你要先使用宏包 ntheorem</h2>
+
+<h2 id="toc_2"> </h2>
+
+<h2 id="toc_3">\usepackage[amsmath,thmmarks]{ntheorem}</h2>
+
+<h2 id="toc_4">% 定理类环境宏包，其中 amsmath 选项</h2>
+
+<p>% 用来兼容 AMS LaTeX 的宏包</p>
+
+<h2 id="toc_5"> %=== 配合上面的ntheorem宏包产生各种定理结构,重定义一些</h2>
+
+<h2 id="toc_6">%正文相关标题 ===</h2>
+
+<p>\theoremstyle{plain}<br/>
+\theoremheaderfont{\normalfont\rmfamily\CJKfamily{hei}}<br/>
+\theorembodyfont{\normalfont\rm\CJKfamily{kai}} \theoremindent0em<br/>
+\theoremseparator{\hspace{1em}} \theoremnumbering{arabic}<br/>
+%\theoremsymbol{}          %定理结束时自动添加的标志</p>
+
+<p> </p>
+
+<p><strong>\newtheorem{theorem}{Theorem}<br/>
+\newtheorem{corollary}{Corollary}<br/>
+......<br/>
+\begin{theorem}<br/>
+......<br/>
+\end{theorem}<br/>
+......</strong></p>
+
+<p><strong>\begin{corollary}<br/>
+......<br/>
+\end{corollary}</strong></p>
+
+<p>这样的输出结果就是各自编号的定理和推论了，定义、命题等等也类似可以这么使用。如果你希望定理和推论一起编号，前面可以改为这样（意思是corollary也使用theorem的编号）：</p>
+
+<p><strong>\newtheorem{theorem}{Theorem}<br/>
+\newtheorem{corollary}[theorem]{Corollary}</strong></p>
+
+<p>最后，如果你希望使用Theorem 1.4.2这样的编号，可以这么使用：</p>
+
+<p><strong>\newtheorem{theorem}{Theorem}[subsection] \newtheorem{corollary}[theorem]{Corollary}</strong></p>
+
+<p>前面的subsection改为section将输出Theorem 4.2这样的编号。</p>
+
+<p> </p>
+
+<p><strong>\newtheorem{theorem}{Theorem}[subsection] \newtheorem{corollary}[theorem]{Corollary}</strong></p>
+
+<p>前面的subsection改为section将输出Theorem 4.2这样的编号。</p>
+
+<p>如何让定理，推理等用同一计数器：</p>
+
+<p>\newtheorem{thm}{Theorem}[section] %如果不采用章节号做前缀，则不用[section]<br/>
+\newtheorem{defn}[thm]{Definition} %这句定义使得defn环境和thm共享编号<br/>
+\newtheorem{lem}[thm]{Lemma} %这句定义使得lem环境和thm共享编号</p>
+
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2019-09-16T17:24:22+08:00" itemprop="datePublished">2019/09/16</time>
+			</div>
+			<div class="tags">posted in 
+			
+			    <a class='category' href='%E5%85%B6%E4%BB%96.html'>其他</a>&nbsp;
+			 
+			</div>
+		</div>
+		<h1 class="title" itemprop="name"><a href="15682182289509.html" itemprop="url">
+		赛前感想</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<p>现在是12:10，醒来后的晚上2019年全国大学生数学建模竞赛就要开始了，赛前就发生了很多事情，我的电脑因为一个模块的问题被我搞来搞去，python出现了很大问题，同伴的电脑因为一些硬件问题，不得不借用其他同学的电脑，所以需要重新安装许多东西，也是刚刚，我才结束完两个电脑的准备工作。<br/>
+现在的心情当然是非常激动，也非常疲惫，这是大三的一次建模竞赛，也几乎是我能够获得国家级奖项的唯一机会，我一定要把握这次机会。明天还有两门十分重要的课程，如果落下来，也势必对我这学期的学习会产生很大影响。<br/>
+不管那么多了，还是先睡觉了💤</p>
+
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2019-09-10T20:04:18+08:00" itemprop="datePublished">2019/09/10</time>
+			</div>
+			<div class="tags">posted in 
+			
+			    <a class='category' href='%E5%85%B6%E4%BB%96.html'>其他</a>&nbsp;
+			 
+			</div>
+		</div>
+		<h1 class="title" itemprop="name"><a href="15681170584422.html" itemprop="url">
+		手表使用评价</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<p>最初在b站看到有关pebble的视频后，非常希望有这样一款造型简单，续航之间长，有时间和小题提醒功能就够了的手表，非常遗憾的是，pebble在中国境内不能给顺畅的使用，且有许多问题，不建议中国用户购买。<br/>
+在淘宝搜寻过后，锁定在一款vla腕表，设计符合我的要求，价格便宜，且兼容ios。<br/>
+毕竟是学生，在一番挣扎之后还是买了最便宜的cityA款，售价199，一般会有10元的优惠券。<br/>
+约3天后收到手表，总体感觉不错，玻璃屏幕的硬度和清晰度都不错，蓝牙连接顺畅，且没有发现会影响手机的用电，手表电量充足，大约可以一个月充一次。<br/>
+消息提醒功能暂时微信是完全正常的，qq最新版本存在问题，我非常高兴的是，手表的测试和开发人员都非常的积极，在与他们的一番讨论后，锁定了问题。非常难得的，购买了一款产品后可以联系到开发人员，这样的售后保障我想即使出现了问题也能很快进行修复。<br/>
+总结一下，我觉得不亏</p>
+
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2019-09-09T12:22:01+08:00" itemprop="datePublished">2019/09/09</time>
+			</div>
+			<div class="tags">posted in 
+			
+			    <a class='category' href='%E5%85%B6%E4%BB%96.html'>其他</a>&nbsp;
+			 
+			</div>
+		</div>
+		<h1 class="title" itemprop="name"><a href="15680029212149.html" itemprop="url">
+		雅思阅读</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<p>雅思阅读开始可以分题型练习<br/>
+题型主要有填空题、判断题、选择题、匹配题<br/>
+填空题分为给选项的和不给选项的，不给选项的题型较容易，优先做，一般题目会涉及一大段或连续的几小段，填空一定填原词，甚至不需要修改形式，“”内的内容很有可能就是要填的<br/>
+给选项的比较难，很有可能是无序的，除了根据词性排除一些内容，剩下的只能硬上了，可以放后面做</p>
+
+<p>每道题基本上会对应一个段落或几个段落，出过题的段落不会再出，文意匹配除外</p>
+
+<p>是非判断 true/false/not given  yes/no/not given<br/>
+非与not given 的区别<br/>
+非是文章给的情况和题目给的情况不能共存<br/>
+not given 可以共存<br/>
+我理解是 非是认知错误 not given是对象错误<br/>
+事情的主语、宾语错误都是not given<br/>
+然后如果至少有四个题那么 三种肯定都有 只有三个题，可能缺少一种选项</p>
+
+<p>小匹配（在文章后的），只要一段里有提到就选那一段，不需要整段都是叙述这件事</p>
+
+<p>大匹配（文章前） 最后做.. 很耗时间</p>
+
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2018-10-30T15:57:25+08:00" itemprop="datePublished">2018/10/30</time>
+			</div>
+			<div class="tags">posted in 
+			
+			    <a class='category' href='%E5%85%B6%E4%BB%96.html'>其他</a>&nbsp;
+			 
+			</div>
+		</div>
+		<h1 class="title" itemprop="name"><a href="15408862456484.html" itemprop="url">
+		从不动点定理到计算复杂性</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<h2 id="toc_0">多项式求根的库恩算法</h2>
+
+<p>复平面对\(C\times[0,\infty)\)做单纯剖分,越往上剖分越细<br/>
+对剖分的顶点按照w=f(z)做如下整数标号</p>
+
+<p><img src="media/15408862456484/IMG_3332.heic" alt="IMG_3332"/><br/>
+对于\(C\times[0,\infty)\)上的顶点,按照\(f(z)=z^n\)进行标号<br/>
+<img src="media/15408862456484/IMG_3335.heic" alt="IMG_3335"/></p>
+
+<p>易知计算只在半空间的一个大圆筒内进行<br/>
+每个四面体只能穿行一次<br/>
+算法的可行性</p>
+
+<h2 id="toc_1">计算复杂性论题</h2>
+
+<p><img src="media/15408862456484/IMG_3336.heic" alt="IMG_3336"/><br/>
+<img src="media/15408862456484/IMG_3338.jpg" alt="IMG_3338"/><br/>
+<img src="media/15408862456484/IMG_3339.jpg" alt="IMG_3339"/></p>
+
+<p>牛顿方法（初始的选取）</p>
+
+
+			
+			
+		</div>
+
+	</article>
+  
+
+</div>
+<nav id="pagenavi">
+	 
+	
+	<div class="center"><a href="archives.html">Blog Archives</a></div>
+
+</nav>
+
+</div>
+
+
+
         </div>
-      </div>
-      <div class="otherposts row">
-    
+			<footer id="footer" class="inner">Copyright &copy; 2014
+Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a> &nbsp;&nbsp; 
+Theme by <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a>
+      </footer>
+		</div>
+	</div>
+
   
     
-        <div class="col-md-6">
-          <a href="15686818191570.html" class="item">
-            <div class="article normal">
-              <div class="featureimg" style="background-image: url('asset/defaultfeaimg.jpg')"></div>
-              <div class="articleinfo">
-                <div class="headline">LATEX 定理、命题环境</div>
-                
-              </div>
-            </div>
-          </a>
-        </div>
-    
-  
-    
-        <div class="col-md-6">
-          <a href="15682182289509.html" class="item">
-            <div class="article normal">
-              <div class="featureimg" style="background-image: url('asset/defaultfeaimg.jpg')"></div>
-              <div class="articleinfo">
-                <div class="headline">赛前感想</div>
-                
-              </div>
-            </div>
-          </a>
-        </div>
-    
-  
-    
-        <div class="col-md-6">
-          <a href="15681170584422.html" class="item">
-            <div class="article normal">
-              <div class="featureimg" style="background-image: url('asset/defaultfeaimg.jpg')"></div>
-              <div class="articleinfo">
-                <div class="headline">手表使用评价</div>
-                
-              </div>
-            </div>
-          </a>
-        </div>
-    
-  
-    
-        <div class="col-md-6">
-          <a href="15680029212149.html" class="item">
-            <div class="article normal">
-              <div class="featureimg" style="background-image: url('asset/defaultfeaimg.jpg')"></div>
-              <div class="articleinfo">
-                <div class="headline">雅思阅读</div>
-                
-              </div>
-            </div>
-          </a>
-        </div>
-    
-   
-  </div>
-  <div class="pagenavi">
-    <div class="item">已是最新一页</div>
-    <div class="item"> · </div>
-    <div class="item"><a href="其他_1.html">旧有文章</a></div>
-  </div>
- </div>
- <script>
-   let category = new Vue({
-    el: '#category',
-    data: {},
-    methods: {
-      indexOddandEven(index) {
-        return index%2 ? 'odd' : 'even';
-      },
-      timeformat(raw) {
-        return moment(raw).format("YYYY 年 MM 月 DD 日");
-      }
-    },
-    delimiters: ['$[', ']']
-  })
- </script>
-      <div class="container">
-      <hr>
-      <div class="footer" id="footer">
-        <div class="slogan">众所周知，数学研究只需要一支笔和一堆草稿纸</div>
-        <div class="meta">
-          <p>又是学习的一天</p>
-          <p>「程序猿CubeTian」使用 <a href="https://zh.mweb.im/" target="_blank">MWeb</a> 和 <a href="https://github.com/Astrian/reflect-white-mweb-theme" target="_blank">Reflect White</a> 搭建。</p>
-        </div>
-      </div>
-      <script>
-        let footer = new Vue({
-          el: '#footer',
-          data: {
-            message: 'hello'
-          },
-          delimiters: ['$[', ']']
-        })
-      </script>
-    </div>
-  </div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
+
 </body>
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<style></style>
 </html>

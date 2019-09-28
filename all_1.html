@@ -1,249 +1,686 @@
-<!doctype html>
-<html lang="zh-cn">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,minimum-scale=1" />
-    <title>
-        
-      程序猿CubeTian
-      
-    </title>
-    
-    
-    
-    <link href="atom.xml" rel="alternate" title="程序猿CubeTian" type="application/atom+xml">
-    <script src="https://cdn.bootcss.com/moment.js/2.24.0/moment.min.js"></script>
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>  
+	  
+  	程序猿CubeTian
+  	
+	</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="asset/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <div class="head">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="blogname">程序猿CubeTian</div>
-            <nav>
-              
-                <div class="item"><a target="self" href="index.html">Home</a></div>
-              
-                <div class="item"><a target="_self" href="archives.html">Archives</a></div>
-              
-            </nav>
-          </div>
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="atom.xml" rel="alternate" title="程序猿CubeTian" type="application/atom+xml">
+
+	<link href="asset/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="asset/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<script src="asset/javascripts/jquery.min.js"></script>
+	<script src="asset/highlightjs/highlight.pack.js"></script>
+	<link href="asset/highlightjs/styles/solarized_dark.css" media="screen, projection" rel="stylesheet" type="text/css">
+<script>hljs.initHighlightingOnLoad();</script>
+
+	<!--[if lt IE 9]><script src="asset/javascripts/html5.js"></script><![endif]-->
+	<!-- <link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'> -->
+	<style type="text/css">
+/* latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Nunito-Light'), url(asset/font/1TiHc9yag0wq3lDO9cw0voX0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Nunito-Regular'), url(asset/font/6TbRXKWJjpj6V2v_WyRbMX-_kf6ByYO6CLYdB4HQE-Y.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Nunito-Bold'), url(asset/font/TttUCfJ272GBgSKaOaD7KoX0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+	</style>
+	
+	<style type="text/css">
+	.container .left-col{ opacity: 1;}
+	#pagenavi a{ font-size: 1.3em;}
+	#pagenavi .next:before{ top: 3px;}
+	#pagenavi .prev:before{ top: 3px;}
+	.container .mid-col .mid-col-container #content .archives .title{ font-size: 1.5em;}
+	.container .mid-col .mid-col-container #content article{ padding: 15px 0px;}
+	#header .subtitle {
+		line-height: 1.2em;
+		padding-top: 8px;
+	}
+	article pre{ background: none; border: none; padding: 0;}
+	article .entry-content{text-align: left;}
+	.share-comment{ padding: 25px 0px; clear: both;}
+	hr{ margin: 20px 0px;border: 0; border-top:solid 1px #ddd;}
+	</style>
+  
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+				<header id="header" class="inner">
+				 
+					
+					<h1><a href="index.html">程序猿CubeTian</a></h1>
+					<p class="subtitle">众所周知，数学研究只需要一支笔和一堆草稿纸</p>
+					<nav id="main-nav">
+						<ul class="main">
+						
+						  <li id=""><a target="self" href="index.html">Home</a></li>
+						
+						  <li id=""><a target="_self" href="archives.html">Archives</a></li>
+						
+						</ul>
+					</nav>
+
+					<nav id="sub-nav">
+						<div class="social">
+
+
+
+
+
+
+
+
+
+
+
+
+
+								
+
+								<a class="rss" href="atom.xml" title="RSS">RSS</a>
+							
+						</div>
+					</nav>
+				</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			<div class="mid-col-container"> <div id="content" class="inner">
+<div itemscope itemtype="http://schema.org/Blog">
+
+
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2019-09-16T17:24:22+08:00" itemprop="datePublished">2019/09/16</time>
+			</div>
+			<div class="tags">posted in 
+			
+			    <a class='category' href='%E5%85%B6%E4%BB%96.html'>其他</a>&nbsp;
+			 
+			</div>
+		</div>
+		<h1 class="title" itemprop="name"><a href="15682182289509.html" itemprop="url">
+		赛前感想</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<p>现在是12:10，醒来后的晚上2019年全国大学生数学建模竞赛就要开始了，赛前就发生了很多事情，我的电脑因为一个模块的问题被我搞来搞去，python出现了很大问题，同伴的电脑因为一些硬件问题，不得不借用其他同学的电脑，所以需要重新安装许多东西，也是刚刚，我才结束完两个电脑的准备工作。<br/>
+现在的心情当然是非常激动，也非常疲惫，这是大三的一次建模竞赛，也几乎是我能够获得国家级奖项的唯一机会，我一定要把握这次机会。明天还有两门十分重要的课程，如果落下来，也势必对我这学期的学习会产生很大影响。<br/>
+不管那么多了，还是先睡觉了💤</p>
+
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2019-09-11T21:01:59+08:00" itemprop="datePublished">2019/09/11</time>
+			</div>
+			<div class="tags">posted in 
+			
+			    <a class='category' href='%E8%AE%A1%E7%AE%97%E6%9C%BA.html'>计算机</a>&nbsp;
+			 
+			</div>
+		</div>
+		<h1 class="title" itemprop="name"><a href="15682069194444.html" itemprop="url">
+		地图相关</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<p>在描述数据时，如果有一张热力地图，将是一件非常棒的事情，在这里我在尝试用python制作地图</p>
+
+<h2 id="toc_0">pyecharts</h2>
+
+<p>pyecharts 将不再自带地图 js 文件。如用户需要用到地图图表，可自行安装对应的地图文件包。<br/>
+全球国家地图: echarts-countries-pypkg (1.9MB): 世界地图和 213 个国家，包括中国地图<br/>
+中国省级地图: echarts-china-provinces-pypkg (730KB)：23 个省，5 个自治区<br/>
+中国市级地图: echarts-china-cities-pypkg (3.8MB)：370 个中国城市<br/>
+中国县区级地图: echarts-china-counties-pypkg (4.1MB)：2882 个中国县·区<br/>
+中国区域地图: echarts-china-misc-pypkg (148KB)：11 个中国区域地图，比如华南、华北。</p>
+
+<pre><code class="language-text">如果提示缺少这个就安装一下
+pip  install pyecharts_snapshot
+pip install echarts-countries-pypkg
+pip install echarts-china-provinces-pypkg
+pip install echarts-china-cities-pypkg
+pip install echarts-china-counties-pypkg
+pip install echarts-china-misc-pypkg
+</code></pre>
+
+<h2 id="toc_1">Basemap</h2>
+
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2019-09-10T21:56:33+08:00" itemprop="datePublished">2019/09/10</time>
+			</div>
+			<div class="tags">posted in 
+			
+			    <a class='category' href='%E8%AE%A1%E7%AE%97%E6%9C%BA.html'>计算机</a>&nbsp;
+			 
+			</div>
+		</div>
+		<h1 class="title" itemprop="name"><a href="15681237931017.html" itemprop="url">
+		itertools 模块</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<p>在解决优化问题的过程中，经常需要遍历所有的情况，不仅需要考虑内存的问题，所需要迭代内容的生成也是一件很麻烦的事情，我曾经尝试过网格生成等方法，效果并不理想，十分复杂，直到我发现了它<br/>
+原教程地址：<a href="http://funhacks.net/2017/02/13/itertools/">高效的 itertools 模块</a><br/>
+itertools 是python的一个很小的模块，是python标准库中的，不需要另外安装<br/>
+首先介绍迭代器的三种类型</p>
+
+<ul>
+<li>无限迭代器：生成一个无限序列，比如自然数序列 <code>1, 2, 3, 4, ...</code>；</li>
+<li>有限迭代器：接收一个或多个序列（sequence）作为参数，进行组合、分组和过滤等；</li>
+<li>组合生成器：序列的排列、组合，求序列的笛卡儿积等；</li>
+</ul>
+
+<h2 id="toc_0">无限迭代器</h2>
+
+<p>itertools 模块提供了三个函数（事实上，它们是类）用于生成一个无限序列迭代器：</p>
+
+<ul>
+<li><p>count(firstval=0, step=1)</p>
+<p>创建一个从 firstval (默认值为 0) 开始，以 step (默认值为 1) 为步长的的无限整数迭代器</p></li>
+<li><p>cycle(iterable)</p>
+<p>对 iterable 中的元素反复执行循环，返回迭代器</p></li>
+<li><p>repeat(object [,times]</p>
+<p>反复生成 object，如果给定 times，则重复次数为 times，否则为无限</p></li>
+</ul>
+
+<p>下面，让我们看看一些例子。</p>
+
+<h3 id="toc_1">count</h3>
+
+<p>count() 接收两个参数，第一个参数指定开始值，默认为0，第二个参数指定步长，默认为1:</p>
+
+<pre><code class="language-text">&gt;&gt;&gt; import itertools
+&gt;&gt;&gt;
+&gt;&gt;&gt; nums = itertools.count()
+&gt;&gt;&gt; for i in nums:
+...     if i &gt; 6:
+...         break
+...     print i
+...
+0
+1
+2
+3
+4
+5
+6
+&gt;&gt;&gt; nums = itertools.count(10, 2)    # 指定开始值和步长
+&gt;&gt;&gt; for i in nums:
+...     if i &gt; 20:
+...         break
+...     print i
+...
+10
+12
+14
+16
+18
+20
+</code></pre>
+
+<h3 id="toc_2">cycle</h3>
+
+<p>cycle() 用于对iterable中的元素反复执行循环：</p>
+
+<pre><code class="language-text">&gt;&gt;&gt; import itertools
+&gt;&gt;&gt;
+&gt;&gt;&gt; cycle_strings = itertools.cycle(&#39;ABC&#39;)
+&gt;&gt;&gt; i = 1
+&gt;&gt;&gt; for string in cycle_strings:
+...     if i == 10:
+...         break
+...     print i, string
+...     i += 1
+...
+1 A
+2 B
+3 C
+4 A
+5 B
+6 C
+7 A
+8 B
+9 C
+</code></pre>
+
+<h3 id="toc_3">repeat</h3>
+
+<p>repeat() 用于反复生成一个object：</p>
+
+<pre><code class="language-text">&gt;&gt;&gt; import itertools
+&gt;&gt;&gt;
+&gt;&gt;&gt; for item in itertools.repeat(&#39;hello world&#39;, 3):
+...     print item
+...
+hello world
+hello world
+hello world
+&gt;&gt;&gt;
+&gt;&gt;&gt; for item in itertools.repeat([1, 2, 3, 4], 3):
+...     print item
+...
+[1, 2, 3, 4]
+[1, 2, 3, 4]
+[1, 2, 3, 4]
+</code></pre>
+
+<h2 id="toc_4">有限迭代器</h2>
+
+<p>itertools 模块提供了多个函数（类），接收一个或多个迭代对象作为参数，对它们进行组合、分组和过滤等：</p>
+
+<ul>
+<li>chain() 连接</li>
+<li>compress()</li>
+<li>dropwhile()</li>
+<li>groupby()</li>
+<li>ifilter()</li>
+<li>ifilterfalse()</li>
+<li>islice()</li>
+<li>imap()</li>
+<li>starmap()</li>
+<li>tee()</li>
+<li>takewhile()</li>
+<li>izip()</li>
+<li>izip_longest()</li>
+</ul>
+
+<h2 id="toc_5">组合生成器</h2>
+
+<p>itertools 模块还提供了多个组合生成器函数，用于求序列的排列、组合等：</p>
+
+<ul>
+<li>product</li>
+<li>permutations</li>
+<li>combinations</li>
+<li>combinations_with_replacement</li>
+</ul>
+
+<h3 id="toc_6">product</h3>
+
+<p>product 用于求多个可迭代对象的笛卡尔积，它跟嵌套的for循环等价，它的一般使用形式如下：</p>
+
+<pre><code class="language-text">product(iter1, iter2, ... iterN, [repeat=1])
+</code></pre>
+
+<p>其中，repeat是一个关键字参数，用于指定重复生成序列的次数，</p>
+
+<pre><code class="language-text">&gt;&gt;&gt; from itertools import product
+&gt;&gt;&gt;
+&gt;&gt;&gt; for item in product(&#39;ABCD&#39;, &#39;xy&#39;):
+...     print item
+...
+(&#39;A&#39;, &#39;x&#39;)
+(&#39;A&#39;, &#39;y&#39;)
+(&#39;B&#39;, &#39;x&#39;)
+(&#39;B&#39;, &#39;y&#39;)
+(&#39;C&#39;, &#39;x&#39;)
+(&#39;C&#39;, &#39;y&#39;)
+(&#39;D&#39;, &#39;x&#39;)
+(&#39;D&#39;, &#39;y&#39;)
+&gt;&gt;&gt;
+&gt;&gt;&gt; list(product(&#39;ab&#39;, range(3)))
+[(&#39;a&#39;, 0), (&#39;a&#39;, 1), (&#39;a&#39;, 2), (&#39;b&#39;, 0), (&#39;b&#39;, 1), (&#39;b&#39;, 2)]
+&gt;&gt;&gt;
+&gt;&gt;&gt; list(product((0,1), (0,1), (0,1)))
+[(0, 0, 0), (0, 0, 1), (0, 1, 0), (0, 1, 1), (1, 0, 0), (1, 0, 1), (1, 1, 0), (1, 1, 1)]
+&gt;&gt;&gt;
+&gt;&gt;&gt; list(product(&#39;ABC&#39;, repeat=2))
+[(&#39;A&#39;, &#39;A&#39;), (&#39;A&#39;, &#39;B&#39;), (&#39;A&#39;, &#39;C&#39;), (&#39;B&#39;, &#39;A&#39;), (&#39;B&#39;, &#39;B&#39;), (&#39;B&#39;, &#39;C&#39;), (&#39;C&#39;, &#39;A&#39;), (&#39;C&#39;, &#39;B&#39;), (&#39;C&#39;, &#39;C&#39;)]
+&gt;&gt;&gt;
+</code></pre>
+
+<h3 id="toc_7">permutation</h3>
+
+<p>permutation 用于生成一个排列，它的一般使用形式如下：</p>
+
+<pre><code class="language-text">permutations(iterable[, r])
+</code></pre>
+
+<p>其中，r 指定生成排列的元素的长度，如果不指定，则默认为可迭代对象的元素长度。</p>
+
+<pre><code class="language-text">&gt;&gt;&gt; from itertools import permutations
+&gt;&gt;&gt;
+&gt;&gt;&gt; permutations(&#39;ABC&#39;, 2)
+&lt;itertools.permutations object at 0x1074d9c50&gt;
+&gt;&gt;&gt;
+&gt;&gt;&gt; list(permutations(&#39;ABC&#39;, 2))
+[(&#39;A&#39;, &#39;B&#39;), (&#39;A&#39;, &#39;C&#39;), (&#39;B&#39;, &#39;A&#39;), (&#39;B&#39;, &#39;C&#39;), (&#39;C&#39;, &#39;A&#39;), (&#39;C&#39;, &#39;B&#39;)]
+&gt;&gt;&gt;
+&gt;&gt;&gt; list(permutations(&#39;ABC&#39;))
+[(&#39;A&#39;, &#39;B&#39;, &#39;C&#39;), (&#39;A&#39;, &#39;C&#39;, &#39;B&#39;), (&#39;B&#39;, &#39;A&#39;, &#39;C&#39;), (&#39;B&#39;, &#39;C&#39;, &#39;A&#39;), (&#39;C&#39;, &#39;A&#39;, &#39;B&#39;), (&#39;C&#39;, &#39;B&#39;, &#39;A&#39;)]
+&gt;&gt;&gt;
+</code></pre>
+
+<h3 id="toc_8">combination</h3>
+
+<p>combinations(不放回) 用于求序列的组合，它的使用形式如下：</p>
+
+<pre><code class="language-text">combinations(iterable, r)
+</code></pre>
+
+<p>其中，r指定生成组合的元素的长度</p>
+
+<pre><code class="language-text">&gt;&gt;&gt; from itertools import combinations
+&gt;&gt;&gt;
+&gt;&gt;&gt; list(combinations(&#39;ABC&#39;, 2))
+[(&#39;A&#39;, &#39;B&#39;), (&#39;A&#39;, &#39;C&#39;), (&#39;B&#39;, &#39;C&#39;)]
+</code></pre>
+
+<p>combinations_with_replacement（放回抽取） 和 combinations 类似，但它生成的组合包含自身元素。</p>
+
+<pre><code class="language-text">&gt;&gt;&gt; from itertools import combinations_with_replacement
+&gt;&gt;&gt;
+&gt;&gt;&gt; list(combinations_with_replacement(&#39;ABC&#39;, 2))
+[(&#39;A&#39;, &#39;A&#39;), (&#39;A&#39;, &#39;B&#39;), (&#39;A&#39;, &#39;C&#39;), (&#39;B&#39;, &#39;B&#39;), (&#39;B&#39;, &#39;C&#39;), (&#39;C&#39;, &#39;C&#39;)]
+</code></pre>
+
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2019-09-10T20:21:15+08:00" itemprop="datePublished">2019/09/10</time>
+			</div>
+			<div class="tags">posted in 
+			
+			    <a class='category' href='%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1.html'>数学建模</a>&nbsp;
+			 
+			</div>
+		</div>
+		<h1 class="title" itemprop="name"><a href="15681180752987.html" itemprop="url">
+		蚁群优化算法学习笔记</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<p>本人阅读《蚁群优化算法》-马良等过程中的笔记<br/>
+前五章的目录</p>
+
+<ol>
+<li>引论
+<ol>
+<li>组合优化与计算复杂性</li>
+<li>来自自然界的几类优化方法</li>
+</ol></li>
+<li>蚁群算法原理
+<ol>
+<li>基本思想</li>
+<li>研究概况</li>
+</ol></li>
+<li>标准的TSP的蚁群算法
+<ol>
+<li>TSP概述</li>
+<li>经典方法</li>
+<li>遗传算法与模拟退火</li>
+<li>蚁群算法</li>
+<li>元胞蚁群算法及其收敛性</li>
+</ol></li>
+<li>扩展旅行商问题的蚁群算法
+<ol>
+<li>瓶颈TSP及其求解</li>
+<li>最小比率TSP及其求解</li>
+<li>时间约束TSP及其求解</li>
+<li>多目标TSP及其求解</li>
+</ol></li>
+<li>车辆路径问题的蚁群算法
+<ol>
+<li>VRP概述</li>
+<li>CVRP及其求解</li>
+<li>多目标VRP及其求解</li>
+<li>VRPTW及其求解</li>
+<li>VRPSTW及其求解</li>
+<li>FVRP及其求解<br/>
+看完目录前五章，首先有好多英文缩写看不明白，接着看</li>
+</ol></li>
+</ol>
+
+<h2 id="toc_0">第一章 引论</h2>
+
+<p>1.1 组合优化与计算复杂性<br/>
+最优化分连续变量与离散变量，离散变量的问题往往称为组合优化<br/>
+局部搜索法是基于贪婪思想，利用领域函数进行搜索的，局部搜索法可能落入局部最优点，或由于步长和初始点选择不好而错过最优点。<br/>
+依据一定概率，对于步长问题，可以采用变步长方法，在接近最优点附近，采取某种策略改变步长<br/>
+对于初始点问题，可以采用随机生成的一些初始点，从每个初始点出发进行搜索，找到各自的最优解，再从这些最优解中选择一个最好的结果</p>
+
+<p>典型组合优化难题<br/>
+    1. 旅行商问题（TSP）：所有可能的路线最多有（n-1）!/2 条<br/>
+    2. 图着色问题（GCP）：记图的最大顶点读书为\(\Delta\) ，则图的最小着色数以\(\Delta + 1\)为上界<br/>
+    3. 工件排序问题（JSP）：NP难题（NP-hard）<br/>
+    4. 二次分配问题（QAP）：目标函数非线性<br/>
+    5. 度约束最小树问题（DCMSTP）：最小生成树问题（不懂）<br/>
+上述典型问题及等价问题，普遍认为没有多项式算法求解</p>
+
+<p>1.2 来自自然界的几类优化方法<br/>
+计算智能系统是在神经网络、模糊系统、进化计算</p>
+
+<ol>
+<li>遗传算法的基本步骤（GA）：
+<ol>
+<li>问题的染色体表示</li>
+<li>初始解组（种群）的生成</li>
+<li>计算解组中各个解的适值函数（代价函数）</li>
+<li>从解组中随机抽取两个解作为父母代</li>
+<li>对父母代实施遗传操作（交叉、变异等）以产生一个后代解</li>
+<li>按某种规则，用该后代解替换原解组中的某个解</li>
+<li>按当前解组符合停机条件则算法终止，否则，转步骤1<br/>
+结果的好坏主要依赖于遗传代数和解组规模<br/></li>
+</ol></li>
+<li>模拟退火算法基本步骤（SA）：<br/>
+物体内部服从Boltzman分布
+<ol>
+<li>选择初始状态H（初始解）、初始温度、降温次数等</li>
+<li>生成H的领域状态H‘，并计算两种状态下的目标函数f(H&#39;)-f(H)</li>
+<li>按接受概率置换H为H‘</li>
+<li>重复步骤2和步骤3直至停机条件满足</li>
+</ol></li>
+<li>禁忌搜索法（TS）在搜索过程中使用记忆功能</li>
+<li>人工神经网络</li>
+<li>蚁群系统：信息激素，轨迹，自催化行为，增强型学习系统</li>
+<li>微粒群算法（PSO）：
+<ol>
+<li>依照初始化过程，对微粒群的随机位置和速度进行初始设定</li>
+<li>计算每个微粒的适应值</li>
+<li>对每个微粒，将其适应值与所经历过的最好位置进行比较，若较好，则将其作为当前的最好位置</li>
+<li>对每个微粒，将其适应值与全局所经历的最好位置的适应值进行比较，若较好，则将其作为当前的的全局最好位置</li>
+<li>对微粒的速度和位置进行进化</li>
+<li>若未到达结束条件（通常为足够好的适应值或最大代数），则返回步骤2</li>
+</ol></li>
+</ol>
+
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2019-09-09T07:54:07+08:00" itemprop="datePublished">2019/09/09</time>
+			</div>
+			<div class="tags">posted in 
+			
+			    <a class='category' href='%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1.html'>数学建模</a>&nbsp;
+			 
+			</div>
+		</div>
+		<h1 class="title" itemprop="name"><a href="15679868479784.html" itemprop="url">
+		数值分析</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<h2 id="toc_0">灵敏度分析和误差分析</h2>
+
+<h3 id="toc_1">灵敏度分析</h3>
+
+<p><strong>敏感度分析</strong>（Sensitivity analysis）是研究数学模型或系统(数值或其他)输出中的不确定性如何在其输入中被分配到不同的不确定性来源。<a href="https://zh.wikipedia.org/wiki/%E6%95%8F%E6%84%9F%E5%BA%A6%E5%88%86%E6%9E%90#cite_note-1">[1]</a><a href="https://zh.wikipedia.org/wiki/%E6%95%8F%E6%84%9F%E5%BA%A6%E5%88%86%E6%9E%90#cite_note-2">[2]</a>一个相关的实践是不确定度分析，它更注重不确定度的量化和不确定度的传播;理想情况下，不确定度和灵敏度分析应该同时进行。</p>
+
+<p>在其他假设下重新计算结果以确定变量在敏感性分析下的影响的过程可用于一系列目的，<a href="https://zh.wikipedia.org/wiki/%E6%95%8F%E6%84%9F%E5%BA%A6%E5%88%86%E6%9E%90#cite_note-3">[3]</a>包括：</p>
+
+<ul>
+<li>在存在不确定性的情况下测试模型或系统结果的稳健性。</li>
+<li>增加对系统或模型中输入和输出变量之间关系的理解。</li>
+<li>通过识别导致输出中存在显着不确定性的模型输入来减少不确定性，因此应该成为关注的焦点，以便提高稳健性（可能通过进一步的研究）。</li>
+<li>搜索模型中的错误（通过遇到输入和输出之间的意外关系）。</li>
+<li>模型简化 - 修复对输出没有影响的模型输入，或识别和删除模型结构的冗余部分。</li>
+<li>加强建模人员与决策者之间的沟通（例如，通过提出更可信，可理解，引人注目或具有说服力的建议）。</li>
+<li>在输入因子空间中查找模型输出为最大值或最小值或满足某个最佳标准的区域。</li>
+<li>在校准具有大量参数的模型的情况下，主要灵敏度测试可以通过关注敏感参数来简化校准阶段。不知道参数的敏感性会导致无用的时间花在非敏感的时间上。<a href="https://zh.wikipedia.org/wiki/%E6%95%8F%E6%84%9F%E5%BA%A6%E5%88%86%E6%9E%90#cite_note-4">[4]</a></li>
+<li>寻求识别观测，模型输入和预测或预测之间的重要联系，从而开发出更好的模型。<a href="https://zh.wikipedia.org/wiki/%E6%95%8F%E6%84%9F%E5%BA%A6%E5%88%86%E6%9E%90#cite_note-5">[5]</a><a href="https://zh.wikipedia.org/wiki/%E6%95%8F%E6%84%9F%E5%BA%A6%E5%88%86%E6%9E%90#cite_note-6">[6]</a></li>
+</ul>
+
+<p>（from wiki）</p>
+
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2019-09-10T20:04:18+08:00" itemprop="datePublished">2019/09/10</time>
+			</div>
+			<div class="tags">posted in 
+			
+			    <a class='category' href='%E5%85%B6%E4%BB%96.html'>其他</a>&nbsp;
+			 
+			</div>
+		</div>
+		<h1 class="title" itemprop="name"><a href="15681170584422.html" itemprop="url">
+		手表使用评价</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<p>最初在b站看到有关pebble的视频后，非常希望有这样一款造型简单，续航之间长，有时间和小题提醒功能就够了的手表，非常遗憾的是，pebble在中国境内不能给顺畅的使用，且有许多问题，不建议中国用户购买。<br/>
+在淘宝搜寻过后，锁定在一款vla腕表，设计符合我的要求，价格便宜，且兼容ios。<br/>
+毕竟是学生，在一番挣扎之后还是买了最便宜的cityA款，售价199，一般会有10元的优惠券。<br/>
+约3天后收到手表，总体感觉不错，玻璃屏幕的硬度和清晰度都不错，蓝牙连接顺畅，且没有发现会影响手机的用电，手表电量充足，大约可以一个月充一次。<br/>
+消息提醒功能暂时微信是完全正常的，qq最新版本存在问题，我非常高兴的是，手表的测试和开发人员都非常的积极，在与他们的一番讨论后，锁定了问题。非常难得的，购买了一款产品后可以联系到开发人员，这样的售后保障我想即使出现了问题也能很快进行修复。<br/>
+总结一下，我觉得不亏</p>
+
+
+			
+			
+		</div>
+
+	</article>
+ 
+	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="meta">
+			<div class="date">
+				<time datetime="2019-09-09T12:22:01+08:00" itemprop="datePublished">2019/09/09</time>
+			</div>
+			<div class="tags">posted in 
+			
+			    <a class='category' href='%E5%85%B6%E4%BB%96.html'>其他</a>&nbsp;
+			 
+			</div>
+		</div>
+		<h1 class="title" itemprop="name"><a href="15680029212149.html" itemprop="url">
+		雅思阅读</a></h1>
+		<div class="entry-content" itemprop="articleBody">
+			
+			<p>雅思阅读开始可以分题型练习<br/>
+题型主要有填空题、判断题、选择题、匹配题<br/>
+填空题分为给选项的和不给选项的，不给选项的题型较容易，优先做，一般题目会涉及一大段或连续的几小段，填空一定填原词，甚至不需要修改形式，“”内的内容很有可能就是要填的<br/>
+给选项的比较难，很有可能是无序的，除了根据词性排除一些内容，剩下的只能硬上了，可以放后面做</p>
+
+<p>每道题基本上会对应一个段落或几个段落，出过题的段落不会再出，文意匹配除外</p>
+
+<p>是非判断 true/false/not given  yes/no/not given<br/>
+非与not given 的区别<br/>
+非是文章给的情况和题目给的情况不能共存<br/>
+not given 可以共存<br/>
+我理解是 非是认知错误 not given是对象错误<br/>
+事情的主语、宾语错误都是not given<br/>
+然后如果至少有四个题那么 三种肯定都有 只有三个题，可能缺少一种选项</p>
+
+<p>小匹配（在文章后的），只要一段里有提到就选那一段，不需要整段都是叙述这件事</p>
+
+<p>大匹配（文章前） 最后做.. 很耗时间</p>
+
+
+			
+			
+		</div>
+
+	</article>
+  
+
+</div>
+<nav id="pagenavi">
+	 <a class="prev" href="all.html">Prev</a>  
+	 <a class="next" href="all_2.html">Next</a> 
+	<div class="center"><a href="archives.html">Blog Archives</a></div>
+
+</nav>
+
+</div>
+
+
+
         </div>
-      </div>
-      <hr>
-    </div> <div class="container" id="category">
+			<footer id="footer" class="inner">Copyright &copy; 2014
+Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a> &nbsp;&nbsp; 
+Theme by <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a>
+      </footer>
+		</div>
+	</div>
+
   
     
-      <div class="article huge">
-        <div class="featureimg" style="background-image: url('asset/defaultfeaimg.jpg')"></div>
-        <div class="row content">
-          <div class="col-md-2"></div>
-          <div class="col-md-10 main">
-            <div class="row">
-              <div class="col-md-10 post">
-                <div class="headline"><a href="15685969611776.html">SAS DATA步之全揭秘</a></div>
-                
-                <div class="time">$[timeformat('2019-09-16T09:22:41+08:00')]</div>
-                <div class="body">
-                    <p>一些概念</p>
 
-<ul>
-<li>程序数据向量（PDV）</li>
-<li>SAS自动变量名及其使用</li>
-<li>理解DATA步内部处理过程</li>
-<li>代码编译期间发生的事情</li>
-<li>程序执行期间实际发生了什么</li>
-<li>如何获取和存储变量属性</li>
-</ul>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
 
-<p>DATA时建立SAS数据集的主要方法之一。一些涉及数据处理和创建数据集的任务可能只能通过DATA步才能解决<br/>
-DATA步分编译和执行两个阶段，PDV贯穿SAS编译和执行的两个阶段，决定了信息在DATA步中的存储及变化</p>
-
-<p>编译阶段包括：</p>
-
-<ul>
-<li>编译SAS语句，包括检查语法</li>
-<li>创建一个输入缓存区（input buffer）（如果需要读入原始数据文件）、一个PDV和描述性信息</li>
-</ul>
-
-<p>执行阶段包括：</p>
-
-<ul>
-<li>计算DATA步迭代的次数（从DATA语句开始）</li>
-<li>将PDV中所有变量设成缺失值并初始化自动变量</li>
-<li>读取输入观测（从原始文件或SAS数据集）</li>
-<li>执行附加的处理或计算语句</li>
-<li>将一条数据记录写入输出数据集并返回到DATA步语句</li>
-</ul>
-
-<p>PDV贯穿编译的执行阶段：</p>
-
-<ul>
-<li>PDV是内存的一个临时逻辑区域，SAS建立数据集时，每条观察值只有一次机会用的PDV</li>
-<li>包含所有变量的当前值</li>
-<li>包含两个自动变量：_N_和_ERROR_</li>
-</ul>
-
-<p>DATA步<br/>
-一个DATA步包含SAS语言的一组语句，这些语句具有以下功能</p>
-
-<ul>
-<li>从外部文件读入数据</li>
-<li>将数据写入外部文件</li>
-<li>读入SAS数据集和SAS视图</li>
-<li>创建SAS数据集和SAS视图<br/>
-一旦数据可以以SAS数据集的形式访问，就可以通过SAS过程步来分析数据和写报告</li>
-</ul>
-
-<p>可以运用DATA步：</p>
-
-<ul>
-<li>创建SAS数据集（SAS数据集或SAS视图）</li>
-<li>根据包含原始数据（外部文件）和文件创建SAS数据集</li>
-<li>通过提取子集、合并、修改和更新已经存在数据集的方式来创建新的数据集</li>
-<li>分析、处理或展现数据</li>
-<li>为新变量赋值（在有公式计算的情况下）</li>
-<li>撰写报告或将文件写入磁盘或磁带</li>
-<li>信息检索</li>
-<li>文件管理<br/>
-DATA步以‘DATA’语句开始（即显示的表明数据步的开始），以‘RUN’语句结束，在结束时会编译或执行RUN语句。在数据步最后一个观察值读取前，‘RUN’的功能都是以非显示的形式执行RETURN功能，去继续循环的操作。
-<img src="media/15685969611776/15687662911534.png" alt=""/>
-编译阶段<br/>
-如上所示，DATA步的第一个阶段就为编译阶段。在编译阶段SAS的任务如下：</li>
-<li>自动将SAS语句编译成将会在后面执行的机器语言</li>
-<li>确定每个变量的类型和长度</li>
-<li>确定变量是否有必要进行类型转换</li>
-<li>如果有INPUT语句，为外部文件新建读取内存缓存区</li>
-<li>创建PDV（Program Data Vector）</li>
-<li>创建数据集和变量属性的描述性信息</li>
-<li>处理语句，该项任务仅限于编译阶段；这为编译器如何新建变量提供信息；事实上，他们决定了如何在PDV内建立变量及信息；这些信息包括：DROP；KEEP；RENAME；RETAIN；RHERE；LABEL；LENGTH；FORMAT；ARRAY；BY；ATTRIB</li>
-<li>创建自动变量：包括_N_,_ERROR_,RND=,IN=,FIRST,LAST,POINT=</li>
-</ul>
-
-                </div>
-                <div class="bottom">
-                  <a href="15685969611776.html" class="continue float-right">
-                    继续阅读
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="otherposts row">
-    
-  
-    
-        <div class="col-md-6">
-          <a href="15686818191570.html" class="item">
-            <div class="article normal">
-              <div class="featureimg" style="background-image: url('asset/defaultfeaimg.jpg')"></div>
-              <div class="articleinfo">
-                <div class="headline">LATEX 定理、命题环境</div>
-                
-              </div>
-            </div>
-          </a>
-        </div>
-    
-  
-    
-        <div class="col-md-6">
-          <a href="15682182289509.html" class="item">
-            <div class="article normal">
-              <div class="featureimg" style="background-image: url('asset/defaultfeaimg.jpg')"></div>
-              <div class="articleinfo">
-                <div class="headline">赛前感想</div>
-                
-              </div>
-            </div>
-          </a>
-        </div>
-    
-  
-    
-        <div class="col-md-6">
-          <a href="15682069194444.html" class="item">
-            <div class="article normal">
-              <div class="featureimg" style="background-image: url('asset/defaultfeaimg.jpg')"></div>
-              <div class="articleinfo">
-                <div class="headline">地图相关</div>
-                
-              </div>
-            </div>
-          </a>
-        </div>
-    
-  
-    
-        <div class="col-md-6">
-          <a href="15681237931017.html" class="item">
-            <div class="article normal">
-              <div class="featureimg" style="background-image: url('asset/defaultfeaimg.jpg')"></div>
-              <div class="articleinfo">
-                <div class="headline">itertools 模块</div>
-                
-              </div>
-            </div>
-          </a>
-        </div>
-    
-   
-  </div>
-  <div class="pagenavi">
-    <div class="item"><a href="all.html">更新文章</a></div>
-    <div class="item"> · </div>
-    <div class="item"><a href="all_2.html">旧有文章</a></div>
-  </div>
- </div>
- <script>
-   let category = new Vue({
-    el: '#category',
-    data: {},
-    methods: {
-      indexOddandEven(index) {
-        return index%2 ? 'odd' : 'even';
-      },
-      timeformat(raw) {
-        return moment(raw).format("YYYY 年 MM 月 DD 日");
-      }
-    },
-    delimiters: ['$[', ']']
-  })
- </script>
-      <div class="container">
-      <hr>
-      <div class="footer" id="footer">
-        <div class="slogan">众所周知，数学研究只需要一支笔和一堆草稿纸</div>
-        <div class="meta">
-          <p>又是学习的一天</p>
-          <p>「程序猿CubeTian」使用 <a href="https://zh.mweb.im/" target="_blank">MWeb</a> 和 <a href="https://github.com/Astrian/reflect-white-mweb-theme" target="_blank">Reflect White</a> 搭建。</p>
-        </div>
-      </div>
-      <script>
-        let footer = new Vue({
-          el: '#footer',
-          data: {
-            message: 'hello'
-          },
-          delimiters: ['$[', ']']
-        })
-      </script>
-    </div>
-  </div>
 </body>
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<style></style>
 </html>

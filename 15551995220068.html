@@ -1,119 +1,151 @@
-<!doctype html>
-<html lang="zh-cn">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,minimum-scale=1" />
-    <title>
-        
-      数值线性代数第一次学习 - 程序猿CubeTian
-      
-    </title>
-    
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:creator" content="@Astrian_Zheng" />
-      <meta property="og:url" content="https://cubetian.github.io/15551995220068.html" />
-      <meta property="og:title" content="数值线性代数第一次学习" />
-      
-        <meta property="og:description" content="数值线性代数第一次学习" />
-      
-      
-      <meta property="og:site_name" content="程序猿CubeTian" />
-    
-    
-    <link href="atom.xml" rel="alternate" title="程序猿CubeTian" type="application/atom+xml">
-    <script src="https://cdn.bootcss.com/moment.js/2.24.0/moment.min.js"></script>
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>  
+	  
+  	数值线性代数第一次学习 - 程序猿CubeTian
+  	
+	</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="asset/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <div class="head">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="blogname">程序猿CubeTian</div>
-            <nav>
-              
-                <div class="item"><a target="self" href="index.html">Home</a></div>
-              
-                <div class="item"><a target="_self" href="archives.html">Archives</a></div>
-              
-            </nav>
-          </div>
-        </div>
-      </div>
-      <hr>
-    </div> <div class="container" id="post">
-  <div class="article huge">
-    <div class="featureimg" style="background-image: url('asset/defaultfeaimg.jpg')"></div>
-    <img src="" style="display: none;" class="featureimgforexternal">
-    <div class="timeGTM" style="display:none;">2019-04-14T08:12:08+08:00</div>
-    <div class="row content">
-      <div class="col-md-2"></div>
-      <div class="col-md-10 main">
-        <div class="row">
-          <div class="col-md-10">
-            <div class="post">
-              <div class="headline"><a href="15551995220068.html">数值线性代数第一次学习</a></div>
-              
-              <div class="time">$[timeformat('2019-04-14T08:12:08+08:00')]</div>
-              <div class="body">
-                  <h2 id="toc_0">前言</h2>
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="atom.xml" rel="alternate" title="程序猿CubeTian" type="application/atom+xml">
+
+	<link href="asset/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="asset/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<script src="asset/javascripts/jquery.min.js"></script>
+	<script src="asset/highlightjs/highlight.pack.js"></script>
+	<link href="asset/highlightjs/styles/solarized_dark.css" media="screen, projection" rel="stylesheet" type="text/css">
+<script>hljs.initHighlightingOnLoad();</script>
+
+	<!--[if lt IE 9]><script src="asset/javascripts/html5.js"></script><![endif]-->
+	<!-- <link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'> -->
+	<style type="text/css">
+/* latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Nunito-Light'), url(asset/font/1TiHc9yag0wq3lDO9cw0voX0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Nunito-Regular'), url(asset/font/6TbRXKWJjpj6V2v_WyRbMX-_kf6ByYO6CLYdB4HQE-Y.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Nunito-Bold'), url(asset/font/TttUCfJ272GBgSKaOaD7KoX0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+	</style>
+	
+	<style type="text/css">
+	.container .left-col{ opacity: 1;}
+	#pagenavi a{ font-size: 1.3em;}
+	#pagenavi .next:before{ top: 3px;}
+	#pagenavi .prev:before{ top: 3px;}
+	.container .mid-col .mid-col-container #content .archives .title{ font-size: 1.5em;}
+	.container .mid-col .mid-col-container #content article{ padding: 15px 0px;}
+	#header .subtitle {
+		line-height: 1.2em;
+		padding-top: 8px;
+	}
+	article pre{ background: none; border: none; padding: 0;}
+	article .entry-content{text-align: left;}
+	.share-comment{ padding: 25px 0px; clear: both;}
+	hr{ margin: 20px 0px;border: 0; border-top:solid 1px #ddd;}
+	</style>
+  
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+				<header id="header" class="inner">
+				 
+					
+					<h1><a href="index.html">程序猿CubeTian</a></h1>
+					<p class="subtitle">众所周知，数学研究只需要一支笔和一堆草稿纸</p>
+					<nav id="main-nav">
+						<ul class="main">
+						
+						  <li id=""><a target="self" href="index.html">Home</a></li>
+						
+						  <li id=""><a target="_self" href="archives.html">Archives</a></li>
+						
+						</ul>
+					</nav>
+
+					<nav id="sub-nav">
+						<div class="social">
+
+
+
+
+
+
+
+
+
+
+
+
+
+								
+
+								<a class="rss" href="atom.xml" title="RSS">RSS</a>
+							
+						</div>
+					</nav>
+				</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			<div class="mid-col-container"> <div id="content" class="inner">
+
+	<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+		<h1 class="title" itemprop="name">数值线性代数第一次学习</h1>
+		<div class="entry-content" itemprop="articleBody">
+			<h2 id="toc_0">前言</h2>
 
 <p>数值线性代数是本人学校曾经开展的一门课程，该课程现由数学模型和数值分析两门课程各自涉及一部分内容。由于本人对计算数学有需求，先通过陈中文老师的课件自学，并将自己的一些总结分享出来。</p>
 
-              </div>
-            </div>
-            
-            
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<script>
-    let post = new Vue({
-     el: '#post',
-     data: {
-       hidelikecoin: ''
-     },
-     methods: {
-       timeformat(raw) {
-         return moment(raw).format("YYYY 年 MM 月 DD 日");
-       }
-     },
-     delimiters: ['$[', ']']
-   })
-  </script>      <div class="container">
-      <hr>
-      <div class="footer" id="footer">
-        <div class="slogan">众所周知，数学研究只需要一支笔和一堆草稿纸</div>
-        <div class="meta">
-          <p>又是学习的一天</p>
-          <p>「程序猿CubeTian」使用 <a href="https://zh.mweb.im/" target="_blank">MWeb</a> 和 <a href="https://github.com/Astrian/reflect-white-mweb-theme" target="_blank">Reflect White</a> 搭建。</p>
-        </div>
-      </div>
-      <script>
-        let footer = new Vue({
-          el: '#footer',
-          data: {
-            message: 'hello'
-          },
-          delimiters: ['$[', ']']
-        })
-      </script>
-    </div>
-  </div>
+		</div>
+	</article>
+	<div class="share-comment">
+	 
+
+	  
+
+	  
+
+	</div>
+</div>        </div>
+			<footer id="footer" class="inner">Copyright &copy; 2014
+Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a> &nbsp;&nbsp; 
+Theme by <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a>
+      </footer>
+		</div>
+	</div>
+
+  
+    
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
+
 </body>
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<style></style>
 </html>
