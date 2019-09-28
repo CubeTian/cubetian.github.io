@@ -6,19 +6,10 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1" />
     <title>
         
-      树莓派入门笔记 - 程序猿CubeTian
+      其他 - 程序猿CubeTian
       
     </title>
     
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:creator" content="@Astrian_Zheng" />
-      <meta property="og:url" content="https://cubetian.github.io/15696705812938.html" />
-      <meta property="og:title" content="树莓派入门笔记" />
-      
-        <meta property="og:description" content="树莓派入门笔记" />
-      
-      
-      <meta property="og:site_name" content="程序猿CubeTian" />
     
     
     <link href="atom.xml" rel="alternate" title="程序猿CubeTian" type="application/atom+xml">
@@ -48,47 +39,78 @@
         </div>
       </div>
       <hr>
-    </div> <div class="container" id="post">
-  <div class="article huge">
-    <div class="featureimg" style="background-image: url('asset/defaultfeaimg.jpg')"></div>
-    <img src="" style="display: none;" class="featureimgforexternal">
-    <div class="timeGTM" style="display:none;">2019-09-28T19:36:21+08:00</div>
-    <div class="row content">
-      <div class="col-md-2"></div>
-      <div class="col-md-10 main">
-        <div class="row">
-          <div class="col-md-10">
-            <div class="post">
-              <div class="headline"><a href="15696705812938.html">树莓派入门笔记</a></div>
-              
-              <div class="time">$[timeformat('2019-09-28T19:36:21+08:00')]</div>
-              <div class="body">
-                  <p>本尊要开始接触树莓派啦</p>
+    </div> <div class="container" id="category">
+  
+    
+      <div class="article huge">
+        <div class="featureimg" style="background-image: url('asset/defaultfeaimg.jpg')"></div>
+        <div class="row content">
+          <div class="col-md-2"></div>
+          <div class="col-md-10 main">
+            <div class="row">
+              <div class="col-md-10 post">
+                <div class="headline"><a href="15408862456484.html">从不动点定理到计算复杂性</a></div>
+                
+                <div class="time">$[timeformat('2018-10-30T15:57:25+08:00')]</div>
+                <div class="body">
+                    <h2 id="toc_0">多项式求根的库恩算法</h2>
 
+<p>复平面对\(C\times[0,\infty)\)做单纯剖分,越往上剖分越细<br/>
+对剖分的顶点按照w=f(z)做如下整数标号</p>
+
+<p><img src="media/15408862456484/IMG_3332.heic" alt="IMG_3332"/><br/>
+对于\(C\times[0,\infty)\)上的顶点,按照\(f(z)=z^n\)进行标号<br/>
+<img src="media/15408862456484/IMG_3335.heic" alt="IMG_3335"/></p>
+
+<p>易知计算只在半空间的一个大圆筒内进行<br/>
+每个四面体只能穿行一次<br/>
+算法的可行性</p>
+
+<h2 id="toc_1">计算复杂性论题</h2>
+
+<p><img src="media/15408862456484/IMG_3336.heic" alt="IMG_3336"/><br/>
+<img src="media/15408862456484/IMG_3338.jpg" alt="IMG_3338"/><br/>
+<img src="media/15408862456484/IMG_3339.jpg" alt="IMG_3339"/></p>
+
+<p>牛顿方法（初始的选取）</p>
+
+                </div>
+                <div class="bottom">
+                  <a href="15408862456484.html" class="continue float-right">
+                    继续阅读
+                  </a>
+                </div>
               </div>
             </div>
-            
-            
           </div>
         </div>
       </div>
-    </div>
+      <div class="otherposts row">
+    
+   
   </div>
-</div>
-<script>
-    let post = new Vue({
-     el: '#post',
-     data: {
-       hidelikecoin: ''
-     },
-     methods: {
-       timeformat(raw) {
-         return moment(raw).format("YYYY 年 MM 月 DD 日");
-       }
-     },
-     delimiters: ['$[', ']']
-   })
-  </script>      <div class="container">
+  <div class="pagenavi">
+    <div class="item"><a href="其他.html">更新文章</a></div>
+    <div class="item"> · </div>
+    <div class="item">已是最旧一页</div>
+  </div>
+ </div>
+ <script>
+   let category = new Vue({
+    el: '#category',
+    data: {},
+    methods: {
+      indexOddandEven(index) {
+        return index%2 ? 'odd' : 'even';
+      },
+      timeformat(raw) {
+        return moment(raw).format("YYYY 年 MM 月 DD 日");
+      }
+    },
+    delimiters: ['$[', ']']
+  })
+ </script>
+      <div class="container">
       <hr>
       <div class="footer" id="footer">
         <div class="slogan">众所周知，数学研究只需要一支笔和一堆草稿纸</div>

@@ -1,1011 +1,176 @@
-
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1" />
+    <title>
+        
+      程序猿CubeTian
+      
+    </title>
     
-  程序猿CubeTian
-  
-
-  </title>
-  <meta name="author" content="">
-  <meta name="description" content="众所周知，数学研究只需要一支笔和一堆草稿纸">
-
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <link href="asset/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="atom.xml" rel="alternate" title="程序猿CubeTian" type="application/atom+xml">
-  <script src="asset/js/modernizr-2.0.js"></script>
-  <script src="asset/js/jquery.min.js"></script>
-  <script src="asset/highlightjs/highlight.pack.js"></script>
-  <link href="asset/highlightjs/styles/solarized_light.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script>hljs.initHighlightingOnLoad();</script>
-
-  <style type="text/css">
-  .cat-children-p{ padding: 6px 0px;}
-  .hljs{background: none;}
-  </style>
-  <script type="text/javascript">
-  var isAddSildbar = true;
-  </script>
-  <script src="asset/js/octopress.js" type="text/javascript"></script>
-</head>
-<script type="text/javascript">
-//链接新开窗口
-function addBlankTargetForLinks () {
-  $('a[href^="http"]').each(function(){
-      $(this).attr('target', '_blank');
-  });
-}
-$(document).ready(function(event) {
-  addBlankTargetForLinks();
-});
-</script>
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="index.html">程序猿CubeTian</a></h1>
-  
-    <h2>众所周知，数学研究只需要一支笔和一堆草稿纸</h2>
-  
-</hgroup>
-
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:cubetian.github.io" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-
-  <li id=""><a target="self" href="index.html">Home</a></li>
-
-  <li id=""><a target="_self" href="archives.html">Archives</a></li>
-
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content"> 
-<div class="blog-index">
-
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15696705812938.html">树莓派入门笔记</a></h1>
-			<p class="meta"><time datetime="2019-09-28T19:36:21+08:00" 
-			pubdate data-updated="true">2019/09/28</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p>本尊要开始接触树莓派啦</p>
-
-
-		</div>
-
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15686818191570.html">LATEX 定理、命题环境</a></h1>
-			<p class="meta"><time datetime="2019-09-17T08:56:59+08:00" 
-			pubdate data-updated="true">2019/09/17</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p>在LaTex中需要有关定理、公理、命题、引理、定义等时，常用如下命令</p>
-
-<ul>
-<li><strong>\newtheorem</strong>{定理环境名}{标题}[主计数器名] </li>
-<li><strong>\newtheorem</strong>{theorem}{Theorem}[Chapter]</li>
-</ul>
-
-<p>意思就是定义一个以Theorem为标题的theorem环境,计数以章节数为主.</p>
-
-<p> </p>
-
-<p><strong>\begin{theorem}[均值不等式]</strong></p>
-
-<p>设\(A,B\)是两个实数, 则\(2AB\leq 2 A^2+B^2\).</p>
-
-<p><strong>\end{theorem}</strong></p>
-
-<p>如果需要输出中文,使用定义theorem如下</p>
-
-<p><strong>\newtheorem{theorem}{\hspace{2em}定理}[chaptet]</strong></p>
-
-<p>另外在{\hspace{2em}定理}中还可以输入更改字体的命令来改变定理的字体</p>
-
-<p><strong>其他中文模式：</strong></p>
-
-<ul>
-<li><strong>\newtheorem{Definition}{\hspace{2em}定义}[chapter]</strong></li>
-<li><strong>\newtheorem{theorem}{\hspace{2em}定理}[chapter]</strong></li>
-<li><strong>\newtheorem{lemma}{\hspace{2em}引理}[chapter]</strong></li>
-<li><strong>\newtheorem{Proof}{证明}[chapter]</strong></li>
-</ul>
-
-<p>前面提到的定理、公理、命题、引理、定义的一套命令可以用这个</p>
-
-<p>% Theorem style</p>
-
-<ul>
-<li>\newtheoremstyle{mystyle}{3pt}{3pt}{\kaishu}{0cm}{\heiti2 }{}{1em}{}  \theoremstyle{mystyle}</li>
-<li>\newtheorem{definition}{\hspace{2em}定义}[chapter] % </li>
-<li>没有章, 只有节, 把上面的[chapter]改成[section] </li>
-</ul>
-
-<p><strong>文章中可以直接使用的范例：</strong></p>
-
-<p><strong>\newtheorem{theorem}[definition]{\hspace{2em}定理} </strong></p>
-
-<p><strong>\newtheorem{axiom}[definition]{\hspace{2em}公理} </strong></p>
-
-<p><strong>\newtheorem{lemma}[definition]{\hspace{2em}引理} </strong></p>
-
-<p><strong>\newtheorem{proposition}[definition]{\hspace{2em}命题} </strong></p>
-
-<p><strong>\newtheorem{corollary}[definition]{\hspace{2em}推论} </strong></p>
-
-<p><strong> \newtheorem{remark}{\hspace{2em}注}[chapter]</strong></p>
-
-<p> </p>
-
-<hr/>
-
-<p> </p>
-
-<p><strong>Latex-定理定义的排版</strong></p>
-
-<p>\newtheorem{thm}{Theorem}[section]</p>
-
-<p>\newtheorem{prop}{Proposition}[section]</p>
-
-<p>以上定理和命题分别计数，如果命题也用定理的计数器，可以这样定义：</p>
-
-<p>\newtheorem{prop}[thm]{Proposition}</p>
-
-<p>引用：</p>
-
-<p>\begin{thm}[附加标题,如定理名称，作者]</p>
-
-<p>文本</p>
-
-<p>\end{thm}</p>
-
-<p>较短的证明可以用</p>
-
-<p>\begin{proof}[标题]</p>
-
-<p>证明内容。</p>
-
-<p>\end{proof}</p>
-
-<p> </p>
-
-<p>如果有[标题]选项，则显示这个标题(斜体)，否则自动打印斜体的Proof，并在证明结束时自动生成证毕符号口。</p>
-
-<p>如果使用\proof命令，则需要在结束时手动加上结束命令\qed。</p>
-
-<p>当然你可以重定义证毕符号，例如：</p>
-
-<p>\renewcommand*{\qedsymbol}{[证毕]}</p>
-
-<p>\begin{proof}[证:]</p>
-
-<p>证明正文。</p>
-
-<p>\end{proof}</p>
-
-<p>注意：</p>
-
-<p>\begin{proof}...\end{proof}&quot; role=&quot;presentation&quot; style=&quot;margin: 0px; padding: 0px; display: inline; font-weight: normal; line-height: normal; font-size: 14px; text-align: left; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; position: relative;&quot;&gt;<br/>
-\begin{proof}...\end{proof}</p>
-
-<p>环境需要\usepackage{amsthm}宏包的支持</p>
-
-<p> </p>
-
-<h2 id="toc_0"> </h2>
-
-<h2 id="toc_1">首先你要先使用宏包 ntheorem</h2>
-
-<h2 id="toc_2"> </h2>
-
-<h2 id="toc_3">\usepackage[amsmath,thmmarks]{ntheorem}</h2>
-
-<h2 id="toc_4">% 定理类环境宏包，其中 amsmath 选项</h2>
-
-<p>% 用来兼容 AMS LaTeX 的宏包</p>
-
-<h2 id="toc_5"> %=== 配合上面的ntheorem宏包产生各种定理结构,重定义一些</h2>
-
-<h2 id="toc_6">%正文相关标题 ===</h2>
-
-<p>\theoremstyle{plain}<br/>
-\theoremheaderfont{\normalfont\rmfamily\CJKfamily{hei}}<br/>
-\theorembodyfont{\normalfont\rm\CJKfamily{kai}} \theoremindent0em<br/>
-\theoremseparator{\hspace{1em}} \theoremnumbering{arabic}<br/>
-%\theoremsymbol{}          %定理结束时自动添加的标志</p>
-
-<p> </p>
-
-<p><strong>\newtheorem{theorem}{Theorem}<br/>
-\newtheorem{corollary}{Corollary}<br/>
-......<br/>
-\begin{theorem}<br/>
-......<br/>
-\end{theorem}<br/>
-......</strong></p>
-
-<p><strong>\begin{corollary}<br/>
-......<br/>
-\end{corollary}</strong></p>
-
-<p>这样的输出结果就是各自编号的定理和推论了，定义、命题等等也类似可以这么使用。如果你希望定理和推论一起编号，前面可以改为这样（意思是corollary也使用theorem的编号）：</p>
-
-<p><strong>\newtheorem{theorem}{Theorem}<br/>
-\newtheorem{corollary}[theorem]{Corollary}</strong></p>
-
-<p>最后，如果你希望使用Theorem 1.4.2这样的编号，可以这么使用：</p>
-
-<p><strong>\newtheorem{theorem}{Theorem}[subsection] \newtheorem{corollary}[theorem]{Corollary}</strong></p>
-
-<p>前面的subsection改为section将输出Theorem 4.2这样的编号。</p>
-
-<p> </p>
-
-<p><strong>\newtheorem{theorem}{Theorem}[subsection] \newtheorem{corollary}[theorem]{Corollary}</strong></p>
-
-<p>前面的subsection改为section将输出Theorem 4.2这样的编号。</p>
-
-<p>如何让定理，推理等用同一计数器：</p>
-
-<p>\newtheorem{thm}{Theorem}[section] %如果不采用章节号做前缀，则不用[section]<br/>
-\newtheorem{defn}[thm]{Definition} %这句定义使得defn环境和thm共享编号<br/>
-\newtheorem{lem}[thm]{Lemma} %这句定义使得lem环境和thm共享编号</p>
-
-
-		</div>
-
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15682182289509.html">赛前感想</a></h1>
-			<p class="meta"><time datetime="2019-09-16T17:24:22+08:00" 
-			pubdate data-updated="true">2019/09/16</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p>现在是12:10，醒来后的晚上2019年全国大学生数学建模竞赛就要开始了，赛前就发生了很多事情，我的电脑因为一个模块的问题被我搞来搞去，python出现了很大问题，同伴的电脑因为一些硬件问题，不得不借用其他同学的电脑，所以需要重新安装许多东西，也是刚刚，我才结束完两个电脑的准备工作。<br/>
-现在的心情当然是非常激动，也非常疲惫，这是大三的一次建模竞赛，也几乎是我能够获得国家级奖项的唯一机会，我一定要把握这次机会。明天还有两门十分重要的课程，如果落下来，也势必对我这学期的学习会产生很大影响。<br/>
-不管那么多了，还是先睡觉了💤</p>
-
-
-		</div>
-
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15685969611776.html">SAS DATA步之全揭秘</a></h1>
-			<p class="meta"><time datetime="2019-09-16T09:22:41+08:00" 
-			pubdate data-updated="true">2019/09/16</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p>一些概念</p>
-
-<ul>
-<li>程序数据向量（PDV）</li>
-<li>SAS自动变量名及其使用</li>
-<li>理解DATA步内部处理过程</li>
-<li>代码编译期间发生的事情</li>
-<li>程序执行期间实际发生了什么</li>
-<li>如何获取和存储变量属性</li>
-</ul>
-
-<p>DATA时建立SAS数据集的主要方法之一。一些涉及数据处理和创建数据集的任务可能只能通过DATA步才能解决<br/>
-DATA步分编译和执行两个阶段，PDV贯穿SAS编译和执行的两个阶段，决定了信息在DATA步中的存储及变化</p>
-
-<p>编译阶段包括：</p>
-
-<ul>
-<li>编译SAS语句，包括检查语法</li>
-<li>创建一个输入缓存区（input buffer）（如果需要读入原始数据文件）、一个PDV和描述性信息</li>
-</ul>
-
-<p>执行阶段包括：</p>
-
-<ul>
-<li>计算DATA步迭代的次数（从DATA语句开始）</li>
-<li>将PDV中所有变量设成缺失值并初始化自动变量</li>
-<li>读取输入观测（从原始文件或SAS数据集）</li>
-<li>执行附加的处理或计算语句</li>
-<li>将一条数据记录写入输出数据集并返回到DATA步语句</li>
-</ul>
-
-<p>PDV贯穿编译的执行阶段：</p>
-
-<ul>
-<li>PDV是内存的一个临时逻辑区域，SAS建立数据集时，每条观察值只有一次机会用的PDV</li>
-<li>包含所有变量的当前值</li>
-<li>包含两个自动变量：_N_和_ERROR_</li>
-</ul>
-
-<p>DATA步<br/>
-一个DATA步包含SAS语言的一组语句，这些语句具有以下功能</p>
-
-<ul>
-<li>从外部文件读入数据</li>
-<li>将数据写入外部文件</li>
-<li>读入SAS数据集和SAS视图</li>
-<li>创建SAS数据集和SAS视图<br/>
-一旦数据可以以SAS数据集的形式访问，就可以通过SAS过程步来分析数据和写报告</li>
-</ul>
-
-<p>可以运用DATA步：</p>
-
-<ul>
-<li>创建SAS数据集（SAS数据集或SAS视图）</li>
-<li>根据包含原始数据（外部文件）和文件创建SAS数据集</li>
-<li>通过提取子集、合并、修改和更新已经存在数据集的方式来创建新的数据集</li>
-<li>分析、处理或展现数据</li>
-<li>为新变量赋值（在有公式计算的情况下）</li>
-<li>撰写报告或将文件写入磁盘或磁带</li>
-<li>信息检索</li>
-<li>文件管理<br/>
-DATA步以‘DATA’语句开始（即显示的表明数据步的开始），以‘RUN’语句结束，在结束时会编译或执行RUN语句。在数据步最后一个观察值读取前，‘RUN’的功能都是以非显示的形式执行RETURN功能，去继续循环的操作。
-<img src="media/15685969611776/15687662911534.png" alt=""/>
-编译阶段<br/>
-如上所示，DATA步的第一个阶段就为编译阶段。在编译阶段SAS的任务如下：</li>
-<li>自动将SAS语句编译成将会在后面执行的机器语言</li>
-<li>确定每个变量的类型和长度</li>
-<li>确定变量是否有必要进行类型转换</li>
-<li>如果有INPUT语句，为外部文件新建读取内存缓存区</li>
-<li>创建PDV（Program Data Vector）</li>
-<li>创建数据集和变量属性的描述性信息</li>
-<li>处理语句，该项任务仅限于编译阶段；这为编译器如何新建变量提供信息；事实上，他们决定了如何在PDV内建立变量及信息；这些信息包括：DROP；KEEP；RENAME；RETAIN；RHERE；LABEL；LENGTH；FORMAT；ARRAY；BY；ATTRIB</li>
-<li>创建自动变量：包括_N_,_ERROR_,RND=,IN=,FIRST,LAST,POINT=</li>
-</ul>
-
-
-		</div>
-
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15682069194444.html">地图相关</a></h1>
-			<p class="meta"><time datetime="2019-09-11T21:01:59+08:00" 
-			pubdate data-updated="true">2019/09/11</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p>在描述数据时，如果有一张热力地图，将是一件非常棒的事情，在这里我在尝试用python制作地图</p>
-
-<h2 id="toc_0">pyecharts</h2>
-
-<p>pyecharts 将不再自带地图 js 文件。如用户需要用到地图图表，可自行安装对应的地图文件包。<br/>
-全球国家地图: echarts-countries-pypkg (1.9MB): 世界地图和 213 个国家，包括中国地图<br/>
-中国省级地图: echarts-china-provinces-pypkg (730KB)：23 个省，5 个自治区<br/>
-中国市级地图: echarts-china-cities-pypkg (3.8MB)：370 个中国城市<br/>
-中国县区级地图: echarts-china-counties-pypkg (4.1MB)：2882 个中国县·区<br/>
-中国区域地图: echarts-china-misc-pypkg (148KB)：11 个中国区域地图，比如华南、华北。</p>
-
-<pre><code class="language-text">如果提示缺少这个就安装一下
-pip  install pyecharts_snapshot
-pip install echarts-countries-pypkg
-pip install echarts-china-provinces-pypkg
-pip install echarts-china-cities-pypkg
-pip install echarts-china-counties-pypkg
-pip install echarts-china-misc-pypkg
-</code></pre>
-
-<h2 id="toc_1">Basemap</h2>
-
-
-		</div>
-
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15681237931017.html">itertools 模块</a></h1>
-			<p class="meta"><time datetime="2019-09-10T21:56:33+08:00" 
-			pubdate data-updated="true">2019/09/10</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p>在解决优化问题的过程中，经常需要遍历所有的情况，不仅需要考虑内存的问题，所需要迭代内容的生成也是一件很麻烦的事情，我曾经尝试过网格生成等方法，效果并不理想，十分复杂，直到我发现了它<br/>
-原教程地址：<a href="http://funhacks.net/2017/02/13/itertools/">高效的 itertools 模块</a><br/>
-itertools 是python的一个很小的模块，是python标准库中的，不需要另外安装<br/>
-首先介绍迭代器的三种类型</p>
-
-<ul>
-<li>无限迭代器：生成一个无限序列，比如自然数序列 <code>1, 2, 3, 4, ...</code>；</li>
-<li>有限迭代器：接收一个或多个序列（sequence）作为参数，进行组合、分组和过滤等；</li>
-<li>组合生成器：序列的排列、组合，求序列的笛卡儿积等；</li>
-</ul>
-
-<h2 id="toc_0">无限迭代器</h2>
-
-<p>itertools 模块提供了三个函数（事实上，它们是类）用于生成一个无限序列迭代器：</p>
-
-<ul>
-<li><p>count(firstval=0, step=1)</p>
-<p>创建一个从 firstval (默认值为 0) 开始，以 step (默认值为 1) 为步长的的无限整数迭代器</p></li>
-<li><p>cycle(iterable)</p>
-<p>对 iterable 中的元素反复执行循环，返回迭代器</p></li>
-<li><p>repeat(object [,times]</p>
-<p>反复生成 object，如果给定 times，则重复次数为 times，否则为无限</p></li>
-</ul>
-
-<p>下面，让我们看看一些例子。</p>
-
-<h3 id="toc_1">count</h3>
-
-<p>count() 接收两个参数，第一个参数指定开始值，默认为0，第二个参数指定步长，默认为1:</p>
-
-<pre><code class="language-text">&gt;&gt;&gt; import itertools
-&gt;&gt;&gt;
-&gt;&gt;&gt; nums = itertools.count()
-&gt;&gt;&gt; for i in nums:
-...     if i &gt; 6:
-...         break
-...     print i
-...
-0
-1
-2
-3
-4
-5
-6
-&gt;&gt;&gt; nums = itertools.count(10, 2)    # 指定开始值和步长
-&gt;&gt;&gt; for i in nums:
-...     if i &gt; 20:
-...         break
-...     print i
-...
-10
-12
-14
-16
-18
-20
-</code></pre>
-
-<h3 id="toc_2">cycle</h3>
-
-<p>cycle() 用于对iterable中的元素反复执行循环：</p>
-
-<pre><code class="language-text">&gt;&gt;&gt; import itertools
-&gt;&gt;&gt;
-&gt;&gt;&gt; cycle_strings = itertools.cycle(&#39;ABC&#39;)
-&gt;&gt;&gt; i = 1
-&gt;&gt;&gt; for string in cycle_strings:
-...     if i == 10:
-...         break
-...     print i, string
-...     i += 1
-...
-1 A
-2 B
-3 C
-4 A
-5 B
-6 C
-7 A
-8 B
-9 C
-</code></pre>
-
-<h3 id="toc_3">repeat</h3>
-
-<p>repeat() 用于反复生成一个object：</p>
-
-<pre><code class="language-text">&gt;&gt;&gt; import itertools
-&gt;&gt;&gt;
-&gt;&gt;&gt; for item in itertools.repeat(&#39;hello world&#39;, 3):
-...     print item
-...
-hello world
-hello world
-hello world
-&gt;&gt;&gt;
-&gt;&gt;&gt; for item in itertools.repeat([1, 2, 3, 4], 3):
-...     print item
-...
-[1, 2, 3, 4]
-[1, 2, 3, 4]
-[1, 2, 3, 4]
-</code></pre>
-
-<h2 id="toc_4">有限迭代器</h2>
-
-<p>itertools 模块提供了多个函数（类），接收一个或多个迭代对象作为参数，对它们进行组合、分组和过滤等：</p>
-
-<ul>
-<li>chain() 连接</li>
-<li>compress()</li>
-<li>dropwhile()</li>
-<li>groupby()</li>
-<li>ifilter()</li>
-<li>ifilterfalse()</li>
-<li>islice()</li>
-<li>imap()</li>
-<li>starmap()</li>
-<li>tee()</li>
-<li>takewhile()</li>
-<li>izip()</li>
-<li>izip_longest()</li>
-</ul>
-
-<h2 id="toc_5">组合生成器</h2>
-
-<p>itertools 模块还提供了多个组合生成器函数，用于求序列的排列、组合等：</p>
-
-<ul>
-<li>product</li>
-<li>permutations</li>
-<li>combinations</li>
-<li>combinations_with_replacement</li>
-</ul>
-
-<h3 id="toc_6">product</h3>
-
-<p>product 用于求多个可迭代对象的笛卡尔积，它跟嵌套的for循环等价，它的一般使用形式如下：</p>
-
-<pre><code class="language-text">product(iter1, iter2, ... iterN, [repeat=1])
-</code></pre>
-
-<p>其中，repeat是一个关键字参数，用于指定重复生成序列的次数，</p>
-
-<pre><code class="language-text">&gt;&gt;&gt; from itertools import product
-&gt;&gt;&gt;
-&gt;&gt;&gt; for item in product(&#39;ABCD&#39;, &#39;xy&#39;):
-...     print item
-...
-(&#39;A&#39;, &#39;x&#39;)
-(&#39;A&#39;, &#39;y&#39;)
-(&#39;B&#39;, &#39;x&#39;)
-(&#39;B&#39;, &#39;y&#39;)
-(&#39;C&#39;, &#39;x&#39;)
-(&#39;C&#39;, &#39;y&#39;)
-(&#39;D&#39;, &#39;x&#39;)
-(&#39;D&#39;, &#39;y&#39;)
-&gt;&gt;&gt;
-&gt;&gt;&gt; list(product(&#39;ab&#39;, range(3)))
-[(&#39;a&#39;, 0), (&#39;a&#39;, 1), (&#39;a&#39;, 2), (&#39;b&#39;, 0), (&#39;b&#39;, 1), (&#39;b&#39;, 2)]
-&gt;&gt;&gt;
-&gt;&gt;&gt; list(product((0,1), (0,1), (0,1)))
-[(0, 0, 0), (0, 0, 1), (0, 1, 0), (0, 1, 1), (1, 0, 0), (1, 0, 1), (1, 1, 0), (1, 1, 1)]
-&gt;&gt;&gt;
-&gt;&gt;&gt; list(product(&#39;ABC&#39;, repeat=2))
-[(&#39;A&#39;, &#39;A&#39;), (&#39;A&#39;, &#39;B&#39;), (&#39;A&#39;, &#39;C&#39;), (&#39;B&#39;, &#39;A&#39;), (&#39;B&#39;, &#39;B&#39;), (&#39;B&#39;, &#39;C&#39;), (&#39;C&#39;, &#39;A&#39;), (&#39;C&#39;, &#39;B&#39;), (&#39;C&#39;, &#39;C&#39;)]
-&gt;&gt;&gt;
-</code></pre>
-
-<h3 id="toc_7">permutation</h3>
-
-<p>permutation 用于生成一个排列，它的一般使用形式如下：</p>
-
-<pre><code class="language-text">permutations(iterable[, r])
-</code></pre>
-
-<p>其中，r 指定生成排列的元素的长度，如果不指定，则默认为可迭代对象的元素长度。</p>
-
-<pre><code class="language-text">&gt;&gt;&gt; from itertools import permutations
-&gt;&gt;&gt;
-&gt;&gt;&gt; permutations(&#39;ABC&#39;, 2)
-&lt;itertools.permutations object at 0x1074d9c50&gt;
-&gt;&gt;&gt;
-&gt;&gt;&gt; list(permutations(&#39;ABC&#39;, 2))
-[(&#39;A&#39;, &#39;B&#39;), (&#39;A&#39;, &#39;C&#39;), (&#39;B&#39;, &#39;A&#39;), (&#39;B&#39;, &#39;C&#39;), (&#39;C&#39;, &#39;A&#39;), (&#39;C&#39;, &#39;B&#39;)]
-&gt;&gt;&gt;
-&gt;&gt;&gt; list(permutations(&#39;ABC&#39;))
-[(&#39;A&#39;, &#39;B&#39;, &#39;C&#39;), (&#39;A&#39;, &#39;C&#39;, &#39;B&#39;), (&#39;B&#39;, &#39;A&#39;, &#39;C&#39;), (&#39;B&#39;, &#39;C&#39;, &#39;A&#39;), (&#39;C&#39;, &#39;A&#39;, &#39;B&#39;), (&#39;C&#39;, &#39;B&#39;, &#39;A&#39;)]
-&gt;&gt;&gt;
-</code></pre>
-
-<h3 id="toc_8">combination</h3>
-
-<p>combinations(不放回) 用于求序列的组合，它的使用形式如下：</p>
-
-<pre><code class="language-text">combinations(iterable, r)
-</code></pre>
-
-<p>其中，r指定生成组合的元素的长度</p>
-
-<pre><code class="language-text">&gt;&gt;&gt; from itertools import combinations
-&gt;&gt;&gt;
-&gt;&gt;&gt; list(combinations(&#39;ABC&#39;, 2))
-[(&#39;A&#39;, &#39;B&#39;), (&#39;A&#39;, &#39;C&#39;), (&#39;B&#39;, &#39;C&#39;)]
-</code></pre>
-
-<p>combinations_with_replacement（放回抽取） 和 combinations 类似，但它生成的组合包含自身元素。</p>
-
-<pre><code class="language-text">&gt;&gt;&gt; from itertools import combinations_with_replacement
-&gt;&gt;&gt;
-&gt;&gt;&gt; list(combinations_with_replacement(&#39;ABC&#39;, 2))
-[(&#39;A&#39;, &#39;A&#39;), (&#39;A&#39;, &#39;B&#39;), (&#39;A&#39;, &#39;C&#39;), (&#39;B&#39;, &#39;B&#39;), (&#39;B&#39;, &#39;C&#39;), (&#39;C&#39;, &#39;C&#39;)]
-</code></pre>
-
-
-		</div>
-
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15681180752987.html">蚁群优化算法学习笔记</a></h1>
-			<p class="meta"><time datetime="2019-09-10T20:21:15+08:00" 
-			pubdate data-updated="true">2019/09/10</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p>本人阅读《蚁群优化算法》-马良等过程中的笔记<br/>
-前五章的目录</p>
-
-<ol>
-<li>引论
-<ol>
-<li>组合优化与计算复杂性</li>
-<li>来自自然界的几类优化方法</li>
-</ol></li>
-<li>蚁群算法原理
-<ol>
-<li>基本思想</li>
-<li>研究概况</li>
-</ol></li>
-<li>标准的TSP的蚁群算法
-<ol>
-<li>TSP概述</li>
-<li>经典方法</li>
-<li>遗传算法与模拟退火</li>
-<li>蚁群算法</li>
-<li>元胞蚁群算法及其收敛性</li>
-</ol></li>
-<li>扩展旅行商问题的蚁群算法
-<ol>
-<li>瓶颈TSP及其求解</li>
-<li>最小比率TSP及其求解</li>
-<li>时间约束TSP及其求解</li>
-<li>多目标TSP及其求解</li>
-</ol></li>
-<li>车辆路径问题的蚁群算法
-<ol>
-<li>VRP概述</li>
-<li>CVRP及其求解</li>
-<li>多目标VRP及其求解</li>
-<li>VRPTW及其求解</li>
-<li>VRPSTW及其求解</li>
-<li>FVRP及其求解<br/>
-看完目录前五章，首先有好多英文缩写看不明白，接着看</li>
-</ol></li>
-</ol>
-
-<h2 id="toc_0">第一章 引论</h2>
-
-<p>1.1 组合优化与计算复杂性<br/>
-最优化分连续变量与离散变量，离散变量的问题往往称为组合优化<br/>
-局部搜索法是基于贪婪思想，利用领域函数进行搜索的，局部搜索法可能落入局部最优点，或由于步长和初始点选择不好而错过最优点。<br/>
-依据一定概率，对于步长问题，可以采用变步长方法，在接近最优点附近，采取某种策略改变步长<br/>
-对于初始点问题，可以采用随机生成的一些初始点，从每个初始点出发进行搜索，找到各自的最优解，再从这些最优解中选择一个最好的结果</p>
-
-<p>典型组合优化难题<br/>
-    1. 旅行商问题（TSP）：所有可能的路线最多有（n-1）!/2 条<br/>
-    2. 图着色问题（GCP）：记图的最大顶点读书为\(\Delta\) ，则图的最小着色数以\(\Delta + 1\)为上界<br/>
-    3. 工件排序问题（JSP）：NP难题（NP-hard）<br/>
-    4. 二次分配问题（QAP）：目标函数非线性<br/>
-    5. 度约束最小树问题（DCMSTP）：最小生成树问题（不懂）<br/>
-上述典型问题及等价问题，普遍认为没有多项式算法求解</p>
-
-<p>1.2 来自自然界的几类优化方法<br/>
-计算智能系统是在神经网络、模糊系统、进化计算</p>
-
-<ol>
-<li>遗传算法的基本步骤（GA）：
-<ol>
-<li>问题的染色体表示</li>
-<li>初始解组（种群）的生成</li>
-<li>计算解组中各个解的适值函数（代价函数）</li>
-<li>从解组中随机抽取两个解作为父母代</li>
-<li>对父母代实施遗传操作（交叉、变异等）以产生一个后代解</li>
-<li>按某种规则，用该后代解替换原解组中的某个解</li>
-<li>按当前解组符合停机条件则算法终止，否则，转步骤1<br/>
-结果的好坏主要依赖于遗传代数和解组规模<br/></li>
-</ol></li>
-<li>模拟退火算法基本步骤（SA）：<br/>
-物体内部服从Boltzman分布
-<ol>
-<li>选择初始状态H（初始解）、初始温度、降温次数等</li>
-<li>生成H的领域状态H‘，并计算两种状态下的目标函数f(H&#39;)-f(H)</li>
-<li>按接受概率置换H为H‘</li>
-<li>重复步骤2和步骤3直至停机条件满足</li>
-</ol></li>
-<li>禁忌搜索法（TS）在搜索过程中使用记忆功能</li>
-<li>人工神经网络</li>
-<li>蚁群系统：信息激素，轨迹，自催化行为，增强型学习系统</li>
-<li>微粒群算法（PSO）：
-<ol>
-<li>依照初始化过程，对微粒群的随机位置和速度进行初始设定</li>
-<li>计算每个微粒的适应值</li>
-<li>对每个微粒，将其适应值与所经历过的最好位置进行比较，若较好，则将其作为当前的最好位置</li>
-<li>对每个微粒，将其适应值与全局所经历的最好位置的适应值进行比较，若较好，则将其作为当前的的全局最好位置</li>
-<li>对微粒的速度和位置进行进化</li>
-<li>若未到达结束条件（通常为足够好的适应值或最大代数），则返回步骤2</li>
-</ol></li>
-</ol>
-
-
-		</div>
-
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15681170584422.html">手表使用评价</a></h1>
-			<p class="meta"><time datetime="2019-09-10T20:04:18+08:00" 
-			pubdate data-updated="true">2019/09/10</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p>最初在b站看到有关pebble的视频后，非常希望有这样一款造型简单，续航之间长，有时间和小题提醒功能就够了的手表，非常遗憾的是，pebble在中国境内不能给顺畅的使用，且有许多问题，不建议中国用户购买。<br/>
-在淘宝搜寻过后，锁定在一款vla腕表，设计符合我的要求，价格便宜，且兼容ios。<br/>
-毕竟是学生，在一番挣扎之后还是买了最便宜的cityA款，售价199，一般会有10元的优惠券。<br/>
-约3天后收到手表，总体感觉不错，玻璃屏幕的硬度和清晰度都不错，蓝牙连接顺畅，且没有发现会影响手机的用电，手表电量充足，大约可以一个月充一次。<br/>
-消息提醒功能暂时微信是完全正常的，qq最新版本存在问题，我非常高兴的是，手表的测试和开发人员都非常的积极，在与他们的一番讨论后，锁定了问题。非常难得的，购买了一款产品后可以联系到开发人员，这样的售后保障我想即使出现了问题也能很快进行修复。<br/>
-总结一下，我觉得不亏</p>
-
-
-		</div>
-
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15680140350374.html">想要的书目录</a></h1>
-			<p class="meta"><time datetime="2019-09-09T15:27:15+08:00" 
-			pubdate data-updated="true">2019/09/09</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p>《运筹与管理科学丛书》的部分专著：</p>
-
-<ol>
-<li>非线性优化计算方法 袁亚湘 著 2008年2月 9787030208835</li>
-<li>博弈论与非线性分析 俞建 著 2008年2月 9787030207203</li>
-<li>蚁群优化算法 马良等著 2008年2月 9787030205681</li>
-<li>组合预测方法有效性理论及其应用 陈友华著 2008年2月 9787030202130</li>
-<li>非光滑优化 高岩 著 2008年4月</li>
-<li>离散时间排队论 田乃硕 徐秀丽 马占友 著 2008年6月</li>
-<li>动态合作博弈 高红伟[俄] 彼得罗相著 2009年3月</li>
-<li>锥约束优化——最优性理论与增广Lagrange方法 张立卫 著 2010年1月</li>
-<li>Kernel Function-based Interior-point Algorithms for Conic Optimization Yanqin Bai 著2010年7月</li>
-<li>整数规划 孙小玲 李端 著 2010年11月</li>
-<li>竞争与合作——数学模型及供应链管理 葛泽慧 孟志青 胡奇英著 2011年6月</li>
-<li>线性规划计算（上） 潘平奇 著 2012年4月</li>
-<li>线性规划计算（下） 潘平奇 著 2012年5月</li>
-<li>设施选址问题的近似算法 徐大川 张家伟著 2013年1月 9787030352408</li>
-<li>模糊优化方法与应用  刘彦奎   陈艳菊   刘颖   秦蕊 著 2013年3月</li>
-<li>变分分析与优化  张立卫   吴佳   张艺   著 2013年6月</li>
-<li>线性锥优化  方述诚    邢文训    著 2013年8月</li>
-<li>网络最优化 谢政 著 2014年6月</li>
-<li>网上拍卖下的库存管理 刘树人 著 2014年8月</li>
-<li>图与网络流理论（第二版） 田丰，张运清 著 2015年1月</li>
-<li>组合矩阵的结构指数 柳柏濂 黄宇飞 著 2015年1月</li>
-<li>马尔可夫决策过程理论与应用 刘克 编著 2015年2月</li>
-<li>最优化方法 杨庆之 编著 2015年3月</li>
-<li>图论基础教程（英文版） 徐俊明 著 2015年4月</li>
-<li>广义凸性及其应用 杨新民，戎卫东 著 2015年12月</li>
-<li>排队博弈论基础 王金亭 著 2016年6月</li>
-<li>不良贷款的回收：数据背后的故事 杨晓光，陈暮紫，陈敏 著 2017年6月</li>
-<li>参数可信性优化方法 刘彦奎，白雪洁，杨凯 著 2017年12月</li>
-<li>非线性方程组数值方法 范金燕，袁亚湘 著 2018年3月</li>
-</ol>
-
-<p>《信息与计算科学》丛书</p>
-
-
-		</div>
-
-		
-
-	</article>
- 
-	<article>
-		 <header>
-		  	<h1 class="entry-title"><a href="15680029212149.html">雅思阅读</a></h1>
-			<p class="meta"><time datetime="2019-09-09T12:22:01+08:00" 
-			pubdate data-updated="true">2019/09/09</time></p>
-		 </header>
-	  	<div class="entry-content">
-		  	
-		  	<p>雅思阅读开始可以分题型练习<br/>
-题型主要有填空题、判断题、选择题、匹配题<br/>
-填空题分为给选项的和不给选项的，不给选项的题型较容易，优先做，一般题目会涉及一大段或连续的几小段，填空一定填原词，甚至不需要修改形式，“”内的内容很有可能就是要填的<br/>
-给选项的比较难，很有可能是无序的，除了根据词性排除一些内容，剩下的只能硬上了，可以放后面做</p>
-
-<p>每道题基本上会对应一个段落或几个段落，出过题的段落不会再出，文意匹配除外</p>
-
-<p>是非判断 true/false/not given  yes/no/not given<br/>
-非与not given 的区别<br/>
-非是文章给的情况和题目给的情况不能共存<br/>
-not given 可以共存<br/>
-我理解是 非是认知错误 not given是对象错误<br/>
-事情的主语、宾语错误都是not given<br/>
-然后如果至少有四个题那么 三种肯定都有 只有三个题，可能缺少一种选项</p>
-
-<p>小匹配（在文章后的），只要一段里有提到就选那一段，不需要整段都是叙述这件事</p>
-
-<p>大匹配（文章前） 最后做.. 很耗时间</p>
-
-
-		</div>
-
-		
-
-	</article>
-  
-	<div class="pagination">
-	 <a class="prev" href="all_1.html">&larr; Older</a> 
-<a href="archives.html">Blog Archives</a>
-	 
-	    
-	</div>
-</div>
- <aside class="sidebar"> 
-
-	<section>
-	  <h1>Categories</h1>
-	  <ul id="recent_posts">
-	  
-	      <li class="post">
-	        <a href="%E5%85%B6%E4%BB%96.html"><strong>其他&nbsp;(6)</strong></a>
-	        
-	        
-	        
-	      </li>
-	  
-	      <li class="post">
-	        <a href="%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1.html"><strong>数学建模&nbsp;(5)</strong></a>
-	        
-	        
-	        
-	      </li>
-	  
-	      <li class="post">
-	        <a href="%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6.html"><strong>基础数学&nbsp;(2)</strong></a>
-	        
-	        
-	        
-	      </li>
-	  
-	      <li class="post">
-	        <a href="%E8%AE%A1%E7%AE%97%E6%9C%BA.html"><strong>计算机&nbsp;(12)</strong></a>
-	        
-	        
-	        
-	      </li>
-	  
-	      <li class="post">
-	        <a href="%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/%E8%AE%A1%E7%AE%97%E7%89%A9%E7%90%86.html"><strong>数值分析/计算物理&nbsp;(4)</strong></a>
-	        
-	        
-	        
-	      </li>
-	   
-	  </ul>
-	</section>
-	<section>
-	  <h1>Recent Posts</h1>
-	  <ul id="recent_posts">
-	  
-	      
-		      <li class="post">
-		        <a href="15696705812938.html">树莓派入门笔记</a>
-		      </li>
-	     
-	  
-	      
-		      <li class="post">
-		        <a href="15686818191570.html">LATEX 定理、命题环境</a>
-		      </li>
-	     
-	  
-	      
-		      <li class="post">
-		        <a href="15682182289509.html">赛前感想</a>
-		      </li>
-	     
-	  
-	      
-		      <li class="post">
-		        <a href="15685969611776.html">SAS DATA步之全揭秘</a>
-		      </li>
-	     
-	  
-	      
-		      <li class="post">
-		        <a href="15682069194444.html">地图相关</a>
-		      </li>
-	     
-	  
-	      
-	  
-	      
-	  
-	      
-	  
-	      
-	  
-	      
-	  
-	      
-	  
-	      
-	  
-	      
-	  
-	      
-	  
-	      
-	  
-	      
-	  
-	      
-	  
-	      
-	  
-	      
-	  
-	      
-	   
-	  </ul>
-	</section>
-	
-</aside> </div></div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2014 -  -
-  <span class="credit">Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a> &nbsp;&nbsp; Theme by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
-</footer>
-
-  
+    
+    
+    <link href="atom.xml" rel="alternate" title="程序猿CubeTian" type="application/atom+xml">
+    <script src="https://cdn.bootcss.com/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="asset/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="head">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="blogname">程序猿CubeTian</div>
+            <nav>
+              
+                <div class="item"><a target="self" href="index.html">Home</a></div>
+              
+                <div class="item"><a target="_self" href="archives.html">Archives</a></div>
+              
+            </nav>
+          </div>
+        </div>
+      </div>
+      <hr>
+    </div> <div class="container" id="category">
+  
+    
+      <div class="article huge">
+        <div class="featureimg" style="background-image: url('asset/defaultfeaimg.jpg')"></div>
+        <div class="row content">
+          <div class="col-md-2"></div>
+          <div class="col-md-10 main">
+            <div class="row">
+              <div class="col-md-10 post">
+                <div class="headline"><a href="15696705812938.html">树莓派入门笔记</a></div>
+                
+                <div class="time">$[timeformat('2019-09-28T19:36:21+08:00')]</div>
+                <div class="body">
+                    <p>本尊要开始接触树莓派啦</p>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
-
+                </div>
+                <div class="bottom">
+                  <a href="15696705812938.html" class="continue float-right">
+                    继续阅读
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="otherposts row">
+    
+  
+    
+        <div class="col-md-6">
+          <a href="15680140350374.html" class="item">
+            <div class="article normal">
+              <div class="featureimg" style="background-image: url('asset/defaultfeaimg.jpg')"></div>
+              <div class="articleinfo">
+                <div class="headline">想要的书目录</div>
+                
+              </div>
+            </div>
+          </a>
+        </div>
+    
+  
+    
+        <div class="col-md-6">
+          <a href="15673304578082.html" class="item">
+            <div class="article normal">
+              <div class="featureimg" style="background-image: url('asset/defaultfeaimg.jpg')"></div>
+              <div class="articleinfo">
+                <div class="headline">SAS程序结构</div>
+                
+              </div>
+            </div>
+          </a>
+        </div>
+    
+  
+    
+        <div class="col-md-6">
+          <a href="15655035745414.html" class="item">
+            <div class="article normal">
+              <div class="featureimg" style="background-image: url('asset/defaultfeaimg.jpg')"></div>
+              <div class="articleinfo">
+                <div class="headline">计算机二级python</div>
+                
+              </div>
+            </div>
+          </a>
+        </div>
+    
+  
+    
+        <div class="col-md-6">
+          <a href="15653132926815.html" class="item">
+            <div class="article normal">
+              <div class="featureimg" style="background-image: url('asset/defaultfeaimg.jpg')"></div>
+              <div class="articleinfo">
+                <div class="headline">计算机二级 公共知识</div>
+                
+              </div>
+            </div>
+          </a>
+        </div>
+    
+   
+  </div>
+  <div class="pagenavi">
+    <div class="item">已是最新一页</div>
+    <div class="item"> · </div>
+    <div class="item"><a href="all_1.html">旧有文章</a></div>
+  </div>
+ </div>
+ <script>
+   let category = new Vue({
+    el: '#category',
+    data: {},
+    methods: {
+      indexOddandEven(index) {
+        return index%2 ? 'odd' : 'even';
+      },
+      timeformat(raw) {
+        return moment(raw).format("YYYY 年 MM 月 DD 日");
+      }
+    },
+    delimiters: ['$[', ']']
+  })
+ </script>
+      <div class="container">
+      <hr>
+      <div class="footer" id="footer">
+        <div class="slogan">众所周知，数学研究只需要一支笔和一堆草稿纸</div>
+        <div class="meta">
+          <p>又是学习的一天</p>
+          <p>「程序猿CubeTian」使用 <a href="https://zh.mweb.im/" target="_blank">MWeb</a> 和 <a href="https://github.com/Astrian/reflect-white-mweb-theme" target="_blank">Reflect White</a> 搭建。</p>
+        </div>
+      </div>
+      <script>
+        let footer = new Vue({
+          el: '#footer',
+          data: {
+            message: 'hello'
+          },
+          delimiters: ['$[', ']']
+        })
+      </script>
+    </div>
+  </div>
 </body>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<style></style>
 </html>

@@ -49,107 +49,28 @@
           <div class="col-md-10 main">
             <div class="row">
               <div class="col-md-10 post">
-                <div class="headline"><a href="15681180752987.html">蚁群优化算法学习笔记</a></div>
+                <div class="headline"><a href="15670727988571.html">复变函数整理</a></div>
                 
-                <div class="time">$[timeformat('2019-09-10T20:21:15+08:00')]</div>
+                <div class="time">$[timeformat('2019-08-29T17:59:58+08:00')]</div>
                 <div class="body">
-                    <p>本人阅读《蚁群优化算法》-马良等过程中的笔记<br/>
-前五章的目录</p>
+                    <p>单值：给定复数z，有唯一确定的复数w与之对应 如：\(w=\frac{z+1}{z-1}\)<br/>
+多值：给定复数z，有几个或无穷多个w与之对应 如：\(w=\sqrt[n]{z}\) <br/>
+单叶：对于\(\forall z_1 \neq z_2\) 有\(f(z_1)\neq f(z_2)\)</p>
 
-<ol>
-<li>引论
-<ol>
-<li>组合优化与计算复杂性</li>
-<li>来自自然界的几类优化方法</li>
-</ol></li>
-<li>蚁群算法原理
-<ol>
-<li>基本思想</li>
-<li>研究概况</li>
-</ol></li>
-<li>标准的TSP的蚁群算法
-<ol>
-<li>TSP概述</li>
-<li>经典方法</li>
-<li>遗传算法与模拟退火</li>
-<li>蚁群算法</li>
-<li>元胞蚁群算法及其收敛性</li>
-</ol></li>
-<li>扩展旅行商问题的蚁群算法
-<ol>
-<li>瓶颈TSP及其求解</li>
-<li>最小比率TSP及其求解</li>
-<li>时间约束TSP及其求解</li>
-<li>多目标TSP及其求解</li>
-</ol></li>
-<li>车辆路径问题的蚁群算法
-<ol>
-<li>VRP概述</li>
-<li>CVRP及其求解</li>
-<li>多目标VRP及其求解</li>
-<li>VRPTW及其求解</li>
-<li>VRPSTW及其求解</li>
-<li>FVRP及其求解<br/>
-看完目录前五章，首先有好多英文缩写看不明白，接着看</li>
-</ol></li>
-</ol>
+<p>保角性：导数的几何意义<br/>
+有解析函数\(w=f(z)\) 曲线参数表达\(w(t)=f(z(t))\)<br/>
+\(w&#39;(t)=f&#39;(z)z&#39;(t)\),  \(\arg w&#39;(t) =\arg f&#39;(z) + \arg z&#39;(t) \)<br/><br/>
+设\(\arg f&#39;(z_0) = \alpha \)， \(\alpha\)表示经过解析变换后倾角的变化 </p>
 
-<h2 id="toc_0">第一章 引论</h2>
+<p>函数f在D={z:0&lt;|z|&lt;1}内解析，且\(|f(z)|&lt;\ln \frac{1}{|z|}\) 试证\(f\equiv 0\)</p>
 
-<p>1.1 组合优化与计算复杂性<br/>
-最优化分连续变量与离散变量，离散变量的问题往往称为组合优化<br/>
-局部搜索法是基于贪婪思想，利用领域函数进行搜索的，局部搜索法可能落入局部最优点，或由于步长和初始点选择不好而错过最优点。<br/>
-依据一定概率，对于步长问题，可以采用变步长方法，在接近最优点附近，采取某种策略改变步长<br/>
-对于初始点问题，可以采用随机生成的一些初始点，从每个初始点出发进行搜索，找到各自的最优解，再从这些最优解中选择一个最好的结果</p>
+<p>试证：如果整函数\(f(z)=\sum_{n=0}^{+\infty}a_n z^n\)在实轴上取实值，则系数\(a_n\) 全是实数</p>
 
-<p>典型组合优化难题<br/>
-    1. 旅行商问题（TSP）：所有可能的路线最多有（n-1）!/2 条<br/>
-    2. 图着色问题（GCP）：记图的最大顶点读书为\(\Delta\) ，则图的最小着色数以\(\Delta + 1\)为上界<br/>
-    3. 工件排序问题（JSP）：NP难题（NP-hard）<br/>
-    4. 二次分配问题（QAP）：目标函数非线性<br/>
-    5. 度约束最小树问题（DCMSTP）：最小生成树问题（不懂）<br/>
-上述典型问题及等价问题，普遍认为没有多项式算法求解</p>
-
-<p>1.2 来自自然界的几类优化方法<br/>
-计算智能系统是在神经网络、模糊系统、进化计算</p>
-
-<ol>
-<li>遗传算法的基本步骤（GA）：
-<ol>
-<li>问题的染色体表示</li>
-<li>初始解组（种群）的生成</li>
-<li>计算解组中各个解的适值函数（代价函数）</li>
-<li>从解组中随机抽取两个解作为父母代</li>
-<li>对父母代实施遗传操作（交叉、变异等）以产生一个后代解</li>
-<li>按某种规则，用该后代解替换原解组中的某个解</li>
-<li>按当前解组符合停机条件则算法终止，否则，转步骤1<br/>
-结果的好坏主要依赖于遗传代数和解组规模<br/></li>
-</ol></li>
-<li>模拟退火算法基本步骤（SA）：<br/>
-物体内部服从Boltzman分布
-<ol>
-<li>选择初始状态H（初始解）、初始温度、降温次数等</li>
-<li>生成H的领域状态H‘，并计算两种状态下的目标函数f(H&#39;)-f(H)</li>
-<li>按接受概率置换H为H‘</li>
-<li>重复步骤2和步骤3直至停机条件满足</li>
-</ol></li>
-<li>禁忌搜索法（TS）在搜索过程中使用记忆功能</li>
-<li>人工神经网络</li>
-<li>蚁群系统：信息激素，轨迹，自催化行为，增强型学习系统</li>
-<li>微粒群算法（PSO）：
-<ol>
-<li>依照初始化过程，对微粒群的随机位置和速度进行初始设定</li>
-<li>计算每个微粒的适应值</li>
-<li>对每个微粒，将其适应值与所经历过的最好位置进行比较，若较好，则将其作为当前的最好位置</li>
-<li>对每个微粒，将其适应值与全局所经历的最好位置的适应值进行比较，若较好，则将其作为当前的的全局最好位置</li>
-<li>对微粒的速度和位置进行进化</li>
-<li>若未到达结束条件（通常为足够好的适应值或最大代数），则返回步骤2</li>
-</ol></li>
-</ol>
+<p>f在\(\overline { \Delta } = \{ z | | z | &lt; 1 \}\)上解析，而在\(|z|=1\)时f(z)=1,证明f是一个有理函数  </p>
 
                 </div>
                 <div class="bottom">
-                  <a href="15681180752987.html" class="continue float-right">
+                  <a href="15670727988571.html" class="continue float-right">
                     继续阅读
                   </a>
                 </div>
@@ -163,11 +84,11 @@
   
     
         <div class="col-md-6">
-          <a href="15679868479784.html" class="item">
+          <a href="15666534139692.html" class="item">
             <div class="article normal">
               <div class="featureimg" style="background-image: url('asset/defaultfeaimg.jpg')"></div>
               <div class="articleinfo">
-                <div class="headline">数值分析</div>
+                <div class="headline">MYsql 学习教程</div>
                 
               </div>
             </div>
@@ -177,11 +98,11 @@
   
     
         <div class="col-md-6">
-          <a href="15681170584422.html" class="item">
+          <a href="15662129253478.html" class="item">
             <div class="article normal">
               <div class="featureimg" style="background-image: url('asset/defaultfeaimg.jpg')"></div>
               <div class="articleinfo">
-                <div class="headline">手表使用评价</div>
+                <div class="headline">数学与计算机</div>
                 
               </div>
             </div>
@@ -191,11 +112,11 @@
   
     
         <div class="col-md-6">
-          <a href="15680029212149.html" class="item">
+          <a href="15645732861970.html" class="item">
             <div class="article normal">
               <div class="featureimg" style="background-image: url('asset/defaultfeaimg.jpg')"></div>
               <div class="articleinfo">
-                <div class="headline">雅思阅读</div>
+                <div class="headline">PDE（Walter/njdx）</div>
                 
               </div>
             </div>
@@ -205,11 +126,11 @@
   
     
         <div class="col-md-6">
-          <a href="15679981303848.html" class="item">
+          <a href="15621385998065.html" class="item">
             <div class="article normal">
               <div class="featureimg" style="background-image: url('asset/defaultfeaimg.jpg')"></div>
               <div class="articleinfo">
-                <div class="headline">sklearn 模块参考书</div>
+                <div class="headline">课程二:偏微分方程数值方法</div>
                 
               </div>
             </div>
@@ -219,9 +140,9 @@
    
   </div>
   <div class="pagenavi">
-    <div class="item"><a href="all_1.html">更新文章</a></div>
+    <div class="item"><a href="all_3.html">更新文章</a></div>
     <div class="item"> · </div>
-    <div class="item"><a href="all_3.html">旧有文章</a></div>
+    <div class="item"><a href="all_5.html">旧有文章</a></div>
   </div>
  </div>
  <script>
