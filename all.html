@@ -123,15 +123,50 @@
 从科学和技术的观点来看，铁磁薄膜中磁化分布的动力学是一个有趣且重要的问题。通常，这些薄膜的主要兴趣在于它们在磁记录行业中的应用。最近，对将它们用作磁存储器件（MRAM）的兴趣已经激发了研究该主题的更大动力。由于缺陷，杂质和热噪声在纳米厚度的膜中对磁化场的动力学起着重要作用，因此它也成为研究某些纳米级物理的理想场所[4，7，8，10，18] </p>
 
 <p>铁磁材料中磁化分布的弛豫(relaxation)过程由Landau–Lifshitz方程[12，14]描述<br/>
-\[\mathbf{M}_{t}=-\gamma \mathbf{M} \times \mathcal{H}-\frac{\gamma \alpha}{M_{s}} \mathbf{M} \times(\mathbf{M} \times \mathcal{H})\]<br/>
+\[\mathbf{M}_{t}=-\gamma \mathbf{M} \times \mathcal{H}-\frac{\gamma \alpha}{M_{s}} \mathbf{M} \times(\mathbf{M} \times \mathcal{H}) \tag1\]<br/>
 其中\(|\mathbf{M}|=M_{s}\)是饱和磁化强度，通常设置为一个远离居里温度的常数。右边第一项是旋磁项，其中\(\gamma\)是旋磁比。右边第二项是阻尼项，其中\(\alpha\)是无量纲的阻尼系数。\(\mathcal{H}\)项是局部场，由Landau–Lifshitz自由能函数计算得到<br/>
 \[<br/>
-\mathcal{H}=-\frac{\delta F}{\delta \mathbf{M}}<br/>
+\mathcal{H}=-\frac{\delta F}{\delta \mathbf{M}} \tag2<br/>
 \]<br/>
 \[<br/>
 F[\mathbf{M}]=\frac{1}{2} \int_{\Omega}\left\{\Phi\left(\frac{\mathbf{M}}{M_{s}}\right)+\frac{A}{M_{s}^{2}}|\nabla \mathbf{M}|^{2}-2 \mu_{0} \mathbf{H}_{e} \cdot \mathbf{M}\right\} d x+\frac{\mu_{0}}{2} \int_{\mathbb{R}^{3}}|\nabla U|^{2} d x<br/>
+\tag3\]<br/>
+在（3）中，\(A\)是交换常数，\(\frac{A}{M_{s}^{2}}|\nabla M|^{2}\)是自旋之间的交换相互作用能。\(\Phi\left(\frac{\mathrm{M}}{M_{s}}\right)\)是自材料的各向异性的能量。\(\mu_0\)是真空磁导率(S.I.中\(\mu_0=4\pi\times10^{-7} N/A^2\))\(-2 \mu_{0} \mathbf{H}_{e} \cdot \mathbf{M}\)是由外部施加场产生的能量。\(\Omega\)是材料所占的体积。最后,(3)中的最后一项是由材料内部磁化分布感应的磁场产生的能量。感应场\(\mathbf{H}_{s}=-\nabla U\)可以通过以下求解<br/>
+\[<br/>
+\Delta U=\left\{\begin{array}{ll}{\nabla \cdot \mathbf{M}} &amp; {\text { in } \Omega} \\ {0} &amp; {\text { outside } \Omega}\end{array}\right.<br/>
+ \tag4\]<br/>
+连同跳跃条件<br/>
+\[<br/>
+\begin{aligned} \left[U\right]_{\partial \Omega} &amp;=0 \\\left[\frac{\partial U}{\partial v}\right]_{\partial \Omega} &amp;=-\mathbf{M} \cdot v\end{aligned}<br/>
+\tag5\]<br/>
+在域\(\Omega\)的边界。在(5)中,我们用\([v]_{\partial \Omega}\)表示\(v\)在\(\Omega\)边界的跳跃。<br/>
+\[<br/>
+[v]_{ | \partial \Omega}(x)=\lim _{y \rightarrow x \atop y \in \overline{\Omega}^{c}} v(y)-\lim _{y \rightarrow x \atop y \in \Omega} v(y)<br/>
 \]<br/>
-在（3）中，\(A\)是交换常数，</p>
+方程(4)，与边界条件(5)的解为<br/>
+\[<br/>
+\nabla U(x)=\nabla \int_{\Omega} \nabla N(x-y) \cdot \mathbf{M}(y) d y \tag6<br/>
+\]<br/>
+其中\(N(x)=-\frac{1}{4 \pi} \frac{1}{|x|}\)是牛顿势。<br/>
+Landau–Lifshitz方程(1)中旋磁项是一个保守项，而阻尼项是耗散的。<br/>
+了解Landau–Lifshitz系统(1)的长期动力学对于设计有效的计算机磁化切换机制具有实际意义。<br/>
+存储单元[4，18]。数值模拟已成为研究铁磁材料中静态和动态问题的重要工具[1、2、6、9、11、15、16、19、26]。在磁化反转过程的仿真中，重要的是能够解析出所涉及的不同小长度尺度，尤其是磁畴壁和磁涡旋，因为它们是在亚微米图案化NiFe实验中观察到的开关异常的原因。数组[17，21，22，23，24]。明确的数字格式（例如四阶Runge-Kutta或具有某种自适应时间步长程序的预测器-校正器方案）是目前最常用的Landau-Lifshitz方程模拟方法。尽管显式方案可以在空间和时间上达到很高的准确性，时间步长的大小受到数值方案稳定性的严格限制。对于坡莫合金的物理常数(\(M_{s}=8.0 \times 10^{5}\) Ampere \(/ \mathrm{m}, K_{u}=5.0 \times 10^{2} \mathrm{J} / \mathrm{m}^{3}, A=1.3 \times 10^{-11} \mathrm{J} / \mathrm{m}, \gamma=1.76 \times 10^{11} T^{-1}s^{-1}\)),单位大小\(\Delta x=0.004 \mu \mathrm{m}\)（在1 µm长的样本中为256个网格点），并且使用四阶Runge–Kutta，我们需要使用大约Ot≈.25皮秒量级的时间步长来实现数值稳定性。 如果将像元大小减小10倍，则必须将时间步长Ot减小100倍。此外，在典型的磁滞回线中，相对于所施加磁场的变化，平均磁化强度的变化表现为 在切换场附近和远离切换场有很大的不同，相距不远，并且随着所施加的场接近切换场而突然改变。 这些考虑表明，需要具有时间适应性的Landau–Lifshitz方程数值积分方案。 构建这种方法的第一步是构建无条件稳定的数值方案。<br/>
+为了克服显式方案的稳定性约束，通常采用隐式方案[15]。但是，由于在Landau–Lifshitz方程（1）中的回旋和阻尼项中都存在很强的非线性，因此系统的直接隐式离散化效率不高且难以实现。为了理解问题的症结，让我们将注意力集中在仅交换条件在（2）中成立的情况下。在这种情况下，\(\mathcal{H}=\Delta \mathbf{m}\)和Landau–Lifshitz方程简化为<br/>
+\[<br/>
+\mathbf{m}_{t}=-\mathbf{m} \times \Delta \mathbf{m}-\mathbf{m} \times(\mathbf{m} \times \Delta \mathbf{m}) \tag7<br/>
+\]<br/>
+我们的目标是为（7）开发一个稳定的数值方案，使我们可以使用较大的时间步长。旋磁项和阻尼项将需要不同的处理。当仅存在阻尼项时，方程（7）变为<br/>
+\[<br/>
+\mathbf{m}_{t}=-\mathbf{m} \times(\mathbf{m} \times \Delta \mathbf{m})=\Delta \mathbf{m}+|\nabla \mathbf{m}|^{2} \mathbf{m}<br/>
+\tag 8\]<br/>
+该方程式描述了谐波图的热流。在[5]中，为该方程引入了一个简单的投影方案。与用于模拟方程(8)的其他方案相比，该方案被证明是无条件稳定和高效的。<br/>
+在本文中，我们将主要关注Landau–Lifshitz方程中的旋磁项:<br/>
+\[<br/>
+\mathbf{m}_{t}=-\mathbf{m} \times \Delta \mathbf{m}<br/>
+\tag9\]<br/>
+该方程为谐波图的辛流[3，25]。我们为（9）引入了一种简单有效的方案，该方案也是无条件稳定的。这个新方案的关键是观察到，由于方程的矢量积结构，高斯-赛德尔（Gauss-Seidel）类型的技术显着提高了Landau-Lifshitz方程显式格式的稳定性。然后，将此高斯－赛德尔技术与拆分过程一起使用，以获得有效的，更重要的是无条件稳定的方案。除了简单性和无条件的稳定性外，该方案在某种意义上也是刻板的。结合阻尼部分的投影方案，我们对整个Landau–Lifshitz方程有一个无条件稳定的方案。<br/>
+我们将我们的方法应用于图案化亚微米阵列中异常切换的仿真。 Jing Shi等人[17，21–24]在实验中观察到了这一点捕获的磁化涡旋是开关异常的原因。 这个问题的数值模拟非常苛刻。 为了计算磁滞回线和剩余磁化曲线，需要运行100多个到稳态的演化，同时，在每个方向上需要256个以上的网格点才能解决涡旋和畴壁。<br/>
+本文的组织结构如下：在第2节中，我们将通过分析一个简单的示例来研究Landau–Lifshitz方程的矢量性质对几种常用时间步进程序的稳定性的影响。我们介绍了高斯－赛德尔技术，并对这一技术提高了显式方案的稳定性进行了重要观察。在第3节中，我们引入了利用高斯-赛德尔（Gauss-Seidel）技术的（9）的分步程序。上一节的分析表明，我们的方案是无条件稳定的。在第4节中，我们将我们的方案的性能与两种不同的显式方案的性能进行了谐波图的辛流动。在第5节中，我们结合了新方法 用[5]中推导的谐波图的热流投影方法，并为整个Landau-Lifshitz方程引入高斯-塞德尔投影方法。在第6节中，我们回顾了一些开关异常实验，并给出了使用高斯-赛德尔投影法进行的数值模拟。我们能够解析涡旋动力学，并准确模拟[17，21–24]中观察到的切换异常。</p>
 
                         
                       </div>
