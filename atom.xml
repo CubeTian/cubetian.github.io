@@ -4,13 +4,40 @@
   <title><![CDATA[程序猿CubeTian]]></title>
   <link href="https://cubetian.github.io/atom.xml" rel="self"/>
   <link href="https://cubetian.github.io/"/>
-  <updated>2019-09-28T19:56:11+08:00</updated>
+  <updated>2019-10-01T22:42:53+08:00</updated>
   <id>https://cubetian.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
     
   </author>
   <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[GSPM笔记]]></title>
+    <link href="https://cubetian.github.io/15699393940279.html"/>
+    <updated>2019-10-01T22:16:34+08:00</updated>
+    <id>https://cubetian.github.io/15699393940279.html</id>
+    <content type="html"><![CDATA[
+<p>用于微磁模拟的Gauss-Seidel投影方法</p>
+
+<p>微磁学仿真中的主要困难之一是交换场引入了严格的时间步长约束。使用标准的显式积分器会导致亚皮秒级的物理时间步长，通常比最快的物理时间尺度小两个数量级。直接的隐式积分器需要解决复杂的耦合系统。在本文中我们介绍了一种隐式方法，其复杂度可与隐式求解标量热方程相媲美。该方法是基于Gauss-Seidel实施的针对旋磁项的分数阶隐式求解器和针对谐波图的热流投影方法的组合。这种方法是我们能够对微米级元素中磁化强度进行完全解析的计算。</p>
+
+<p>介绍<br/>
+从科学和技术的观点来看，铁磁薄膜中磁化分布的动力学是一个有趣且重要的问题。通常，这些薄膜的主要兴趣在于它们在磁记录行业中的应用。最近，对将它们用作磁存储器件（MRAM）的兴趣已经激发了研究该主题的更大动力。由于缺陷，杂质和热噪声在纳米厚度的膜中对磁化场的动力学起着重要作用，因此它也成为研究某些纳米级物理的理想场所[4，7，8，10，18] </p>
+
+<p>铁磁材料中磁化分布的弛豫(relaxation)过程由Landau–Lifshitz方程[12，14]描述<br/>
+\[\mathbf{M}_{t}=-\gamma \mathbf{M} \times \mathcal{H}-\frac{\gamma \alpha}{M_{s}} \mathbf{M} \times(\mathbf{M} \times \mathcal{H})\]<br/>
+其中\(|\mathbf{M}|=M_{s}\)是饱和磁化强度，通常设置为一个远离居里温度的常数。右边第一项是旋磁项，其中\(\gamma\)是旋磁比。右边第二项是阻尼项，其中\(\alpha\)是无量纲的阻尼系数。\(\mathcal{H}\)项是局部场，由Landau–Lifshitz自由能函数计算得到<br/>
+\[<br/>
+\mathcal{H}=-\frac{\delta F}{\delta \mathbf{M}}<br/>
+\]<br/>
+\[<br/>
+F[\mathbf{M}]=\frac{1}{2} \int_{\Omega}\left\{\Phi\left(\frac{\mathbf{M}}{M_{s}}\right)+\frac{A}{M_{s}^{2}}|\nabla \mathbf{M}|^{2}-2 \mu_{0} \mathbf{H}_{e} \cdot \mathbf{M}\right\} d x+\frac{\mu_{0}}{2} \int_{\mathbb{R}^{3}}|\nabla U|^{2} d x<br/>
+\]<br/>
+在（3）中，\(A\)是交换常数，</p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[树莓派入门笔记]]></title>
@@ -2120,19 +2147,6 @@ content 二进制编码内容</p>
 <p>\(ax^2+2bxy+cy^2=d\)<br/>
 \(x=x&#39;cos\the - y&#39;sin\)<br/>
 \(y=x&#39;sin + y&#39;\)</p>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[SAS安装教程]]></title>
-    <link href="https://cubetian.github.io/15675205901094.html"/>
-    <updated>2019-09-03T22:23:10+08:00</updated>
-    <id>https://cubetian.github.io/15675205901094.html</id>
-    <content type="html"><![CDATA[
-<p>sas统计软件是我院一门很受欢迎的课程，由于商用版过于庞大，安装激活困难，这里提供sas的另一版本，SAS University，为大学生学习的版本</p>
-
-<p>SAS University 的<a href="https://www.sas.com/en_us/software/university-edition.html">官方网站</a>上有免费的下载渠道</p>
 
 ]]></content>
   </entry>

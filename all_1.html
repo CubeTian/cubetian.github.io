@@ -108,6 +108,209 @@
 		<div class="markdown-body home-categories">
 		
 			<div class="article">
+                <a class="clearlink" href="15686818191570.html">
+                
+                  <h1>LATEX 定理、命题环境</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>在LaTex中需要有关定理、公理、命题、引理、定义等时，常用如下命令</p>
+
+<ul>
+<li><strong>\newtheorem</strong>{定理环境名}{标题}[主计数器名] </li>
+<li><strong>\newtheorem</strong>{theorem}{Theorem}[Chapter]</li>
+</ul>
+
+<p>意思就是定义一个以Theorem为标题的theorem环境,计数以章节数为主.</p>
+
+<p> </p>
+
+<p><strong>\begin{theorem}[均值不等式]</strong></p>
+
+<p>设\(A,B\)是两个实数, 则\(2AB\leq 2 A^2+B^2\).</p>
+
+<p><strong>\end{theorem}</strong></p>
+
+<p>如果需要输出中文,使用定义theorem如下</p>
+
+<p><strong>\newtheorem{theorem}{\hspace{2em}定理}[chaptet]</strong></p>
+
+<p>另外在{\hspace{2em}定理}中还可以输入更改字体的命令来改变定理的字体</p>
+
+<p><strong>其他中文模式：</strong></p>
+
+<ul>
+<li><strong>\newtheorem{Definition}{\hspace{2em}定义}[chapter]</strong></li>
+<li><strong>\newtheorem{theorem}{\hspace{2em}定理}[chapter]</strong></li>
+<li><strong>\newtheorem{lemma}{\hspace{2em}引理}[chapter]</strong></li>
+<li><strong>\newtheorem{Proof}{证明}[chapter]</strong></li>
+</ul>
+
+<p>前面提到的定理、公理、命题、引理、定义的一套命令可以用这个</p>
+
+<p>% Theorem style</p>
+
+<ul>
+<li>\newtheoremstyle{mystyle}{3pt}{3pt}{\kaishu}{0cm}{\heiti2 }{}{1em}{}  \theoremstyle{mystyle}</li>
+<li>\newtheorem{definition}{\hspace{2em}定义}[chapter] % </li>
+<li>没有章, 只有节, 把上面的[chapter]改成[section] </li>
+</ul>
+
+<p><strong>文章中可以直接使用的范例：</strong></p>
+
+<p><strong>\newtheorem{theorem}[definition]{\hspace{2em}定理} </strong></p>
+
+<p><strong>\newtheorem{axiom}[definition]{\hspace{2em}公理} </strong></p>
+
+<p><strong>\newtheorem{lemma}[definition]{\hspace{2em}引理} </strong></p>
+
+<p><strong>\newtheorem{proposition}[definition]{\hspace{2em}命题} </strong></p>
+
+<p><strong>\newtheorem{corollary}[definition]{\hspace{2em}推论} </strong></p>
+
+<p><strong> \newtheorem{remark}{\hspace{2em}注}[chapter]</strong></p>
+
+<p> </p>
+
+<hr/>
+
+<p> </p>
+
+<p><strong>Latex-定理定义的排版</strong></p>
+
+<p>\newtheorem{thm}{Theorem}[section]</p>
+
+<p>\newtheorem{prop}{Proposition}[section]</p>
+
+<p>以上定理和命题分别计数，如果命题也用定理的计数器，可以这样定义：</p>
+
+<p>\newtheorem{prop}[thm]{Proposition}</p>
+
+<p>引用：</p>
+
+<p>\begin{thm}[附加标题,如定理名称，作者]</p>
+
+<p>文本</p>
+
+<p>\end{thm}</p>
+
+<p>较短的证明可以用</p>
+
+<p>\begin{proof}[标题]</p>
+
+<p>证明内容。</p>
+
+<p>\end{proof}</p>
+
+<p> </p>
+
+<p>如果有[标题]选项，则显示这个标题(斜体)，否则自动打印斜体的Proof，并在证明结束时自动生成证毕符号口。</p>
+
+<p>如果使用\proof命令，则需要在结束时手动加上结束命令\qed。</p>
+
+<p>当然你可以重定义证毕符号，例如：</p>
+
+<p>\renewcommand*{\qedsymbol}{[证毕]}</p>
+
+<p>\begin{proof}[证:]</p>
+
+<p>证明正文。</p>
+
+<p>\end{proof}</p>
+
+<p>注意：</p>
+
+<p>\begin{proof}...\end{proof}&quot; role=&quot;presentation&quot; style=&quot;margin: 0px; padding: 0px; display: inline; font-weight: normal; line-height: normal; font-size: 14px; text-align: left; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; position: relative;&quot;&gt;<br/>
+\begin{proof}...\end{proof}</p>
+
+<p>环境需要\usepackage{amsthm}宏包的支持</p>
+
+<p> </p>
+
+<h2 id="toc_0"> </h2>
+
+<h2 id="toc_1">首先你要先使用宏包 ntheorem</h2>
+
+<h2 id="toc_2"> </h2>
+
+<h2 id="toc_3">\usepackage[amsmath,thmmarks]{ntheorem}</h2>
+
+<h2 id="toc_4">% 定理类环境宏包，其中 amsmath 选项</h2>
+
+<p>% 用来兼容 AMS LaTeX 的宏包</p>
+
+<h2 id="toc_5"> %=== 配合上面的ntheorem宏包产生各种定理结构,重定义一些</h2>
+
+<h2 id="toc_6">%正文相关标题 ===</h2>
+
+<p>\theoremstyle{plain}<br/>
+\theoremheaderfont{\normalfont\rmfamily\CJKfamily{hei}}<br/>
+\theorembodyfont{\normalfont\rm\CJKfamily{kai}} \theoremindent0em<br/>
+\theoremseparator{\hspace{1em}} \theoremnumbering{arabic}<br/>
+%\theoremsymbol{}          %定理结束时自动添加的标志</p>
+
+<p> </p>
+
+<p><strong>\newtheorem{theorem}{Theorem}<br/>
+\newtheorem{corollary}{Corollary}<br/>
+......<br/>
+\begin{theorem}<br/>
+......<br/>
+\end{theorem}<br/>
+......</strong></p>
+
+<p><strong>\begin{corollary}<br/>
+......<br/>
+\end{corollary}</strong></p>
+
+<p>这样的输出结果就是各自编号的定理和推论了，定义、命题等等也类似可以这么使用。如果你希望定理和推论一起编号，前面可以改为这样（意思是corollary也使用theorem的编号）：</p>
+
+<p><strong>\newtheorem{theorem}{Theorem}<br/>
+\newtheorem{corollary}[theorem]{Corollary}</strong></p>
+
+<p>最后，如果你希望使用Theorem 1.4.2这样的编号，可以这么使用：</p>
+
+<p><strong>\newtheorem{theorem}{Theorem}[subsection] \newtheorem{corollary}[theorem]{Corollary}</strong></p>
+
+<p>前面的subsection改为section将输出Theorem 4.2这样的编号。</p>
+
+<p> </p>
+
+<p><strong>\newtheorem{theorem}{Theorem}[subsection] \newtheorem{corollary}[theorem]{Corollary}</strong></p>
+
+<p>前面的subsection改为section将输出Theorem 4.2这样的编号。</p>
+
+<p>如何让定理，推理等用同一计数器：</p>
+
+<p>\newtheorem{thm}{Theorem}[section] %如果不采用章节号做前缀，则不用[section]<br/>
+\newtheorem{defn}[thm]{Definition} %这句定义使得defn环境和thm共享编号<br/>
+\newtheorem{lem}[thm]{Lemma} %这句定义使得lem环境和thm共享编号</p>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2019/09/17</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='%E5%85%B6%E4%BB%96.html'>其他</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
                 <a class="clearlink" href="15682182289509.html">
                 
                   <h1>赛前感想</h1>
@@ -657,56 +860,6 @@ hello world
                 </div>
               </div><!-- article -->
         
-			<div class="article">
-                <a class="clearlink" href="15680029212149.html">
-                
-                  <h1>雅思阅读</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>雅思阅读开始可以分题型练习<br/>
-题型主要有填空题、判断题、选择题、匹配题<br/>
-填空题分为给选项的和不给选项的，不给选项的题型较容易，优先做，一般题目会涉及一大段或连续的几小段，填空一定填原词，甚至不需要修改形式，“”内的内容很有可能就是要填的<br/>
-给选项的比较难，很有可能是无序的，除了根据词性排除一些内容，剩下的只能硬上了，可以放后面做</p>
-
-<p>每道题基本上会对应一个段落或几个段落，出过题的段落不会再出，文意匹配除外</p>
-
-<p>是非判断 true/false/not given  yes/no/not given<br/>
-非与not given 的区别<br/>
-非是文章给的情况和题目给的情况不能共存<br/>
-not given 可以共存<br/>
-我理解是 非是认知错误 not given是对象错误<br/>
-事情的主语、宾语错误都是not given<br/>
-然后如果至少有四个题那么 三种肯定都有 只有三个题，可能缺少一种选项</p>
-
-<p>小匹配（在文章后的），只要一段里有提到就选那一段，不需要整段都是叙述这件事</p>
-
-<p>大匹配（文章前） 最后做.. 很耗时间</p>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2019/09/09</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='%E5%85%B6%E4%BB%96.html'>其他</a></span>
-          				   
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
               
 
 
@@ -784,6 +937,12 @@ not given 可以共存<br/>
 	      
 		      
 			      <li class="post">
+			        <a href="15699393940279.html">GSPM笔记</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
 			        <a href="15696705812938.html">树莓派入门笔记</a>
 			      </li>
 		     
@@ -803,12 +962,6 @@ not given 可以共存<br/>
 		      
 			      <li class="post">
 			        <a href="15655035745414.html">计算机二级python</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="15653132926815.html">计算机二级 公共知识</a>
 			      </li>
 		     
 		  
