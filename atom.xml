@@ -4,7 +4,7 @@
   <title><![CDATA[程序猿CubeTian]]></title>
   <link href="https://cubetian.github.io/atom.xml" rel="self"/>
   <link href="https://cubetian.github.io/"/>
-  <updated>2019-10-01T23:46:57+08:00</updated>
+  <updated>2019-10-07T22:54:54+08:00</updated>
   <id>https://cubetian.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -31,7 +31,7 @@
 \[<br/>
 \mathcal{H}=-\frac{\delta F}{\delta \mathbf{M}} \tag2<br/>
 \]<br/>
-\[\small{<br/>
+\[\tiny{<br/>
 F[\mathbf{M}]=\frac{1}{2} \int_{\Omega}\left\{\Phi\left(\frac{\mathbf{M}}{M_{s}}\right)+\frac{A}{M_{s}^{2}}|\nabla \mathbf{M}|^{2}-2 \mu_{0} \mathbf{H}_{e} \cdot \mathbf{M}\right\} d x+\frac{\mu_{0}}{2} \int_{\mathbb{R}^{3}}|\nabla U|^{2} d x}<br/>
 \tag3\]<br/>
 在（3）中，\(A\)是交换常数，\(\frac{A}{M_{s}^{2}}|\nabla M|^{2}\)是自旋之间的交换相互作用能。\(\Phi\left(\frac{\mathrm{M}}{M_{s}}\right)\)是自材料的各向异性的能量。\(\mu_0\)是真空磁导率(S.I.中\(\mu_0=4\pi\times10^{-7} N/A^2\))\(-2 \mu_{0} \mathbf{H}_{e} \cdot \mathbf{M}\)是由外部施加场产生的能量。\(\Omega\)是材料所占的体积。最后,(3)中的最后一项是由材料内部磁化分布感应的磁场产生的能量。感应场\(\mathbf{H}_{s}=-\nabla U\)可以通过以下求解<br/>
@@ -71,7 +71,221 @@ Landau–Lifshitz方程(1)中旋磁项是一个保守项，而阻尼项是耗散
 我们将我们的方法应用于图案化亚微米阵列中异常切换的仿真。 Jing Shi等人[17，21–24]在实验中观察到了这一点捕获的磁化涡旋是开关异常的原因。 这个问题的数值模拟非常苛刻。 为了计算磁滞回线和剩余磁化曲线，需要运行100多个到稳态的演化，同时，在每个方向上需要256个以上的网格点才能解决涡旋和畴壁。<br/>
 本文的组织结构如下：在第2节中，我们将通过分析一个简单的示例来研究Landau–Lifshitz方程的矢量性质对几种常用时间步进程序的稳定性的影响。我们介绍了高斯－赛德尔技术，并对这一技术提高了显式方案的稳定性进行了重要观察。在第3节中，我们引入了利用高斯-赛德尔（Gauss-Seidel）技术的（9）的分步程序。上一节的分析表明，我们的方案是无条件稳定的。在第4节中，我们将我们的方案的性能与两种不同的显式方案的性能进行了谐波图的辛流动。在第5节中，我们结合了新方法 用[5]中推导的谐波图的热流投影方法，并为整个Landau-Lifshitz方程引入高斯-塞德尔投影方法。在第6节中，我们回顾了一些开关异常实验，并给出了使用高斯-赛德尔投影法进行的数值模拟。我们能够解析涡旋动力学，并准确模拟[17，21–24]中观察到的切换异常。</p>
 
-<p>一个简答的例子</p>
+<p>一个简答的例子\(\frac{d \mathbf{m}}{d t}=-\mathbf{a} \times \mathbf{m}\)<br/>
+当考虑时间步长方案时，Landau-Lifshitz方程(1)的矢量结构表现出一些有趣的特征。为了欣赏这一点，让我们首先考虑简单的线性矢量方程<br/>
+\[<br/>
+\frac{d \mathbf{m}}{d t}=-\mathbf{a} \times \mathbf{m} \tag{10}<br/>
+\]<br/>
+其中，\(a^{T}=\left(a_{1}, a_{2}, a_{3}\right)\)是一个常数向量。</p>
+
+<p>2.1标准单步方法<br/>
+方程10的向前欧拉法为<br/>
+\[<br/>
+\mathbf{m}^{n+1}=\mathbf{m}^{n}-\Delta t\left(\mathbf{a} \times \mathbf{m}^{n}\right)<br/>
+\tag{11}\]<br/>
+或以其分量形式<br/>
+\[<br/>
+\left(\begin{array}{c}{m_{1}^{n+1}} \\ {m_{2}^{n+1}} \\ {m_{3}^{n+1}}\end{array}\right)=\left(\begin{array}{c}{m_{1}^{n}-\Delta t\left(a_{2} m_{3}^{n}-a_{3} m_{2}^{n}\right)} \\ {m_{2}^{n}-\Delta t\left(a_{3} m_{1}^{n}-a_{1} m_{3}^{n}\right)} \\ {m_{3}^{n}-\Delta t\left(a_{1} m_{2}^{n}-a_{2} m_{1}^{n}\right)}\end{array}\right)=A\left(\begin{array}{c}{m_{1}^{n}} \\ {m_{2}^{n}} \\ {m_{3}^{n}}\end{array}\right) \tag{12}<br/>
+\]<br/>
+其中，\(\Delta t\)是时间步长，并且<br/>
+\[<br/>
+A=\left(\begin{array}{ccc}{1} &amp; {\tilde{a}_{3}} &amp; {-\tilde{a}_{2}} \\ {-\tilde{a}_{3}} &amp; {1} &amp; {\tilde{a}_{1}} \\ {\tilde{a}_{2}} &amp; {-\tilde{a}_{1}} &amp; {1}\end{array}\right), \quad \tilde{a}_{i}=\tilde{a}_{i} \Delta t<br/>
+\]<br/>
+为了讨论欧拉法的稳定性，我们计算\(A\)的特征多项式<br/>
+\[<br/>
+\operatorname{det}(A-\lambda I)=(1-\lambda)^{3}+(1-\lambda)\left(a_{1}^{2}+a_{2}^{2}+a_{3}^{2}\right)(\Delta t)^{2}<br/>
+\]<br/>
+三个特征根分别为\(\lambda_{0}=1, \lambda_{ \pm}=1 \pm|a| \Delta t i\)。所以，谱半径\(\rho(A)=\sqrt{1+|a|^{2}(\Delta t)^{2}}&gt;1\),这意味着欧拉方案的稳定区仅包含一个点（即，\(\Delta t =0\)）.</p>
+
+<p>对于二阶Runge-Kutta方案，类似的计算显示出相同的功能。但是，对于四阶Runge-Kutta方案，特征多项式的三个特征值满足\(\left|\lambda_{0}\right|=1,\left|\lambda_{ \pm}\right|=1-\frac{1}{72}(|a| \Delta t)^{6}+\frac{1}{(24)^{2}}(|a| \Delta t)^{8}\)，我们有在\(\Delta t \leq \frac{\sqrt{8}}{|a|}\)的条件下，\(\rho(A) \leq 1\)。<br/>
+这个现象很容易理解，常微分方程系统的收敛范围，\(\lambda=\{-|a| i, 0,|a| i\}\)位于虚轴上。众所周知，向前欧拉法合二阶Runge-Kutta法的稳定区域不包含任何除原点以外的虚轴的任何部分。另一方面，古典三阶和四阶Runge-Kutta法确实包含虚轴部分，这导致四阶Runge-Kutta法的绝对稳定条件为\(\Delta t \leq \frac{\sqrt{8}}{|a|}\)。</p>
+
+<p>2.2Gauss-Seidel法<br/>
+我们已经表明，通常的向前欧拉法对于线性方程是不稳定的<br/>
+\[<br/>
+\frac{d \mathbf{m}}{d t}=-\mathbf{a} \times \mathbf{m}<br/>
+\]<br/>
+让我们考虑以下的对(11)和(12)的Gauss-Seidel校正<br/>
+\[<br/>
+\left(\begin{array}{c}{m_{1}^{n+1}} \\ {m_{2}^{n+1}} \\ {m_{3}^{n+1}}\end{array}\right)=\left(\begin{array}{c}{m_{1}^{n}-\Delta t\left(a_{2} m_{3}^{n}-a_{3} m_{2}^{n}\right)} \\ {m_{2}^{n}-\Delta t\left(a_{3} m_{1}^{n+1}-a_{1} m_{3}^{n}\right)} \\ {m_{3}^{n}-\Delta t\left(a_{1} m_{2}^{n+1}-a_{2} m_{1}^{n+1}\right)}\end{array}\right)<br/>
+ \tag{13} \]<br/>
+我们可以将（13）重新写为<br/>
+\[<br/>
+\left(\begin{array}{ccc}{1} &amp; {0} &amp; {0} \\ {\tilde{a}_{3}} &amp; {1} &amp; {0} \\ {-\tilde{a}_{2}} &amp; {\tilde{a}_{1}} &amp; {1}\end{array}\right)\left(\begin{array}{c}{m_{1}^{n+1}} \\ {m_{2}^{n+1}} \\ {m_{3}^{n+1}}\end{array}\right)=\left(\begin{array}{ccc}{1} &amp; {\tilde{a}_{3}} &amp; {-\tilde{a}_{2}} \\ {0} &amp; {1} &amp; {\tilde{a}_{1}} \\ {0} &amp; {0} &amp; {1}\end{array}\right)\left(\begin{array}{c}{m_{1}^{n}} \\ {m_{2}^{n}} \\ {m_{3}^{n}}\end{array}\right)<br/>
+\tag{14}\]<br/>
+或是<br/>
+\[<br/>
+\begin{aligned}\left(\begin{array}{c}{m_{1}^{n+1}} \\ {m_{2}^{n+1}} \\ {m_{3}^{n+1}}\end{array}\right) &amp;=\left(\begin{array}{ccc}{1} &amp; {\tilde{a}_{3}} &amp; {-\tilde{a}_{2}} \\ {-\tilde{a}_{3}} &amp; {1-\tilde{a}_{3}^{2}} &amp; {\tilde{a}_{1}+\tilde{a}_{2} \tilde{a}_{3}} \\ {\tilde{a}_{1} \tilde{a}_{3}+\tilde{a}_{2}} &amp; {\tilde{a}_{1} \tilde{a}_{3}^{2}+\tilde{a}_{2} \tilde{a}_{3}-\tilde{a}_{1}} &amp; {1-\tilde{a}_{1} \tilde{a}_{2} \tilde{a}_{3}-\tilde{a}_{1}^{2}-\tilde{a}_{2}^{2}}\end{array}\right)\left(\begin{array}{c}{m_{1}^{n}} \\ {m_{2}^{n}} \\ {m_{3}^{n}}\end{array}\right) \\ &amp;=A\left(\begin{array}{c}{m_{1}^{n}} \\ {m_{2}^{n}} \\ {m_{3}^{n}}\end{array}\right) \end{aligned} \tag{15} <br/>
+\]<br/>
+转移矩阵A的特征值为<br/>
+\[<br/>
+\lambda_{0}=1, \quad \lambda_{\pm}=1-b \pm \sqrt{b(b-2)}<br/>
+\]<br/>
+其中，\(b=\frac{1}{2}\left(|a|^{2}+a_{1} a_{2} a_{3} \Delta t\right)(\Delta t)^{2}\)。很容易看出，当\(0&lt;b&lt;2\)，或大致有<br/>
+\[<br/>
+\Delta t&lt;\frac{2}{|a|}<br/>
+\]<br/>
+三个特征值不同且\(\left|\lambda_{\pm}\right|=1\)。<br/>
+转移矩阵A有以下特征，当\(0&lt;b&lt;2\)，存在一个可逆矩阵T使得<br/>
+\[<br/>
+A=T^{-1}\left(\begin{array}{ccc}{1} &amp; {0} &amp; {0} \\ {0} &amp; {1-b} &amp; {\sqrt{b(2-b)}} \\ {0} &amp; {-\sqrt{b(2-b)}} &amp; {1-b}\end{array}\right) T=T^{-1}\left(\begin{array}{cc}{1} &amp; {0} \\ {0} &amp; {S}\end{array}\right) T<br/>
+\]<br/>
+这里<br/>
+\[<br/>
+S=\left(\begin{array}{cc}{1-b} &amp; {\sqrt{b(2-b)}} \\ {-\sqrt{b(2-b)}} &amp; {1-b}\end{array}\right)<br/>
+\]<br/>
+是一个辛矩阵，因为\(S^{T} J S=J\)，其中<br/>
+\(J=\left(\begin{array}{cc}{0} &amp; {1} \\ {-1} &amp; {0}\end{array}\right)\)<br/>
+所以，(13)是对[13]中提出的辛方案的奇数维的自然扩展。另见[20]</p>
+
+<p>3.不带阻尼的Landau-Lifshitz方程的隐式Gauss-Seidel格式<br/>
+3.1 一个分步过程<br/>
+我们考虑方程<br/>
+\[<br/>
+\mathbf{m}_{t}=-\mathbf{m} \times \Delta \mathbf{m}<br/>
+\tag{16}\]<br/>
+为了克服方程的非线性，我们考虑一个简单的分步法<br/>
+\[<br/>
+\begin{aligned} \frac{\mathbf{m}^{*}-\mathbf{m}^{n}}{\Delta t} &amp;=\Delta_{h} \mathbf{m}^{*} \\ \mathbf{m}^{n+1} &amp;=\mathbf{m}^{n}-\mathbf{m}^{n} \times \mathbf{m}^{*} \end{aligned} \tag{17}<br/>
+\]<br/>
+或是<br/>
+\[<br/>
+\mathbf{m}^{n+1}=\mathbf{m}^{n}-\mathbf{m}^{n} \times\left(I-\Delta t \Delta_{h}\right)^{-1} \mathbf{m}^{n} \tag{18}<br/>
+\]<br/>
+这里I是单位矩阵，\(\Delta_h \)表示拉普拉斯算子的近似值。在程序中我们用标准的五点近似法。<br/>
+方案(18)的优点在于，现在隐式步骤是线性的，与求解隐式热方程相当，并且易于实现。容易检验方案(18)与(16)一致，是一阶精确的，但是，(18)的直接数值实现表明该方案是不稳定的。不难理解不稳定来自何处。如果将差分方案线性化，则(18)类似于上一节中研究的向前欧拉法，将其应用于诸如(17)的偏微分方程时时不稳定的。就像在线性情况下一样，我们将证明该方案可以通过Gauss-Seidel技术改进。<br/>
+3.2<br/>
+再次考虑方程<br/>
+\[<br/>
+\mathbf{m}_{t}=-\mathbf{m} \times \Delta \mathbf{m}<br/>
+\]<br/>
+使得<br/>
+\[<br/>
+g_{i}^{n}=\left(I-\Delta t \Delta_{h}\right)^{-1} m_{i}^{n}, \quad i=1,2,3<br/>
+\tag{19}\]<br/>
+考虑<br/>
+\[<br/>
+\left(\begin{array}{c}{m_{1}^{n+1}} \\ {m_{2}^{n+1}} \\ {m_{3}^{n+1}}\end{array}\right)=\left(\begin{array}{c}{m_{1}^{n}+\left(g_{2}^{n} m_{3}^{n}-g_{3}^{n} m_{2}^{n}\right)} \\ {m_{2}^{n}+\left(g_{3}^{n} m_{1}^{n+1}-g_{1}^{n+1} m_{3}^{n}\right)} \\ {m_{3}^{n}+\left(g_{1}^{n+1} m_{2}^{n+1}-g_{2}^{n+1} m_{1}^{n+1}\right)}\end{array}\right)<br/>
+\tag{20}\]<br/>
+或者<br/>
+\[<br/>
+\left(\begin{array}{ccc}{1} &amp; {0} &amp; {0} \\ {-g_{3}^{n}} &amp; {1} &amp; {0} \\ {g_{2}^{n+1}} &amp; {-g_{1}^{n+1}} &amp; {1}\end{array}\right)\left(\begin{array}{c}{m_{1}^{n+1}} \\ {m_{2}^{n+1}} \\ {m_{3}^{n+1}}\end{array}\right)=\left(\begin{array}{ccc}{1} &amp; {-g_{3}^{n}} &amp; {g_{2}^{n}} \\ {0} &amp; {1} &amp; {-g_{1}^{n+1}} \\ {0} &amp; {0} &amp; {1}\end{array}\right)\left(\begin{array}{c}{m_{1}^{n}} \\ {m_{2}^{n}} \\ {m_{3}^{n}}\end{array}\right)<br/>
+\tag{21}\]<br/>
+方案（21）的确切的稳定性是很难分析的。数值试验表明该方案是无条件稳定的</p>
+
+<p>4 各方案效果的比较<br/>
+在本节中，我们比较无阻尼的一维Landau–Lifshitz方程的三种不同时间步进方案的性能：<br/>
+\[<br/>
+\mathbf{m}_{t}=-\mathbf{m} \times \mathbf{m}_{x x}<br/>
+\tag{22}\]<br/>
+使<br/>
+\[<br/>
+\mathbf{m}_{e}=\left(\cos \left(x^{2}(1-x)^{2}\right) \sin (t), \sin \left(x^{2}(1-x)^{2}\right) \sin (t), \cos (t)\right)<br/>
+\tag{23}\]<br/>
+是（22）的精确解，强迫项为\(\mathbf{f}=\mathbf{m}_{e t}+\mathbf{m}_{e} \times \mathbf{m}_{e x x}\)将通过以下三种方案计算在\([0,1]\)上具有Neumann边界条件的（22）的数值解。</p>
+
+<p>1.向前欧拉法<br/>
+\[<br/>
+\left(\begin{array}{c}{m_{1}^{n+1}} \\ {m_{2}^{n+1}} \\ {m_{3}^{n+1}}\end{array}\right)=\left(\begin{array}{c}{m_{1}^{n}+\Delta t\left(\left(\Delta_{h} m_{2}^{n}\right) m_{3}^{n}-\left(\Delta_{h} m_{3}^{n}\right) m_{2}^{n}\right)} \\ {m_{2}^{n}+\Delta t\left(\left(\Delta_{h} m_{3}^{n}\right) m_{1}^{n}-\left(\Delta_{h} m_{1}^{n}\right) m_{3}^{n}\right.} \\ {m_{3}^{n}+\Delta t\left(\left(\Delta_{h} m_{1}^{n}\right) m_{2}^{n}-\left(\Delta_{h} m_{2}^{n}\right) m_{1}^{n}\right)}\end{array}\right)<br/>
+\tag{FE}\]<br/>
+2.一种显式Gauss-Seidel法<br/>
+\[<br/>
+\left(\begin{array}{c}{m_{1}^{n+1}} \\ {m_{2}^{n+1}} \\ {m_{3}^{n+1}}\end{array}\right)=\left(\begin{array}{c}{m_{1}^{n}+\Delta t\left(\left(\Delta_{h} m_{2}^{n}\right) m_{3}^{n}-\left(\Delta_{h} m_{3}^{n}\right) m_{2}^{n}\right)} \\ {m_{2}^{n}+\Delta t\left(\left(\Delta_{h} m_{3}^{n}\right) m_{1}^{n+1}-\left(\Delta_{h} m_{1}^{n+1}\right) m_{3}^{n}\right)} \\ {m_{3}^{n}+\Delta t\left(\left(\Delta_{h} m_{1}^{n+1}\right) m_{2}^{n+1}-\left(\Delta_{h} m_{2}^{n+1}\right) m_{1}^{n+1}\right)}\end{array}\right)<br/>
+\tag{EGS}\]<br/>
+这是Gauss-Seidel技术在向前欧拉法的直接应用。即，我们在第二个和第三个式子中使用刚更新的\(m_{1}^{n+1}, m_{2}^{n+{1}}\)</p>
+
+<p>3.隐式Gauss-Seidel法<br/>
+\[<br/>
+\left(\begin{array}{c}{m_{1}^{n+1}} \\ {m_{2}^{n+1}} \\ {m_{3}^{n+1}}\end{array}\right)=\left(\begin{array}{c}{m_{1}^{n}+\left(g_{2}^{n} m_{3}^{n}-g_{3}^{n} m_{2}^{n}\right)} \\ {m_{2}^{n}+\left(g_{3}^{n} m_{1}^{n+1}-g_{1}^{n+1} m_{3}^{n}\right)} \\ {m_{3}^{n}+\left(g_{1}^{n+1} m_{2}^{n+1}-g_{2}^{n+1} m_{1}^{n+1}\right)}\end{array}\right)<br/>
+\tag{IGS}\]<br/>
+\[<br/>
+g_{i}^{n}=\left(I-\Delta t \Delta_{h}\right)^{-1} m_{i}^{n}, \quad i=1,2,3<br/>
+\]<br/>
+我们首先比较三种方案的稳定性约束，对于每种方案，我们尝试找到最大的\(\Delta t\)对应与三个不同空间网格大小，便可以计算出稳定的解，直到\(T=0.02\)。结果显示在表I中。对于向前欧拉法，\(\Delta t\)必须极其小来得到一个稳定的解使得\(T=0.02\)。显式的高斯-赛德尔方案更稳定，但受CFL常数\(C = 0.4\)的标准CFL条件的约束。我们隐含的高斯-赛德尔方案似乎是无条件稳定的。</p>
+
+<p><strong>表I 三种方案的∆t稳定性约束</strong><br/>
+\[<br/>
+\begin{array}{llll}{} &amp; {\text { FE }} &amp; {\text { EGS }} &amp; {\text { IGS }} \\ \hline \Delta x=0.01 &amp; {\Delta t \leq 1 . \times 10^{-6}} &amp; {\Delta t \leq 4 . \times 10^{-5}} &amp; {} \\ {\Delta x=0.005} &amp; {\Delta t \leq 5 . \times 10^{-8}} &amp; {\Delta t \leq 1 . \times 10^{-5}} &amp; {\text { No restriction }} \\ {\Delta x=0.0025} &amp; {\Delta t \leq 5 . \times 10^{-9}} &amp; {\Delta t \leq 0.25 \times 10^{-6}} \\ \hline\end{array}<br/>
+\]<br/>
+我们也比较三种方案的精确性。在表II中，我们比较三种方案在不同时间的数值误差\(e(t)\)，并给相同的时间和空间步长\(\left(\Delta x=0.01, \Delta t=10^{-6}\right)\)。这里\(e(t)=\max \left|m_{h}-m_{e}\right|\)，其中\(\boldsymbol{m}_{e}\)是精确解，\(m_{h}\)是数值解。再次，结果显示隐式Gauss-Seidel是三者中最精确的</p>
+
+<p>5.完全Landau-Lifshitz方程的隐式Gauss-Seidel投影方案</p>
+
+<p>对于完全Landau-Lifshitz方程（1），我们将上述隐式Gauss-Seidel方案与较早开发的投影方案结合在一起，并采用分步框架。由于\(\mathbf{M}\)和\(\mathcal{H}\)具有相同的物理尺寸,我们可以写成\(\mathcal{H}=M_{s} \mathbf{h}\) \(\mathbf{H}_s=M_{s} \mathbf{h}\) \(\mathbf{H}_{e}=M_{s} \mathbf{h}_{e}\) 和 \(\mathbf{M}=M_{s} \mathbf{m}\)。在不失一般性的前提下，我们将假定材料是单轴的，且\(\Phi(\mathbf{m})=K_{u}\left(m_{2}^{2}+m_{3}^{2}\right)\)，方程（1）重新写为<br/>
+\[<br/>
+\mathbf{m}_{t}=-\mu_{0} \gamma M_{s} \mathbf{m} \times \mathbf{h}-\mu_{0} \gamma M_{s} \alpha \mathbf{m} \times \mathbf{m} \times \mathbf{h}<br/>
+\tag{24}\]<br/>
+其中<br/>
+\[<br/>
+\mathbf{h}=-\frac{K_{u}}{\mu_{0} M_{s}^{2}}\left(m_{2} \mathbf{e}_{2}+m_{3} \mathbf{e}_{3}\right)+\frac{A}{\mu_{0} M_{s}^{2}} \Delta \mathbf{m}+\mathbf{h}_{s}+\mathbf{h}_{e}<br/>
+\tag{25}\]<br/>
+这里我们使用符号\(\mathbf{e}_{1}=(1,0,0), \mathbf{e}_{2}=(0,1,0)\)和\(\mathbf{e}_{3}=(0,0,1)\)<br/>
+常数\(\mu_{0} \gamma M_{s}\)有时间倒数\(\left(s^{-1}\right)\)的物理尺寸。所以我们重新缩放时间\(t \rightarrow\left(\mu_{0} \gamma M_{s}\right)^{-1} t\)，然后重新缩放空间变量\(x \rightarrow L x\),其中L是\(\Omega\)的直径。方程化为<br/>
+\[<br/>
+\mathbf{m}_{t}=-\mathbf{m} \times \mathbf{h}-\alpha \mathbf{m} \times \mathbf{m} \times \mathbf{h}<br/>
+\tag{26}\]<br/>
+<img src="media/15699393940279/15704584393474.jpg" alt="" style="width:485px;"/><br/>
+其中<br/>
+\[<br/>
+\mathbf{h}=-Q\left(m_{2} \mathbf{e}_{2}+m_{3} \mathbf{e}_{3}\right)+\epsilon \Delta \mathbf{m}+\mathbf{h}_{s}+\mathbf{h}_{e}<br/>
+\tag{27}\]<br/>
+在这里，我们定义了无量纲参数\(Q=K_{u} /\left(\mu_{0} M_{s}^{2}\right)\)和\(\epsilon=A /\left(\mu_{0} M_{s}^{2} L^{2}\right)\)。<br/>
+对于我们的分割过程，我们定义矢量场<br/>
+\[<br/>
+\mathbf{f}=-Q\left(m_{2} \mathbf{e}_{2}+m_{3} \mathbf{e}_{3}\right)+\mathbf{h}_{s}+\mathbf{h}_{e}<br/>
+\tag{28}\]<br/>
+我们解方程<br/>
+\[<br/>
+\mathbf{m}_{t}=-\mathbf{m} \times(\epsilon \Delta \mathbf{m}+\mathbf{f})-\alpha \mathbf{m} \times \mathbf{m} \times(\epsilon \Delta \mathbf{m}+\mathbf{f})<br/>
+\tag{29}\]<br/>
+照三个步骤<br/>
+步骤一：隐式Gauss-Seidel<br/>
+\[<br/>
+\begin{array}{l}{g_{i}^{n}=\left(I-\epsilon \Delta t \Delta_{h}\right)^{-1}\left(m_{i}^{n}+\Delta t f_{i}^{n}\right)} \\ {g_{i}^{*}=\left(I-\epsilon \Delta t \Delta_{h}\right)^{-1}\left(m_{i}^{*}+\Delta t f_{i}^{n}\right), \quad i=1,2,3}\end{array}<br/>
+\tag{30}\]<br/>
+\[<br/>
+\left(\begin{array}{c}{m_{1}^{*}} \\ {m_{2}^{*}} \\ {m_{3}^{*}}\end{array}\right)=\left(\begin{array}{c}{m_{1}^{n}+\left(g_{2}^{n} m_{3}^{n}-g_{3}^{n} m_{2}^{n}\right)} \\ {m_{2}^{n}+\left(g_{3}^{n} m_{1}^{*}-g_{1}^{*} m_{3}^{n}\right)} \\ {m_{3}^{n}+\left(g_{1}^{*} m_{2}^{*}-g_{2}^{*} m_{2}^{*}\right)}\end{array}\right)<br/>
+\tag{31}\]</p>
+
+<p>步骤二：无约束热流<br/>
+\[<br/>
+\mathbf{f}^{*}=-Q\left(m_{2}^{*} \mathbf{e}_{2}+m_{3}^{*} \mathbf{e}_{3}\right)+\mathbf{h}_{s}^{n}+\mathbf{h}_{e}<br/>
+\tag{32}\]<br/>
+\[<br/>
+\left(\begin{array}{c}{m_{1}^{* *}} \\ {m_{2}^{* *}} \\ {m_{3}^{* *}}\end{array}\right)=\left(\begin{array}{c}{m_{1}^{*}+\alpha \Delta t\left(\epsilon \Delta_{h} m_{1}^{* *}+f_{1}^{*}\right)} \\ {m_{2}^{*}+\alpha \Delta t\left(\epsilon \Delta_{h} m_{2}^{* *}+f_{2}^{*}\right)} \\ {m_{3}^{*}+\alpha \Delta t\left(\epsilon \Delta_{h} m_{3}^{* *}+f_{3}^{*}\right)}\end{array}\right)<br/>
+\tag{33}\]<br/>
+步骤三：投影到\(S^2\)<br/>
+\[<br/>
+\left(\begin{array}{c}{m_{1}^{n+1}} \\ {m_{2}^{n+1}} \\ {m_{3}^{n+1}}\end{array}\right)=\frac{1}{\left|m^{* *}\right|}\left(\begin{array}{c}{m_{1}^{* *}} \\ {m_{2}^{* *}} \\ {m_{3}^{* *}}\end{array}\right)<br/>
+\tag{34}\]<br/>
+注意，杂散场（stray ﬁeld）不使用（30）和（32）中的\(\mathbf{m}\)的中间值重新计算，而是每个时间步仅计算一次。</p>
+
+<p>6.在开关异常问题中的应用<br/>
+在系列文章[17，21–24]中，对200Å厚的NiFe和NiFeCo元素的亚微米图案化阵列中的磁化反转进行了实验研究。报告了切换异常，并且发现该异常与陷阱的存在有关<br/>
+磁化涡流。可以通过将磁滞回线及其对应的剩余回线进行比较来检测是否存在捕获的涡流。</p>
+
+<p>磁滞回线可以通过以下方式获得：首先，施加强度为H0的正磁场，并使磁化强度达到稳定状态。一旦达到此稳态，所施加的电场将减小一定量，并再次允许样品达到稳态。这个过程一直持续到我们达到负强度H0为止。然后重复该过程，逐步增加磁场，直到达到最初应用的磁场。磁滞回线是稳态下的平均磁化强度与所施加磁场强度的函数图。</p>
+
+<p>对于剩余回路，将应用初始正场。一旦达到稳定状态，将关闭正磁场，并施加负小磁场。样品达到稳态后，将关闭负磁场，并允许样品松弛到稳态，即剩​​余状态。然后测量平均磁化强度。施加了另一个（更强的）负场，当样品达到稳态时，它被关闭。该过程一直持续到我们达到应用字段的规定负值为止。对于磁滞回线和剩余回线，应用字段中的增量是恒定的。</p>
+
+<p>在图1中可以看到一个典型的剩余回路。该回路具有两个跳跃和三个扁平部分的特征。平坦的区域对应于磁化强度的可逆变化：当去除外部磁场时，磁化强度恢复到初始配置。跳跃对应于不可逆的变化。剩余回路中的每个扁平零件都标识了反转过程中的不同阶段。这些中间状态负责[17，21–24]中报告的切换异常。<br/>
+为了模拟逆过程，我们使用上一节中描述的高斯-塞德尔投影方法对Landau-Lifshitz方程进行了模拟。在我们的实现中，我们将计算域划分为多个单元，并且在每个单元中，我们将磁化强度近似为一个常数。我们还近似了杂散场<br/>
+<img src="media/15699393940279/15704600610800.jpg" alt="" style="width:460px;"/></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[阿里巴巴店铺装修]]></title>
+    <link href="https://cubetian.github.io/15702534023062.html"/>
+    <updated>2019-10-05T13:30:02+08:00</updated>
+    <id>https://cubetian.github.io/15702534023062.html</id>
+    <content type="html"><![CDATA[
+<p>店招 1920x150 像素 分辨率72<br/>
+首页 1920x<br/><br/>
+标尺 基于参考线的切片 储存web所用格式 JPGE<br/>
+在旺铺上传店招<br/>
+在后台上传切片后的图片，DW中复制HTML地址，设计栏中热点框增添宝贝链接 </p>
 
 ]]></content>
   </entry>
@@ -2171,19 +2385,6 @@ apparent_encoding 备选编码方式</p>
 
 <p>如果header中不存在charset，则认为编码为ISO-8859-1但不能解析中文<br/>
 content 二进制编码内容</p>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[合同]]></title>
-    <link href="https://cubetian.github.io/15675882890776.html"/>
-    <updated>2019-09-04T17:11:29+08:00</updated>
-    <id>https://cubetian.github.io/15675882890776.html</id>
-    <content type="html"><![CDATA[
-<p>\(ax^2+2bxy+cy^2=d\)<br/>
-\(x=x&#39;cos\the - y&#39;sin\)<br/>
-\(y=x&#39;sin + y&#39;\)</p>
 
 ]]></content>
   </entry>

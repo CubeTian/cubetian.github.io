@@ -108,6 +108,112 @@
 		<div class="markdown-body home-categories">
 		
 			<div class="article">
+                <a class="clearlink" href="15685969611776.html">
+                
+                  <h1>SAS DATA步之全揭秘</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>一些概念</p>
+
+<ul>
+<li>程序数据向量（PDV）</li>
+<li>SAS自动变量名及其使用</li>
+<li>理解DATA步内部处理过程</li>
+<li>代码编译期间发生的事情</li>
+<li>程序执行期间实际发生了什么</li>
+<li>如何获取和存储变量属性</li>
+</ul>
+
+<p>DATA时建立SAS数据集的主要方法之一。一些涉及数据处理和创建数据集的任务可能只能通过DATA步才能解决<br/>
+DATA步分编译和执行两个阶段，PDV贯穿SAS编译和执行的两个阶段，决定了信息在DATA步中的存储及变化</p>
+
+<p>编译阶段包括：</p>
+
+<ul>
+<li>编译SAS语句，包括检查语法</li>
+<li>创建一个输入缓存区（input buffer）（如果需要读入原始数据文件）、一个PDV和描述性信息</li>
+</ul>
+
+<p>执行阶段包括：</p>
+
+<ul>
+<li>计算DATA步迭代的次数（从DATA语句开始）</li>
+<li>将PDV中所有变量设成缺失值并初始化自动变量</li>
+<li>读取输入观测（从原始文件或SAS数据集）</li>
+<li>执行附加的处理或计算语句</li>
+<li>将一条数据记录写入输出数据集并返回到DATA步语句</li>
+</ul>
+
+<p>PDV贯穿编译的执行阶段：</p>
+
+<ul>
+<li>PDV是内存的一个临时逻辑区域，SAS建立数据集时，每条观察值只有一次机会用的PDV</li>
+<li>包含所有变量的当前值</li>
+<li>包含两个自动变量：_N_和_ERROR_</li>
+</ul>
+
+<p>DATA步<br/>
+一个DATA步包含SAS语言的一组语句，这些语句具有以下功能</p>
+
+<ul>
+<li>从外部文件读入数据</li>
+<li>将数据写入外部文件</li>
+<li>读入SAS数据集和SAS视图</li>
+<li>创建SAS数据集和SAS视图<br/>
+一旦数据可以以SAS数据集的形式访问，就可以通过SAS过程步来分析数据和写报告</li>
+</ul>
+
+<p>可以运用DATA步：</p>
+
+<ul>
+<li>创建SAS数据集（SAS数据集或SAS视图）</li>
+<li>根据包含原始数据（外部文件）和文件创建SAS数据集</li>
+<li>通过提取子集、合并、修改和更新已经存在数据集的方式来创建新的数据集</li>
+<li>分析、处理或展现数据</li>
+<li>为新变量赋值（在有公式计算的情况下）</li>
+<li>撰写报告或将文件写入磁盘或磁带</li>
+<li>信息检索</li>
+<li>文件管理<br/>
+DATA步以‘DATA’语句开始（即显示的表明数据步的开始），以‘RUN’语句结束，在结束时会编译或执行RUN语句。在数据步最后一个观察值读取前，‘RUN’的功能都是以非显示的形式执行RETURN功能，去继续循环的操作。
+<img src="media/15685969611776/15687662911534.png" alt=""/>
+编译阶段<br/>
+如上所示，DATA步的第一个阶段就为编译阶段。在编译阶段SAS的任务如下：</li>
+<li>自动将SAS语句编译成将会在后面执行的机器语言</li>
+<li>确定每个变量的类型和长度</li>
+<li>确定变量是否有必要进行类型转换</li>
+<li>如果有INPUT语句，为外部文件新建读取内存缓存区</li>
+<li>创建PDV（Program Data Vector）</li>
+<li>创建数据集和变量属性的描述性信息</li>
+<li>处理语句，该项任务仅限于编译阶段；这为编译器如何新建变量提供信息；事实上，他们决定了如何在PDV内建立变量及信息；这些信息包括：DROP；KEEP；RENAME；RETAIN；RHERE；LABEL；LENGTH；FORMAT；ARRAY；BY；ATTRIB</li>
+<li>创建自动变量：包括_N_,_ERROR_,RND=,IN=,FIRST,LAST,POINT=</li>
+</ul>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2019/09/16</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1.html'>数学建模</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
                 <a class="clearlink" href="15686818191570.html">
                 
                   <h1>LATEX 定理、命题环境</h1>
@@ -822,44 +928,6 @@ hello world
                 </div>
               </div><!-- article -->
         
-			<div class="article">
-                <a class="clearlink" href="15681170584422.html">
-                
-                  <h1>手表使用评价</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>最初在b站看到有关pebble的视频后，非常希望有这样一款造型简单，续航之间长，有时间和小题提醒功能就够了的手表，非常遗憾的是，pebble在中国境内不能给顺畅的使用，且有许多问题，不建议中国用户购买。<br/>
-在淘宝搜寻过后，锁定在一款vla腕表，设计符合我的要求，价格便宜，且兼容ios。<br/>
-毕竟是学生，在一番挣扎之后还是买了最便宜的cityA款，售价199，一般会有10元的优惠券。<br/>
-约3天后收到手表，总体感觉不错，玻璃屏幕的硬度和清晰度都不错，蓝牙连接顺畅，且没有发现会影响手机的用电，手表电量充足，大约可以一个月充一次。<br/>
-消息提醒功能暂时微信是完全正常的，qq最新版本存在问题，我非常高兴的是，手表的测试和开发人员都非常的积极，在与他们的一番讨论后，锁定了问题。非常难得的，购买了一款产品后可以联系到开发人员，这样的售后保障我想即使出现了问题也能很快进行修复。<br/>
-总结一下，我觉得不亏</p>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2019/09/10</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='%E5%85%B6%E4%BB%96.html'>其他</a></span>
-          				   
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
               
 
 
@@ -943,6 +1011,12 @@ hello world
 		  
 		      
 			      <li class="post">
+			        <a href="15702534023062.html">阿里巴巴店铺装修</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
 			        <a href="15696705812938.html">树莓派入门笔记</a>
 			      </li>
 		     
@@ -956,12 +1030,6 @@ hello world
 		      
 			      <li class="post">
 			        <a href="15673304578082.html">SAS程序结构</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="15655035745414.html">计算机二级python</a>
 			      </li>
 		     
 		  

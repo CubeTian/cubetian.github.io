@@ -108,6 +108,143 @@
 		<div class="markdown-body home-categories">
 		
 			<div class="article">
+                <a class="clearlink" href="15608678868641.html">
+                
+                  <h1>数学模型代码整合</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>y=lagr(x0,y0,x) 拉格朗日插值 自编函数<br/>
+y=interp1(x0,y0,x) 分段线性插值<br/>
+y=interp1(x0,y0,x,&#39;spline&#39;) 或 y=spline(x0,y0,x)</p>
+
+<h2 id="toc_0">无约束优化</h2>
+
+<p>P1,P2为自定函数f中的参数<br/>
+x 点 fv 值 ef 结束信息（1 收敛 -1 不收敛 0 达到最大次数） out 相关结构信息<br/>
+[x,fv,ef,out]=fminbnd(@f,v1,v2,opt,P1,P2,...)   v1 下界 v2 上界<br/>
+[x,fv,ef,out,grad,hess]=fminunc(@f,x0,opt,P1,P2,...)<br/>
+[x,fv,ef,out]=fminsearch(@f,x0,opt,P1,P2,...)</p>
+
+<h2 id="toc_1">二次优化</h2>
+
+<p>[x,fv,ef,out,lag]=quadprog(H,c,A1,b1,A2,b2,v1,v2,x0,opt)<br/>
+[x,fv,ef,out,lambda]=linprog(c,A1,b1,A2,b2,v1,v2,x0,opt)<br/>
+min \(z = c^T x\)<br/>
+min \(z = \frac{1}{2}x^T H x + c^T x\)<br/>
+\(A_1 x \le b_1\)<br/>
+\(A_2 x = b_2\)<br/>
+\(v1\le x\le v2\) </p>
+
+<h2 id="toc_2">非线性优化</h2>
+
+<p>[x,fv,ef,out,lag,grad,hess]=fmincon(@f,x0,A1,b1,A2,b2,v1,v2,@c,opt)<br/>
+min \(z=f(x)\)<br/>
+\(c_1 \le 0\)<br/>
+\(c_2 = 0\)<br/>
+\(A_1 x \le b_1\)<br/>
+\(A_2 x = b_2\)<br/>
+\(v_1 \le x \le v_2\)<br/>
+其中 f至少输出一个参数 然后依次为梯度g、黑塞矩阵H 以二元函数为例<br/>
+\(g=[\frac{\partial f}{\partial x},\frac{\partial f }{\partial y}]\)<br/>
+\(H = [\frac{\partial^2 f}{\partial ^2 x},\frac{\partial^2 f}{\partial  x \partial y};\frac{\partial^2 f}{\partial  x \partial y},\frac{\partial^2 f}{\partial ^2 y};]\)<br/>
+c至少输出两个 [cneq ceq]=c(x)<br/>
+cneq 表示不等式约束部分<br/>
+ceq 表示等式约束部分</p>
+
+<p>所有的多个变量都用向量x表示<br/>
+多个函数也用向量表示<br/>
+opt后P1,P2 等缺省 表示 自定义的函数中的参数<br/>
+[] 表示缺省<br/>
+特别的 非线性可将线性条件也放入c中<br/>
+即：fmincon(@f,x0,[],[],[],[],[],[],@c,opt) 六个[]</p>
+
+<p>给出一个lingo程序</p>
+
+<p>model:<br/>
+sets:<br/>
+stocks/a,b,c/:p,mean,x;<br/>
+stst(stocks,stocks):cov;<br/>
+!stst(stocks,stocks)/a,a a,b a,c <br/>
+                             b,a b,b b,c <br/>
+                             c,a c,b c,c/:cov;<br/>
+endsets<br/>
+data:<br/>
+money=5000;<br/>
+target=1000;<br/>
+p=20 35 30;<br/>
+mean=5 8 10;<br/>
+cov = 4 2.5 -10<br/>
+        2.5 36 -15<br/>
+        -10 -15 100;<br/>
+enddata<br/>
+min = @sum(stst(i,j):cov(i,j)<em>x(i)</em>x(j));<br/>
+@sum(stocks:p<em>x)&lt;money;<br/>
+@sum(stocks:mean</em>x)&gt;=target;<br/>
+end</p>
+
+<h2 id="toc_3">统计基础</h2>
+
+<p>分布： unif exp norm chi2 t f bino poiss<br/>
+功能：pdf cdf inv stat(均值与方差) rnd<br/>
+\(pdf(x,\mu , \sigma)\)   x可以为多个点组成的向量<br/>
+\(cdf(x,\mu,\sigma)\)<br/>
+\(inv(\alpha,\mu,\sigma)\) \(\alpha\)也可以是向量<br/>
+\([\mu,\sigma^2]=stat(P1,P2)\) P1，P2为分布的参数<br/>
+rnd(a,b,m,n)  [a,b]上的m×n的矩阵随机数</p>
+
+<h2 id="toc_4">参数估计</h2>
+
+<p>[mu sigma muci sigmaci]=normfit(x,alpha)<br/>
+ ci 表示区间估计<br/>
+ [h,sig,ci]= <br/>
+ h=0接受原假设 h=1拒绝原假设<br/>
+ sig是在假设H0下的概率\(P{|Z|\ge|z|}\)<br/>
+ ci是\(\mu_0\)的置信区间</p>
+
+<p>ztest test ttest2<br/>
+ jbtest kstest lillietest</p>
+
+<h2 id="toc_5">回归分析</h2>
+
+<p>b=regress(y,X)<br/>
+\(b=(\hat{\beta_0},\hat{\beta_1})\)<br/>
+y是因变量数组<br/>
+X=[ones(n,1),x&#39;]    1与自变量组成的输入矩阵，n是数据容量<br/>
+[b,bint,r,rint,s]=regress(y‘,X,alpha)<br/>
+b 回归系数 bint 回归系数的置信区间<br/>
+r 残差 rint 残差的置信区间<br/>
+s 四个统计量 \(R^2,F,p,s^2\)<br/>
+\(R^2=U/S\) 决定系数<br/>
+\(F=\frac{U}{\frac{Q}{n-2}}\)统计量<br/>
+p:F(1,n-2)分布大于F值的概率<br/>
+\(s^2\)剩余方差</p>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2019/06/18</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/%E8%AE%A1%E7%AE%97%E7%89%A9%E7%90%86.html'>数值分析/计算物理</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
                 <a class="clearlink" href="15551995220068.html">
                 
                   <h1>数值线性代数第一次学习</h1>
@@ -277,6 +414,12 @@
 		  
 		      
 			      <li class="post">
+			        <a href="15702534023062.html">阿里巴巴店铺装修</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
 			        <a href="15696705812938.html">树莓派入门笔记</a>
 			      </li>
 		     
@@ -290,12 +433,6 @@
 		      
 			      <li class="post">
 			        <a href="15673304578082.html">SAS程序结构</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="15655035745414.html">计算机二级python</a>
 			      </li>
 		     
 		  
