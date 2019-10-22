@@ -202,6 +202,40 @@ Enterprise Miner 数据挖掘</p>
 
 <h3 id="toc_5">从外部文件中导入数据</h3>
 
+<h2 id="toc_6">一些知识点</h2>
+
+<p>此选项只在INFILE语句中与选项DSD一起使用时才有效。<br/>
+注：DSD的作用：<br/>
+将默认分隔符改为逗号<br/>
+对于连续的两个分隔符，中间按缺失值处理<br/>
+将字符变量值的引号去掉<br/>
+对引号里面的分隔符按字符来对待<br/>
+所以INFILE语句中的DSD选项自动把数据记录的分隔符设置为逗号，并且读入数据之前，把字符数据中的引号去掉，若加上“~”就会保留数据中的引号</p>
+
+<p>MISSOVER 阻止INPUT语句从下一个数据行读入数据，未赋值的变量设为缺失</p>
+
+<hr/>
+
+<p>@ 适用于一个数据行被多个INPUT语句读入的情况。对INPUT语句可以这样理解，执行INPUT语句后会自动换行，当有@时表示不换行（但DATA步进入下一循环时会换行）。</p>
+
+<p>@@ 适用于一个数据行包含多个观测值的情况，第一@可以理解为HOLD input语句，第二@可以理解为hold DATA步循环。意指：即使DATA开始下一次循环，INPUT语句仍hold,直到数据行结束，或下一个INPUT语句。</p>
+
+<p>data test;<br/>
+    infile cards ;<br/>
+    input x @; /<em>单个@，能H住，有效期到下一个input语句</em>/<br/>
+    input y;   /<em>没有@，H不住，下一个input语句会去读新的一行</em>/<br/>
+    input z @@; /<em>两个@，H住没问题，有效期延长到Data步下一圈</em>/<br/>
+cards;<br/>
+1 2 3<br/>
+4 5 6<br/>
+7<br/>
+run;<br/>
+proc print;run;</p>
+
+<p>Obs     x    y    z<br/>
+  1     1    2    4<br/>
+  2     5    6    7</p>
+
 
     
 
@@ -211,16 +245,16 @@ Enterprise Miner 数据挖掘</p>
         <div class="large-6 columns">
         <p class="text-left" style="padding:15px 0px;">
       
-          <a href="15680140350374.html" 
-          title="Previous Post: 想要的书目录">&laquo; 想要的书目录</a>
+          <a href="15702534023062.html" 
+          title="Previous Post: 阿里巴巴店铺装修">&laquo; 阿里巴巴店铺装修</a>
       
         </p>
         </div>
         <div class="large-6 columns">
       <p class="text-right" style="padding:15px 0px;">
       
-          <a  href="15655035745414.html" 
-          title="Next Post: 计算机二级python">计算机二级python &raquo;</a>
+          <a  href="15707633313339.html" 
+          title="Next Post: 软件管家">软件管家 &raquo;</a>
       
       </p>
         </div>
@@ -299,7 +333,7 @@ Enterprise Miner 数据挖掘</p>
 	      
 		      
 			      <li class="post">
-			        <a href="15699393940279.html">GSPM笔记</a>
+			        <a href="15717326165491.html">GTM 书单</a>
 			      </li>
 		     
 		  
@@ -311,19 +345,19 @@ Enterprise Miner 数据挖掘</p>
 		  
 		      
 			      <li class="post">
-			        <a href="15696705812938.html">树莓派入门笔记</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="15680140350374.html">想要的书目录</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
 			        <a href="15673304578082.html">SAS程序结构</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15707633313339.html">软件管家</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15699393940279.html">GSPM笔记</a>
 			      </li>
 		     
 		  

@@ -108,6 +108,184 @@
 		<div class="markdown-body home-categories">
 		
 			<div class="article">
+                <a class="clearlink" href="15681180752987.html">
+                
+                  <h1>蚁群优化算法学习笔记</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>本人阅读《蚁群优化算法》-马良等过程中的笔记<br/>
+前五章的目录</p>
+
+<ol>
+<li>引论
+<ol>
+<li>组合优化与计算复杂性</li>
+<li>来自自然界的几类优化方法</li>
+</ol></li>
+<li>蚁群算法原理
+<ol>
+<li>基本思想</li>
+<li>研究概况</li>
+</ol></li>
+<li>标准的TSP的蚁群算法
+<ol>
+<li>TSP概述</li>
+<li>经典方法</li>
+<li>遗传算法与模拟退火</li>
+<li>蚁群算法</li>
+<li>元胞蚁群算法及其收敛性</li>
+</ol></li>
+<li>扩展旅行商问题的蚁群算法
+<ol>
+<li>瓶颈TSP及其求解</li>
+<li>最小比率TSP及其求解</li>
+<li>时间约束TSP及其求解</li>
+<li>多目标TSP及其求解</li>
+</ol></li>
+<li>车辆路径问题的蚁群算法
+<ol>
+<li>VRP概述</li>
+<li>CVRP及其求解</li>
+<li>多目标VRP及其求解</li>
+<li>VRPTW及其求解</li>
+<li>VRPSTW及其求解</li>
+<li>FVRP及其求解<br/>
+看完目录前五章，首先有好多英文缩写看不明白，接着看</li>
+</ol></li>
+</ol>
+
+<h2 id="toc_0">第一章 引论</h2>
+
+<p>1.1 组合优化与计算复杂性<br/>
+最优化分连续变量与离散变量，离散变量的问题往往称为组合优化<br/>
+局部搜索法是基于贪婪思想，利用领域函数进行搜索的，局部搜索法可能落入局部最优点，或由于步长和初始点选择不好而错过最优点。<br/>
+依据一定概率，对于步长问题，可以采用变步长方法，在接近最优点附近，采取某种策略改变步长<br/>
+对于初始点问题，可以采用随机生成的一些初始点，从每个初始点出发进行搜索，找到各自的最优解，再从这些最优解中选择一个最好的结果</p>
+
+<p>典型组合优化难题<br/>
+    1. 旅行商问题（TSP）：所有可能的路线最多有（n-1）!/2 条<br/>
+    2. 图着色问题（GCP）：记图的最大顶点读书为\(\Delta\) ，则图的最小着色数以\(\Delta + 1\)为上界<br/>
+    3. 工件排序问题（JSP）：NP难题（NP-hard）<br/>
+    4. 二次分配问题（QAP）：目标函数非线性<br/>
+    5. 度约束最小树问题（DCMSTP）：最小生成树问题（不懂）<br/>
+上述典型问题及等价问题，普遍认为没有多项式算法求解</p>
+
+<p>1.2 来自自然界的几类优化方法<br/>
+计算智能系统是在神经网络、模糊系统、进化计算</p>
+
+<ol>
+<li>遗传算法的基本步骤（GA）：
+<ol>
+<li>问题的染色体表示</li>
+<li>初始解组（种群）的生成</li>
+<li>计算解组中各个解的适值函数（代价函数）</li>
+<li>从解组中随机抽取两个解作为父母代</li>
+<li>对父母代实施遗传操作（交叉、变异等）以产生一个后代解</li>
+<li>按某种规则，用该后代解替换原解组中的某个解</li>
+<li>按当前解组符合停机条件则算法终止，否则，转步骤1<br/>
+结果的好坏主要依赖于遗传代数和解组规模<br/></li>
+</ol></li>
+<li>模拟退火算法基本步骤（SA）：<br/>
+物体内部服从Boltzman分布
+<ol>
+<li>选择初始状态H（初始解）、初始温度、降温次数等</li>
+<li>生成H的领域状态H‘，并计算两种状态下的目标函数f(H&#39;)-f(H)</li>
+<li>按接受概率置换H为H‘</li>
+<li>重复步骤2和步骤3直至停机条件满足</li>
+</ol></li>
+<li>禁忌搜索法（TS）在搜索过程中使用记忆功能</li>
+<li>人工神经网络</li>
+<li>蚁群系统：信息激素，轨迹，自催化行为，增强型学习系统</li>
+<li>微粒群算法（PSO）：
+<ol>
+<li>依照初始化过程，对微粒群的随机位置和速度进行初始设定</li>
+<li>计算每个微粒的适应值</li>
+<li>对每个微粒，将其适应值与所经历过的最好位置进行比较，若较好，则将其作为当前的最好位置</li>
+<li>对每个微粒，将其适应值与全局所经历的最好位置的适应值进行比较，若较好，则将其作为当前的的全局最好位置</li>
+<li>对微粒的速度和位置进行进化</li>
+<li>若未到达结束条件（通常为足够好的适应值或最大代数），则返回步骤2</li>
+</ol></li>
+</ol>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2019/09/10</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1.html'>数学建模</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="15679868479784.html">
+                
+                  <h1>数值分析</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<h2 id="toc_0">灵敏度分析和误差分析</h2>
+
+<h3 id="toc_1">灵敏度分析</h3>
+
+<p><strong>敏感度分析</strong>（Sensitivity analysis）是研究数学模型或系统(数值或其他)输出中的不确定性如何在其输入中被分配到不同的不确定性来源。<a href="https://zh.wikipedia.org/wiki/%E6%95%8F%E6%84%9F%E5%BA%A6%E5%88%86%E6%9E%90#cite_note-1">[1]</a><a href="https://zh.wikipedia.org/wiki/%E6%95%8F%E6%84%9F%E5%BA%A6%E5%88%86%E6%9E%90#cite_note-2">[2]</a>一个相关的实践是不确定度分析，它更注重不确定度的量化和不确定度的传播;理想情况下，不确定度和灵敏度分析应该同时进行。</p>
+
+<p>在其他假设下重新计算结果以确定变量在敏感性分析下的影响的过程可用于一系列目的，<a href="https://zh.wikipedia.org/wiki/%E6%95%8F%E6%84%9F%E5%BA%A6%E5%88%86%E6%9E%90#cite_note-3">[3]</a>包括：</p>
+
+<ul>
+<li>在存在不确定性的情况下测试模型或系统结果的稳健性。</li>
+<li>增加对系统或模型中输入和输出变量之间关系的理解。</li>
+<li>通过识别导致输出中存在显着不确定性的模型输入来减少不确定性，因此应该成为关注的焦点，以便提高稳健性（可能通过进一步的研究）。</li>
+<li>搜索模型中的错误（通过遇到输入和输出之间的意外关系）。</li>
+<li>模型简化 - 修复对输出没有影响的模型输入，或识别和删除模型结构的冗余部分。</li>
+<li>加强建模人员与决策者之间的沟通（例如，通过提出更可信，可理解，引人注目或具有说服力的建议）。</li>
+<li>在输入因子空间中查找模型输出为最大值或最小值或满足某个最佳标准的区域。</li>
+<li>在校准具有大量参数的模型的情况下，主要灵敏度测试可以通过关注敏感参数来简化校准阶段。不知道参数的敏感性会导致无用的时间花在非敏感的时间上。<a href="https://zh.wikipedia.org/wiki/%E6%95%8F%E6%84%9F%E5%BA%A6%E5%88%86%E6%9E%90#cite_note-4">[4]</a></li>
+<li>寻求识别观测，模型输入和预测或预测之间的重要联系，从而开发出更好的模型。<a href="https://zh.wikipedia.org/wiki/%E6%95%8F%E6%84%9F%E5%BA%A6%E5%88%86%E6%9E%90#cite_note-5">[5]</a><a href="https://zh.wikipedia.org/wiki/%E6%95%8F%E6%84%9F%E5%BA%A6%E5%88%86%E6%9E%90#cite_note-6">[6]</a></li>
+</ul>
+
+<p>（from wiki）</p>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2019/09/09</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1.html'>数学建模</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
                 <a class="clearlink" href="15681170584422.html">
                 
                   <h1>手表使用评价</h1>
@@ -595,83 +773,6 @@ k表示偏移量，正数为右移，负数为左移</p>
                 </div>
               </div><!-- article -->
         
-			<div class="article">
-                <a class="clearlink" href="15678538813115.html">
-                
-                  <h1>爬虫学习</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>r = request.get(url)</p>
-
-<p>r (response)的五个属性<br/>
-status_code 200表示成功，404表示失败<br/>
-text 响应内容的字符串形式，即，url对应的网页内容<br/>
-encoding 内容编码方式<br/>
-apparent_encoding 备选编码方式</p>
-
-<p>如果header中不存在charset，则认为编码为ISO-8859-1但不能解析中文<br/>
-content 二进制编码内容</p>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2019/09/07</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='%E8%AE%A1%E7%AE%97%E6%9C%BA.html'>计算机</a></span>
-          				   
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="15675882890776.html">
-                
-                  <h1>合同</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>\(ax^2+2bxy+cy^2=d\)<br/>
-\(x=x&#39;cos\the - y&#39;sin\)<br/>
-\(y=x&#39;sin + y&#39;\)</p>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2019/09/04</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6.html'>基础数学</a></span>
-          				   
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
               
 
 
@@ -749,7 +850,7 @@ content 二进制编码内容</p>
 	      
 		      
 			      <li class="post">
-			        <a href="15699393940279.html">GSPM笔记</a>
+			        <a href="15717326165491.html">GTM 书单</a>
 			      </li>
 		     
 		  
@@ -761,19 +862,19 @@ content 二进制编码内容</p>
 		  
 		      
 			      <li class="post">
-			        <a href="15696705812938.html">树莓派入门笔记</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
-			        <a href="15680140350374.html">想要的书目录</a>
-			      </li>
-		     
-		  
-		      
-			      <li class="post">
 			        <a href="15673304578082.html">SAS程序结构</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15707633313339.html">软件管家</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="15699393940279.html">GSPM笔记</a>
 			      </li>
 		     
 		  
