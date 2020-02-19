@@ -1,1668 +1,423 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>  
-	  
-  	程序猿CubeTian
-  	
-	</title>
-
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link href="atom.xml" rel="alternate" title="程序猿CubeTian" type="application/atom+xml">
-
-	<link href="asset/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-	<link href="asset/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
-	<script src="asset/javascripts/jquery.min.js"></script>
-	<script src="asset/highlightjs/highlight.pack.js"></script>
-	<link href="asset/highlightjs/styles/solarized_dark.css" media="screen, projection" rel="stylesheet" type="text/css">
-<script>hljs.initHighlightingOnLoad();</script>
-
-	<!--[if lt IE 9]><script src="asset/javascripts/html5.js"></script><![endif]-->
-	<!-- <link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'> -->
-	<style type="text/css">
-/* latin */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Nunito-Light'), url(asset/font/1TiHc9yag0wq3lDO9cw0voX0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
-/* latin */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Nunito-Regular'), url(asset/font/6TbRXKWJjpj6V2v_WyRbMX-_kf6ByYO6CLYdB4HQE-Y.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
-/* latin */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Nunito-Bold'), url(asset/font/TttUCfJ272GBgSKaOaD7KoX0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
-	</style>
-	
-	<style type="text/css">
-	.container .left-col{ opacity: 1;}
-	#pagenavi a{ font-size: 1.3em;}
-	#pagenavi .next:before{ top: 3px;}
-	#pagenavi .prev:before{ top: 3px;}
-	.container .mid-col .mid-col-container #content .archives .title{ font-size: 1.5em;}
-	.container .mid-col .mid-col-container #content article{ padding: 15px 0px;}
-	#header .subtitle {
-		line-height: 1.2em;
-		padding-top: 8px;
-	}
-	article pre{ background: none; border: none; padding: 0;}
-	article .entry-content{text-align: left;}
-	.share-comment{ padding: 25px 0px; clear: both;}
-	hr{ margin: 20px 0px;border: 0; border-top:solid 1px #ddd;}
-	</style>
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+    
+  程序猿CubeTian
   
+  </title>
+ <meta name="description" content="众所周知，数学研究只需要一支笔和一堆草稿纸">
+ <link href="atom.xml" rel="alternate" title="程序猿CubeTian" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.min.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
 
-</head>
-
-
-<body>
-	<div class="container">
-		<div class="left-col">
-			<div class="intrude-less">
-				<header id="header" class="inner">
-				 
-					
-					<h1><a href="index.html">程序猿CubeTian</a></h1>
-					<p class="subtitle">众所周知，数学研究只需要一支笔和一堆草稿纸</p>
-					<nav id="main-nav">
-						<ul class="main">
-						
-						  <li id=""><a target="self" href="index.html">Home</a></li>
-						
-						  <li id=""><a target="_self" href="archives.html">Archives</a></li>
-						
-						</ul>
-					</nav>
-
-					<nav id="sub-nav">
-						<div class="social">
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+    <script src="asset/highlightjs/highlight.pack.js"></script>
+    <link href="asset/highlightjs/styles/github.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
 
 
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
 
+<div id="header">
+    <h1><a href="index.html">程序猿CubeTian</a></h1>
+</div>
 
+</nav>
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; 程序猿CubeTian</span>
+  </a>
+</nav>
 
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+      <li><a href="index.html">Home</a></li>
+      
+        <li class="divider"></li>
+        <li><label>其他</label></li>
 
+          
+            <li><a title="LATEX 定理、命题环境" href="15686818191570.html">LATEX 定理、命题环境</a></li>
+          
+            <li><a title="从不动点定理到计算复杂性" href="15408862456484.html">从不动点定理到计算复杂性</a></li>
+          
+            <li><a title="想要的书目录" href="15680140350374.html">想要的书目录</a></li>
+          
+            <li><a title="手表使用评价" href="15681170584422.html">手表使用评价</a></li>
+          
+            <li><a title="赛前感想" href="15682182289509.html">赛前感想</a></li>
+          
+            <li><a title="软件目录【20年2月】" href="15707633313339.html">软件目录【20年2月】</a></li>
+          
+            <li><a title="阿里巴巴店铺装修" href="15702534023062.html">阿里巴巴店铺装修</a></li>
+          
+            <li><a title="雅思阅读" href="15680029212149.html">雅思阅读</a></li>
+          
 
+      
+        <li class="divider"></li>
+        <li><label>数学建模</label></li>
 
+          
+            <li><a title="SAS DATA步之全揭秘" href="15685969611776.html">SAS DATA步之全揭秘</a></li>
+          
+            <li><a title="SAS程序结构" href="15673304578082.html">SAS程序结构</a></li>
+          
+            <li><a title="数值分析" href="15679868479784.html">数值分析</a></li>
+          
+            <li><a title="数学与计算机" href="15662129253478.html">数学与计算机</a></li>
+          
+            <li><a title="蚁群优化算法学习笔记" href="15681180752987.html">蚁群优化算法学习笔记</a></li>
+          
 
+      
+        <li class="divider"></li>
+        <li><label>基础数学</label></li>
 
+          
+            <li><a title="GTM 书单" href="15717326165491.html">GTM 书单</a></li>
+          
+            <li><a title="合同" href="15675882890776.html">合同</a></li>
+          
+            <li><a title="复变函数整理" href="15670727988571.html">复变函数整理</a></li>
+          
 
+      
+        <li class="divider"></li>
+        <li><label>计算机</label></li>
 
+          
+            <li><a title="MYsql 学习教程" href="15666534139692.html">MYsql 学习教程</a></li>
+          
+            <li><a title="SAS安装教程" href="15675205901094.html">SAS安装教程</a></li>
+          
+            <li><a title="itertools 模块" href="15681237931017.html">itertools 模块</a></li>
+          
+            <li><a title="scipy 模块参考书" href="15679893433260.html">scipy 模块参考书</a></li>
+          
+            <li><a title="sklearn 模块参考书" href="15679981303848.html">sklearn 模块参考书</a></li>
+          
+            <li><a title="wifi 相关" href="15375337935500.html">wifi 相关</a></li>
+          
+            <li><a title="地图相关" href="15682069194444.html">地图相关</a></li>
+          
+            <li><a title="树莓派入门笔记" href="15696705812938.html">树莓派入门笔记</a></li>
+          
+            <li><a title="爬虫学习" href="15678538813115.html">爬虫学习</a></li>
+          
+            <li><a title="计算机三级知识点" href="15623137342353.html">计算机三级知识点</a></li>
+          
+            <li><a title="计算机二级 公共知识" href="15653132926815.html">计算机二级 公共知识</a></li>
+          
+            <li><a title="计算机二级python" href="15655035745414.html">计算机二级python</a></li>
+          
 
-								
+      
+        <li class="divider"></li>
+        <li><label>数值分析/计算物理</label></li>
 
-								<a class="rss" href="atom.xml" title="RSS">RSS</a>
-							
-						</div>
-					</nav>
-				</header>				
-			</div>
-		</div>	
-		<div class="mid-col">
-			<div class="mid-col-container"> <div id="content" class="inner">
-<div itemscope itemtype="http://schema.org/Blog">
+          
+            <li><a title="GSPM笔记" href="15699393940279.html">GSPM笔记</a></li>
+          
+            <li><a title="PDE（Walter/njdx）" href="15645732861970.html">PDE（Walter/njdx）</a></li>
+          
+            <li><a title="数值线性代数第一次学习" href="15551995220068.html">数值线性代数第一次学习</a></li>
+          
+            <li><a title="数学模型代码整合" href="15608678868641.html">数学模型代码整合</a></li>
+          
+            <li><a title="课程二:偏微分方程数值方法" href="15621385998065.html">课程二:偏微分方程数值方法</a></li>
+          
 
+      
+      </ul>
+    </aside>
 
-	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-		<div class="meta">
-			<div class="date">
-				<time datetime="2019-08-11T14:06:14+08:00" itemprop="datePublished">2019/08/11</time>
-			</div>
-			<div class="tags">posted in 
-			
-			    <a class='category' href='%E8%AE%A1%E7%AE%97%E6%9C%BA.html'>计算机</a>&nbsp;
-			 
-			</div>
-		</div>
-		<h1 class="title" itemprop="name"><a href="15655035745414.html" itemprop="url">
-		计算机二级python</a></h1>
-		<div class="entry-content" itemprop="articleBody">
-			
-			<ul>
-<li>注释 #</li>
-<li>续行符 反斜杠 \</li>
-<li>命名 大小字母、下划线、数字、汉字<br/>
-但首字母不能是数字</li>
-<li>保留字：<br/>
-False, True, and, as, break, continue, def, del, elif, else, except, for, from, global, if, import, in, not, or, return, try, while (22个，2个大写)<br/>
-None, finally, lambda, pass, with</li>
-<li>jieba.lcut(s,cut_all=True)<br/>
-*0x4DC0 是一个十六进制数，它对应的 Unicode 编码是中国古老的《易经》六十四卦的第一卦，请输出第 51 卦（震卦）对应的 Unicode 编码的二进制、十进制、八进制和十六进制格式。
-<code>print(&quot;二进制{0:b}、十进制{0:d}、八进制{0:o}、十六进制{0:x}&quot;.format(0x4DC0+50))
-</code></li>
-<li>字符串的索引：<br/>
-正向索引：最左侧字符序号为0，向右依次递增，最右侧为L-1<br/>
-反向索引：最右侧字符序号为-1，向左依次递减，最左侧为-L</li>
-<li>字符串的索引：<br/>
-切片部分必须连续，[a=0,b=L-1,step=1] </li>
-<li>文件操作
-<code>
-f = open(&#39;file.csv&#39;,&#39;r&#39;,encoding=&#39;GB2312&#39;)<br/>
-ls = []<br/>
-for line in f.readlines():<br/>
-line.replace(&#39;\n&#39;,&#39;&#39;)<br/>
-ls.append(line.split(&#39;,&#39;))
-</code></li>
-<li>字典操作<br/>
-d[key] = d.get(key,0)</li>
-</ul>
+<a class="exit-off-canvas" href="#"></a>
 
+        <section id="main-content" role="main" class="scroll-container">
 
-			
-			
-		</div>
+          <div class="row">
+            <div class="large-3 medium-3 columns">
+              <div class="hide-for-small">
+                <div class="sidebar">
+                <nav>
+                  <ul id="side-nav" class="side-nav">
 
-	</article>
+                    
+                      <li class="side-title"><span>其他</span></li>
+                        
+                          <li><a title="LATEX 定理、命题环境" href="15686818191570.html">LATEX 定理、命题环境</a></li>
+                        
+                          <li><a title="从不动点定理到计算复杂性" href="15408862456484.html">从不动点定理到计算复杂性</a></li>
+                        
+                          <li><a title="想要的书目录" href="15680140350374.html">想要的书目录</a></li>
+                        
+                          <li><a title="手表使用评价" href="15681170584422.html">手表使用评价</a></li>
+                        
+                          <li><a title="赛前感想" href="15682182289509.html">赛前感想</a></li>
+                        
+                          <li><a title="软件目录【20年2月】" href="15707633313339.html">软件目录【20年2月】</a></li>
+                        
+                          <li><a title="阿里巴巴店铺装修" href="15702534023062.html">阿里巴巴店铺装修</a></li>
+                        
+                          <li><a title="雅思阅读" href="15680029212149.html">雅思阅读</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>数学建模</span></li>
+                        
+                          <li><a title="SAS DATA步之全揭秘" href="15685969611776.html">SAS DATA步之全揭秘</a></li>
+                        
+                          <li><a title="SAS程序结构" href="15673304578082.html">SAS程序结构</a></li>
+                        
+                          <li><a title="数值分析" href="15679868479784.html">数值分析</a></li>
+                        
+                          <li><a title="数学与计算机" href="15662129253478.html">数学与计算机</a></li>
+                        
+                          <li><a title="蚁群优化算法学习笔记" href="15681180752987.html">蚁群优化算法学习笔记</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>基础数学</span></li>
+                        
+                          <li><a title="GTM 书单" href="15717326165491.html">GTM 书单</a></li>
+                        
+                          <li><a title="合同" href="15675882890776.html">合同</a></li>
+                        
+                          <li><a title="复变函数整理" href="15670727988571.html">复变函数整理</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>计算机</span></li>
+                        
+                          <li><a title="MYsql 学习教程" href="15666534139692.html">MYsql 学习教程</a></li>
+                        
+                          <li><a title="SAS安装教程" href="15675205901094.html">SAS安装教程</a></li>
+                        
+                          <li><a title="itertools 模块" href="15681237931017.html">itertools 模块</a></li>
+                        
+                          <li><a title="scipy 模块参考书" href="15679893433260.html">scipy 模块参考书</a></li>
+                        
+                          <li><a title="sklearn 模块参考书" href="15679981303848.html">sklearn 模块参考书</a></li>
+                        
+                          <li><a title="wifi 相关" href="15375337935500.html">wifi 相关</a></li>
+                        
+                          <li><a title="地图相关" href="15682069194444.html">地图相关</a></li>
+                        
+                          <li><a title="树莓派入门笔记" href="15696705812938.html">树莓派入门笔记</a></li>
+                        
+                          <li><a title="爬虫学习" href="15678538813115.html">爬虫学习</a></li>
+                        
+                          <li><a title="计算机三级知识点" href="15623137342353.html">计算机三级知识点</a></li>
+                        
+                          <li><a title="计算机二级 公共知识" href="15653132926815.html">计算机二级 公共知识</a></li>
+                        
+                          <li><a title="计算机二级python" href="15655035745414.html">计算机二级python</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>数值分析/计算物理</span></li>
+                        
+                          <li><a title="GSPM笔记" href="15699393940279.html">GSPM笔记</a></li>
+                        
+                          <li><a title="PDE（Walter/njdx）" href="15645732861970.html">PDE（Walter/njdx）</a></li>
+                        
+                          <li><a title="数值线性代数第一次学习" href="15551995220068.html">数值线性代数第一次学习</a></li>
+                        
+                          <li><a title="数学模型代码整合" href="15608678868641.html">数学模型代码整合</a></li>
+                        
+                          <li><a title="课程二:偏微分方程数值方法" href="15621385998065.html">课程二:偏微分方程数值方法</a></li>
+                        
+
+                    
+                  </ul>
+                </nav>
+                </div>
+              </div>
+            </div>
+            <div class="large-9 medium-9 columns">
+
  
-	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-		<div class="meta">
-			<div class="date">
-				<time datetime="2019-08-09T09:14:52+08:00" itemprop="datePublished">2019/08/09</time>
-			</div>
-			<div class="tags">posted in 
-			
-			    <a class='category' href='%E8%AE%A1%E7%AE%97%E6%9C%BA.html'>计算机</a>&nbsp;
-			 
-			</div>
-		</div>
-		<h1 class="title" itemprop="name"><a href="15653132926815.html" itemprop="url">
-		计算机二级 公共知识</a></h1>
-		<div class="entry-content" itemprop="articleBody">
-			
-			<h2 id="toc_0">程序设计基础</h2>
+
+
+	
+		<div class="markdown-body">
+		<h1>SAS程序结构</h1>
+
+		<p>DATA步-PROC步-OUTPUT步</p>
+
+<h3 id="toc_0">DATA步：此步骤涉及将所需数据集加载到SAS存储器中并识别数据集的变量（也称为列）。 它还捕获记录（也称为观察或主体）。</h3>
+
+<p>DATA;  数据集的创建<br/>
+INFILE ‘文件路径’<br/>
+INPUT;  定义变量<br/>
+CARDS;<br/>
+;<br/>
+RUN;<br/>
+. 表示数据缺失<br/>
+过程步<br/>
+proc ;<br/>
+run;</p>
+
+<h2 id="toc_1">SAS 概述</h2>
+
+<p>SAS常用组件<br/>
+Base 核心模块<br/>
+Graph 图表<br/>
+Stat 统计分析：方差分析、回归、多变量分析、生存分析、心理分析<br/>
+Or 行动调查<br/>
+Ets 计量经济学和时间序列分析<br/>
+IML CInteractive 矩阵语言<br/>
+AF 应用设施<br/>
+QC 质量控制<br/>
+INSIGHT 数据挖掘<br/>
+PH 临床试验分析<br/>
+Enterprise Miner 数据挖掘</p>
+
+<p>SAS的窗口</p>
 
 <ol>
-<li>程序设计的方法和风格：“清晰第一、效率第二”
-<ol>
-<li>源程序文档化
-<ol>
-<li>符号名的命名：</li>
-<li>程序注释：</li>
-<li>视觉组织：</li>
-</ol></li>
-<li>数据说明方法
-<ol>
-<li>数据说明次序规范化</li>
-<li>说明语句中变量安排有序化</li>
-<li>使用注释来说明复杂的数据结构</li>
-</ol></li>
-<li>语句的结构</li>
-<li>输入和输出</li>
-</ol></li>
-<li>结构化程序设计
-<ol>
-<li>原则：自顶向下、逐步求精、模块化、限制使用goto语句</li>
-</ol></li>
-<li>结构化程序的基本结构与特点
-<ol>
-<li>顺序结构</li>
-<li>选择结构</li>
-<li>循环结构</li>
-</ol></li>
-<li>结构化程序设计原则和方法的应用</li>
-<li>面向对象的程序设计
-<ol>
-<li>面向对象方法的优点
-<ol>
-<li>与人类习惯的思维方法一致</li>
-<li>稳定性好</li>
-<li>可重用性好</li>
-<li>易于开发大型软件产品</li>
-<li>可维护性好</li>
-</ol></li>
-<li>基本概念
-<ol>
-<li>对象：应用领域中有意义的，与所要解决问题有关的任何事物都可以作为对象，它既可以是具体的物理实体的抽象，也可以是人为的概念，或者是任何有明确边界和意义的东西。由一组表示其静态性质的属性和它可执行的一组操作组成
-<ol>
-<li>标识唯一性：由对象的内在本质区分，而不是通过表述来区分</li>
-<li>分类性</li>
-<li>多态性</li>
-<li>封装性</li>
-</ol></li>
-<li>类和实例：类是具有共同属性共同方法的对象的集合。当使用对象这个词时，既可以指具体对象，也可以指一般对象，但是实例必然是一个具体对象。</li>
-<li>消息：消息是一个实例与另一个实例之间传递的信息，它请求对象执行某一处理或回答某一要求的信息，它统一了数据流和控制流，组成：
-<ol>
-<li>接收消息的对象名称</li>
-<li>消息标识符（消息名）</li>
-<li>零个或多个参数</li>
-</ol></li>
-<li>继承：是使用已有的类定义作为基础建立新类的定义技术
-<ol>
-<li>单继承：一个类只允许有一个父类</li>
-<li>多继承：一个类允许有多个父类，功能更强，使用方便，但是要避免二义性</li>
-</ol></li>
-<li>多态性：对象根据所接受的信息做出动作，同样的消息被不同的对象接收时可导致完全不同的行动。在面对对象的软件技术中，多态性是指子类对象可以像父类对象那样使用，同样的消息既可以发送给父类对象，又可以发送给子类对象</li>
-</ol></li>
-</ol></li>
+<li>日志窗口：执行窗口，可以检查SAS程序的执行</li>
+<li>编辑器窗口：写所有代码，像记事本，默认提交后清除文本，可在工具-选项-编辑器中调整</li>
+<li>输出窗口：可以看到程序的输出</li>
+<li>结果窗口：</li>
+<li>资源管理器窗口</li>
 </ol>
 
-<h2 id="toc_1">数据库知识基础</h2>
+<p>SAS库</p>
 
 <ol>
-<li>数据库系统的基本概念
-<ol>
-<li>数据（DATA）：描述事物的符号记录
-<ol>
-<li>数据分为临时性、持久性</li>
-<li>数据有 型 、值 之分</li>
-<li>将多种相关数据以一定的结构方式组合构成特定的数据框架，这样的数据框架称为数据结构，数据库在特定的条件下称为数据模式</li>
-</ol></li>
-<li>数据库（DATABASE，DB）：数据的集合，它具有统一的结构形式并存放于统一的存储介质内，是多种应用数据的集成，并可被各个应用程序所共享</li>
-<li>数据库管理系统（Database Managerment System DBMS）：是数据库的机构，它是一种系统软件，负责数据库中的数据组织，数据操控，数据维护、控制及保护和数据服务<br/>
-    功能：
-<ol>
-<li>数据模式定义</li>
-<li>数据存取的物理构建</li>
-<li>数据操纵</li>
-<li>数据的完整性、安全性定义与检查：数据的完整性与安全性的维护是数据库管理系统的基本功能</li>
-<li>数据库的并发控制与故障恢复</li>
-<li>数据的服务：数据的拷贝、转存、重组、性能检测、分析<br/>
-数据语言：</li>
-<li>数据定义语言（DDL）：负责数据的模式定义与数据的物理存储构建</li>
-<li>数据操作语言（DML）：负责数据的操作，查增删改</li>
-<li>数据控制语言（DCL）：负责数据完整性、安全性的定义与检查以及并发控制、故障恢复等功能</li>
-</ol></li>
-<li>数据库管理员（DBA）：
-<ol>
-<li>数据库设计（Database Design）</li>
-<li>数据库维护</li>
-<li>改善系统性能，提高系统效率</li>
-</ol></li>
-<li>数据库系统（DBS）
-<ol>
-<li>数据库（数据）</li>
-<li>数据库管理系统软件（软件）</li>
-<li>数据库管理员（人员）</li>
-<li>系统平台之一——硬件平台（硬件）：计算机、网络</li>
-<li>系统平台之二——软件平台（软件）：操作系统、数据库系统开发工具</li>
-</ol></li>
-<li>数据库应用系统（DBAS）：数据库系统+应用软件+应用界面
-<ol>
-<li>数据库</li>
-<li>数据库管理系统</li>
-<li>数据库管理员</li>
-<li>硬件平台</li>
-<li>软件平台</li>
-<li>应用软件</li>
-<li>应用界面</li>
-</ol></li>
-</ol></li>
-<li>数据库发展
-<ol>
-<li>文件系统阶段</li>
-<li>层次数据库与网状数据库系统阶段</li>
-<li>关系数据库系统阶段</li>
-<li>未来：
-<ol>
-<li>面向对象数据库系统</li>
-<li>知识库系统</li>
-<li>关系数据库系统的扩充</li>
-</ol></li>
-</ol></li>
-<li>数据库系统的基本特点
-<ol>
-<li>数据的集成性：
-<ol>
-<li>统一的数据结构方式</li>
-<li>按照多个应用的需要组织全局的统一的数据结构</li>
-<li>数据模式是多个应用共同的、全局的数据结构</li>
-</ol></li>
-<li>数据的高共享性与低冗余性</li>
-<li>数据的独立性
-<ol>
-<li>物理独立性：数据库的物理结构改变不影响逻辑结构</li>
-<li>逻辑独立性：数据库总体逻辑改变不影响相应的应用程序</li>
-</ol></li>
-<li>数据的统一管理与控制
-<ol>
-<li>数据的完整性检查</li>
-<li>数据的安全性保护</li>
-<li>并发控制</li>
-</ol></li>
-</ol></li>
-<li>数据库系统的内部结构体系：数据库在其内部有三级模式及二级映射
-<ol>
-<li>三级模式
-<ol>
-<li>概念模式：数据库系统中全局数据逻辑结构的描述，是全体用户公用数据视图</li>
-<li>外模式（子模式、用户模式）：用户的数据视图</li>
-<li>内模式（物理模式）：数据物理存储结构与物理存取方法</li>
-</ol></li>
-<li>二级映射
-<ol>
-<li>概念模式到内模式的映射</li>
-<li>外模式到概念模式到映射</li>
-</ol></li>
-</ol></li>
-<li>数据模型：数据库中的数据模型可以将复杂的现实世界要求反映到计算机数据库中的物理世界，这种反映是一个逐步变化的过程：由现实世界开始，经历信息世界而至计算机世界
-<ol>
-<li>世界
-<ol>
-<li>现实世界（Real World）</li>
-<li>信息世界（Information World）:通过抽象对现实世界进行数据库级上的刻画所构成的逻辑模型叫信息世界，信息世界与数据库的具体模型有关</li>
-<li>计算机世界（Computer World）：在信息世界的基础上致力于其在计算机物理结构上的描述，而形成的逻辑模型叫计算机世界</li>
-</ol></li>
-<li>数据模型：数据模型所描述的内容有三个部分：数据结构、数据操作、数据约束
-<ol>
-<li>数据结构：主要描述数据的类型、内容、性质以及数据间的联系</li>
-<li>数据操纵：</li>
-<li>数据约束：描述数据结构内数据间的语法、语义联系，它们之间的制约与依存关系，以及数据间的动态变化规则</li>
-</ol></li>
-<li>分类：
-<ol>
-<li>概念数据模型：是一种面向客观世界、面向用户的模型。概念数据模型是整个数据模型的基础，如E-R模型、扩充的E-R模型、面向对象模型以及谓词模型</li>
-<li>逻辑数据模型：是一种面向数据库系统的模型。如，层次模型、网状模型、关系模型、面向对象模型</li>
-<li>物理数据模型：面向计算机物理表示的模型</li>
-</ol></li>
-</ol></li>
-<li>E-R模型（实体联系模型）
-<ol>
-<li>基本概念：
-<ol>
-<li>实体：现实世界中的事物可以抽象成为实体，实体是概念世界中的基本单位，它们是客观存在又相互区别的事物</li>
-<li>属性：现实世界中的事物均有一些特点，这些特性可以用属性来表示</li>
-<li>联系：现实世界中事物之间的关联称为联系
-<ol>
-<li>实体集间的联系
-<ol>
-<li>两个实体集之间的联系</li>
-<li>多个实体集之间的联系</li>
-<li>一个实体集内部的联系</li>
-</ol></li>
-<li>联系的个数
-<ol>
-<li>一对一的联系，简记为1:1</li>
-<li>一对多的联系，简记为1:m或m：1</li>
-<li>多对多的联系，简记为m:n</li>
-</ol></li>
-</ol></li>
-<li>三个基本概念之间的联系
-<ol>
-<li>实体集（联系）与属性之间的连接关系
-<ol>
-<li>一个实体的所有属性取值组成一个值集叫元组（Tuple）</li>
-<li>联系也可以附有属性</li>
-</ol></li>
-<li>实体（集）与联系
-<ol>
-<li>实体集之间可以通过联系建立连接关系，实体集之间无法建立直接关系，它只能通过联系才能建立连接关系</li>
-</ol></li>
-</ol></li>
-<li>E-R模型的图示法：
-<ol>
-<li>实体集：矩形表示实体集，在矩形内部写上该实体集的名字</li>
-<li>属性：用椭圆表示属性，在椭圆内部写上该属性的名称</li>
-<li>联系表示法：用菱形表示联系，内写上联系名</li>
-<li>实体集（联系）与属性之间连接关系：用连接两个图形之间的无向线段表示</li>
-<li>实体集与联系间的连接关系：用连接两个图形的无向线段表示，还可以注明对应的函数关系</li>
-</ol></li>
-</ol></li>
-</ol></li>
-<li>层次模型：
-<ol>
-<li>基本结构：树形结构</li>
-<li>特点：
-<ol>
-<li>每棵树有且只有一个无双亲结点，称为根（Root）</li>
-<li>树中除根以外所有结点有且只有一个双亲</li>
-</ol></li>
-<li>缺点：
-<ol>
-<li>如果没有相应的双亲结点值就不能插入子女结点值</li>
-<li>如果删除双亲结点值，则相应的子女结点值也被同时删除</li>
-<li>查询子女结点必须通过双亲结点</li>
-</ol></li>
-</ol></li>
-<li>网状模型：网状模型是一个不加任何限制的无向图
-<ol>
-<li>网状模型将通用的网状拓扑结构分成一些基本结构。一般采用的分解方法是将一个网络分成若干个二级树</li>
-<li>基本结构简单二级树叫系（Set），系的基本单位是记录（Record），系有一个首记录（Owner Record），它相当于简单二级树的根，系同时有若干个成员记录（Member Record）</li>
-</ol></li>
-<li>关系模型
-<ol>
-<li>关系的数据结构：关系模式采用二维表来表示，简称表。二维表由表框架（Frame）及表的元组（Tuple）组成。<br/>
-二维表满足以下性质：满足以下性质的二维表称为关系（Relation）
-<ol>
-<li>元组个数有限性</li>
-<li>元组唯一性</li>
-<li>元组的次数无关性</li>
-<li>元组分量的原子性</li>
-<li>属性名唯一性</li>
-<li>属性的次序无关性</li>
-<li>分量的值域的同一性</li>
-</ol></li>
-<li>关系操作
-<ol>
-<li>数据查询：分解为一个关系内的属性指定、一个关系内的元组选择、两个关系的合并三个基本操作以及一个查询操作</li>
-<li>数据删除：一个关系内的元组选择与关系中元组删除两个基本操作</li>
-<li>数据插入：只有一个基本操作</li>
-<li>数据修改：不是基本操作，可分解为删除需修改的元组与插入修改后的元组两个更基本操作</li>
-</ol></li>
-<li>关系中的数据约束
-<ol>
-<li>实体完整性约束</li>
-<li>参照完整性约束：不允许关系引用不存在的元组：即在关系中的外键要么是所关联关系中实际存在的元组，要么就为空值</li>
-<li>用户定义的完整性约束</li>
-</ol></li>
-</ol></li>
-<li>关系代数
-<ol>
-<li>关系模型的基本操作：
-<ol>
-<li>关系的属性指定</li>
-<li>关系的元组的选择</li>
-<li>两个关系的合并</li>
-<li>关系的查询</li>
-<li>关系元组的插入</li>
-<li>关系元组的删除</li>
-</ol></li>
-<li>关系模型的基本运算
-<ol>
-<li>插入</li>
-<li>删除</li>
-<li>修改：删除+插入</li>
-<li>查询：
-<ol>
-<li>投影运算：投影出一个列（属性集合）</li>
-<li>选择运算：选择元组</li>
-<li>笛卡尔积运算：两个关系的合并操作</li>
-</ol></li>
-</ol></li>
-<li>关系代数中的扩充运算
-<ol>
-<li>交运算：</li>
-<li>除运算：笛卡尔积的逆运算</li>
-<li>连接与自然连接运算</li>
-</ol></li>
-<li>关系代数的应用实例</li>
-</ol></li>
-<li>数据库设计与管理
-<ol>
-<li>数据库设计概念：</li>
-<li>设计方法
-<ol>
-<li>面向数据的方法：以信息需求为主兼顾处理需求（主流）</li>
-<li>面向过程的方法：以处理需求为主，兼顾信息需求</li>
-</ol></li>
-<li>生命周期法：将整个数据库应用系统的开发分解成目标独立的若干阶段，需求分析阶段、概念设计阶段、逻辑设计阶段、物理设计阶段、编码阶段、测试阶段、运行阶段、进一步修改阶段。数据库设计中采用前四个阶段</li>
-<li>需求分析
-<ol>
-<li>获取用户的如下要求：
-<ol>
-<li>信息要求</li>
-<li>处理要求</li>
-<li>安全性和完整性要求</li>
-</ol></li>
-<li>数据字典是进行详细的数据收集和数据分析所获的的主要结果</li>
-</ol></li>
-<li>数据库概念设计
-<ol>
-<li>概述
-<ol>
-<li>集中式模型设计法</li>
-<li>视图集成模式设计法</li>
-</ol></li>
-<li>过程
-<ol>
-<li>选择局部应用</li>
-<li>视图设计
-<ol>
-<li>自顶向下</li>
-<li>自底向上</li>
-<li>由内向外</li>
-</ol></li>
-<li>视图集成
-<ol>
-<li>注意：命名冲突、概念冲突、域冲突、约束冲突</li>
-</ol></li>
-</ol></li>
-</ol></li>
-<li>数据库的逻辑设计
-<ol>
-<li>从E-R图向关系模式转换
-<ol>
-<li>实体集与联系都可以表示成关系</li>
-<li>属性转换为关系的属性</li>
-<li>实体转换为元组</li>
-</ol></li>
-<li>逻辑模式规范化及调整、实现
-<ol>
-<li>规范化：设计不良的关系模式会有数据冗余、插入异常、删除异常及修改异常等问题，需要通过分解进行规范化
-<ol>
-<li>对于关系模式若其中的每个属性都已不能再分为简单项，则它属于第一范式模式（1NF）</li>
-<li>如果某个关系模式R为第一范式并且R中每一个非主属性完全函数依赖于R的某个候选键，则称其为第二范式模式（2NF）（消除了非主属性对主键的部分依赖）</li>
-<li>如果关系模式R是第二范式，并且每个非主属性都不传递依赖于R的候选键，则称R为第三范式模式（3NF）</li>
-<li>更高级的是BCNF，要求所有属性都不传递依赖于关系的任何候选键，但是并不一定要做到，一般做到三就好了</li>
-</ol></li>
-<li>RDBMS
-<ol>
-<li>调整性能以减少连接运算</li>
-<li>调整关系大小，使每个关系数量保持在合理水平，从而提高存取效率</li>
-<li>尽量采用快照</li>
-</ol></li>
-</ol></li>
-<li>关系视图设计：关系视图是在关系模式基础上所设计的直接面向操作用户的视图，它可以根据用户需求随时创建
-<ol>
-<li>提供数据逻辑独立性</li>
-<li>能适应用户对数据的不同需求</li>
-<li>有一定数据保密功能</li>
-</ol></li>
-</ol></li>
-<li>数据库的物理设计
-<ol>
-<li>数据库管理
-<ol>
-<li>数据库建立
-<ol>
-<li>数据模式建立</li>
-<li>数据加载</li>
-</ol></li>
-</ol></li>
-<li>数据库的调整</li>
-<li>数据库的重组</li>
-<li>数据库安全性控制与完整性控制</li>
-<li>数据库的故障较复</li>
-<li>数据库监控</li>
-</ol></li>
-</ol></li>
+<li>临时库(WORK库)：这是SAS的默认库。如果我们创建的数据不选择其他库将默认存储于临时库。可以在资源管理器窗口看到WORK库。如果在关闭或者重启SAS前没有将该数据存储于一个永久库，数据将会丢失。</li>
 </ol>
 
-<h2 id="toc_2">数据结构与算法</h2>
+<h2 id="toc_2">SAS Enterprise Guide</h2>
 
-<ol>
-<li>算法基本特征：
-<ol>
-<li>可行性：每个步骤能够实现；结果能达到预期</li>
-<li>确定性</li>
-<li>有穷性</li>
-<li>拥有足够多的情报</li>
-</ol></li>
-<li>算法设计基本方法
-<ol>
-<li>列举法</li>
-<li>归纳法</li>
-<li>递推</li>
-<li>递归
-<ol>
-<li>自己调用自己的过程称为递归调用过程</li>
-</ol></li>
-<li>减半递推技术
-<ol>
-<li>二分法求方程实根</li>
-</ol></li>
-<li>回溯法</li>
-</ol></li>
-<li>算法的复杂程度
-<ol>
-<li>算法时间复杂度：算法的工作量与算法所执行的基本运算次数以及问题的规模有关，而有时算法所执行的基本运算次数与特定的输入有关
-<ol>
-<li>平均性态：各种特定输入下基本运算次数的加权平均数。A(n)</li>
-<li>最坏情况复杂性：在规模为n时，算法所执行的基本运算的最大次数。W(n)。比A(n)更具有实用价值。</li>
-</ol></li>
-<li>算法的空间复杂度：执行这个算法所需要的内存空间</li>
-</ol></li>
-<li>数据结构
-<ol>
-<li>数据结构是指反应数据元素之间关系的数据元素集合的表示</li>
-<li>数据处理：是指对数据集合中的各元素以各种方式进行运算，包括插入、删除、查找、更改等，也包括对数据元素进行分析</li>
-<li>前后件关系时数据元素之间的一个基本关系，数据元素之间的任何关系都可以用前后件关系来描述</li>
-</ol></li>
-<li>数据的逻辑结构:
-<ol>
-<li>一个数据结构应该包括：
-<ol>
-<li>表示数据元素的信息</li>
-<li>表示各元素之间的前后件关系，其中，数据元素之间的前后件关系是指它们的逻辑关系，与它们在计算机中的储存位置无关</li>
-</ol></li>
-<li>B=(D,R) data,relation</li>
-</ol></li>
-<li>数据的储存结构
-<ol>
-<li>数据的逻辑结构在计算机储存空间中的存放形式称为数据的储存结构</li>
-<li>常用的储存结构：顺序、链接、索引</li>
-</ol></li>
-<li>线性结构与非线性结构
-<ol>
-<li>如果在一个数据结构中一个元素都没有，则称该数据结构为空的数据结构</li>
-<li>线性结构（线性表）：
-<ol>
-<li>有且只有一个根节点</li>
-<li>每一个结点最多有一个前件，也最多有一个后件</li>
-<li>在一个线性结构中插入或删除任何一个结点后还应是线性结构</li>
-</ol></li>
-<li>非线性结构：不是线性就是非线性</li>
-<li>一个空的数据结构是线性还是非线性根据具体情况确定，如果对该数据结构的运算是按线性结构规则处理的则属于线性结构，否则属于非线性结构。</li>
-</ol></li>
-<li>线性表及其顺序储存结构
-<ol>
-<li>线性表是由n个数据元素组成的一个有限序列，表中的每一个元素，除了第一个以外，有且只有一个前件，除了最后一个外，有且只有一个后件</li>
-<li>矩阵也是一个线性表</li>
-<li>复杂的线性表中，由若干数据项组成的数据元素称为记录，由多个记录构成的线性表又称为文件</li>
-<li>线性表的顺序储存结构：
-<ol>
-<li>线性表中所有元素所占的储存空间是连续的</li>
-<li>线性表中个数据元素在储存空间中是按逻辑顺序依次存放的</li>
-</ol></li>
-<li>顺序表的插入运算：效率低，可能发生“上溢”错误</li>
-<li>顺序表的删除运算：效率低，可能发生“下溢”错误</li>
-</ol></li>
-<li>栈和队列
-<ol>
-<li>栈：限定在一端进行插入和删除的线性表
-<ol>
-<li>在顺序储存结构下，对栈的插入与删除时不需要移动表中其他元素的</li>
-<li>允许插入与删除的一端称为栈顶，不允许插入和删除的一端称为栈底</li>
-<li>先进后出，后进先出（FILO，LIFO），栈具有记忆功能</li>
-<li>通常用指针top来指示栈顶的位置，用指针bottom指向栈底</li>
-<li>在栈中插入一个元素称为入栈运算，删除一个元素称为退栈运算</li>
-<li>栈的顺序储存及运算
-<ol>
-<li>入栈运算</li>
-<li>退栈运算</li>
-<li>读栈顶元素</li>
-</ol></li>
-</ol></li>
-<li>队列：指允许在一端进行插入，而在另外一端进行删除的线性表
-<ol>
-<li>允许插入的一端称为队尾，通常用一个尾指针（rear）指向队尾元素；允许删除的一端称为排头（队头），通常用排头指针（front）指向排头元素的前一个位置。</li>
-<li>先进先出，后进后出（FIFO，LILO）</li>
-<li>在队尾插入一个元素称为入队运算，从排头删除一个元素称为退队运算</li>
-<li>循环队列：在实际应用中，队列的顺序储存结构一般采用循环队列的形式。Front=rear时，队列要么为空，要么为满，所以要加一个标志s，s=0为空，1为非空</li>
-</ol></li>
-</ol></li>
-<li>线性链表
-<ol>
-<li>链式储存方式中，要求每个结点有由两部分组成：一部分用于存放数据元素值，称为数据域，另一部分用于存放指针，称为指针域。其中指针用于指向该结点的前一个或后一个结点</li>
-<li>线性表的链式存储方式称为线性链表：指针域用于指向下一个元素的存储序号</li>
-<li>双向链表：一个左指针（Llink）指向前件结点，一个右指针（Rlink）指向后件结点</li>
-<li>带链的栈：</li>
-<li>带栈的队列</li>
-<li>循环链表：增加一个表头结点，最后一个结点的指针域不为空，而是指向表头结点
-<ol>
-<li>只要指出表中任意结点位置，就可以从它出发访问到表中其他所有的结点，线性单链表做不到</li>
-<li>由于设置表头结点，因此，在任何情况下，循环链表中至少有一个结点，使空表与非空表运算统一</li>
-</ol></li>
-</ol></li>
-<li>树与二叉树
-<ol>
-<li>树中，每一个结点只有一个前件，称为父结点，每一个节点可以有多个后件，称为子结点，没有后件的结点称为叶子结点。一个结点所拥有的后件个数称为该结点的度，在树中，所以结点中最大的度称为树的度；在树中，所以结点的度之和再加一为树的结点数。树的最大层数称为树的深度</li>
-<li>二叉树基本性质
-<ol>
-<li>性质一</li>
-<li>性质二</li>
-<li>性质三：在任意一颗二叉树中，度为零的结点总是比度为2的结点多一个</li>
-<li>性质四</li>
-</ol></li>
-<li>满二叉树：每一层上的结点数都达到最大值</li>
-<li>完全二叉树：除最后一层外，每一层上的结点数均达到最大值，在最后一层上只缺少右边的若干结点。
-<ol>
-<li>性质五</li>
-<li>性质六</li>
-</ol></li>
-<li>二叉树存储结构：在计算机中，二叉树通常采用链式存储结构，对于满二叉树和完全二叉树来说，可以按层序进行顺序存储</li>
-<li>二叉树的遍历：
-<ol>
-<li>前序遍历（DLR）：根结点、左子树、右子树</li>
-<li>中序遍历（LDR）：左子树、根结点、右子树</li>
-<li>后序遍历（LRD）：左子树、右子树、根结点</li>
-<li>如果知道了前序序列和中序序列或者知道了中序序列和后序序列可以唯一地恢复该二叉树，但是如果知道了前序序列和后序序列，不能唯一地恢复该二叉树</li>
-</ol></li>
-</ol></li>
-<li>查找技术：
-<ol>
-<li>顺序查找：对于大的线性表效率低，但是对于无序表和链表只能用顺序查找</li>
-<li>二分法查找：只适用于顺序存储的有序表</li>
-</ol></li>
-<li>排序技术：
-<ol>
-<li>交换类排序方式：
-<ol>
-<li>冒泡排序：最坏-- n(n-1)/2</li>
-<li>快速排序：最坏-- n(n-1)/2 一般比冒泡要好</li>
-</ol></li>
-<li>插入类排序：
-<ol>
-<li>简单插入排序：最坏--n（n-1）/2 效率与冒泡相同</li>
-<li>希尔排序：最坏效率与所选取增量有关</li>
-</ol></li>
-<li>选择类排序：
-<ol>
-<li>简单选择排序法：最坏--n(n-1)/2</li>
-<li>堆排序法：最坏-- nlog2n 对于较小规模不适用，对于较大规模线性表很有效</li>
-</ol></li>
-</ol></li>
-</ol>
-
-<h2 id="toc_3">软件工程基础</h2>
-
-<ol>
-<li>软件的定义及软件的特点：
-<ol>
-<li>程序是软件开发人员根据用户需求开发的、用程序设计语言描述的、适合计算机执行的指令序列</li>
-<li>特点：
-<ol>
-<li>软件是一种逻辑实体，而不是物理实体，具有抽象性</li>
-<li>软件的生产与硬件不同，没有明显的制作过程</li>
-<li>软件在运行、使用期间不存在磨损、老化问题</li>
-<li>软件的开发、运行对计算机系统具有依赖性</li>
-<li>软件复杂性高，成本昂贵</li>
-<li>软件开发涉及诸多社会因素</li>
-</ol></li>
-<li>分类：
-<ol>
-<li>应用软件：为解决特定领域的应用而开发的软件</li>
-<li>系统软件：计算机管理自身资源、提高计算机使用效率并服务于其他程序的软件。如，操作系统，编译程序，汇编程序，网络软件，数据库管理系统</li>
-<li>支撑软件（工具软件）：介于系统软件和应用软件之间，协助用户开发软件的工具箱软件</li>
-</ol></li>
-</ol></li>
-<li>软件危机与软件工程
-<ol>
-<li>软件危机：泛指在计算机软件的开发和维护过程中所遇到的一系列严重问题</li>
-<li>软件工程：将系统化的、规范的、可度量的方法应用于软件的开发、运行和维护的过程，即将工程化应用于软件中</li>
-<li>软件工程三要素：方法、工具、过程</li>
-</ol></li>
-<li>软件过程与软件生命周期：
-<ol>
-<li>软件过程：软件过程就是把输入转化为一组彼此相关的资源和活动</li>
-<li>软件生命周期：软件从提出、实现、使用、维护到停止使用退役的过程称为软件的生命周期。
-<ol>
-<li>可行性研究与计划制定</li>
-<li>需求分析</li>
-<li>软件设计</li>
-<li>编码</li>
-<li>软件测试</li>
-<li>运行与维护</li>
-</ol></li>
-</ol></li>
-<li>软件工程的目标与原则：
-<ol>
-<li>目标：在给定成本、进度的前提下，开发具有有效性、可靠性、可理解性、可维护性、可重用性、可适应性、可移植性、可追踪性和可操作性且满足用户需求的产品</li>
-<li>研究内容：
-<ol>
-<li>软件开发技术：软件开发方法学、开发过程、开发工具、软件工程环境</li>
-<li>软件工程管理：软件管理学、软件工程经济学、软件心理学</li>
-<li>软件工程的原则：
-<ol>
-<li>抽象</li>
-<li>信息隐蔽</li>
-<li>模块化</li>
-<li>局部化</li>
-<li>确定性</li>
-<li>一致性</li>
-<li>完备性</li>
-<li>可验证性</li>
-</ol></li>
-</ol></li>
-</ol></li>
-<li>结构化分析方法
-<ol>
-<li>软件开发方法：分析方法、设计方法、程序设计方法</li>
-<li>结构化方法：结构化分析方法、结构化设计方法、结构化编程方法</li>
-</ol></li>
-<li>需求分析与需求分析方法
-<ol>
-<li>需求分析：用户对目标软件系统在功能、行为、性能、设计约束等方面的期望。需求分析的任务是发现需求、求精、建模和定义需求的过程。</li>
-<li>需求分析方法：
-<ol>
-<li>结构化分析方法：面向数据流的结构化分析方法（SA）、面向数据结构的Jackson方法（JSD）、面向数据结构的结构化数据系统开发方法（DSSD）</li>
-<li>面向对象的分析方法（OOA）：</li>
-</ol></li>
-</ol></li>
-<li>结构化分析方法：
-<ol>
-<li>实质：着眼于数据流，自顶向下，逐层分解，建立系统的处理流程，以数据流图和数据字典为主要工具，建立系统的逻辑模型</li>
-<li>工具：
-<ol>
-<li>数据流图（DFD）：
-<ol>
-<li>元素：加工、数据流、数据源、数据的源点和终点</li>
-<li>步骤：由外向里，自顶向下，逐层分解。</li>
-</ol></li>
-<li>数据字典（DD）：对所有与系统相关的数据元素的一个有组织的列表，以及精确、严格定义。</li>
-<li>判定树</li>
-<li>判定表</li>
-</ol></li>
-</ol></li>
-<li>软件需求规格说明书
-<ol>
-<li>内容：软件的目标，功能需求、性能需求、外部接口、属性及约束条件</li>
-<li>特点
-<ol>
-<li>正确性</li>
-<li>无歧义性</li>
-<li>完整性</li>
-<li>可验证性</li>
-<li>一致性</li>
-<li>可理解性</li>
-<li>可修改性</li>
-<li>可追踪性</li>
-</ol></li>
-</ol></li>
-<li>结构化设计方法
-<ol>
-<li>软件设计基本概念
-<ol>
-<li>目标：用比较抽象概括的方式确定目标系统如何完成预定的任务，即软件设计是确定系统的物理模型</li>
-<li>包括：结构设计、数据设计、接口设计、过程设计</li>
-<li>一般过程：软件设计是一个迭代过程，先进行高层次的结构设计，后进行低层次的过程设计，穿插进行数据设计和接口设计</li>
-<li>基本原理：
-<ol>
-<li>抽象</li>
-<li>逐步求精和模块化</li>
-<li>信息隐蔽和局部化</li>
-<li>模块独立性（高内聚、低耦合）</li>
-</ol></li>
-<li>结构化设计方法：采取最佳的可能方法设计系统的各个组成部分以及各成分之间的内部联系的技术</li>
-</ol></li>
-<li>概要设计
-<ol>
-<li>设计软件系统结构</li>
-<li>数据结构及数据库设计</li>
-<li>编写概要设计文档</li>
-<li>概要设计文档评审</li>
-<li>常用软件结构设计工具是结构图（SC）
-<ol>
-<li>构成：一般模块、数据信息、控制信息</li>
-<li>四种模块：传入、传出、变化、协调</li>
-<li>术语：
-<ol>
-<li>深度：表示控制的层数</li>
-<li>宽度：整体控制跨度</li>
-<li>扇入：调用一个给定模块的个数</li>
-<li>扇出：一个模块调用的其他模块数</li>
-<li>原子模块：树中位于叶子结点的模块</li>
-</ol></li>
-</ol></li>
-<li>面向数据流的结构化设计方法
-<ol>
-<li>数据流类型
-<ol>
-<li>变换型</li>
-<li>实物型</li>
-</ol></li>
-<li>面向数据流设计方法的实施要点与设计过程
-<ol>
-<li>分析、确认数据流图的类型，区分是事物型还是变换型</li>
-<li>说明数据流的边界</li>
-<li>把数据流图映射为程序结构</li>
-<li>根据设计准则对产生的结构进行细化和求精</li>
-</ol></li>
-</ol></li>
-<li>设计的准则
-<ol>
-<li>提高模块独立性</li>
-<li>模块规模适中</li>
-<li>深度、宽度、扇出和扇入适当</li>
-<li>使模块的作用域在该模块的控制域内</li>
-<li>应减少模块的接口和界面的复杂性</li>
-<li>设计成单入口、单出口的模块</li>
-<li>设计功能可预测的模块</li>
-</ol></li>
-<li>详细设计
-<ol>
-<li>确定模块内部的详细执行过程，包括局部数据组织、控制流、每一步具体处理要求和各种实现细节等</li>
-<li>设计工具
-<ol>
-<li>图形工具：程序流程图（PFD）、N-S图、PAD图、HIOP图</li>
-<li>表格工具：判定表</li>
-<li>语言工具：PDL</li>
-</ol></li>
-</ol></li>
-</ol></li>
-</ol></li>
-<li>软件测试
-<ol>
-<li>目的和定义
-<ol>
-<li>定义：
-<ol>
-<li>在规定条件下运行系统或构件的过程；在此过程中观察和记录结果，并对系统或构件的某些方面给出评价</li>
-<li>软件项目的过程：检测现有状况或所需状况的不同（bug），并评估软件的特性</li>
-</ol></li>
-<li>目的：
-<ol>
-<li>软件测试是为了发现错误而执行程序的过程</li>
-<li>一个好的测试用例是指很有可能找到迄今为止尚未发现的错误的用例</li>
-<li>一个成功的测试是发现了至今尚未发现的错误的测试</li>
-</ol></li>
-</ol></li>
-<li>软件测试的准则
-<ol>
-<li>所有测试都应追溯到需求</li>
-<li>严格执行测试计划，排除测试的随意性</li>
-<li>充分主语测试中的群集现象</li>
-<li>程序员应该避免检查自己的程序</li>
-<li>穷举测试不可能</li>
-<li>妥善保存测试计划、测试用例、出错统计和最终分析报告，为维护提供方便</li>
-</ol></li>
-<li>软件测试方法与技术综述
-<ol>
-<li>静态测试与动态测试
-<ol>
-<li>静态测试：变量检查、命名和类型审查、程序逻辑审查、程序语法审查和程序结构检查
-<ol>
-<li>代码检查包括：代码审查、代码走查、桌面检查、静态分析</li>
-</ol></li>
-<li>动态测试：设计高效合理的测试用例是动态测试的关键</li>
-</ol></li>
-<li>白盒测试方法与测试用例设计
-<ol>
-<li>白盒测试把测试对象看作打开的盒子，允许测试人员利用程序内部的逻辑机构及有关信息来设计或选择测试用例</li>
-<li>基本原则：保证所测模块中每一独立路径至少执行一次；保证所测模块所有判断的每一分枝至少执行一次；保证所测模块每一循环都在边界条件和一般条件下至少各执行一次；验证所有内部数据结构的有效性</li>
-<li>分类：
-<ol>
-<li>等价类划分法：
-<ol>
-<li>有效等价类：合理、有意义的输入数据构成的集合</li>
-<li>无效等价类：不合理、无意义的输入数据构成的集合</li>
-</ol></li>
-<li>边界值分析法：一般多用边界值分析法来补充等价类划分法</li>
-<li>错误推测法</li>
-</ol></li>
-</ol></li>
-</ol></li>
-<li>软件测试的粗略
-<ol>
-<li>单元测试：依据详细设计说明书和源程序，采用静态分析和动态测试。对动态测试通常以白盒测试为主，黑盒测试为辅。目的是发现各模块内部可能存在的各种错误
-<ol>
-<li>测试内容：模块接口测试、局部数据结构测试、重要执行路径检查、出错处理测试、影响以上各点及其他相关点的边界条件测试</li>
-</ol></li>
-<li>集成测试：依据概要设计说明书，目的是发现与接口有关的错误
-<ol>
-<li>非增量方式：将测试好的每一个软件单元一次性组装在一起再进行整体测试</li>
-<li>增量方式：将已经测试好的模块逐步组装成较大系统，在组装过程中边接边测，以发现连接过程中产生的问题
-<ol>
-<li>自顶向下：较早显示整个程序轮廓，较早验证主要的控制和判断点。但是当测试上层模块时使用的桩模块较多，很难摸清真实模块的全部功能，导致部分测试推迟</li>
-<li>自底向上：实际测试用例比较容易，但是在早期不能显示出程序的轮廓</li>
-<li>自顶向下和自底向上相结合</li>
-</ol></li>
-</ol></li>
-<li>确认测试：验证软件的功能和性能及其他特性是否满足了需求规格说明中确定的各种需求，以及软件配置是否完全，正确。黑盒测试</li>
-<li>系统测试：将通过确认测试的软件，作为整个基于计算机系统的一个元素，与计算机硬件、外设、支持软件、数据和人员等其他元素组合在一起，在实际运行环境下对计算机系统进行一系列的集成测试和确认测试</li>
-</ol></li>
-</ol></li>
-<li>程序的调试 
-<ol>
-<li>目的：诊断和改正程序中的错误（软件测试是尽可能多地发现软件中的错误，贯穿整个软件的生命周期，调试主要发生在开发阶段）</li>
-<li>基本步骤
-<ol>
-<li>错误定位：占据绝大部分工作量</li>
-<li>修改设计和代码，以排除错误</li>
-<li>进行回归测试防止引进新的错误</li>
-</ol></li>
-<li>原则：
-<ol>
-<li>确定错误原则
-<ol>
-<li>分析思考与错误征兆有关的信息</li>
-<li>避开死胡同</li>
-<li>只把调试工具当辅助手段来用</li>
-<li>避免使用试探法，最多只能当作最后手段</li>
-</ol></li>
-<li>修改错误的原则
-<ol>
-<li>在出现错误的地方，有可能还有别的错误</li>
-<li>不要只修改了错误的征兆或表现，而没有修改错误本身</li>
-<li>注意修改一个错误的同时可能引进一个新的错误</li>
-<li>修改错误的过程将迫使人们暂时回到程序设计阶段</li>
-<li>修改源代码，不要改变目标代码</li>
-</ol></li>
-</ol></li>
-<li>软件调试方法：静态调试为主，动态调试为辅
-<ol>
-<li>强行排错法：设置断点，程序暂停，观察程序状态，继续运行程序</li>
-<li>回溯法：适用于小规模程序排错</li>
-<li>原因排除法：通过演绎和归纳以及二分法</li>
-</ol></li>
-</ol></li>
-</ol>
-
-
-			
-			
-		</div>
-
-	</article>
- 
-	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-		<div class="meta">
-			<div class="date">
-				<time datetime="2019-09-16T09:22:41+08:00" itemprop="datePublished">2019/09/16</time>
-			</div>
-			<div class="tags">posted in 
-			
-			    <a class='category' href='%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1.html'>数学建模</a>&nbsp;
-			 
-			</div>
-		</div>
-		<h1 class="title" itemprop="name"><a href="15685969611776.html" itemprop="url">
-		SAS DATA步之全揭秘</a></h1>
-		<div class="entry-content" itemprop="articleBody">
-			
-			<p>一些概念</p>
+<p>学习教程的过程中，您将学习以下内容：</p>
 
 <ul>
-<li>程序数据向量（PDV）</li>
-<li>SAS自动变量名及其使用</li>
-<li>理解DATA步内部处理过程</li>
-<li>代码编译期间发生的事情</li>
-<li>程序执行期间实际发生了什么</li>
-<li>如何获取和存储变量属性</li>
+<li>创建和保存项目</li>
+<li>向项目添加 SAS 数据</li>
+<li>从文本文件导入数据</li>
+<li>创建和修改列表报表</li>
+<li>创建条形图和饼图</li>
+<li>使用查询连接表</li>
+<li>使用查询创建计算列</li>
+<li>生成汇总统计量表</li>
+<li>基于数据运行线性模型分析</li>
+<li>将多个报表组合成单个文档</li>
 </ul>
 
-<p>DATA时建立SAS数据集的主要方法之一。一些涉及数据处理和创建数据集的任务可能只能通过DATA步才能解决<br/>
-DATA步分编译和执行两个阶段，PDV贯穿SAS编译和执行的两个阶段，决定了信息在DATA步中的存储及变化</p>
+<p>在继续相应教程之前，您需要首先了解一些有关 SAS Enterprise Guide 和 SAS 软件之间的关系。</p>
 
-<p>编译阶段包括：</p>
+<h2 id="toc_3">SAS程序语法</h2>
 
-<ul>
-<li>编译SAS语句，包括检查语法</li>
-<li>创建一个输入缓存区（input buffer）（如果需要读入原始数据文件）、一个PDV和描述性信息</li>
-</ul>
+<h3 id="toc_4">注释</h3>
 
-<p>执行阶段包括：</p>
+<p>/*<br/><br/>
+ *   */</p>
 
-<ul>
-<li>计算DATA步迭代的次数（从DATA语句开始）</li>
-<li>将PDV中所有变量设成缺失值并初始化自动变量</li>
-<li>读取输入观测（从原始文件或SAS数据集）</li>
-<li>执行附加的处理或计算语句</li>
-<li>将一条数据记录写入输出数据集并返回到DATA步语句</li>
-</ul>
+<h3 id="toc_5">从外部文件中导入数据</h3>
 
-<p>PDV贯穿编译的执行阶段：</p>
+<h2 id="toc_6">一些知识点</h2>
 
-<ul>
-<li>PDV是内存的一个临时逻辑区域，SAS建立数据集时，每条观察值只有一次机会用的PDV</li>
-<li>包含所有变量的当前值</li>
-<li>包含两个自动变量：_N_和_ERROR_</li>
-</ul>
+<p>此选项只在INFILE语句中与选项DSD一起使用时才有效。<br/>
+注：DSD的作用：<br/>
+将默认分隔符改为逗号<br/>
+对于连续的两个分隔符，中间按缺失值处理<br/>
+将字符变量值的引号去掉<br/>
+对引号里面的分隔符按字符来对待<br/>
+所以INFILE语句中的DSD选项自动把数据记录的分隔符设置为逗号，并且读入数据之前，把字符数据中的引号去掉，若加上“~”就会保留数据中的引号</p>
 
-<p>DATA步<br/>
-一个DATA步包含SAS语言的一组语句，这些语句具有以下功能</p>
-
-<ul>
-<li>从外部文件读入数据</li>
-<li>将数据写入外部文件</li>
-<li>读入SAS数据集和SAS视图</li>
-<li>创建SAS数据集和SAS视图<br/>
-一旦数据可以以SAS数据集的形式访问，就可以通过SAS过程步来分析数据和写报告</li>
-</ul>
-
-<p>可以运用DATA步：</p>
-
-<ul>
-<li>创建SAS数据集（SAS数据集或SAS视图）</li>
-<li>根据包含原始数据（外部文件）和文件创建SAS数据集</li>
-<li>通过提取子集、合并、修改和更新已经存在数据集的方式来创建新的数据集</li>
-<li>分析、处理或展现数据</li>
-<li>为新变量赋值（在有公式计算的情况下）</li>
-<li>撰写报告或将文件写入磁盘或磁带</li>
-<li>信息检索</li>
-<li>文件管理<br/>
-DATA步以‘DATA’语句开始（即显示的表明数据步的开始），以‘RUN’语句结束，在结束时会编译或执行RUN语句。在数据步最后一个观察值读取前，‘RUN’的功能都是以非显示的形式执行RETURN功能，去继续循环的操作。
-<img src="media/15685969611776/15687662911534.png" alt=""/>
-编译阶段<br/>
-如上所示，DATA步的第一个阶段就为编译阶段。在编译阶段SAS的任务如下：</li>
-<li>自动将SAS语句编译成将会在后面执行的机器语言</li>
-<li>确定每个变量的类型和长度</li>
-<li>确定变量是否有必要进行类型转换</li>
-<li>如果有INPUT语句，为外部文件新建读取内存缓存区</li>
-<li>创建PDV（Program Data Vector）</li>
-<li>创建数据集和变量属性的描述性信息</li>
-<li>处理语句，该项任务仅限于编译阶段；这为编译器如何新建变量提供信息；事实上，他们决定了如何在PDV内建立变量及信息；这些信息包括：DROP；KEEP；RENAME；RETAIN；RHERE；LABEL；LENGTH；FORMAT；ARRAY；BY；ATTRIB</li>
-<li>创建自动变量：包括_N_,_ERROR_,RND=,IN=,FIRST,LAST,POINT=</li>
-</ul>
-
-
-			
-			
-		</div>
-
-	</article>
- 
-	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-		<div class="meta">
-			<div class="date">
-				<time datetime="2019-09-17T08:56:59+08:00" itemprop="datePublished">2019/09/17</time>
-			</div>
-			<div class="tags">posted in 
-			
-			    <a class='category' href='%E5%85%B6%E4%BB%96.html'>其他</a>&nbsp;
-			 
-			</div>
-		</div>
-		<h1 class="title" itemprop="name"><a href="15686818191570.html" itemprop="url">
-		LATEX 定理、命题环境</a></h1>
-		<div class="entry-content" itemprop="articleBody">
-			
-			<p>在LaTex中需要有关定理、公理、命题、引理、定义等时，常用如下命令</p>
-
-<ul>
-<li><strong>\newtheorem</strong>{定理环境名}{标题}[主计数器名] </li>
-<li><strong>\newtheorem</strong>{theorem}{Theorem}[Chapter]</li>
-</ul>
-
-<p>意思就是定义一个以Theorem为标题的theorem环境,计数以章节数为主.</p>
-
-<p> </p>
-
-<p><strong>\begin{theorem}[均值不等式]</strong></p>
-
-<p>设\(A,B\)是两个实数, 则\(2AB\leq 2 A^2+B^2\).</p>
-
-<p><strong>\end{theorem}</strong></p>
-
-<p>如果需要输出中文,使用定义theorem如下</p>
-
-<p><strong>\newtheorem{theorem}{\hspace{2em}定理}[chaptet]</strong></p>
-
-<p>另外在{\hspace{2em}定理}中还可以输入更改字体的命令来改变定理的字体</p>
-
-<p><strong>其他中文模式：</strong></p>
-
-<ul>
-<li><strong>\newtheorem{Definition}{\hspace{2em}定义}[chapter]</strong></li>
-<li><strong>\newtheorem{theorem}{\hspace{2em}定理}[chapter]</strong></li>
-<li><strong>\newtheorem{lemma}{\hspace{2em}引理}[chapter]</strong></li>
-<li><strong>\newtheorem{Proof}{证明}[chapter]</strong></li>
-</ul>
-
-<p>前面提到的定理、公理、命题、引理、定义的一套命令可以用这个</p>
-
-<p>% Theorem style</p>
-
-<ul>
-<li>\newtheoremstyle{mystyle}{3pt}{3pt}{\kaishu}{0cm}{\heiti2 }{}{1em}{}  \theoremstyle{mystyle}</li>
-<li>\newtheorem{definition}{\hspace{2em}定义}[chapter] % </li>
-<li>没有章, 只有节, 把上面的[chapter]改成[section] </li>
-</ul>
-
-<p><strong>文章中可以直接使用的范例：</strong></p>
-
-<p><strong>\newtheorem{theorem}[definition]{\hspace{2em}定理} </strong></p>
-
-<p><strong>\newtheorem{axiom}[definition]{\hspace{2em}公理} </strong></p>
-
-<p><strong>\newtheorem{lemma}[definition]{\hspace{2em}引理} </strong></p>
-
-<p><strong>\newtheorem{proposition}[definition]{\hspace{2em}命题} </strong></p>
-
-<p><strong>\newtheorem{corollary}[definition]{\hspace{2em}推论} </strong></p>
-
-<p><strong> \newtheorem{remark}{\hspace{2em}注}[chapter]</strong></p>
-
-<p> </p>
+<p>MISSOVER 阻止INPUT语句从下一个数据行读入数据，未赋值的变量设为缺失</p>
 
 <hr/>
 
-<p> </p>
+<p>@ 适用于一个数据行被多个INPUT语句读入的情况。对INPUT语句可以这样理解，执行INPUT语句后会自动换行，当有@时表示不换行（但DATA步进入下一循环时会换行）。</p>
 
-<p><strong>Latex-定理定义的排版</strong></p>
+<p>@@ 适用于一个数据行包含多个观测值的情况，第一@可以理解为HOLD input语句，第二@可以理解为hold DATA步循环。意指：即使DATA开始下一次循环，INPUT语句仍hold,直到数据行结束，或下一个INPUT语句。</p>
 
-<p>\newtheorem{thm}{Theorem}[section]</p>
+<p>data test;<br/>
+    infile cards ;<br/>
+    input x @; /<em>单个@，能H住，有效期到下一个input语句</em>/<br/>
+    input y;   /<em>没有@，H不住，下一个input语句会去读新的一行</em>/<br/>
+    input z @@; /<em>两个@，H住没问题，有效期延长到Data步下一圈</em>/<br/>
+cards;<br/>
+1 2 3<br/>
+4 5 6<br/>
+7<br/>
+run;<br/>
+proc print;run;</p>
 
-<p>\newtheorem{prop}{Proposition}[section]</p>
-
-<p>以上定理和命题分别计数，如果命题也用定理的计数器，可以这样定义：</p>
-
-<p>\newtheorem{prop}[thm]{Proposition}</p>
-
-<p>引用：</p>
-
-<p>\begin{thm}[附加标题,如定理名称，作者]</p>
-
-<p>文本</p>
-
-<p>\end{thm}</p>
-
-<p>较短的证明可以用</p>
-
-<p>\begin{proof}[标题]</p>
-
-<p>证明内容。</p>
-
-<p>\end{proof}</p>
-
-<p> </p>
-
-<p>如果有[标题]选项，则显示这个标题(斜体)，否则自动打印斜体的Proof，并在证明结束时自动生成证毕符号口。</p>
-
-<p>如果使用\proof命令，则需要在结束时手动加上结束命令\qed。</p>
-
-<p>当然你可以重定义证毕符号，例如：</p>
-
-<p>\renewcommand*{\qedsymbol}{[证毕]}</p>
-
-<p>\begin{proof}[证:]</p>
-
-<p>证明正文。</p>
-
-<p>\end{proof}</p>
-
-<p>注意：</p>
-
-<p>\begin{proof}...\end{proof}&quot; role=&quot;presentation&quot; style=&quot;margin: 0px; padding: 0px; display: inline; font-weight: normal; line-height: normal; font-size: 14px; text-align: left; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; position: relative;&quot;&gt;<br/>
-\begin{proof}...\end{proof}</p>
-
-<p>环境需要\usepackage{amsthm}宏包的支持</p>
-
-<p> </p>
-
-<h2 id="toc_0"> </h2>
-
-<h2 id="toc_1">首先你要先使用宏包 ntheorem</h2>
-
-<h2 id="toc_2"> </h2>
-
-<h2 id="toc_3">\usepackage[amsmath,thmmarks]{ntheorem}</h2>
-
-<h2 id="toc_4">% 定理类环境宏包，其中 amsmath 选项</h2>
-
-<p>% 用来兼容 AMS LaTeX 的宏包</p>
-
-<h2 id="toc_5"> %=== 配合上面的ntheorem宏包产生各种定理结构,重定义一些</h2>
-
-<h2 id="toc_6">%正文相关标题 ===</h2>
-
-<p>\theoremstyle{plain}<br/>
-\theoremheaderfont{\normalfont\rmfamily\CJKfamily{hei}}<br/>
-\theorembodyfont{\normalfont\rm\CJKfamily{kai}} \theoremindent0em<br/>
-\theoremseparator{\hspace{1em}} \theoremnumbering{arabic}<br/>
-%\theoremsymbol{}          %定理结束时自动添加的标志</p>
-
-<p> </p>
-
-<p><strong>\newtheorem{theorem}{Theorem}<br/>
-\newtheorem{corollary}{Corollary}<br/>
-......<br/>
-\begin{theorem}<br/>
-......<br/>
-\end{theorem}<br/>
-......</strong></p>
-
-<p><strong>\begin{corollary}<br/>
-......<br/>
-\end{corollary}</strong></p>
-
-<p>这样的输出结果就是各自编号的定理和推论了，定义、命题等等也类似可以这么使用。如果你希望定理和推论一起编号，前面可以改为这样（意思是corollary也使用theorem的编号）：</p>
-
-<p><strong>\newtheorem{theorem}{Theorem}<br/>
-\newtheorem{corollary}[theorem]{Corollary}</strong></p>
-
-<p>最后，如果你希望使用Theorem 1.4.2这样的编号，可以这么使用：</p>
-
-<p><strong>\newtheorem{theorem}{Theorem}[subsection] \newtheorem{corollary}[theorem]{Corollary}</strong></p>
-
-<p>前面的subsection改为section将输出Theorem 4.2这样的编号。</p>
-
-<p> </p>
-
-<p><strong>\newtheorem{theorem}{Theorem}[subsection] \newtheorem{corollary}[theorem]{Corollary}</strong></p>
-
-<p>前面的subsection改为section将输出Theorem 4.2这样的编号。</p>
-
-<p>如何让定理，推理等用同一计数器：</p>
-
-<p>\newtheorem{thm}{Theorem}[section] %如果不采用章节号做前缀，则不用[section]<br/>
-\newtheorem{defn}[thm]{Definition} %这句定义使得defn环境和thm共享编号<br/>
-\newtheorem{lem}[thm]{Lemma} %这句定义使得lem环境和thm共享编号</p>
+<p>Obs     x    y    z<br/>
+  1     1    2    4<br/>
+  2     5    6    7</p>
 
 
-			
-			
 		</div>
+	
 
-	</article>
  
-	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-		<div class="meta">
-			<div class="date">
-				<time datetime="2019-09-16T17:24:22+08:00" itemprop="datePublished">2019/09/16</time>
-			</div>
-			<div class="tags">posted in 
-			
-			    <a class='category' href='%E5%85%B6%E4%BB%96.html'>其他</a>&nbsp;
-			 
-			</div>
-		</div>
-		<h1 class="title" itemprop="name"><a href="15682182289509.html" itemprop="url">
-		赛前感想</a></h1>
-		<div class="entry-content" itemprop="articleBody">
-			
-			<p>现在是12:10，醒来后的晚上2019年全国大学生数学建模竞赛就要开始了，赛前就发生了很多事情，我的电脑因为一个模块的问题被我搞来搞去，python出现了很大问题，同伴的电脑因为一些硬件问题，不得不借用其他同学的电脑，所以需要重新安装许多东西，也是刚刚，我才结束完两个电脑的准备工作。<br/>
-现在的心情当然是非常激动，也非常疲惫，这是大三的一次建模竞赛，也几乎是我能够获得国家级奖项的唯一机会，我一定要把握这次机会。明天还有两门十分重要的课程，如果落下来，也势必对我这学期的学习会产生很大影响。<br/>
-不管那么多了，还是先睡觉了💤</p>
+	
 
-
-			
-			
-		</div>
-
-	</article>
  
-	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-		<div class="meta">
-			<div class="date">
-				<time datetime="2019-09-11T21:01:59+08:00" itemprop="datePublished">2019/09/11</time>
-			</div>
-			<div class="tags">posted in 
-			
-			    <a class='category' href='%E8%AE%A1%E7%AE%97%E6%9C%BA.html'>计算机</a>&nbsp;
-			 
-			</div>
-		</div>
-		<h1 class="title" itemprop="name"><a href="15682069194444.html" itemprop="url">
-		地图相关</a></h1>
-		<div class="entry-content" itemprop="articleBody">
-			
-			<p>在描述数据时，如果有一张热力地图，将是一件非常棒的事情，在这里我在尝试用python制作地图</p>
+	
 
-<h2 id="toc_0">pyecharts</h2>
-
-<p>pyecharts 将不再自带地图 js 文件。如用户需要用到地图图表，可自行安装对应的地图文件包。<br/>
-全球国家地图: echarts-countries-pypkg (1.9MB): 世界地图和 213 个国家，包括中国地图<br/>
-中国省级地图: echarts-china-provinces-pypkg (730KB)：23 个省，5 个自治区<br/>
-中国市级地图: echarts-china-cities-pypkg (3.8MB)：370 个中国城市<br/>
-中国县区级地图: echarts-china-counties-pypkg (4.1MB)：2882 个中国县·区<br/>
-中国区域地图: echarts-china-misc-pypkg (148KB)：11 个中国区域地图，比如华南、华北。</p>
-
-<pre><code class="language-text">如果提示缺少这个就安装一下
-pip  install pyecharts_snapshot
-pip install echarts-countries-pypkg
-pip install echarts-china-provinces-pypkg
-pip install echarts-china-cities-pypkg
-pip install echarts-china-counties-pypkg
-pip install echarts-china-misc-pypkg
-</code></pre>
-
-<h2 id="toc_1">Basemap</h2>
-
-
-			
-			
-		</div>
-
-	</article>
  
-	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-		<div class="meta">
-			<div class="date">
-				<time datetime="2019-09-10T21:56:33+08:00" itemprop="datePublished">2019/09/10</time>
-			</div>
-			<div class="tags">posted in 
-			
-			    <a class='category' href='%E8%AE%A1%E7%AE%97%E6%9C%BA.html'>计算机</a>&nbsp;
-			 
-			</div>
-		</div>
-		<h1 class="title" itemprop="name"><a href="15681237931017.html" itemprop="url">
-		itertools 模块</a></h1>
-		<div class="entry-content" itemprop="articleBody">
-			
-			<p>在解决优化问题的过程中，经常需要遍历所有的情况，不仅需要考虑内存的问题，所需要迭代内容的生成也是一件很麻烦的事情，我曾经尝试过网格生成等方法，效果并不理想，十分复杂，直到我发现了它<br/>
-原教程地址：<a href="http://funhacks.net/2017/02/13/itertools/">高效的 itertools 模块</a><br/>
-itertools 是python的一个很小的模块，是python标准库中的，不需要另外安装<br/>
-首先介绍迭代器的三种类型</p>
+	
 
-<ul>
-<li>无限迭代器：生成一个无限序列，比如自然数序列 <code>1, 2, 3, 4, ...</code>；</li>
-<li>有限迭代器：接收一个或多个序列（sequence）作为参数，进行组合、分组和过滤等；</li>
-<li>组合生成器：序列的排列、组合，求序列的笛卡儿积等；</li>
-</ul>
+ 
+	
 
-<h2 id="toc_0">无限迭代器</h2>
+ 
+	
 
-<p>itertools 模块提供了三个函数（事实上，它们是类）用于生成一个无限序列迭代器：</p>
-
-<ul>
-<li><p>count(firstval=0, step=1)</p>
-<p>创建一个从 firstval (默认值为 0) 开始，以 step (默认值为 1) 为步长的的无限整数迭代器</p></li>
-<li><p>cycle(iterable)</p>
-<p>对 iterable 中的元素反复执行循环，返回迭代器</p></li>
-<li><p>repeat(object [,times]</p>
-<p>反复生成 object，如果给定 times，则重复次数为 times，否则为无限</p></li>
-</ul>
-
-<p>下面，让我们看看一些例子。</p>
-
-<h3 id="toc_1">count</h3>
-
-<p>count() 接收两个参数，第一个参数指定开始值，默认为0，第二个参数指定步长，默认为1:</p>
-
-<pre><code class="language-text">&gt;&gt;&gt; import itertools
-&gt;&gt;&gt;
-&gt;&gt;&gt; nums = itertools.count()
-&gt;&gt;&gt; for i in nums:
-...     if i &gt; 6:
-...         break
-...     print i
-...
-0
-1
-2
-3
-4
-5
-6
-&gt;&gt;&gt; nums = itertools.count(10, 2)    # 指定开始值和步长
-&gt;&gt;&gt; for i in nums:
-...     if i &gt; 20:
-...         break
-...     print i
-...
-10
-12
-14
-16
-18
-20
-</code></pre>
-
-<h3 id="toc_2">cycle</h3>
-
-<p>cycle() 用于对iterable中的元素反复执行循环：</p>
-
-<pre><code class="language-text">&gt;&gt;&gt; import itertools
-&gt;&gt;&gt;
-&gt;&gt;&gt; cycle_strings = itertools.cycle(&#39;ABC&#39;)
-&gt;&gt;&gt; i = 1
-&gt;&gt;&gt; for string in cycle_strings:
-...     if i == 10:
-...         break
-...     print i, string
-...     i += 1
-...
-1 A
-2 B
-3 C
-4 A
-5 B
-6 C
-7 A
-8 B
-9 C
-</code></pre>
-
-<h3 id="toc_3">repeat</h3>
-
-<p>repeat() 用于反复生成一个object：</p>
-
-<pre><code class="language-text">&gt;&gt;&gt; import itertools
-&gt;&gt;&gt;
-&gt;&gt;&gt; for item in itertools.repeat(&#39;hello world&#39;, 3):
-...     print item
-...
-hello world
-hello world
-hello world
-&gt;&gt;&gt;
-&gt;&gt;&gt; for item in itertools.repeat([1, 2, 3, 4], 3):
-...     print item
-...
-[1, 2, 3, 4]
-[1, 2, 3, 4]
-[1, 2, 3, 4]
-</code></pre>
-
-<h2 id="toc_4">有限迭代器</h2>
-
-<p>itertools 模块提供了多个函数（类），接收一个或多个迭代对象作为参数，对它们进行组合、分组和过滤等：</p>
-
-<ul>
-<li>chain() 连接</li>
-<li>compress()</li>
-<li>dropwhile()</li>
-<li>groupby()</li>
-<li>ifilter()</li>
-<li>ifilterfalse()</li>
-<li>islice()</li>
-<li>imap()</li>
-<li>starmap()</li>
-<li>tee()</li>
-<li>takewhile()</li>
-<li>izip()</li>
-<li>izip_longest()</li>
-</ul>
-
-<h2 id="toc_5">组合生成器</h2>
-
-<p>itertools 模块还提供了多个组合生成器函数，用于求序列的排列、组合等：</p>
-
-<ul>
-<li>product</li>
-<li>permutations</li>
-<li>combinations</li>
-<li>combinations_with_replacement</li>
-</ul>
-
-<h3 id="toc_6">product</h3>
-
-<p>product 用于求多个可迭代对象的笛卡尔积，它跟嵌套的for循环等价，它的一般使用形式如下：</p>
-
-<pre><code class="language-text">product(iter1, iter2, ... iterN, [repeat=1])
-</code></pre>
-
-<p>其中，repeat是一个关键字参数，用于指定重复生成序列的次数，</p>
-
-<pre><code class="language-text">&gt;&gt;&gt; from itertools import product
-&gt;&gt;&gt;
-&gt;&gt;&gt; for item in product(&#39;ABCD&#39;, &#39;xy&#39;):
-...     print item
-...
-(&#39;A&#39;, &#39;x&#39;)
-(&#39;A&#39;, &#39;y&#39;)
-(&#39;B&#39;, &#39;x&#39;)
-(&#39;B&#39;, &#39;y&#39;)
-(&#39;C&#39;, &#39;x&#39;)
-(&#39;C&#39;, &#39;y&#39;)
-(&#39;D&#39;, &#39;x&#39;)
-(&#39;D&#39;, &#39;y&#39;)
-&gt;&gt;&gt;
-&gt;&gt;&gt; list(product(&#39;ab&#39;, range(3)))
-[(&#39;a&#39;, 0), (&#39;a&#39;, 1), (&#39;a&#39;, 2), (&#39;b&#39;, 0), (&#39;b&#39;, 1), (&#39;b&#39;, 2)]
-&gt;&gt;&gt;
-&gt;&gt;&gt; list(product((0,1), (0,1), (0,1)))
-[(0, 0, 0), (0, 0, 1), (0, 1, 0), (0, 1, 1), (1, 0, 0), (1, 0, 1), (1, 1, 0), (1, 1, 1)]
-&gt;&gt;&gt;
-&gt;&gt;&gt; list(product(&#39;ABC&#39;, repeat=2))
-[(&#39;A&#39;, &#39;A&#39;), (&#39;A&#39;, &#39;B&#39;), (&#39;A&#39;, &#39;C&#39;), (&#39;B&#39;, &#39;A&#39;), (&#39;B&#39;, &#39;B&#39;), (&#39;B&#39;, &#39;C&#39;), (&#39;C&#39;, &#39;A&#39;), (&#39;C&#39;, &#39;B&#39;), (&#39;C&#39;, &#39;C&#39;)]
-&gt;&gt;&gt;
-</code></pre>
-
-<h3 id="toc_7">permutation</h3>
-
-<p>permutation 用于生成一个排列，它的一般使用形式如下：</p>
-
-<pre><code class="language-text">permutations(iterable[, r])
-</code></pre>
-
-<p>其中，r 指定生成排列的元素的长度，如果不指定，则默认为可迭代对象的元素长度。</p>
-
-<pre><code class="language-text">&gt;&gt;&gt; from itertools import permutations
-&gt;&gt;&gt;
-&gt;&gt;&gt; permutations(&#39;ABC&#39;, 2)
-&lt;itertools.permutations object at 0x1074d9c50&gt;
-&gt;&gt;&gt;
-&gt;&gt;&gt; list(permutations(&#39;ABC&#39;, 2))
-[(&#39;A&#39;, &#39;B&#39;), (&#39;A&#39;, &#39;C&#39;), (&#39;B&#39;, &#39;A&#39;), (&#39;B&#39;, &#39;C&#39;), (&#39;C&#39;, &#39;A&#39;), (&#39;C&#39;, &#39;B&#39;)]
-&gt;&gt;&gt;
-&gt;&gt;&gt; list(permutations(&#39;ABC&#39;))
-[(&#39;A&#39;, &#39;B&#39;, &#39;C&#39;), (&#39;A&#39;, &#39;C&#39;, &#39;B&#39;), (&#39;B&#39;, &#39;A&#39;, &#39;C&#39;), (&#39;B&#39;, &#39;C&#39;, &#39;A&#39;), (&#39;C&#39;, &#39;A&#39;, &#39;B&#39;), (&#39;C&#39;, &#39;B&#39;, &#39;A&#39;)]
-&gt;&gt;&gt;
-</code></pre>
-
-<h3 id="toc_8">combination</h3>
-
-<p>combinations(不放回) 用于求序列的组合，它的使用形式如下：</p>
-
-<pre><code class="language-text">combinations(iterable, r)
-</code></pre>
-
-<p>其中，r指定生成组合的元素的长度</p>
-
-<pre><code class="language-text">&gt;&gt;&gt; from itertools import combinations
-&gt;&gt;&gt;
-&gt;&gt;&gt; list(combinations(&#39;ABC&#39;, 2))
-[(&#39;A&#39;, &#39;B&#39;), (&#39;A&#39;, &#39;C&#39;), (&#39;B&#39;, &#39;C&#39;)]
-</code></pre>
-
-<p>combinations_with_replacement（放回抽取） 和 combinations 类似，但它生成的组合包含自身元素。</p>
-
-<pre><code class="language-text">&gt;&gt;&gt; from itertools import combinations_with_replacement
-&gt;&gt;&gt;
-&gt;&gt;&gt; list(combinations_with_replacement(&#39;ABC&#39;, 2))
-[(&#39;A&#39;, &#39;A&#39;), (&#39;A&#39;, &#39;B&#39;), (&#39;A&#39;, &#39;C&#39;), (&#39;B&#39;, &#39;B&#39;), (&#39;B&#39;, &#39;C&#39;), (&#39;C&#39;, &#39;C&#39;)]
-</code></pre>
-
-
-			
-			
-		</div>
-
-	</article>
-  
-
-</div>
-<nav id="pagenavi">
-	 <a class="prev" href="all.html">Prev</a>  
-	 <a class="next" href="all_2.html">Next</a> 
-	<div class="center"><a href="archives.html">Blog Archives</a></div>
-
-</nav>
-
-</div>
-
-
-
-        </div>
-			<footer id="footer" class="inner">Copyright &copy; 2014
-Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a> &nbsp;&nbsp; 
-Theme by <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a>
-      </footer>
-		</div>
-	</div>
+ 
+	
 
   
+  
+</div></div>
+
+
+<div class="page-bottom">
+  <div class="row">
+  <hr />
+  <div class="small-9 columns">
+  <p class="copyright">Copyright &copy; 2015
+Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+  <div class="small-3 columns">
+  <p class="copyright text-right"><a href="#header">TOP</a></p>
+  </div>
+   
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
     
+    
+    <script src="asset/js/foundation.min.js"></script>
+    <script src="asset/js/foundation/foundation.offcanvas.js"></script>
+    <script>
+      $(document).foundation();
 
+     
+    </script>
+    
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
 
-</body>
+  </body>
 </html>

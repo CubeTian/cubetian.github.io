@@ -1,752 +1,337 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>  
-	  
-  	程序猿CubeTian
-  	
-	</title>
-
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link href="atom.xml" rel="alternate" title="程序猿CubeTian" type="application/atom+xml">
-
-	<link href="asset/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-	<link href="asset/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
-	<script src="asset/javascripts/jquery.min.js"></script>
-	<script src="asset/highlightjs/highlight.pack.js"></script>
-	<link href="asset/highlightjs/styles/solarized_dark.css" media="screen, projection" rel="stylesheet" type="text/css">
-<script>hljs.initHighlightingOnLoad();</script>
-
-	<!--[if lt IE 9]><script src="asset/javascripts/html5.js"></script><![endif]-->
-	<!-- <link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'> -->
-	<style type="text/css">
-/* latin */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Nunito-Light'), url(asset/font/1TiHc9yag0wq3lDO9cw0voX0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
-/* latin */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Nunito-Regular'), url(asset/font/6TbRXKWJjpj6V2v_WyRbMX-_kf6ByYO6CLYdB4HQE-Y.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
-/* latin */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Nunito-Bold'), url(asset/font/TttUCfJ272GBgSKaOaD7KoX0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
-	</style>
-	
-	<style type="text/css">
-	.container .left-col{ opacity: 1;}
-	#pagenavi a{ font-size: 1.3em;}
-	#pagenavi .next:before{ top: 3px;}
-	#pagenavi .prev:before{ top: 3px;}
-	.container .mid-col .mid-col-container #content .archives .title{ font-size: 1.5em;}
-	.container .mid-col .mid-col-container #content article{ padding: 15px 0px;}
-	#header .subtitle {
-		line-height: 1.2em;
-		padding-top: 8px;
-	}
-	article pre{ background: none; border: none; padding: 0;}
-	article .entry-content{text-align: left;}
-	.share-comment{ padding: 25px 0px; clear: both;}
-	hr{ margin: 20px 0px;border: 0; border-top:solid 1px #ddd;}
-	</style>
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+    
+  程序猿CubeTian
   
-
-</head>
-
-
-<body>
-	<div class="container">
-		<div class="left-col">
-			<div class="intrude-less">
-				<header id="header" class="inner">
-				 
-					
-					<h1><a href="index.html">程序猿CubeTian</a></h1>
-					<p class="subtitle">众所周知，数学研究只需要一支笔和一堆草稿纸</p>
-					<nav id="main-nav">
-						<ul class="main">
-						
-						  <li id=""><a target="self" href="index.html">Home</a></li>
-						
-						  <li id=""><a target="_self" href="archives.html">Archives</a></li>
-						
-						</ul>
-					</nav>
-
-					<nav id="sub-nav">
-						<div class="social">
-
-
-
-
-
-
-
-
-
-
-
-
-
-								
-
-								<a class="rss" href="atom.xml" title="RSS">RSS</a>
-							
-						</div>
-					</nav>
-				</header>				
-			</div>
-		</div>	
-		<div class="mid-col">
-			<div class="mid-col-container"> <div id="content" class="inner">
-<div itemscope itemtype="http://schema.org/Blog">
-
-
-	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-		<div class="meta">
-			<div class="date">
-				<time datetime="2019-09-10T20:21:15+08:00" itemprop="datePublished">2019/09/10</time>
-			</div>
-			<div class="tags">posted in 
-			
-			    <a class='category' href='%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1.html'>数学建模</a>&nbsp;
-			 
-			</div>
-		</div>
-		<h1 class="title" itemprop="name"><a href="15681180752987.html" itemprop="url">
-		蚁群优化算法学习笔记</a></h1>
-		<div class="entry-content" itemprop="articleBody">
-			
-			<p>本人阅读《蚁群优化算法》-马良等过程中的笔记<br/>
-前五章的目录</p>
-
-<ol>
-<li>引论
-<ol>
-<li>组合优化与计算复杂性</li>
-<li>来自自然界的几类优化方法</li>
-</ol></li>
-<li>蚁群算法原理
-<ol>
-<li>基本思想</li>
-<li>研究概况</li>
-</ol></li>
-<li>标准的TSP的蚁群算法
-<ol>
-<li>TSP概述</li>
-<li>经典方法</li>
-<li>遗传算法与模拟退火</li>
-<li>蚁群算法</li>
-<li>元胞蚁群算法及其收敛性</li>
-</ol></li>
-<li>扩展旅行商问题的蚁群算法
-<ol>
-<li>瓶颈TSP及其求解</li>
-<li>最小比率TSP及其求解</li>
-<li>时间约束TSP及其求解</li>
-<li>多目标TSP及其求解</li>
-</ol></li>
-<li>车辆路径问题的蚁群算法
-<ol>
-<li>VRP概述</li>
-<li>CVRP及其求解</li>
-<li>多目标VRP及其求解</li>
-<li>VRPTW及其求解</li>
-<li>VRPSTW及其求解</li>
-<li>FVRP及其求解<br/>
-看完目录前五章，首先有好多英文缩写看不明白，接着看</li>
-</ol></li>
-</ol>
-
-<h2 id="toc_0">第一章 引论</h2>
-
-<p>1.1 组合优化与计算复杂性<br/>
-最优化分连续变量与离散变量，离散变量的问题往往称为组合优化<br/>
-局部搜索法是基于贪婪思想，利用领域函数进行搜索的，局部搜索法可能落入局部最优点，或由于步长和初始点选择不好而错过最优点。<br/>
-依据一定概率，对于步长问题，可以采用变步长方法，在接近最优点附近，采取某种策略改变步长<br/>
-对于初始点问题，可以采用随机生成的一些初始点，从每个初始点出发进行搜索，找到各自的最优解，再从这些最优解中选择一个最好的结果</p>
-
-<p>典型组合优化难题<br/>
-    1. 旅行商问题（TSP）：所有可能的路线最多有（n-1）!/2 条<br/>
-    2. 图着色问题（GCP）：记图的最大顶点读书为\(\Delta\) ，则图的最小着色数以\(\Delta + 1\)为上界<br/>
-    3. 工件排序问题（JSP）：NP难题（NP-hard）<br/>
-    4. 二次分配问题（QAP）：目标函数非线性<br/>
-    5. 度约束最小树问题（DCMSTP）：最小生成树问题（不懂）<br/>
-上述典型问题及等价问题，普遍认为没有多项式算法求解</p>
-
-<p>1.2 来自自然界的几类优化方法<br/>
-计算智能系统是在神经网络、模糊系统、进化计算</p>
-
-<ol>
-<li>遗传算法的基本步骤（GA）：
-<ol>
-<li>问题的染色体表示</li>
-<li>初始解组（种群）的生成</li>
-<li>计算解组中各个解的适值函数（代价函数）</li>
-<li>从解组中随机抽取两个解作为父母代</li>
-<li>对父母代实施遗传操作（交叉、变异等）以产生一个后代解</li>
-<li>按某种规则，用该后代解替换原解组中的某个解</li>
-<li>按当前解组符合停机条件则算法终止，否则，转步骤1<br/>
-结果的好坏主要依赖于遗传代数和解组规模<br/></li>
-</ol></li>
-<li>模拟退火算法基本步骤（SA）：<br/>
-物体内部服从Boltzman分布
-<ol>
-<li>选择初始状态H（初始解）、初始温度、降温次数等</li>
-<li>生成H的领域状态H‘，并计算两种状态下的目标函数f(H&#39;)-f(H)</li>
-<li>按接受概率置换H为H‘</li>
-<li>重复步骤2和步骤3直至停机条件满足</li>
-</ol></li>
-<li>禁忌搜索法（TS）在搜索过程中使用记忆功能</li>
-<li>人工神经网络</li>
-<li>蚁群系统：信息激素，轨迹，自催化行为，增强型学习系统</li>
-<li>微粒群算法（PSO）：
-<ol>
-<li>依照初始化过程，对微粒群的随机位置和速度进行初始设定</li>
-<li>计算每个微粒的适应值</li>
-<li>对每个微粒，将其适应值与所经历过的最好位置进行比较，若较好，则将其作为当前的最好位置</li>
-<li>对每个微粒，将其适应值与全局所经历的最好位置的适应值进行比较，若较好，则将其作为当前的的全局最好位置</li>
-<li>对微粒的速度和位置进行进化</li>
-<li>若未到达结束条件（通常为足够好的适应值或最大代数），则返回步骤2</li>
-</ol></li>
-</ol>
-
-
-			
-			
-		</div>
-
-	</article>
- 
-	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-		<div class="meta">
-			<div class="date">
-				<time datetime="2019-09-09T07:54:07+08:00" itemprop="datePublished">2019/09/09</time>
-			</div>
-			<div class="tags">posted in 
-			
-			    <a class='category' href='%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1.html'>数学建模</a>&nbsp;
-			 
-			</div>
-		</div>
-		<h1 class="title" itemprop="name"><a href="15679868479784.html" itemprop="url">
-		数值分析</a></h1>
-		<div class="entry-content" itemprop="articleBody">
-			
-			<h2 id="toc_0">灵敏度分析和误差分析</h2>
-
-<h3 id="toc_1">灵敏度分析</h3>
-
-<p><strong>敏感度分析</strong>（Sensitivity analysis）是研究数学模型或系统(数值或其他)输出中的不确定性如何在其输入中被分配到不同的不确定性来源。<a href="https://zh.wikipedia.org/wiki/%E6%95%8F%E6%84%9F%E5%BA%A6%E5%88%86%E6%9E%90#cite_note-1">[1]</a><a href="https://zh.wikipedia.org/wiki/%E6%95%8F%E6%84%9F%E5%BA%A6%E5%88%86%E6%9E%90#cite_note-2">[2]</a>一个相关的实践是不确定度分析，它更注重不确定度的量化和不确定度的传播;理想情况下，不确定度和灵敏度分析应该同时进行。</p>
-
-<p>在其他假设下重新计算结果以确定变量在敏感性分析下的影响的过程可用于一系列目的，<a href="https://zh.wikipedia.org/wiki/%E6%95%8F%E6%84%9F%E5%BA%A6%E5%88%86%E6%9E%90#cite_note-3">[3]</a>包括：</p>
-
-<ul>
-<li>在存在不确定性的情况下测试模型或系统结果的稳健性。</li>
-<li>增加对系统或模型中输入和输出变量之间关系的理解。</li>
-<li>通过识别导致输出中存在显着不确定性的模型输入来减少不确定性，因此应该成为关注的焦点，以便提高稳健性（可能通过进一步的研究）。</li>
-<li>搜索模型中的错误（通过遇到输入和输出之间的意外关系）。</li>
-<li>模型简化 - 修复对输出没有影响的模型输入，或识别和删除模型结构的冗余部分。</li>
-<li>加强建模人员与决策者之间的沟通（例如，通过提出更可信，可理解，引人注目或具有说服力的建议）。</li>
-<li>在输入因子空间中查找模型输出为最大值或最小值或满足某个最佳标准的区域。</li>
-<li>在校准具有大量参数的模型的情况下，主要灵敏度测试可以通过关注敏感参数来简化校准阶段。不知道参数的敏感性会导致无用的时间花在非敏感的时间上。<a href="https://zh.wikipedia.org/wiki/%E6%95%8F%E6%84%9F%E5%BA%A6%E5%88%86%E6%9E%90#cite_note-4">[4]</a></li>
-<li>寻求识别观测，模型输入和预测或预测之间的重要联系，从而开发出更好的模型。<a href="https://zh.wikipedia.org/wiki/%E6%95%8F%E6%84%9F%E5%BA%A6%E5%88%86%E6%9E%90#cite_note-5">[5]</a><a href="https://zh.wikipedia.org/wiki/%E6%95%8F%E6%84%9F%E5%BA%A6%E5%88%86%E6%9E%90#cite_note-6">[6]</a></li>
-</ul>
-
-<p>（from wiki）</p>
-
-
-			
-			
-		</div>
-
-	</article>
- 
-	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-		<div class="meta">
-			<div class="date">
-				<time datetime="2019-09-10T20:04:18+08:00" itemprop="datePublished">2019/09/10</time>
-			</div>
-			<div class="tags">posted in 
-			
-			    <a class='category' href='%E5%85%B6%E4%BB%96.html'>其他</a>&nbsp;
-			 
-			</div>
-		</div>
-		<h1 class="title" itemprop="name"><a href="15681170584422.html" itemprop="url">
-		手表使用评价</a></h1>
-		<div class="entry-content" itemprop="articleBody">
-			
-			<p>最初在b站看到有关pebble的视频后，非常希望有这样一款造型简单，续航之间长，有时间和小题提醒功能就够了的手表，非常遗憾的是，pebble在中国境内不能给顺畅的使用，且有许多问题，不建议中国用户购买。<br/>
-在淘宝搜寻过后，锁定在一款vla腕表，设计符合我的要求，价格便宜，且兼容ios。<br/>
-毕竟是学生，在一番挣扎之后还是买了最便宜的cityA款，售价199，一般会有10元的优惠券。<br/>
-约3天后收到手表，总体感觉不错，玻璃屏幕的硬度和清晰度都不错，蓝牙连接顺畅，且没有发现会影响手机的用电，手表电量充足，大约可以一个月充一次。<br/>
-消息提醒功能暂时微信是完全正常的，qq最新版本存在问题，我非常高兴的是，手表的测试和开发人员都非常的积极，在与他们的一番讨论后，锁定了问题。非常难得的，购买了一款产品后可以联系到开发人员，这样的售后保障我想即使出现了问题也能很快进行修复。<br/>
-总结一下，我觉得不亏</p>
-
-
-			
-			
-		</div>
-
-	</article>
- 
-	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-		<div class="meta">
-			<div class="date">
-				<time datetime="2019-09-09T12:22:01+08:00" itemprop="datePublished">2019/09/09</time>
-			</div>
-			<div class="tags">posted in 
-			
-			    <a class='category' href='%E5%85%B6%E4%BB%96.html'>其他</a>&nbsp;
-			 
-			</div>
-		</div>
-		<h1 class="title" itemprop="name"><a href="15680029212149.html" itemprop="url">
-		雅思阅读</a></h1>
-		<div class="entry-content" itemprop="articleBody">
-			
-			<p>雅思阅读开始可以分题型练习<br/>
-题型主要有填空题、判断题、选择题、匹配题<br/>
-填空题分为给选项的和不给选项的，不给选项的题型较容易，优先做，一般题目会涉及一大段或连续的几小段，填空一定填原词，甚至不需要修改形式，“”内的内容很有可能就是要填的<br/>
-给选项的比较难，很有可能是无序的，除了根据词性排除一些内容，剩下的只能硬上了，可以放后面做</p>
-
-<p>每道题基本上会对应一个段落或几个段落，出过题的段落不会再出，文意匹配除外</p>
-
-<p>是非判断 true/false/not given  yes/no/not given<br/>
-非与not given 的区别<br/>
-非是文章给的情况和题目给的情况不能共存<br/>
-not given 可以共存<br/>
-我理解是 非是认知错误 not given是对象错误<br/>
-事情的主语、宾语错误都是not given<br/>
-然后如果至少有四个题那么 三种肯定都有 只有三个题，可能缺少一种选项</p>
-
-<p>小匹配（在文章后的），只要一段里有提到就选那一段，不需要整段都是叙述这件事</p>
-
-<p>大匹配（文章前） 最后做.. 很耗时间</p>
-
-
-			
-			
-		</div>
-
-	</article>
- 
-	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-		<div class="meta">
-			<div class="date">
-				<time datetime="2019-09-09T11:02:10+08:00" itemprop="datePublished">2019/09/09</time>
-			</div>
-			<div class="tags">posted in 
-			
-			    <a class='category' href='%E8%AE%A1%E7%AE%97%E6%9C%BA.html'>计算机</a>&nbsp;
-			 
-			</div>
-		</div>
-		<h1 class="title" itemprop="name"><a href="15679981303848.html" itemprop="url">
-		sklearn 模块参考书</a></h1>
-		<div class="entry-content" itemprop="articleBody">
-			
-			<p>sklearn 全称 scikit learn 是机器学习领域当中最知名的python模块之一</p>
-
-<p>sklearn 包含了很多种机器学习的方式：</p>
-
-<ul>
-<li>Classification 分类</li>
-<li>Regression 回归</li>
-<li>Clustering 非监督分类</li>
-<li>Dimensionality reduction 数据降维</li>
-<li>Model Selection 模型选择</li>
-<li>Preprocessing 数据预处理</li>
-</ul>
-
-<h2 id="toc_0">选择模型</h2>
-
-<p>sklearn 中包含了众多的学习模型，我们需要根据实际问题选择适合的模型<br/>
-这里有一张官网流程图帮助大家，根据实际问题，选择合适的模型<br/>
-<img src="media/15679981303848/15679984183443.jpg" alt=""/></p>
-
-<p>这里，本人还未完全熟悉所有学习方式，拷贝了sam‘s note 的相关链接</p>
-
-<ul>
-<li>2017/06/11   <a href="https://qinqianshan.com/machine_learning/sklearn/meachine-learning1-description/">【1】简介--1--机器学习</a></li>
-<li>2017/06/11   <a href="https://qinqianshan.com/machine_learning/sklearn/meachine-learning2-sklearn/">【1】简介--2--sklearn简介</a></li>
-<li>2018/08/14   <a href="https://qinqianshan.com/machine_learning/sklearn/supervised-learning/">【2】监督学习</a></li>
-<li>2017/06/14   <a href="https://qinqianshan.com/machine_learning/sklearn/supervised-learning-classify/">【2】监督学习--1--分类</a></li>
-<li>2018/08/28   <a href="https://qinqianshan.com/machine_learning/sklearn/sklearn-knn/">【2】监督学习--1--分类-K近邻分类器</a></li>
-<li>2018/08/28   <a href="https://qinqianshan.com/machine_learning/sklearn/sklearn-decisiontree/">【2】监督学习--1--分类-决策树(DecisionTreeClassifier)</a></li>
-<li>2018/08/28   <a href="https://qinqianshan.com/machine_learning/sklearn/sklearn-naivebayes/">【2】监督学习--1--分类-贝叶斯(naive_bayes)</a></li>
-<li>2018/08/28   <a href="https://qinqianshan.com/machine_learning/sklearn/sklearn-naivebayes/">【2】监督学习--1--分类-支持向量机(svm)</a></li>
-<li>2017/06/15   <a href="https://qinqianshan.com/machine_learning/sklearn/supervised-learning-logistic/">【2】监督学习--2--回归</a></li>
-<li>2018/08/22   <a href="https://qinqianshan.com/machine_learning/sklearn/sklearn-polynomialfeatures/">【2】监督学习--3--多项式变形--PolynomialFeatures</a></li>
-<li>2017/06/11   <a href="https://qinqianshan.com/machine_learning/sklearn/unsupervised-learning-cluster/">【3】无监督学习概述</a></li>
-<li>2017/07/08   <a href="https://qinqianshan.com/machine_learning/sklearn/clustering-introduction/">【3】无监督学习--3--聚类--概述</a></li>
-<li>2018/07/05   <a href="https://qinqianshan.com/machine_learning/sklearn/cluster-kmeans/">【3】无监督学习--3--聚类--基于距离--kmeans</a></li>
-<li>2017/07/08   <a href="https://qinqianshan.com/machine_learning/sklearn/hierarchical-clustering/">【3】无监督学习--3--聚类--层次聚类</a></li>
-<li>2018/05/16   <a href="https://qinqianshan.com/machine_learning/sklearn/cross-validation/">【4.1.1】模型选择与评估--1--交叉检验（Cross Validation）</a></li>
-<li>2018/08/17   <a href="https://qinqianshan.com/machine_learning/sklearn/quantifying-the-quality-of-predictions/">【4.3.1】量化预测结果</a></li>
-<li>2018/09/21   <a href="https://qinqianshan.com/machine_learning/sklearn/precision-recall-f-measure/">【4.3.2.3】量化预测结果--分类变量--准确率，召回和F-措施</a></li>
-<li>2018/09/21   <a href="https://qinqianshan.com/machine_learning/sklearn/classification-metrics/">【4.3.2.1】量化预测结果--分类变量</a></li>
-<li>2018/07/05   <a href="https://qinqianshan.com/machine_learning/sklearn/clustering-performance-evaluation/">【4.3.2.9】量化预测结果--分类变量--MCC、RI</a></li>
-<li>2017/02/07   <a href="https://qinqianshan.com/machine_learning/sklearn/roc-curve-and-auc-evaluation-index/">【4.3.2.2】量化预测结果--分类变量--ROC曲线和AUC评价指标</a></li>
-<li>2018/08/17   <a href="https://qinqianshan.com/machine_learning/sklearn/model-persistence/">【4.4.1】模型的保存与调用</a></li>
-<li>2018/08/17   <a href="https://qinqianshan.com/machine_learning/sklearn/underfitting-overfitting/">【4.5.1】验证曲线--欠拟合和过拟合</a></li>
-<li>2018/08/17   <a href="https://qinqianshan.com/machine_learning/sklearn/plotting-validation-curves/">【4.5.2】验证曲线--绘制验证曲线</a></li>
-<li>2018/08/17   <a href="https://qinqianshan.com/machine_learning/sklearn/plotting-learning-curves/">【4.5.3】验证曲线--绘制学习曲线</a></li>
-<li>2018/05/13   <a href="https://qinqianshan.com/machine_learning/sklearn/one-hot-encoding-in-scikit-learn/">【5】数据集转化--3--预处理数据-One Hot Encoding in Scikit-Learn</a></li>
-<li>2017/07/07   <a href="https://qinqianshan.com/machine_learning/sklearn/1-plotting-cross-validated-predictions/">【9】例子--1--general--Plotting Cross-Validated Predictions（交叉验证预测）</a></li>
-<li>2017/07/08   <a href="https://qinqianshan.com/machine_learning/sklearn/concatenating-multiple-feature-extraction-methods/">【9】例子--1--general--混合多重方法获得feature</a></li>
-<li>2017/07/08   <a href="https://qinqianshan.com/machine_learning/sklearn/chaining-pca-and-logistic-regression/">【9】例子--1--general--PCA与逻辑回归的搭配</a></li>
-<li>2017/07/07   <a href="https://qinqianshan.com/machine_learning/sklearn/isotonic-regression/">【9】例子--1--general--保序回归(Isotonic Regression)</a></li>
-<li>2017/07/07   <a href="https://qinqianshan.com/machine_learning/sklearn/mac_sklearn_matplotlib/">【10】报错-1-Mac运行sklearn的matplotlib问题</a></li>
-</ul>
-
-
-			
-			
-		</div>
-
-	</article>
- 
-	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-		<div class="meta">
-			<div class="date">
-				<time datetime="2018-09-21T20:43:13+08:00" itemprop="datePublished">2018/09/21</time>
-			</div>
-			<div class="tags">posted in 
-			
-			    <a class='category' href='%E8%AE%A1%E7%AE%97%E6%9C%BA.html'>计算机</a>&nbsp;
-			 
-			</div>
-		</div>
-		<h1 class="title" itemprop="name"><a href="15375337935500.html" itemprop="url">
-		wifi 相关</a></h1>
-		<div class="entry-content" itemprop="articleBody">
-			
-			<h2 id="toc_0">使用大功率无线网卡抓取cap包用于密码破解（macos）</h2>
-
-<p>1、安装aircrack-ng</p>
-
-<p>命令：brew install aircrack-ng</p>
-
-<p>注意，如果没安装brew,访问：<a href="https://brew.sh%EF%BC%8C%E9%A6%96%E9%A1%B5%E4%B8%8A%E6%9C%89%E5%AE%89%E8%A3%85brew%E7%9A%84%E5%91%BD%E4%BB%A4%EF%BC%8C%E6%88%91%E5%AE%89%E8%A3%85%E6%97%B6%EF%BC%88201706%EF%BC%89%E5%91%BD%E4%BB%A4%E5%A6%82%E4%B8%8B%EF%BC%9A">https://brew.sh，首页上有安装brew的命令，我安装时（201706）命令如下：</a></p>
-
-<p>/usr/bin/ruby -e &quot;$(curl -fsSLhttps://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</p>
-
-<p>2、添加airport快链</p>
-
-<p>命令：ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport</p>
-
-<p>3、使用mac自带的airport选取mac地址</p>
-
-<p>命令：airport -s</p>
-
-<p>选择CHANNEL的数值，比如：11</p>
-
-<p>4、监听选定的频道获取到握手的包</p>
-
-<p>命令：airport en0 sniff 11</p>
-
-<p>运行一段时间，就可以在/tmp收获以.cap结尾的分析包，结束之后会提示保存的.cap文件位置</p>
-
-<p>注意：（1）尽可能不要运行太长时间，否则.cap文件会比较大；</p>
-
-<p>（2）可以使用ctr+c结束运行(我刚开始就不知道🙈)；</p>
-
-<p>（3）如果提示权限问题，则使用 sudo airport en0 sniff 11</p>
-
-<p>5、用 aircrack-ng分析cap包</p>
-
-<p>命令：sudo aircrack-ng  /tmp/airportSniff******.cap</p>
-
-<p>找到有(1 handshake)的那一行记录，记录下BSSID（比如是:10:02:22:23:7v:6f）。</p>
-
-<p>建议直接搜索，否则能看晕，如果没有搜索到，请重新执行第4步；</p>
-
-<p>6、开始暴力破解</p>
-
-<p>命令：sudo aircrack-ng-wpojie.txt-b10:02:22:23:7v:6f/tmp/airportSniff******.cap</p>
-
-<p>注意：.txt为破解字典</p>
-
-<p>如果有碰撞到密码，程序会停止，并显示密码。</p>
-
-
-			
-			
-		</div>
-
-	</article>
- 
-	<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-		<div class="meta">
-			<div class="date">
-				<time datetime="2019-09-09T08:35:43+08:00" itemprop="datePublished">2019/09/09</time>
-			</div>
-			<div class="tags">posted in 
-			
-			    <a class='category' href='%E8%AE%A1%E7%AE%97%E6%9C%BA.html'>计算机</a>&nbsp;
-			 
-			</div>
-		</div>
-		<h1 class="title" itemprop="name"><a href="15679893433260.html" itemprop="url">
-		scipy 模块参考书</a></h1>
-		<div class="entry-content" itemprop="articleBody">
-			
-			<p><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/index.html">SciPy Tutorial</a></p>
-
-<ul>
-<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/general.html">Introduction</a></li>
-<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/basic.html">Basic functions</a></li>
-<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/special.html">Special functions(scipy.special)</a></li>
-<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/integrate.html">Integration(scipy.integrate)</a></li>
-<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/optimize.html">Optimization(scipy.optimize)</a></li>
-<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/interpolate.html">Interpolation(scipy.interpolate)</a></li>
-<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/fftpack.html">Fourier Transforms(scipy.fftpack)</a></li>
-<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/signal.html">Signal Processing(scipy.signal)</a></li>
-<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/linalg.html">Linear Algebra(scipy.linagle)</a></li>
-<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/arpack.html">Sparse Eigenvalue Problems with ARPACK</a></li>
-<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/csgraph.html">Compressed Sparse Graph Routines(scipy.sparse.csgraph)</a></li>
-<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/spatial.html">Spatial data structures and algorithms(scipy.spatial)</a></li>
-<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/stats.html">Statistics(scipy.stats)</a></li>
-<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/ndimage.html">Multidimensional image processing(scipy.ndimage)</a></li>
-<li><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/io.html">File IO(scipy.io)</a></li>
-</ul>
-
-<pre><code class="language-text">import numpy as np
-import matplotlib as mpl
-import matplotlib.pyplot as plt
-</code></pre>
-
-<p>scipy 主要有15个子模块</p>
-
-<pre><code class="language-text">from scipy import cluster, constants, fftpack, integrate, interpolate, io, linalg, ndimage, odr, optimize, signal, sparse, spatial, special, stats
-</code></pre>
-
-<hr/>
-
-<h2 id="toc_0">常量 <a href="https://docs.scipy.org/doc/scipy/reference/constants.html#module-scipy.constants">Constants(scipy.constants)</a></h2>
-
-<p>主要包含数学常数\(\pi\)(pi)以及一些物理常数 </p>
-
-<hr/>
-
-<h2 id="toc_1">基本函数</h2>
-
-<h3 id="toc_2">np.r_ np.c_ 拼接</h3>
-
-<pre><code class="language-text">&gt;&gt;&gt; np.r_[3,[0]*5,-1:1:10j]
-array([ 3.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        , -1.        , -0.77777778, -0.55555556, -0.33333333,
-       -0.11111111,  0.11111111,  0.33333333,  0.55555556,  0.77777778,
-        1.        ])
-</code></pre>
-
-<p>将切片对象转换为沿第一轴的连接。(横向拼接)</p>
-
-<pre><code class="language-text">&gt;&gt;&gt; np.c_[np.array([1,2,3]), np.array([4,5,6])]
-array([[1, 4],
-       [2, 5],
-       [3, 6]])
-</code></pre>
-
-<p>将切片对象转换为沿第二轴的连接。(竖向拼接)<br/>
-复数10j作为切片语​​法中的步长。这种非标准用法允许将数字解释为在范围内产生的点数而不是步长</p>
-
-<h3 id="toc_3">np.mgrid 网格生成</h3>
-
-<pre><code class="language-text">&gt;&gt;&gt; np.mgrid[0:5:4j,0:5:4j]
-array([[[ 0.    ,  0.    ,  0.    ,  0.    ],
-        [ 1.6667,  1.6667,  1.6667,  1.6667],
-        [ 3.3333,  3.3333,  3.3333,  3.3333],
-        [ 5.    ,  5.    ,  5.    ,  5.    ]],
-       [[ 0.    ,  1.6667,  3.3333,  5.    ],
-        [ 0.    ,  1.6667,  3.3333,  5.    ],
-        [ 0.    ,  1.6667,  3.3333,  5.    ],
-        [ 0.    ,  1.6667,  3.3333,  5.    ]]])
-</code></pre>
-
-<h2 id="toc_4">积分 (scipy.integrate)</h2>
-
-<p>此模块可用用于各种包括反常积分在内的定积分的求解<br/>
-\(I(a, b)=\int_{0}^{1} a x^{2}+b d x\)</p>
-
-<pre><code class="language-text">&gt;&gt;&gt; from scipy.integrate import quad
-&gt;&gt;&gt; def integrand(x, a, b):
-...     return a*x**2 + b
-...
-&gt;&gt;&gt; a = 2
-&gt;&gt;&gt; b = 1
-&gt;&gt;&gt; I = quad(integrand, 0, 1, args=(a,b))
-&gt;&gt;&gt; I
-(1.6666666666666667, 1.8503717077085944e-14)
-</code></pre>
-
-<hr/>
-
-<p>常微分方程求解 scipy.integrate.ode<br/>
-BerkeleyMadonna 推荐使用，常微分方程求解器</p>
-
-<h2 id="toc_5">线性代数相关</h2>
-
-<pre><code class="language-text">from scipy import linalg
-</code></pre>
-
-<h3 id="toc_6">范数</h3>
-
-<p>向量的范数<br/>
-\(\|\mathbf{x}\|=\left\{\begin{array}{cl}{\max \left|x_{i}\right|} &amp; {\text { ord }=\inf } \\ {\min \left|x_{i}\right|} &amp; {\text { ord }=-\inf } \\ {\left(\sum_{i}\left|x_{i}\right|^{\text {ord }}\right)^{1 / \operatorname{ord}}} &amp; { | \text { ord } |&lt;\infty}\end{array}\right.\)<br/>
-矩阵的范数<br/>
-\(\|\mathbf{A}\|=\left\{\begin{aligned} \max _{i} \sum_{j}\left|a_{i j}\right| &amp; \text { ord }=\text { inf } \\ \min _{i} \sum_{j}\left|a_{i j}\right| &amp; \text { ord }=-\inf \\ \max _{j} \sum_{i}\left|a_{i j}\right| &amp; \text { ord }=1 \\ \min _{j} \sum_{i}\left|a_{i j}\right| &amp; \text { ord }=-1 \\ \max \sigma_{i} &amp; \text { ord }=2 \\ \min \sigma_{i} &amp; \text { ord }=-2 \\ \sqrt{\operatorname{trace}\left(\mathbf{A}^{H} \mathbf{A}\right)} &amp; \text { ord }=\text { &#39;fro }^{\prime} \end{aligned}\right.\)<br/>
-例：</p>
-
-<pre><code class="language-text">&gt;&gt;&gt; import numpy as np
-&gt;&gt;&gt; from scipy import linalg
-&gt;&gt;&gt; A=np.array([[1,2],[3,4]])
-&gt;&gt;&gt; A
-array([[1, 2],
-      [3, 4]])
-&gt;&gt;&gt; linalg.norm(A)
-5.4772255750516612
-&gt;&gt;&gt; linalg.norm(A,&#39;fro&#39;) # frobenius norm is the default
-5.4772255750516612
-&gt;&gt;&gt; linalg.norm(A,1) # L1 norm (max column sum)
-6
-&gt;&gt;&gt; linalg.norm(A,-1)
-4
-&gt;&gt;&gt; linalg.norm(A,np.inf) # L inf norm (max row sum)
-7
-</code></pre>
-
-<h3 id="toc_7">特征值与特征向量</h3>
-
-<pre><code class="language-text">&gt;&gt;&gt; import numpy as np
-&gt;&gt;&gt; from scipy import linalg
-&gt;&gt;&gt; A = np.array([[1, 2], [3, 4]])
-&gt;&gt;&gt; la, v = linalg.eig(A)
-&gt;&gt;&gt; l1, l2 = la
-&gt;&gt;&gt; print(l1, l2)   # eigenvalues
-(-0.3722813232690143+0j) (5.372281323269014+0j)
-&gt;&gt;&gt; print(v[:, 0])   # first eigenvector
-[-0.82456484  0.56576746]
-&gt;&gt;&gt; print(v[:, 1])   # second eigenvector
-[-0.41597356 -0.90937671]
-</code></pre>
-
-<h3 id="toc_8">LU分解</h3>
-
-<p>\(A=PLU\)</p>
-
-<pre><code class="language-text">&gt;&gt;&gt; from scipy.linalg import lu
-&gt;&gt;&gt; A = np.array([[2, 5, 8, 7], [5, 2, 2, 8], [7, 5, 6, 6], [5, 4, 4, 8]])
-&gt;&gt;&gt; p, l, u = lu(A)
-</code></pre>
-
-<h3 id="toc_9">追赶法</h3>
-
-<p>\(a_{i} x_{i-1}+b_{i} x_{i}+c_{i} x_{i+1}=d_{i}\)<br/>
-where \(a_{1}=0\) and \(c_{n}=0\)<br/>
-\(\left[\begin{array}{ccccc}{b_{1}} &amp; {c_{1}} &amp; {} &amp; {} &amp; {0} \\ {a_{2}} &amp; {b_{2}} &amp; {c_{2}} &amp; {} &amp; {} \\ {} &amp; {a_{3}} &amp; {b_{3}} &amp; {\ddots} &amp; {} \\ {} &amp; {} &amp; {\ddots} &amp; {\ddots} &amp; {c_{n-1}} \\ {0} &amp; {} &amp; {} &amp; {a_{n}} &amp; {b_{n}}\end{array}\right]\left[\begin{array}{c}{x_{1}} \\ {x_{2}} \\ {x_{3}} \\ {\vdots} \\ {x_{n}}\end{array}\right]=\left[\begin{array}{c}{d_{1}} \\ {d_{2}} \\ {d_{3}} \\ {\vdots} \\ {d_{n}}\end{array}\right]\)</p>
-
-<pre><code class="language-text">import numpy as np
-
-## Tri Diagonal Matrix Algorithm(a.k.a Thomas algorithm) solver
-def TDMAsolver(a, b, c, d):
-    &#39;&#39;&#39;
-    TDMA solver, a b c d can be NumPy array type or Python list type.
-    refer to http://en.wikipedia.org/wiki/Tridiagonal_matrix_algorithm
-    and to http://www.cfd-online.com/Wiki/Tridiagonal_matrix_algorithm_-_TDMA_(Thomas_algorithm)
-    &#39;&#39;&#39;
-    nf = len(d) # number of equations
-    ac, bc, cc, dc = map(np.array, (a, b, c, d)) # copy arrays
-    for it in range(1, nf):
-        mc = ac[it-1]/bc[it-1]
-        bc[it] = bc[it] - mc*cc[it-1] 
-        dc[it] = dc[it] - mc*dc[it-1]
-                
-    xc = bc
-    xc[-1] = dc[-1]/bc[-1]
-
-    for il in range(nf-2, -1, -1):
-        xc[il] = (dc[il]-cc[il]*xc[il+1])/bc[il]
-
-    return xc
-</code></pre>
-
-<p>例：</p>
-
-<pre><code class="language-text">A = np.array([[10,2,0,0],[3,10,4,0],[0,1,7,5],[0,0,3,4]],dtype=float)   
-
-a = np.array([3.,1,3]) 
-b = np.array([10.,10.,7.,4.])
-c = np.array([2.,4.,5.])
-d = np.array([3,4,5,6.])
-
-print(TDMAsolver(a, b, c, d))
-&gt;&gt; [ 0.14877589  0.75612053 -1.00188324  2.25141243]
-#compare against numpy linear algebra library
-print(np.linalg.solve(A, d))
-&gt;&gt; [ 0.14877589  0.75612053 -1.00188324  2.25141243]
-</code></pre>
-
-<h3 id="toc_10">对角线元素</h3>
-
-<pre><code class="language-text">numpy.diag(v,k=0)
-</code></pre>
-
-<p>如果v是一个二维的矩阵，则返回对角线元素组成的向量<br/>
-如果v是一个一维的向量，则返回对角线为该向量的矩阵<br/>
-k表示偏移量，正数为右移，负数为左移</p>
-
-
-			
-			
-		</div>
-
-	</article>
-  
-
+  </title>
+ <meta name="description" content="众所周知，数学研究只需要一支笔和一堆草稿纸">
+ <link href="atom.xml" rel="alternate" title="程序猿CubeTian" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.min.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+    <script src="asset/highlightjs/highlight.pack.js"></script>
+    <link href="asset/highlightjs/styles/github.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+<div id="header">
+    <h1><a href="index.html">程序猿CubeTian</a></h1>
 </div>
-<nav id="pagenavi">
-	 <a class="prev" href="all_1.html">Prev</a>  
-	 <a class="next" href="all_3.html">Next</a> 
-	<div class="center"><a href="archives.html">Blog Archives</a></div>
 
 </nav>
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; 程序猿CubeTian</span>
+  </a>
+</nav>
 
-</div>
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+      <li><a href="index.html">Home</a></li>
+      
+        <li class="divider"></li>
+        <li><label>其他</label></li>
+
+          
+            <li><a title="LATEX 定理、命题环境" href="15686818191570.html">LATEX 定理、命题环境</a></li>
+          
+            <li><a title="从不动点定理到计算复杂性" href="15408862456484.html">从不动点定理到计算复杂性</a></li>
+          
+            <li><a title="想要的书目录" href="15680140350374.html">想要的书目录</a></li>
+          
+            <li><a title="手表使用评价" href="15681170584422.html">手表使用评价</a></li>
+          
+            <li><a title="赛前感想" href="15682182289509.html">赛前感想</a></li>
+          
+            <li><a title="软件目录【20年2月】" href="15707633313339.html">软件目录【20年2月】</a></li>
+          
+            <li><a title="阿里巴巴店铺装修" href="15702534023062.html">阿里巴巴店铺装修</a></li>
+          
+            <li><a title="雅思阅读" href="15680029212149.html">雅思阅读</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>数学建模</label></li>
+
+          
+            <li><a title="SAS DATA步之全揭秘" href="15685969611776.html">SAS DATA步之全揭秘</a></li>
+          
+            <li><a title="SAS程序结构" href="15673304578082.html">SAS程序结构</a></li>
+          
+            <li><a title="数值分析" href="15679868479784.html">数值分析</a></li>
+          
+            <li><a title="数学与计算机" href="15662129253478.html">数学与计算机</a></li>
+          
+            <li><a title="蚁群优化算法学习笔记" href="15681180752987.html">蚁群优化算法学习笔记</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>基础数学</label></li>
+
+          
+            <li><a title="GTM 书单" href="15717326165491.html">GTM 书单</a></li>
+          
+            <li><a title="合同" href="15675882890776.html">合同</a></li>
+          
+            <li><a title="复变函数整理" href="15670727988571.html">复变函数整理</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>计算机</label></li>
+
+          
+            <li><a title="MYsql 学习教程" href="15666534139692.html">MYsql 学习教程</a></li>
+          
+            <li><a title="SAS安装教程" href="15675205901094.html">SAS安装教程</a></li>
+          
+            <li><a title="itertools 模块" href="15681237931017.html">itertools 模块</a></li>
+          
+            <li><a title="scipy 模块参考书" href="15679893433260.html">scipy 模块参考书</a></li>
+          
+            <li><a title="sklearn 模块参考书" href="15679981303848.html">sklearn 模块参考书</a></li>
+          
+            <li><a title="wifi 相关" href="15375337935500.html">wifi 相关</a></li>
+          
+            <li><a title="地图相关" href="15682069194444.html">地图相关</a></li>
+          
+            <li><a title="树莓派入门笔记" href="15696705812938.html">树莓派入门笔记</a></li>
+          
+            <li><a title="爬虫学习" href="15678538813115.html">爬虫学习</a></li>
+          
+            <li><a title="计算机三级知识点" href="15623137342353.html">计算机三级知识点</a></li>
+          
+            <li><a title="计算机二级 公共知识" href="15653132926815.html">计算机二级 公共知识</a></li>
+          
+            <li><a title="计算机二级python" href="15655035745414.html">计算机二级python</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>数值分析/计算物理</label></li>
+
+          
+            <li><a title="GSPM笔记" href="15699393940279.html">GSPM笔记</a></li>
+          
+            <li><a title="PDE（Walter/njdx）" href="15645732861970.html">PDE（Walter/njdx）</a></li>
+          
+            <li><a title="数值线性代数第一次学习" href="15551995220068.html">数值线性代数第一次学习</a></li>
+          
+            <li><a title="数学模型代码整合" href="15608678868641.html">数学模型代码整合</a></li>
+          
+            <li><a title="课程二:偏微分方程数值方法" href="15621385998065.html">课程二:偏微分方程数值方法</a></li>
+          
+
+      
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+        <section id="main-content" role="main" class="scroll-container">
+
+          <div class="row">
+            <div class="large-3 medium-3 columns">
+              <div class="hide-for-small">
+                <div class="sidebar">
+                <nav>
+                  <ul id="side-nav" class="side-nav">
+
+                    
+                      <li class="side-title"><span>其他</span></li>
+                        
+                          <li><a title="LATEX 定理、命题环境" href="15686818191570.html">LATEX 定理、命题环境</a></li>
+                        
+                          <li><a title="从不动点定理到计算复杂性" href="15408862456484.html">从不动点定理到计算复杂性</a></li>
+                        
+                          <li><a title="想要的书目录" href="15680140350374.html">想要的书目录</a></li>
+                        
+                          <li><a title="手表使用评价" href="15681170584422.html">手表使用评价</a></li>
+                        
+                          <li><a title="赛前感想" href="15682182289509.html">赛前感想</a></li>
+                        
+                          <li><a title="软件目录【20年2月】" href="15707633313339.html">软件目录【20年2月】</a></li>
+                        
+                          <li><a title="阿里巴巴店铺装修" href="15702534023062.html">阿里巴巴店铺装修</a></li>
+                        
+                          <li><a title="雅思阅读" href="15680029212149.html">雅思阅读</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>数学建模</span></li>
+                        
+                          <li><a title="SAS DATA步之全揭秘" href="15685969611776.html">SAS DATA步之全揭秘</a></li>
+                        
+                          <li><a title="SAS程序结构" href="15673304578082.html">SAS程序结构</a></li>
+                        
+                          <li><a title="数值分析" href="15679868479784.html">数值分析</a></li>
+                        
+                          <li><a title="数学与计算机" href="15662129253478.html">数学与计算机</a></li>
+                        
+                          <li><a title="蚁群优化算法学习笔记" href="15681180752987.html">蚁群优化算法学习笔记</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>基础数学</span></li>
+                        
+                          <li><a title="GTM 书单" href="15717326165491.html">GTM 书单</a></li>
+                        
+                          <li><a title="合同" href="15675882890776.html">合同</a></li>
+                        
+                          <li><a title="复变函数整理" href="15670727988571.html">复变函数整理</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>计算机</span></li>
+                        
+                          <li><a title="MYsql 学习教程" href="15666534139692.html">MYsql 学习教程</a></li>
+                        
+                          <li><a title="SAS安装教程" href="15675205901094.html">SAS安装教程</a></li>
+                        
+                          <li><a title="itertools 模块" href="15681237931017.html">itertools 模块</a></li>
+                        
+                          <li><a title="scipy 模块参考书" href="15679893433260.html">scipy 模块参考书</a></li>
+                        
+                          <li><a title="sklearn 模块参考书" href="15679981303848.html">sklearn 模块参考书</a></li>
+                        
+                          <li><a title="wifi 相关" href="15375337935500.html">wifi 相关</a></li>
+                        
+                          <li><a title="地图相关" href="15682069194444.html">地图相关</a></li>
+                        
+                          <li><a title="树莓派入门笔记" href="15696705812938.html">树莓派入门笔记</a></li>
+                        
+                          <li><a title="爬虫学习" href="15678538813115.html">爬虫学习</a></li>
+                        
+                          <li><a title="计算机三级知识点" href="15623137342353.html">计算机三级知识点</a></li>
+                        
+                          <li><a title="计算机二级 公共知识" href="15653132926815.html">计算机二级 公共知识</a></li>
+                        
+                          <li><a title="计算机二级python" href="15655035745414.html">计算机二级python</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>数值分析/计算物理</span></li>
+                        
+                          <li><a title="GSPM笔记" href="15699393940279.html">GSPM笔记</a></li>
+                        
+                          <li><a title="PDE（Walter/njdx）" href="15645732861970.html">PDE（Walter/njdx）</a></li>
+                        
+                          <li><a title="数值线性代数第一次学习" href="15551995220068.html">数值线性代数第一次学习</a></li>
+                        
+                          <li><a title="数学模型代码整合" href="15608678868641.html">数学模型代码整合</a></li>
+                        
+                          <li><a title="课程二:偏微分方程数值方法" href="15621385998065.html">课程二:偏微分方程数值方法</a></li>
+                        
+
+                    
+                  </ul>
+                </nav>
+                </div>
+              </div>
+            </div>
+            <div class="large-9 medium-9 columns">
+
+ 
 
 
+	
+		<div class="markdown-body">
+		<h1>地图相关</h1>
 
-        </div>
-			<footer id="footer" class="inner">Copyright &copy; 2014
-Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a> &nbsp;&nbsp; 
-Theme by <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a>
-      </footer>
+		<p>在描述数据时，如果有一张热力地图，将是一件非常棒的事情，在这里我在尝试用python制作地图</p>
+
+<h2 id="toc_0">pyecharts</h2>
+
+<p>pyecharts 将不再自带地图 js 文件。如用户需要用到地图图表，可自行安装对应的地图文件包。<br/>
+全球国家地图: echarts-countries-pypkg (1.9MB): 世界地图和 213 个国家，包括中国地图<br/>
+中国省级地图: echarts-china-provinces-pypkg (730KB)：23 个省，5 个自治区<br/>
+中国市级地图: echarts-china-cities-pypkg (3.8MB)：370 个中国城市<br/>
+中国县区级地图: echarts-china-counties-pypkg (4.1MB)：2882 个中国县·区<br/>
+中国区域地图: echarts-china-misc-pypkg (148KB)：11 个中国区域地图，比如华南、华北。</p>
+
+<pre><code class="language-text">如果提示缺少这个就安装一下
+pip  install pyecharts_snapshot
+pip install echarts-countries-pypkg
+pip install echarts-china-provinces-pypkg
+pip install echarts-china-cities-pypkg
+pip install echarts-china-counties-pypkg
+pip install echarts-china-misc-pypkg
+</code></pre>
+
+<h2 id="toc_1">Basemap</h2>
+
+
 		</div>
-	</div>
+	
+
+ 
+	
+
+ 
+	
+
+ 
+	
+
+ 
+	
+
+ 
+	
+
+ 
+	
 
   
-    
+  
+</div></div>
 
+
+<div class="page-bottom">
+  <div class="row">
+  <hr />
+  <div class="small-9 columns">
+  <p class="copyright">Copyright &copy; 2015
+Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+  <div class="small-3 columns">
+  <p class="copyright text-right"><a href="#header">TOP</a></p>
+  </div>
+   
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+    
+    
+    <script src="asset/js/foundation.min.js"></script>
+    <script src="asset/js/foundation/foundation.offcanvas.js"></script>
+    <script>
+      $(document).foundation();
+
+     
+    </script>
+    
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
 
-</body>
+  </body>
 </html>
