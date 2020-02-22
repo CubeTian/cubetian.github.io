@@ -4,7 +4,7 @@
   <title><![CDATA[程序猿CubeTian]]></title>
   <link href="https://cubetian.github.io/atom.xml" rel="self"/>
   <link href="https://cubetian.github.io/"/>
-  <updated>2020-02-19T13:45:11+08:00</updated>
+  <updated>2020-02-22T16:10:06+08:00</updated>
   <id>https://cubetian.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -1640,6 +1640,27 @@ pip install echarts-china-misc-pypkg
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[实数七大公理互相推导]]></title>
+    <link href="https://cubetian.github.io/15823570454686.html"/>
+    <updated>2020-02-22T15:37:25+08:00</updated>
+    <id>https://cubetian.github.io/15823570454686.html</id>
+    <content type="html"><![CDATA[
+<p>转载自<a href="https://space.bilibili.com/269435310/article">bilibili科协采访部</a><br/>
+<!--1. 有限覆盖定理证明区间套定理<br/>
+证明：用反证法.假设$\{[a_n,b_n]\}(n=1,2,3,\cdots)$没有公共点，则对任意一点$x\in [a_1,b_1]$，它都不会是$\{[a_n,b_n]\}(n=1,2,3,\cdots)$的公共点，从而存在正整数$n_x$，使得$x\notin [a_{n_x},b_{n_x}]$，故总存在一个开区间$U_x=(x-\delta_x,x+\delta_x)$，使得：$(x-\delta_x,x+\delta_x)\cap [a_{n_x},b_{n_x}]=\emptyset$，于是我们得到了$[a_1,b_1]$的一个开覆盖：$H=\{U_x=(x-\delta_x,x+\delta_x)|x\in [a_1,b_1]\}$.根据--></p>
+
+<p><img src="media/15823570454686/15823587748115.jpg" alt="" style="width:1101px;"/></p>
+
+<p><img src="media/15823570454686/15823588378639.jpg" alt=""/><br/>
+<img src="media/15823570454686/15823588654367.jpg" alt=""/><br/>
+<img src="media/15823570454686/15823588828454.jpg" alt=""/><br/>
+<img src="media/15823570454686/15823589104979.jpg" alt=""/><br/>
+<img src="media/15823570454686/15823589290068.jpg" alt=""/></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[想要的书目录]]></title>
     <link href="https://cubetian.github.io/15680140350374.html"/>
     <updated>2019-09-09T15:27:15+08:00</updated>
@@ -1727,19 +1748,6 @@ pip install echarts-china-misc-pypkg
 </ul>
 
 <p>（from wiki）</p>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[数值线性代数第一次学习]]></title>
-    <link href="https://cubetian.github.io/15551995220068.html"/>
-    <updated>2019-04-14T07:52:02+08:00</updated>
-    <id>https://cubetian.github.io/15551995220068.html</id>
-    <content type="html"><![CDATA[
-<h2 id="toc_0">前言</h2>
-
-<p>数值线性代数是本人学校曾经开展的一门课程，该课程现由数学模型和数值分析两门课程各自涉及一部分内容。由于本人对计算数学有需求，先通过陈中文老师的课件自学，并将自己的一些总结分享出来。</p>
 
 ]]></content>
   </entry>
