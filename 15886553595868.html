@@ -1,0 +1,626 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+    
+  Evans偏微分方程笔记/问题解答/视频讲解 - 程序猿CubeTian
+  
+  </title>
+ <meta name="description" content="众所周知，数学研究只需要一支笔和一堆草稿纸">
+ <link href="atom.xml" rel="alternate" title="程序猿CubeTian" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.min.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+    <script src="asset/highlightjs/highlight.pack.js"></script>
+    <link href="asset/highlightjs/styles/github.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+<div id="header">
+    <h1><a href="index.html">程序猿CubeTian</a></h1>
+</div>
+
+</nav>
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; 程序猿CubeTian</span>
+  </a>
+</nav>
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+      <li><a href="index.html">Home</a></li>
+      
+        <li class="divider"></li>
+        <li><label>其他</label></li>
+
+          
+            <li><a title="LATEX 定理、命题环境" href="15686818191570.html">LATEX 定理、命题环境</a></li>
+          
+            <li><a title="从不动点定理到计算复杂性" href="15408862456484.html">从不动点定理到计算复杂性</a></li>
+          
+            <li><a title="想要的书目录" href="15680140350374.html">想要的书目录</a></li>
+          
+            <li><a title="手表使用评价" href="15681170584422.html">手表使用评价</a></li>
+          
+            <li><a title="赛前感想" href="15682182289509.html">赛前感想</a></li>
+          
+            <li><a title="软件目录【20年5月】" href="15707633313339.html">软件目录【20年5月】</a></li>
+          
+            <li><a title="阿里巴巴店铺装修" href="15702534023062.html">阿里巴巴店铺装修</a></li>
+          
+            <li><a title="雅思阅读" href="15680029212149.html">雅思阅读</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>数学建模</label></li>
+
+          
+            <li><a title="SAS DATA步之全揭秘" href="15685969611776.html">SAS DATA步之全揭秘</a></li>
+          
+            <li><a title="SAS程序结构" href="15673304578082.html">SAS程序结构</a></li>
+          
+            <li><a title="数值分析" href="15679868479784.html">数值分析</a></li>
+          
+            <li><a title="数学与计算机" href="15662129253478.html">数学与计算机</a></li>
+          
+            <li><a title="蚁群优化算法学习笔记" href="15681180752987.html">蚁群优化算法学习笔记</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>基础数学</label></li>
+
+          
+            <li><a title="" href="15882579557118.html"></a></li>
+          
+            <li><a title="Evans偏微分方程笔记/问题解答/视频讲解" href="15886553595868.html">Evans偏微分方程笔记/问题解答/视频讲解</a></li>
+          
+            <li><a title="GTM 书单" href="15717326165491.html">GTM 书单</a></li>
+          
+            <li><a title="合同" href="15675882890776.html">合同</a></li>
+          
+            <li><a title="复变函数整理" href="15670727988571.html">复变函数整理</a></li>
+          
+            <li><a title="实数七大公理互相推导" href="15823570454686.html">实数七大公理互相推导</a></li>
+          
+            <li><a title="泛函分析习题" href="15877052828788.html">泛函分析习题</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>计算机</label></li>
+
+          
+            <li><a title="Awesome Crowd Counting" href="15893297244166.html">Awesome Crowd Counting</a></li>
+          
+            <li><a title="MYsql 学习教程" href="15666534139692.html">MYsql 学习教程</a></li>
+          
+            <li><a title="SAS安装教程" href="15675205901094.html">SAS安装教程</a></li>
+          
+            <li><a title="itertools 模块" href="15681237931017.html">itertools 模块</a></li>
+          
+            <li><a title="scipy 模块参考书" href="15679893433260.html">scipy 模块参考书</a></li>
+          
+            <li><a title="sklearn 模块参考书" href="15679981303848.html">sklearn 模块参考书</a></li>
+          
+            <li><a title="wifi 相关" href="15375337935500.html">wifi 相关</a></li>
+          
+            <li><a title="人群计数最全资源（含代码、工具、数据集、论文、leaderboard）" href="15893301279941.html">人群计数最全资源（含代码、工具、数据集、论文、leaderboard）</a></li>
+          
+            <li><a title="地图相关" href="15682069194444.html">地图相关</a></li>
+          
+            <li><a title="树莓派入门笔记" href="15696705812938.html">树莓派入门笔记</a></li>
+          
+            <li><a title="爬虫学习" href="15678538813115.html">爬虫学习</a></li>
+          
+            <li><a title="计算机三级知识点" href="15623137342353.html">计算机三级知识点</a></li>
+          
+            <li><a title="计算机二级 公共知识" href="15653132926815.html">计算机二级 公共知识</a></li>
+          
+            <li><a title="计算机二级python" href="15655035745414.html">计算机二级python</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>数值分析/计算物理</label></li>
+
+          
+            <li><a title="GSPM笔记" href="15699393940279.html">GSPM笔记</a></li>
+          
+            <li><a title="PDE（Walter/njdx）" href="15645732861970.html">PDE（Walter/njdx）</a></li>
+          
+            <li><a title="数值分析课程" href="15824373704036.html">数值分析课程</a></li>
+          
+            <li><a title="数值线性代数第一次学习" href="15551995220068.html">数值线性代数第一次学习</a></li>
+          
+            <li><a title="数学模型代码整合" href="15608678868641.html">数学模型代码整合</a></li>
+          
+            <li><a title="课程二:偏微分方程数值方法" href="15621385998065.html">课程二:偏微分方程数值方法</a></li>
+          
+
+      
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+        <section id="main-content" role="main" class="scroll-container">
+
+          <div class="row">
+            <div class="large-3 medium-3 columns">
+              <div class="hide-for-small">
+                <div class="sidebar">
+                <nav>
+                  <ul id="side-nav" class="side-nav">
+
+                    
+                      <li class="side-title"><span>其他</span></li>
+                        
+                          <li><a title="LATEX 定理、命题环境" href="15686818191570.html">LATEX 定理、命题环境</a></li>
+                        
+                          <li><a title="从不动点定理到计算复杂性" href="15408862456484.html">从不动点定理到计算复杂性</a></li>
+                        
+                          <li><a title="想要的书目录" href="15680140350374.html">想要的书目录</a></li>
+                        
+                          <li><a title="手表使用评价" href="15681170584422.html">手表使用评价</a></li>
+                        
+                          <li><a title="赛前感想" href="15682182289509.html">赛前感想</a></li>
+                        
+                          <li><a title="软件目录【20年5月】" href="15707633313339.html">软件目录【20年5月】</a></li>
+                        
+                          <li><a title="阿里巴巴店铺装修" href="15702534023062.html">阿里巴巴店铺装修</a></li>
+                        
+                          <li><a title="雅思阅读" href="15680029212149.html">雅思阅读</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>数学建模</span></li>
+                        
+                          <li><a title="SAS DATA步之全揭秘" href="15685969611776.html">SAS DATA步之全揭秘</a></li>
+                        
+                          <li><a title="SAS程序结构" href="15673304578082.html">SAS程序结构</a></li>
+                        
+                          <li><a title="数值分析" href="15679868479784.html">数值分析</a></li>
+                        
+                          <li><a title="数学与计算机" href="15662129253478.html">数学与计算机</a></li>
+                        
+                          <li><a title="蚁群优化算法学习笔记" href="15681180752987.html">蚁群优化算法学习笔记</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>基础数学</span></li>
+                        
+                          <li><a title="" href="15882579557118.html"></a></li>
+                        
+                          <li><a title="Evans偏微分方程笔记/问题解答/视频讲解" href="15886553595868.html">Evans偏微分方程笔记/问题解答/视频讲解</a></li>
+                        
+                          <li><a title="GTM 书单" href="15717326165491.html">GTM 书单</a></li>
+                        
+                          <li><a title="合同" href="15675882890776.html">合同</a></li>
+                        
+                          <li><a title="复变函数整理" href="15670727988571.html">复变函数整理</a></li>
+                        
+                          <li><a title="实数七大公理互相推导" href="15823570454686.html">实数七大公理互相推导</a></li>
+                        
+                          <li><a title="泛函分析习题" href="15877052828788.html">泛函分析习题</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>计算机</span></li>
+                        
+                          <li><a title="Awesome Crowd Counting" href="15893297244166.html">Awesome Crowd Counting</a></li>
+                        
+                          <li><a title="MYsql 学习教程" href="15666534139692.html">MYsql 学习教程</a></li>
+                        
+                          <li><a title="SAS安装教程" href="15675205901094.html">SAS安装教程</a></li>
+                        
+                          <li><a title="itertools 模块" href="15681237931017.html">itertools 模块</a></li>
+                        
+                          <li><a title="scipy 模块参考书" href="15679893433260.html">scipy 模块参考书</a></li>
+                        
+                          <li><a title="sklearn 模块参考书" href="15679981303848.html">sklearn 模块参考书</a></li>
+                        
+                          <li><a title="wifi 相关" href="15375337935500.html">wifi 相关</a></li>
+                        
+                          <li><a title="人群计数最全资源（含代码、工具、数据集、论文、leaderboard）" href="15893301279941.html">人群计数最全资源（含代码、工具、数据集、论文、leaderboard）</a></li>
+                        
+                          <li><a title="地图相关" href="15682069194444.html">地图相关</a></li>
+                        
+                          <li><a title="树莓派入门笔记" href="15696705812938.html">树莓派入门笔记</a></li>
+                        
+                          <li><a title="爬虫学习" href="15678538813115.html">爬虫学习</a></li>
+                        
+                          <li><a title="计算机三级知识点" href="15623137342353.html">计算机三级知识点</a></li>
+                        
+                          <li><a title="计算机二级 公共知识" href="15653132926815.html">计算机二级 公共知识</a></li>
+                        
+                          <li><a title="计算机二级python" href="15655035745414.html">计算机二级python</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>数值分析/计算物理</span></li>
+                        
+                          <li><a title="GSPM笔记" href="15699393940279.html">GSPM笔记</a></li>
+                        
+                          <li><a title="PDE（Walter/njdx）" href="15645732861970.html">PDE（Walter/njdx）</a></li>
+                        
+                          <li><a title="数值分析课程" href="15824373704036.html">数值分析课程</a></li>
+                        
+                          <li><a title="数值线性代数第一次学习" href="15551995220068.html">数值线性代数第一次学习</a></li>
+                        
+                          <li><a title="数学模型代码整合" href="15608678868641.html">数学模型代码整合</a></li>
+                        
+                          <li><a title="课程二:偏微分方程数值方法" href="15621385998065.html">课程二:偏微分方程数值方法</a></li>
+                        
+
+                    
+                  </ul>
+                </nav>
+                </div>
+              </div>
+            </div>
+            <div class="large-9 medium-9 columns">
+
+ <div class="markdown-body">
+<h1>Evans偏微分方程笔记/问题解答/视频讲解</h1>
+
+<p>张祖锦 小锦教学 <em>6天前</em></p>
+
+<p>Evans偏微分方程笔记/问题解答/视频讲解</p>
+
+<ul>
+<li><p>Exercises</p></li>
+<li><p>5 Sobolev spaces</p></li>
+<li><p>6 Second-order elliptic equations</p></li>
+<li><p>Appendix</p></li>
+</ul>
+
+<h2 id="toc_0">Exercises</h2>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247506617&amp;idx=1&amp;sn=5f05d1193cbcf22f84d129e403a74b00&amp;chksm=fd6982f2ca1e0be4d7cac278f446fceb72c586baa0458002d04d811a276ff3bb8c5dc303b53f&amp;scene=21#wechat_redirect">2019-2020-2 (2020 上半年) PDE Exercises</a></p>
+
+<h2 id="toc_1">5 Sobolev spaces</h2>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247492039&amp;idx=5&amp;sn=4e12475d5066d31bdc21a9f53a384d3d&amp;chksm=fd69b98cca1e309a25057b8770af207652531fde0dbd44bf18f3d5af44d4d719ebc35a87c149&amp;scene=21#wechat_redirect">5.1 Holder spaces</a> <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484229&amp;idx=1&amp;sn=e1eeda3ee19463d4047dac577cf86ffb&amp;chksm=e8a09ca0dfd715b610464b753cbd9792b11638d13136a1ae0ffaf053a56d536f62634558569a&amp;scene=21#wechat_redirect">Video Evans 5-1</a></p>
+
+<p>5.2 Sobolev spaces</p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247492039&amp;idx=6&amp;sn=24beebfb2efe43b45067e4d269301fc1&amp;chksm=fd69b98cca1e309a4b462030042c17c8b15c700703e606f1bc61c09be6c515b968adf02eab82&amp;scene=21#wechat_redirect">5.2.1 Weak derivatives</a> Definition and uniqueness of weak derivatives <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484229&amp;idx=2&amp;sn=75f03cdfe480852d8c8a0e41afd61f78&amp;chksm=e8a09ca0dfd715b6e57e3da822e49c51bf1628d306e501750edc565672b0ae6cd6db19a997a4&amp;scene=21#wechat_redirect">Video Evans 5-2-1-1</a>Examples of existence and nonexistence of weak derivatives <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484229&amp;idx=3&amp;sn=575883533fea7727224bc501e7166c55&amp;chksm=e8a09ca0dfd715b66ed437f920826877326af564e46bc5b73b1ffef0a487c9568e2f490e3257&amp;scene=21#wechat_redirect">Video Evans 5-2-1-2</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247492065&amp;idx=4&amp;sn=c0450410c206937a07dff65f8a2c8eac&amp;chksm=fd69b9aaca1e30bca1bb8faa19488a715bc1a86fb2874437cee39b87db842d9b5d61e7a3cb6d&amp;scene=21#wechat_redirect">5.2.2 Defintion of Sobolev spaces</a> Sobolev spaces <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484229&amp;idx=4&amp;sn=c01bd7817097372a8ed9563c5b96b18d&amp;chksm=e8a09ca0dfd715b6303daed8853db782d8c49721b34e23a018983e9bee6f63d1d9924dbc7e0a&amp;scene=21#wechat_redirect">Video Evans 5-2-2-1</a>Examples: Sobolev functions possess certain smoothness properties, but may stilly badly behaved <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484229&amp;idx=5&amp;sn=a6425093d5d1c91015774d01bc1f1ea3&amp;chksm=e8a09ca0dfd715b6ff8c943d1717b1560979a0d15729a3d6cd7870315f3dbefd74c6efd3c30e&amp;scene=21#wechat_redirect">Video Evans 5-2-2-2</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247483835&amp;idx=2&amp;sn=7587dd20a1b0688ad970eca4e5ced057&amp;chksm=e8a09e5edfd7174837eb9e314de8506063d7b20438cf06dc57e271f9cf7015220fd300f301d6&amp;scene=21#wechat_redirect">5.2.3 Elementary properties</a> Properties of weak derivatives <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484229&amp;idx=6&amp;sn=82052b6b9122fa28cd4098a035998727&amp;chksm=e8a09ca0dfd715b683eb653ccb86fc91616ae1e1a87abcb3b071af1959a9a571541a27e95f5f&amp;scene=21#wechat_redirect">Video Evans 5-2-3-1</a> Sobolev spaces are Banach spaces <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484229&amp;idx=7&amp;sn=e8e1a0ed0039e540808ee15d6dfc3ae4&amp;chksm=e8a09ca0dfd715b6acd6ff1e9a19925b386eafdaf328b651832deb0966de3e5f3528e50c35bc&amp;scene=21#wechat_redirect">Video Evans 5-2-3-2</a></p>
+
+<p>5.3  Approximation</p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484109&amp;idx=1&amp;sn=2a08ee8cb49930d0d0c996dc8e6331ce&amp;chksm=e8a09d28dfd7143ef1c4cf5831d1a77a0a7e27a0442e0a602b1a7c23fb957d2bbf5f5c7e9cd8&amp;scene=21#wechat_redirect">5.3.1 Interior approximation by smooth functions</a> <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484229&amp;idx=8&amp;sn=e578c5a0cfc3b2c062ceba44c45a487d&amp;chksm=e8a09ca0dfd715b6b3ceee0686f6f6ab5fd5d900e948381eaf54853e38a67b1c50896aca04dc&amp;scene=21#wechat_redirect">Video Evans 5-3-1</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484109&amp;idx=2&amp;sn=5ee6913443a6b96ee52d94029617de53&amp;chksm=e8a09d28dfd7143eb028d957585e2311542c45b54955777b908906583f28030af41c6d3e690e&amp;scene=21#wechat_redirect">5.3.2 Approximation by smooth functions</a> <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484268&amp;idx=5&amp;sn=eec2587e0c3c84ce0b040f536e030ee2&amp;chksm=e8a09c89dfd7159f6a05e5b18378c1b0daa93152226503194e5fba1e39d18c726be5f82c1daa&amp;scene=21#wechat_redirect">Video Evans 5-3-2</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484109&amp;idx=3&amp;sn=3e17da60c33801574391385545ea1267&amp;chksm=e8a09d28dfd7143e397b4697466c7f343fe121288257528df5a79a23b3e1ad0f8b15bdfbbfc9&amp;scene=21#wechat_redirect">5.3.3 Global approximation by smooth functions</a> <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484268&amp;idx=6&amp;sn=714a5cff6f6896ba22a9c3236e0183ea&amp;chksm=e8a09c89dfd7159ff07862950f5b98d238bf49e85101dfc9023c213613499a09bca500a45863&amp;scene=21#wechat_redirect">Video Evans 5-3-3</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247488305&amp;idx=1&amp;sn=763945ed2de712cab69d10ff93e395b0&amp;chksm=fc16fa8ccb61739afa59ce4e63b844b3b26a13db512f966f8a1e6eb0b67f28ef4dbf5201e974&amp;scene=21#wechat_redirect">5.4 Extensions</a> <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484268&amp;idx=7&amp;sn=7a782ce0ce366da2aa46a45adbd9ca2e&amp;chksm=e8a09c89dfd7159f724953af7fa5207197af7e4f204cf9e292e3349b53e707860bafdf57aeba&amp;scene=21#wechat_redirect">Video Evans 5.4</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495185&amp;idx=1&amp;sn=9854ebacc5f3fc2b47f4ea2f382ac7a7&amp;chksm=fd69b65aca1e3f4c3c6cd44656ec1feb22b91b79cb09602cc3ad6e807a09a0d88c9b3e29ba9d&amp;scene=21#wechat_redirect">5.5 Traces</a> Trace Theorem <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484268&amp;idx=8&amp;sn=ed830d4e75813fed7e571dd3d2adbd6a&amp;chksm=e8a09c89dfd7159f02d2f2f5cd223df6e9f0f3600621146b1a667a8a1c3d70bbadb62dde6f1a&amp;scene=21#wechat_redirect">Video Evans 5.5-1</a> Trace zero functions in : <a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247505605&amp;idx=4&amp;sn=befce7bf08fca76240d882a9c069d4a3&amp;chksm=fd698e8eca1e0798b57ee38bf4730ea7ebe0b7a60fd8e64af548c98c8f52acb7367a05f437a8&amp;scene=21#wechat_redirect">Video Evans 5-5-2-2</a></p>
+
+<p>5.6 Sobolev inequalities</p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247488316&amp;idx=1&amp;sn=b3edb2593d45a9f8f9a2f6c01be29649&amp;chksm=fc16fa81cb6173973668be66d24a2769f5a059b27c01b334b18d13231479636472d9ec98f760&amp;scene=21#wechat_redirect">5.6.1 Gagliardo-Nirenberg-Sobolev inequality</a> GNS inequality:</p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247505605&amp;idx=5&amp;sn=e54171e9a38c403c9d1b7ee6361d53fb&amp;chksm=fd698e8eca1e0798b6686ddda72931e591e98f14b29f97f0d9b9b5599131d7df90fbc0f936ee&amp;scene=21#wechat_redirect">Video Evans 5-6-1-1</a> defined on is an example showing for <a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247505605&amp;idx=6&amp;sn=538abc13ea523b8f8f6df097a53963dc&amp;chksm=fd698e8eca1e0798d3e98a0812c13da6cd5db4d3712b563cfb580c6b62cff3934050a776fa54&amp;scene=21#wechat_redirect">Video Evans 5-6-1-2</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247488316&amp;idx=2&amp;sn=f98aadb1d4e6c36a2d1d4a2e528cd1be&amp;chksm=fc16fa81cb61739728924a46da1193131b401c50c67cc01c1d20f667d540b907a0556bdc50b1&amp;scene=21#wechat_redirect">5.6.2 Morrey&#39;s inequality</a> Proof <code>part 1</code></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247505605&amp;idx=8&amp;sn=2367b933f3cfc767d1737f27d55e11e0&amp;chksm=fd698e8eca1e0798552e1bf9acf10807ad5d57626e9ffa15078aeed6c71aaceea32e3d1f010e&amp;scene=21#wechat_redirect">Video Evans 5-6-2-1</a>, <code>part 2</code> <a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247505605&amp;idx=7&amp;sn=385d77e02765cf7f5cc68e0ba0010db2&amp;chksm=fd698e8eca1e07985826b0cc28189ec688428673852da290364bbf60774c80b3e0fa078da698&amp;scene=21#wechat_redirect">Video Evans 5-6-2-2</a>  For (or more generally, ), , , we have</p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247506139&amp;idx=4&amp;sn=5ee69c885261bb538942b375de132859&amp;chksm=fd698090ca1e09862da1d085304772323265424665bc084b34a28bfb8953876bef8ef5a187e9&amp;scene=21#wechat_redirect">Video Evans 5-6-2-3</a> Estimates for ,</p>
+
+<p>for a continuous version of <a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247506139&amp;idx=5&amp;sn=23b27324e30c4118b1f0ae0847824a33&amp;chksm=fd698090ca1e098672685e38bad8b9e526672103881204c11fb3b3874d3aebcf2e09b9e3b02b&amp;scene=21#wechat_redirect">Video Evans 5-6-2-4</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247488316&amp;idx=3&amp;sn=79bce4afaa7a4fea2a28ca4664eebfad&amp;chksm=fc16fa81cb6173972e9fb34556d40534b8a2eee6edcc62af223af3926d7cf0ef585047251950&amp;scene=21#wechat_redirect">5.6.3 General Sobolev inequalities</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247506139&amp;idx=6&amp;sn=bc1e670ddfa35fe40e9976b565a2e135&amp;chksm=fd698090ca1e0986937c89ca8890bc080c0e2c1887a87ec1715006efa38ef8d60f7ed1fa7f1a&amp;scene=21#wechat_redirect">Video Evans 5-6-3</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495341&amp;idx=2&amp;sn=d28f6b354c76089ad275c09709da0644&amp;chksm=fd69b6e6ca1e3ff00bbdaa85bd1589fa90e97860c8a4cae41f76e05f7e1d622d404b4ea79977&amp;scene=21#wechat_redirect">5.7 Compactness</a> <code>part 1</code> extension, so that with no boundary trouble; and <a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247506139&amp;idx=7&amp;sn=7eb63d08c4b3411bdc599d5e49e2c6df&amp;chksm=fd698090ca1e09867dc18311a65acd3e8f423f743dec0726d17ee9ff11886218ba182ba750ea&amp;scene=21#wechat_redirect">Video Evans 5-7-1</a> <code>part 2</code> fixed  0&quot; data-formula-type=&quot;inline-equation&quot; style=&quot;margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;&quot;&gt;, is precompact in ; and then  0, \exists\ m_j,\st \vls{j,k} \sen{u_{m_j}-u_{m_k}}_{L<sup>q(V)}\leq</sup> \del&quot; data-formula-type=&quot;inline-equation&quot; style=&quot;margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;&quot;&gt;; later, a standard diagonal argument leads to the desired extraction of a convergent subseuqnece in <a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247506139&amp;idx=8&amp;sn=a1c896a9fa964993c0c405a1f3ec5cb6&amp;chksm=fd698090ca1e0986713eed797116c8f6a6435ac2dad6e93c7bbc020a5fc471e2f29ad3a637b5&amp;scene=21#wechat_redirect">Video Evans 5-7-2</a></p>
+
+<p>5.8 Additional Topics</p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495341&amp;idx=3&amp;sn=954a686dc3d1f20d964e0f03956befcc&amp;chksm=fd69b6e6ca1e3ff09bbeea2bbb0431760c1ef90dc23d51e6302ca0bade26b9ed9b9db316119d&amp;scene=21#wechat_redirect">5.8.1 Poincar&#39;e&#39;s inequality</a> <code>Poincare inequality</code> Assume is bounded, connected and open, with boundary. Then</p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247506539&amp;idx=2&amp;sn=f7eb8b261e1990e3f563547189d8d6f0&amp;chksm=fd698220ca1e0b36a722addf64f378bb4a1525e2f3421e3a0243ee5fcb394a3a499a0fbba25a&amp;scene=21#wechat_redirect">Video Evans 5-8-1-1</a> <code>Poincare inequality for a ball</code> Assume . Then</p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247506539&amp;idx=3&amp;sn=21544afacd28382e685494fb500b03a4&amp;chksm=fd698220ca1e0b36a841b9ae90500e7f6b62f4a5f56e9de4b43d481313e7fe56bcd60a450b4e&amp;scene=21#wechat_redirect">Video Evans 5-8-1-2</a> For , <a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247506539&amp;idx=4&amp;sn=2f58442acd43ae5b0e4882ad835a097e&amp;chksm=fd698220ca1e0b368f36baefb46ac01b5cc631c6d9f341d5b1184929beb9716138f8e1cc570d&amp;scene=21#wechat_redirect">Video Evans 5-8-1-3</a></p>
+
+<p>5.8.2 Difference quotients</p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495341&amp;idx=4&amp;sn=c30c7836e347211e19247dc7169d14fb&amp;chksm=fd69b6e6ca1e3ff0901cc5a72f0a361bfa62eb24f266fd28c89f1b6cc76acba4e5b2a4a8ec32&amp;scene=21#wechat_redirect">5.8.2-1 Difference quotients and  </a> For ,</p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247506539&amp;idx=5&amp;sn=5ba64e3cd8e75368fc15cfdc7022643c&amp;chksm=fd698220ca1e0b36425dfda411712ccf9ae95612ad2372180f8307cb02e5ac3bd827ea631c56&amp;scene=21#wechat_redirect">Video Evans 5-8-2-1-1</a> For ,</p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247506539&amp;idx=6&amp;sn=3d7e5e723a243f6a311f1413a9485677&amp;chksm=fd698220ca1e0b36087da4e175031f2389224bb3b374eaa1a280a0156809dae2713c5a00b197&amp;scene=21#wechat_redirect">Video Evans 5-8-2-1-2</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495341&amp;idx=5&amp;sn=4e2953f171b18406d487c1faa68cdd37&amp;chksm=fd69b6e6ca1e3ff000e8f3bc65d46920148badea10db2eb9255f216c6b57d5af115f855e1a8e&amp;scene=21#wechat_redirect">5.8.2-2 Lipschitz functions and </a>Assume is bounded and open, with . Then . <a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247506539&amp;idx=7&amp;sn=9523fa0ef5e99e5579deb32e8b9e6d42&amp;chksm=fd698220ca1e0b36c47cae3df0167b6f97af574a6712c56e6495602ed5e26a991ae2c804d535&amp;scene=21#wechat_redirect">Video Evans 5-8-2-2</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495341&amp;idx=6&amp;sn=5d3293c11a14784093a1dc0d54802503&amp;chksm=fd69b6e6ca1e3ff05844b9b93291c44b2ad986c88661c55ce5753e04581390308eaf7612e875&amp;scene=21#wechat_redirect">5.8.3 Differentiable   </a>Let . Then function is differentiable <a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247506617&amp;idx=2&amp;sn=35ca36d4c021f6748d1254ac7f474e31&amp;chksm=fd6982f2ca1e0be4cc2cce971e619b455c5f180f0ae1e4f8000ea3c5a2c49c15038e246d0941&amp;scene=21#wechat_redirect">Video Evans 5-8-3</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495341&amp;idx=7&amp;sn=0d81c79cae303059edd9f8a3d31f2efe&amp;chksm=fd69b6e6ca1e3ff0a600431b468472c7a7e248e595152de53d004e0882add7f1cfa37cd64355&amp;scene=21#wechat_redirect">5.8.4 Hardy&#39;s inequality</a> <a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247506617&amp;idx=3&amp;sn=d3b7ec9da2e62c6bc466c9d4ccd18913&amp;chksm=fd6982f2ca1e0be451f922897fcf23fea81c099d21a7852a33be753fc116c0976157f4f24396&amp;scene=21#wechat_redirect">Video Evans 5-8-4</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495341&amp;idx=8&amp;sn=e606c73c55d7493c44cd1d791200ddfb&amp;chksm=fd69b6e6ca1e3ff04ec89e6abb7e44f2f870dd18881ec89c82019d0a7f38c273c6d0eef49dae&amp;scene=21#wechat_redirect">5.8.5 Fourier transform methods</a> <a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247506617&amp;idx=4&amp;sn=f46838e42a0f56a80955cb1252a88f96&amp;chksm=fd6982f2ca1e0be46f55606129eac18990c9cee12a7ea89bf04598e6882ae06fcf6b0a634167&amp;scene=21#wechat_redirect">Video Evans 5-8-5</a></p>
+
+<p>5.9 Other spaces of functions</p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247488337&amp;idx=1&amp;sn=84ac018707a38ea1cab01a5a716e5868&amp;chksm=fc16faeccb6173fa6fb99289fd481b0c170a8fca62246367f7b6fef47f98cc01a1949a51af7b&amp;scene=21#wechat_redirect">5.9.1 The space </a><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247506617&amp;idx=5&amp;sn=395e998c4bb79b8d2ffcf6989347b3ba&amp;chksm=fd6982f2ca1e0be402d6951db3a1bc44f821b7fb88e698fd0405f6e43a914fe20f7cfe7b1ed1&amp;scene=21#wechat_redirect">Video Evans 5-9-1</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247488337&amp;idx=2&amp;sn=9e248a9c56708db9831bd848aba7c5ac&amp;chksm=fc16faeccb6173fa445085f62f89f55f56c068fe42ced3aaa80a1f5972c47877a005c46b18cb&amp;scene=21#wechat_redirect">5.9.2 Spaces involving time</a></p>
+
+<p>5.10 Problems and Solutions</p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495383&amp;idx=2&amp;sn=ad62ceedd35ede01d5b098e3c745d15c&amp;chksm=fd69b69cca1e3f8a6f60b767b5ecfa114fb21e492e5d96c756636e0b2f67d6f25c51d411e54f&amp;scene=21#wechat_redirect">5.10.1 Holder spaces are Banach spaces</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495383&amp;idx=3&amp;sn=af3e13249ef68f1358870c28f41851e6&amp;chksm=fd69b69cca1e3f8a79de8d21ddaf7bbfc774af99e1ead9a14922f274ff47b29ca71843e176a0&amp;scene=21#wechat_redirect">5.10.2 An interpolation inequality for Holder norms</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495383&amp;idx=4&amp;sn=351eccf95068514b6fe913f133769e43&amp;chksm=fd69b69cca1e3f8a9a2c09b97c804b5abdf533fe2c001792e82a59aa0832dc7a5c6658986f9c&amp;scene=21#wechat_redirect">5.10.3 A parameter of Sobolev functions</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495383&amp;idx=5&amp;sn=9d9565eb36542a2513fea53921e26999&amp;chksm=fd69b69cca1e3f8aa9e7c1ec8e60a43a22f83b6280d82b6aba0dd533b7fdf8e09f89a2e3a1ae&amp;scene=21#wechat_redirect">5.10.4 Sobolev spaces on an open interval</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495383&amp;idx=6&amp;sn=ccdf1a8d7cacde1518b716e20da8f333&amp;chksm=fd69b69cca1e3f8a9a4fa8fa3da13ff64eea09d82deed73c8743747ebff782c58c60b2b3d26c&amp;scene=21#wechat_redirect">5.10.5 A cut-off function</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495431&amp;idx=1&amp;sn=08aad5f0b76ad18b80f8c66ce891861d&amp;chksm=fd69b74cca1e3e5a7e1dd606f4dd6c7992f57938468f34ded05caa20e4f7c83e7f5814fb9c28&amp;scene=21#wechat_redirect">5.10.6 Partition of unity</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495431&amp;idx=2&amp;sn=76538398e13caacec76fdb97445c3bca&amp;chksm=fd69b74cca1e3e5a9f5d9775a9bd171cb412dba0bc9f03879737cdc8c1e321bae26f08806fda&amp;scene=21#wechat_redirect">5.10.7 A new proof of the trace theorem</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495431&amp;idx=3&amp;sn=7cad6eec02b889a75aa56fb611bb85ed&amp;chksm=fd69b74cca1e3e5a3c60034d260008cfbcc398a31658cb12274b06095a017283f4ff1aef1de0&amp;scene=21#wechat_redirect">5.10.8 No Trace operator for Lebesgue spaces</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495431&amp;idx=4&amp;sn=b63b60e968a2083506b333b63269e28e&amp;chksm=fd69b74cca1e3e5a8486a4cf8b68b0ba1e840301840fdcc6fc439d074b0fb1a1d4a979cb2f00&amp;scene=21#wechat_redirect">5.10.9 An interpolation inequality</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495431&amp;idx=5&amp;sn=09e3d065549c89e703cf1a8404064e0b&amp;chksm=fd69b74cca1e3e5a42c16d62d82d8b5b424b8b49a80c8f7f9b4a9b0478741ce9af15d109ae8f&amp;scene=21#wechat_redirect">5.10.10 Two interpolation inequalities</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495431&amp;idx=6&amp;sn=2e2baa2dafa5a20b661c6c0fef976a85&amp;chksm=fd69b74cca1e3e5a7369fa333f1a526330c6552cee0c81e6b8f1751c340c0967c11b9cf1a405&amp;scene=21#wechat_redirect">5.10.11 Sobolev functions with weak derivative</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495431&amp;idx=7&amp;sn=fd87e1aaa7585917a9e06b09fcaac2e7&amp;chksm=fd69b74cca1e3e5ae5a19391b0974fd706d10ba6d065ed85ed12a153728626194c0f511a94f8&amp;scene=21#wechat_redirect">5.10.12 An counterexample for difference quotients. case</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495431&amp;idx=8&amp;sn=331aca49c1b34e58004e790d6e31c3e9&amp;chksm=fd69b74cca1e3e5ad7036eeebafe711cc6b401bb465ef6f8f8f3ee5baab17c31f2f6010ece20&amp;scene=21#wechat_redirect">5.10.13 An example showing</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247488394&amp;idx=1&amp;sn=34093744782d16103ee0f59eea858ee0&amp;chksm=fc16fa37cb6173218d2bae894791b4dc60a1943823589dd6e98840e3c4b42516339b4c641e75&amp;scene=21#wechat_redirect">5.10.14</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247488394&amp;idx=2&amp;sn=c429ebe22c5ab552d9e37eccfd37714f&amp;chksm=fc16fa37cb617321efc171b114520add861d4ce5e16356be94720c1671bdfe0df34899886620&amp;scene=21#wechat_redirect">5.10.15 A Poincar&#39;e-type inequality</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247488394&amp;idx=3&amp;sn=bf975c43fd3a8c8631d9b93bc7633e36&amp;chksm=fc16fa37cb617321ac811651abea4e2d384af583d3d76942bc626260043985ebc45b3a625dc9&amp;scene=21#wechat_redirect">5.10.16 Variant of Hardy&#39;s inequality</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247488394&amp;idx=4&amp;sn=f95d0c0da646872280eeea41cf0b34cb&amp;chksm=fc16fa37cb617321a2eaec4919a9810b56ee318d3fb444be68720a13b9fbc3b45f8497953ef0&amp;scene=21#wechat_redirect">5.10.17 Chain rule</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247488394&amp;idx=5&amp;sn=06f4a7d70ed758750f614a7c5244675b&amp;chksm=fc16fa37cb61732198a7c82f73faecee3b36666c2d0ead04faae3cd8ec31ab78d12d833a807a&amp;scene=21#wechat_redirect">5.10.18 The positive/negative part of Sobolev functions</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247488394&amp;idx=6&amp;sn=eb08e964d6092dae39a2612202d80385&amp;chksm=fc16fa37cb617321607b8d4280712451b7ae20a424db1339a6e1f59ccc76250e2d6fc80cf4d6&amp;scene=21#wechat_redirect">5.10.19 Alternative proof of Problem 18 (3)</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247488394&amp;idx=7&amp;sn=9c68f8f66efe5eb90638dc6b54c86c56&amp;chksm=fc16fa37cb6173211e37c383d7a090e9b0fcf7db5528ce1989cb75a3625ca8702e98ff460c03&amp;scene=21#wechat_redirect">5.10.20 \f{n}{2}\ra H<sup>s(\bbR<sup>n)\subset</sup></sup> L<sup>\infty(\bbR<sup>n)&quot;</sup></sup> data-formula-type=&quot;inline-equation&quot; style=&quot;margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;&quot;&gt;</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247488394&amp;idx=8&amp;sn=a49dfefea2afd4b4fcab5c161db13a19&amp;chksm=fc16fa37cb617321e230b6939d105375f431e72654f58c50c4fe5f5282f7ddae928cfe972945&amp;scene=21#wechat_redirect">5.10.21  \f{n}{2}\ra H<sup>s(\bbR<sup>n)&quot;</sup></sup> data-formula-type=&quot;inline-equation&quot; style=&quot;margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important;&quot;&gt;is a Banach algebra</a></p>
+
+<h2 id="toc_2">6 Second-order elliptic equations</h2>
+
+<p>6.1 Definitions</p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495499&amp;idx=5&amp;sn=24367c19071710d70ac00777fcededc9&amp;chksm=fd69b700ca1e3e16bab02d13471584248f7b3e5535a90dd0c9501dd4dfa1fcc61c229b6890fe&amp;scene=21#wechat_redirect">6.1.1 Elliptic equations</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495499&amp;idx=6&amp;sn=7c812247ab1b73b2dd3a95578e51c9ca&amp;chksm=fd69b700ca1e3e16a3ded22dd3a95ba11f2376fa8bbdf9e84e04b9ce4fb7033f76faa8871c87&amp;scene=21#wechat_redirect">6.1.2 Weak solutions</a></p>
+
+<p>6.2 Existence of weak solutions</p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495499&amp;idx=7&amp;sn=5fc25125d9dd43e1b9695b34d2dffaf7&amp;chksm=fd69b700ca1e3e165d3e37547de8982539ef83d8ac41bf1ef22a35c7006bd5774d49ba22d1be&amp;scene=21#wechat_redirect">6.2.1 Lax-Milgram Theorem</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495602&amp;idx=4&amp;sn=afc7bfad5409a70f00a1b9bd019d3675&amp;chksm=fd69b7f9ca1e3eeffce19e6e0a9f7505a8253da84637860c71f105cf21fd792cd16737f74158&amp;scene=21#wechat_redirect">6.2.2 Energy estimates</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495602&amp;idx=5&amp;sn=1c3507de1681ceccca1840e7ac983b33&amp;chksm=fd69b7f9ca1e3eef52f912cee524e4c5c4a1bf8b1bef925f9be1d7036a971606a834d19764d0&amp;scene=21#wechat_redirect">6.2.3-1 Second existence theorem for weak solutions</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495602&amp;idx=6&amp;sn=9c392748285353e02b797e5e0f8154c9&amp;chksm=fd69b7f9ca1e3eef5d76672491648f357b114bdddf5c90b16d6861d96c2ed6d33b29cd463231&amp;scene=21#wechat_redirect">6.2.3-2 Third existence theorem for weak solutions</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495602&amp;idx=7&amp;sn=89efe0b665070f7aa660d2c5b4de8a9c&amp;chksm=fd69b7f9ca1e3eef4e4b1961771e03fe6aac34491dc8a3533cc22841f506cb4bedc25b4b1527&amp;scene=21#wechat_redirect">6.2.3-3 Boundedness of the inverse</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495642&amp;idx=2&amp;sn=01ab87c61a6319c69520614ba2fa6019&amp;chksm=fd69b791ca1e3e87628326734fd333535270ce8ea835f918cb193462c066144f82ca7a31b670&amp;scene=21#wechat_redirect">6.6.1 Laplace&#39;s equation with potential function</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495642&amp;idx=3&amp;sn=49f1385978a96b98d735f1fb7257cb3e&amp;chksm=fd69b791ca1e3e874c61e6920b1309d4148db9712b5cea2fd4e8b229d89fc70ed237e855956a&amp;scene=21#wechat_redirect">6.6.2 Second-order elliptic operator with no transport</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247488515&amp;idx=6&amp;sn=94accd68fdad7e93adae817173c9cef5&amp;chksm=fc16fdbecb6174a81972bc67ca14f8ce31b2eb6622806d250723c571fb305135fa8c40989c63&amp;scene=21#wechat_redirect">6.6.3 Unique weak solution of the biharmonic function</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247488515&amp;idx=7&amp;sn=f9ec11b02878f76128e3611580b2b4d1&amp;chksm=fc16fdbecb6174a8ec08bd89fb03eb20376908f8bf27c1b7bf80c0091006080b636877550383&amp;scene=21#wechat_redirect">6.6.4 Weak solutions of Neumann&#39;s problem</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247488515&amp;idx=8&amp;sn=54976975a25f886e5af50dd1b5b62f48&amp;chksm=fc16fdbecb6174a8c49ccc658e7eaaccec72e6e7686e6e1d690797a37db0f4e8d6109596ce92&amp;scene=21#wechat_redirect">6.6.5 Unique weak solution of Poisson&#39;s equation with Robin</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247488572&amp;idx=1&amp;sn=03499367da99c7a11e2743754ce00178&amp;chksm=fc16fd81cb6174973596ad391884b9c632e472becc11d5de45265ab5792dd4f2c915158da514&amp;scene=21#wechat_redirect">6.6.6 Unique weak solution of Poisson&#39;s equation with mixed Dirichlet-Neumann boundary conditions</a></p>
+
+<h2 id="toc_3">Appendix</h2>
+
+<p>A. Notation</p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247483835&amp;idx=3&amp;sn=72645c84460bbc869d2e56151e6692fc&amp;chksm=e8a09e5edfd717487dc6732b4c3cd2907b0b218cf90ca18229fc43fd17898947f32213f09a35&amp;scene=21#wechat_redirect">A.1. Notation for matrices</a> <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247483897&amp;idx=3&amp;sn=75a2d04a3411f76d2973cd39f7a6683e&amp;chksm=e8a09e1cdfd7170a8de221bcdde224a14c5576b48f9c8ae80bd7b1258ad0681fd4ba3fb06825&amp;scene=21#wechat_redirect">Video Evans A1</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247483835&amp;idx=4&amp;sn=a84dd30e791eadac207ea7250bf6be86&amp;chksm=e8a09e5edfd717489419dcb27f488d7dfe19f419321effb07a4e74b3479b1b3661c5ab290710&amp;scene=21#wechat_redirect">A.2. Geometric noation</a> <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247483897&amp;idx=4&amp;sn=90e6bf494f18a064705621dbae84066b&amp;chksm=e8a09e1cdfd7170aba5c77578417a6efba372dc39b682b2d8be198f3ce766913ed6edb1eaeb9&amp;scene=21#wechat_redirect">Video Evans A2</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247483835&amp;idx=5&amp;sn=82b6c5d352df766912c94b5d174bb3dd&amp;chksm=e8a09e5edfd7174897755379bd2ce28e1c80cda9cb2084da2ac03de425ce606ef9ed1acd9218&amp;scene=21#wechat_redirect">A.3. Notation for functions</a> <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247483897&amp;idx=5&amp;sn=12fd59209c952e8d187bbc98c7cf3680&amp;chksm=e8a09e1cdfd7170a80ffae9a5bad487c5a4f333e2acc6d598a37befd1ff30cb15a43fcfcb196&amp;scene=21#wechat_redirect">Video Evans A3</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247483835&amp;idx=6&amp;sn=3ab91e31a42834bdd075a9e46f6ffac7&amp;chksm=e8a09e5edfd71748325d92c1f518d4a74997ae6e53ba71067cb34d19a73468563c5fd9ec0e3c&amp;scene=21#wechat_redirect">A.4. Vector-valued functions</a> <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247483897&amp;idx=6&amp;sn=fa744bdec6c59c74cfba692e4d94c78e&amp;chksm=e8a09e1cdfd7170ad29e763476d6d028c00594e5536c7d64c803f4bd0f1a62f1495fc3215925&amp;scene=21#wechat_redirect">Video Evans A4</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247483835&amp;idx=7&amp;sn=6e0e00f12fb000c02004282f3ecea174&amp;chksm=e8a09e5edfd71748529f78be1895fa70f2e898a365695da954132521ed1bd106ed8d862bff4e&amp;scene=21#wechat_redirect">A.5. Notation for estimates</a> <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247483897&amp;idx=7&amp;sn=4ce6adce3f089f6e4d3c3fecf4aec963&amp;chksm=e8a09e1cdfd7170acc2a9a2b1ab47256f20c833a630c3d6b6043fc98045d8b598e1256b67fc0&amp;scene=21#wechat_redirect">Video Evans A5</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247483835&amp;idx=8&amp;sn=dbcbb3fcbbe0d51359c2ce37c43ddadc&amp;chksm=e8a09e5edfd717489b0d0d1e98f62c7abd4bdd70435ff04337c2bd2585a0eb1f062c4f43e4d1&amp;scene=21#wechat_redirect">A.6. Some comments about notation</a> <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247483897&amp;idx=8&amp;sn=cb1590c8599c4f94e69f8d7108e8f512&amp;chksm=e8a09e1cdfd7170a95f4d2d3212b81c3110731d983cbac456173463749571c10d45a5c6a10e5&amp;scene=21#wechat_redirect">Video Evans A6</a></p>
+
+<p>B. Inequalities</p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247492123&amp;idx=2&amp;sn=d14f46de31dec82d2d4126fd52124584&amp;chksm=fd69ba50ca1e334655adca8201e88d596023328bbdb41492c14db43540b251ac835c82ff1d06&amp;scene=21#wechat_redirect">B.1. Convex functions</a> <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484099&amp;idx=1&amp;sn=c11200dbc12d2643118140a9d3caa2c6&amp;chksm=e8a09d26dfd714309be67abc4e8b28306e3ed90965cddf3194cb0336e5663c9d2eaa6ec5fcdd&amp;scene=21#wechat_redirect">Video Evans B1</a></p>
+
+<p>B.2. Useful inequalities</p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247492123&amp;idx=3&amp;sn=050528847dc96220857d9994071bd274&amp;chksm=fd69ba50ca1e3346c835789ee86f8703e15b31fabd000923e974848d095618a1bf00b861c806&amp;scene=21#wechat_redirect">B.2.1. Cauchy&#39;s inequality</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247492123&amp;idx=4&amp;sn=b257551a19b7cd9b646a03f44ae4d992&amp;chksm=fd69ba50ca1e3346a266910b1712a0fd8f4feee06a659d157783d920858a57cb5dba883cb488&amp;scene=21#wechat_redirect">B.2.2 Cauchy&#39;s inequality with epsilon</a> <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484099&amp;idx=2&amp;sn=8b76360f9db5541cfd2a6ddfdeb1b3e4&amp;chksm=e8a09d26dfd714303e461db5cf7e3f1f3446444699bd7effe97c6a719531554ee2fdb4cbcbe9&amp;scene=21#wechat_redirect">Video Evans B2-1,2</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247492123&amp;idx=5&amp;sn=531b415f147696162556b2da96f6d996&amp;chksm=fd69ba50ca1e3346ac62517a50c98c410098750db870b183ed7cf3ee92783b8d538adb4e8429&amp;scene=21#wechat_redirect">B.2.3. Young&#39;s inequality</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247492123&amp;idx=6&amp;sn=76e735c05abcbb16304c3f99131ab097&amp;chksm=fd69ba50ca1e334639012c3497c916e50cca1e041eda6ad088cb9c45d18ebf5ab822ad2f8f2f&amp;scene=21#wechat_redirect">B.2.4. Young&#39;s inequality with epsilon</a> <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484099&amp;idx=3&amp;sn=d3d15f8fbb5e334fcd7b6c7fbd42841d&amp;chksm=e8a09d26dfd71430daeec7f782ba92656b5f132a00d423e28a720fb93285ff5f4d13ea1345c7&amp;scene=21#wechat_redirect">Video Evans B2-3,4</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247492123&amp;idx=7&amp;sn=741a3c0152fcbe461e360bf0f08a4958&amp;chksm=fd69ba50ca1e3346502aa81a247b1a9e656ad6f8aca991dd4b64f17f51dbe0dd20e8a9223c8a&amp;scene=21#wechat_redirect">B.2.5. H&quot;older&#39;s inequality</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247492123&amp;idx=8&amp;sn=dcb819ada26d9edc442408584edae844&amp;chksm=fd69ba50ca1e3346af4184b59053f5965d437c45b0325a653cd94faed48c1d66b82224de605b&amp;scene=21#wechat_redirect">B.2.6. Minkowski&#39;s inequality</a> <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484099&amp;idx=4&amp;sn=c628139890c215d65ffd0a21ca5456de&amp;chksm=e8a09d26dfd71430ff072cb00fcf92609ece2260e3fbef9387455ec010c844b4fb88a22fde59&amp;scene=21#wechat_redirect">Video Evans B2-5,6</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247486611&amp;idx=1&amp;sn=d3fa818ba05b8763a60101547ac3e95f&amp;chksm=fc16e52ecb616c382a8748d85b7865b16e001284547912d515ac911fafae5fea502811ed1ecb&amp;scene=21#wechat_redirect">B.2.7. General H&quot;older inequality</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247486611&amp;idx=2&amp;sn=d009cf8a2130264704b08fbac2fe95de&amp;chksm=fc16e52ecb616c388e1bf5973d0f0285b663ed1c8d9a266826f38f54377f3d548ce9e833e0ea&amp;scene=21#wechat_redirect">B.2.8. Interpolation inequality for -norms</a> <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484099&amp;idx=5&amp;sn=44d21bf055aec3d2702ae140f81dd2c8&amp;chksm=e8a09d26dfd71430f1e438b1291abeb0cb797462b128dd5b5b2cb4c7bcfc54b17f5f59e5a96e&amp;scene=21#wechat_redirect">Video Evans B2-7,8</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247486611&amp;idx=3&amp;sn=40c3abe885e85a2218c0ffa42e59d71c&amp;chksm=fc16e52ecb616c383ec915927acb1e44a33fdbd72532725bccb0bfc0b800eceb2376c77400c0&amp;scene=21#wechat_redirect">B.2.9. Cauchy-Schwarz inequality</a> <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484099&amp;idx=6&amp;sn=dec15cd659464ece0e88e58874f83745&amp;chksm=e8a09d26dfd7143049983d0e2c2b7144282852f6562d8360d12fd660bc3c2d672994a7f38828&amp;scene=21#wechat_redirect">Video Evans B2-9</a></p>
+
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247486611&amp;idx=4&amp;sn=0ec1b3f4bf8800976b51694b278105c1&amp;chksm=fc16e52ecb616c38cc55043fce474422f43f8fe79f44dba9e425c3ba3f3c82342f311eba0975&amp;scene=21#wechat_redirect">B.2.10. Gronwall&#39;s inequality (differential form)</a> <a href="https://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484099&amp;idx=7&amp;sn=dc3bf2ac37b6569f28449bad1bea5866&amp;chksm=e8a09d26dfd71430297674d0a441436010b5aeddb24cddfffde46b5b493863bb819163e0b56c&amp;scene=21#wechat_redirect">Video Evans B2-10</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247486611&amp;idx=5&amp;sn=58d84780534aab05e8a51f75015a6ef1&amp;chksm=fc16e52ecb616c38d98360160571cf0cbd19b8d7ce6631a4dd728d1a9210fa012d9c3b99684c&amp;scene=21#wechat_redirect">B.2.11. Gronwall&#39;s inequality (integral form)</a> <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484099&amp;idx=8&amp;sn=bbcdc85768b948f84130d5712419ec82&amp;chksm=e8a09d26dfd71430ff4457e62926c3a333366d9b063233e2332930e80ee5085d7f6fe1763ef4&amp;scene=21#wechat_redirect">Video Evans B2-11</a></p>
+
+<p>C. Calculus</p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247492137&amp;idx=1&amp;sn=8e8d50f53d2c6ae2880eda72307bc852&amp;chksm=fd69ba62ca1e33748fa5b2015a02803254ecef20e5259d5864b11dfbeaece244592d7bced5f0&amp;scene=21#wechat_redirect">C.1. Boundaries</a> <a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247488229&amp;idx=1&amp;sn=eb8a8c3c6af58976c350404660867c18&amp;chksm=fc16fb58cb61724e5dbe929600b6af530426bc9a4c6794829db191595e9dfbd459f1517592ef&amp;scene=21#wechat_redirect">Video Evans C1</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247483840&amp;idx=2&amp;sn=7087fc83dc9a2e7ae9a7b1e643663a17&amp;chksm=e8a09e25dfd71733a66cdf990c9545d95ab96935e7fdc9265dd08a7d1948234f47328d9ef7ee&amp;scene=21#wechat_redirect">C.2. Gauss-Green theorem</a> <a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495185&amp;idx=3&amp;sn=147a1be9af77f009df7f45ba244d4723&amp;chksm=fd69b65aca1e3f4cd04b073190056b54ba67fbfdb87acf488c5476f74d94dfac66425c9bb600&amp;scene=21#wechat_redirect">Video Evans C2</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247483840&amp;idx=3&amp;sn=7da88d7d62bbc73e7fcedce494a44d32&amp;chksm=e8a09e25dfd71733b9b86de614e5dbdd29d211852fbda80418fc778b8dc00d81dd92cb2852f6&amp;scene=21#wechat_redirect">C.3. Polar coordinates, coarea formula</a> <a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495185&amp;idx=4&amp;sn=84fe578364d20805521182950a533c0f&amp;chksm=fd69b65aca1e3f4c4d93b592fbb76ee7039b249f28dc0aa1275948e58960a49dd9afe40b94c7&amp;scene=21#wechat_redirect">Video Evans C3</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247483840&amp;idx=4&amp;sn=91c1a75366e94430d56c295e8be752dd&amp;chksm=e8a09e25dfd7173374b8c3eebb8bf70606fde02e1cd0b5d9566859b97ac4f5ad90d794bdfb81&amp;scene=21#wechat_redirect">C.4. Moving regions</a> <a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495185&amp;idx=5&amp;sn=d070abb81ef1f000fadc08fd4a0aca5d&amp;chksm=fd69b65aca1e3f4c7afbe8053016f0b4d70ce7bff093cba3850b907ce353ebaf29af2e0c9963&amp;scene=21#wechat_redirect">Video Evans C4</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247483840&amp;idx=5&amp;sn=e482cb5a30303b260da235b8270215e4&amp;chksm=e8a09e25dfd717330134688e967e603d7bde2ac9319bd07876b39102f67762f0a191e7b26d65&amp;scene=21#wechat_redirect">C.5. Convolution and smoothing</a> <a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495185&amp;idx=6&amp;sn=33178bfe3c60910513d8bc608268077e&amp;chksm=fd69b65aca1e3f4c1b819101ea3b7ed6dea61dfa04de87fb97f5d14dfd2f34a59b7d2cc5f873&amp;scene=21#wechat_redirect">Video Evans C5</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247483840&amp;idx=6&amp;sn=7552c691f11cd18daaaa5785fb6b5db3&amp;chksm=e8a09e25dfd71733727efd680a333f6203966f603c20d3ffd529170af2d552a1ba90117f8a10&amp;scene=21#wechat_redirect">C.6. Inverse function theorem</a> <a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495185&amp;idx=7&amp;sn=33e4dad0a997da07a4667ebd45cdd00e&amp;chksm=fd69b65aca1e3f4c5265a77f61ad84c327db150686c067ccdd0a82db1db261c070f9019fd09a&amp;scene=21#wechat_redirect">Video Evans C6</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247483840&amp;idx=7&amp;sn=3e7ffebf710c73455c67a4b05a32bb79&amp;chksm=e8a09e25dfd71733f2fc193685fafd44051bcf409e945c1aae020e8283a0942f2701a08f8f86&amp;scene=21#wechat_redirect">C.7. Implicit function theorem</a> <a href="http://mp.weixin.qq.com/s?__biz=MzU3OTExMzI1Mg==&amp;mid=2247495185&amp;idx=8&amp;sn=9624ddc51c6d471c20783a97845416ef&amp;chksm=fd69b65aca1e3f4cb10e6f61ec35adc89f197ee0b4d93dd15f697dc8a7b57628eff34b5fb59c&amp;scene=21#wechat_redirect">Video Evans C7</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247483840&amp;idx=8&amp;sn=c307a801a838cbb723bf827e09bb29b6&amp;chksm=e8a09e25dfd717339cb7e2082672fad38f5e355d21ac648c98e245ec87d09052663930a0453c&amp;scene=21#wechat_redirect">C.8. Uniform convergence</a> <a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247488313&amp;idx=1&amp;sn=ed5bc22d20e9c493a74b3c735bd97ba0&amp;chksm=fc16fa84cb617392105519daf9930aebc23060e60457b89c5e3bc0c48b214ce45f75319d4b67&amp;scene=21#wechat_redirect">Video Evans C8</a></p>
+
+<p>D. Functional Analysis</p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247486702&amp;idx=1&amp;sn=a566199feecce3fb9afa87df3ed9fe31&amp;chksm=fc16e553cb616c45225f41cd2f1b8483975abfd55c7bc1110d40503994e3da4e9c55a90ee7d4&amp;scene=21#wechat_redirect">D.1. Banach spaces</a> <a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247488313&amp;idx=2&amp;sn=675ef7e89e0345113377ef9596be3162&amp;chksm=fc16fa84cb6173922cd9229007dfa5c68a48a8558c183387e90a939273029106e203568a9ba7&amp;scene=21#wechat_redirect">Video Evans D1</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247486702&amp;idx=2&amp;sn=204b2e0f255c3e6b14b1aa8492ba0bc4&amp;chksm=fc16e553cb616c4564d5482f2f9bfc81271aeef5d6c79c772342575ec2a6c0cba2efbb0c814a&amp;scene=21#wechat_redirect">D.2. Hilbert spaces</a> <a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247488313&amp;idx=3&amp;sn=73ac497d6bc83362fab4d05bf6e57dfa&amp;chksm=fc16fa84cb617392ce99aafaa3d15f6918ee3e480cb5fcdce7f7761496108f8f817c4eaeb777&amp;scene=21#wechat_redirect">Video Evans D2</a></p>
+
+<p>D.3. Bounded linear operaters</p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247486702&amp;idx=3&amp;sn=dfb8eb4165f3fe26fee5c1ec1123131f&amp;chksm=fc16e553cb616c4548941adce11ed617fab70369ad8c6e1605f8db41ae941417ba9a977b2175&amp;scene=21#wechat_redirect">D.3.1. Linear operators on Banach spaces</a> <a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247488313&amp;idx=4&amp;sn=71ee8d89a3337ffef39460d09c377654&amp;chksm=fc16fa84cb617392b330c6229dc36dd9a0058b410f3de5edb3c704744b7630a51e903b9dc09b&amp;scene=21#wechat_redirect">Video Evans D3-1</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247486702&amp;idx=4&amp;sn=0816cb03da49bdb3a8f7936760396274&amp;chksm=fc16e553cb616c451a3204ec647cdde5e7fbd2ffd4158613292f7de6ddf9097b94d3b51e4bb5&amp;scene=21#wechat_redirect">D.3.2. Linear operators on Hilbert spaces</a> <a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247488407&amp;idx=1&amp;sn=de1ad64183e973c2a8a91dc29fff707e&amp;chksm=fc16fa2acb61733ccad234eaf26116f73051421a375d72a6aa22bedffae13df0e7ae2c197b70&amp;scene=21#wechat_redirect">Video Evans D3-2</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247486702&amp;idx=5&amp;sn=4158a48b9c97e4a3f3d70a573556a49d&amp;chksm=fc16e553cb616c45c537417afe6c00e2d582707cfa6e8e16f9cd656cbac312befa8da8f70ec4&amp;scene=21#wechat_redirect">D.4. Weak convergence</a> <a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247488407&amp;idx=2&amp;sn=1115c3dd80f3c0a158e4e273815eb6aa&amp;chksm=fc16fa2acb61733c2ba7a079d95e9e69a04c080f301d3ab9ca3937881e8ed6377b7f2eba05b4&amp;scene=21#wechat_redirect">Video Evans D4</a></p>
+
+<p>D.5. Compact operators, Fredholm theory</p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247486702&amp;idx=6&amp;sn=6333ba6bc2c84492cf31ad6be1b95b74&amp;chksm=fc16e553cb616c45245d1159c99f31360a2aebdf94280561b01e3e4ac227cf8bc2a360402cd1&amp;scene=21#wechat_redirect">D.5.1 Definitions and basic properties</a> <a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247488407&amp;idx=3&amp;sn=573294aa54ed52c5acc752973e6ebbdc&amp;chksm=fc16fa2acb61733c95fc8f1b0623e88e3662d170b756e4802185c06c074524dc9b77ba8115bc&amp;scene=21#wechat_redirect">Video Evans D5-1</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247486702&amp;idx=7&amp;sn=0cf24fee7f34b4688e51264b2da098bb&amp;chksm=fc16e553cb616c45e74100af16fdf91e60cc2f264cfd6001bdc5f90ab541080888b4cab4d3e5&amp;scene=21#wechat_redirect">D.5.2. Fredholm alternative</a> <a href="https://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247488407&amp;idx=5&amp;sn=fda5fed4af9ca8ef8d7340695cbb0336&amp;chksm=fc16fa2acb61733c4f56658bed586a40166889599320184b8b43ab76d93936535932eb34a98d&amp;scene=21&amp;token=78939509&amp;lang=zh_CN#wechat_redirect">Video Evans D5-2-1</a> is closed <a href="https://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247488407&amp;idx=6&amp;sn=71a7b26bb124d8f3861f0af7214d8820&amp;chksm=fc16fa2acb61733c55c9417d2f5c1f2a9c6cb3b8ead54518055524becdfbd222ed1e0d3e7912&amp;scene=21&amp;token=78939509&amp;lang=zh_CN#wechat_redirect">Video Evans D5-2-2</a> <a href="https://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247488407&amp;idx=7&amp;sn=4997c6c50423fa93e48899f324f95598&amp;chksm=fc16fa2acb61733cf551a3b5be2ddbf9b1d0fde2da99df39b321ae25f4b0e71dbb51b36fd0fd&amp;scene=21&amp;token=78939509&amp;lang=zh_CN#wechat_redirect">Video Evans D5-2-3</a> <a href="https://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247488407&amp;idx=4&amp;sn=1878c50ecbb5cbd9185e03fec1e124fb&amp;chksm=fc16fa2acb61733c609deabeee9767697c310c92a4aeef2df36f76e6a728c6c05702e8979234&amp;scene=21&amp;token=78939509&amp;lang=zh_CN#wechat_redirect">Video Evans D5-2-4</a> <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484150&amp;idx=1&amp;sn=4a458984d3e09267e8241a382c0c98a0&amp;chksm=e8a09d13dfd71405be1409f6a0f121db01370bcf882e19d02ec92234aa6ce0b6fa00c6c3abff&amp;scene=21#wechat_redirect">Video Evans D5-2-5</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247486742&amp;idx=5&amp;sn=7f8f4249562f3816c10bdde8b1f3c188&amp;chksm=fc16e4abcb616dbdaa985b310dd1ecdb2c5a545131010ef93abb67afef60e3f3564f58134244&amp;scene=21#wechat_redirect">D.5.3. The spectrum of compact operators</a> <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484150&amp;idx=2&amp;sn=d1868d7f7c758464bb218e57a6ea7876&amp;chksm=e8a09d13dfd7140516c7592611e49817b3645ab55bff4b79ec31e33ab428c34dc389e3bee971&amp;scene=21#wechat_redirect">Video Evans D5-3-1</a> <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484150&amp;idx=3&amp;sn=e73cc8da84dad8ee3b7c7d4f56895dae&amp;chksm=e8a09d13dfd71405817c319277d60d6db26839ec91577d06732572bf8f9dc6387e59d349e526&amp;scene=21#wechat_redirect">Video Evans D5-3-2</a> is finite or a sequence tending to <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484150&amp;idx=4&amp;sn=763a8f081231755ab102920a660e2ccc&amp;chksm=e8a09d13dfd71405f6d8e1032350178e27ac12411e04811e7790b8d2d9fc4b8e38379a098850&amp;scene=21#wechat_redirect">Video Evans D5-3-3</a></p>
+
+<p>D.6. Symmetric operators</p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484153&amp;idx=5&amp;sn=c294bc6611415aef94ddb99f6b4edfe5&amp;chksm=e8a09d1cdfd7140a0ab359dc36f684bcfebbe39951a0a4ec51580bd295b1ffbc550dcff8b2c3&amp;scene=21#wechat_redirect">D.6.1.Bounds on spectrum of symmetric bounded linear operator</a> <a href="https://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484191&amp;idx=2&amp;sn=4e2079b8c36dc95129d2c7a6b8443d6e&amp;scene=21#wechat_redirect">Video Evans D6-1-1</a> <a href="https://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484191&amp;idx=3&amp;sn=4ef8b1c06349318b7858129683451f58&amp;scene=21#wechat_redirect">Video Evans D6-1-2</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484153&amp;idx=6&amp;sn=90d311a8e18f7035fdec67db5497aaf9&amp;chksm=e8a09d1cdfd7140a923cb33a99b463094b8e70847610a36b3b5e2cf6e43ed43eb47cdc17cf87&amp;scene=21#wechat_redirect">D.6.2.Eigenvectors of a compact,symmetric operator</a> and their dimensions <a href="https://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484191&amp;idx=4&amp;sn=d4eae12365946fa8e503918cf8ab45db&amp;scene=21#wechat_redirect">Video Evans D6-2-1</a> are orthogonal <a href="https://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484191&amp;idx=5&amp;sn=bfb2ce205d21f5f4369eb08e1b596d96&amp;scene=21#wechat_redirect">Video Evans D6-2-2</a> (the linear span of is dense in <a href="https://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484191&amp;idx=6&amp;sn=8ed30aae7d5c167ee470b0cffc8ad891&amp;scene=21#wechat_redirect">Video Evans D6-2-3</a> construction of a countable orthonormal base <a href="https://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484191&amp;idx=7&amp;sn=43ce7a2303397c7cb9a4293fa501be0b&amp;scene=21#wechat_redirect">Video Evans D6-2-4</a></p>
+
+<p>E. Measure theory</p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247486742&amp;idx=6&amp;sn=f8d69f81af164c0bcdd17f809172d38b&amp;chksm=fc16e4abcb616dbd585640b2e676adadcbbb143af156dfe43736fda3af83064d93b08e51c95c&amp;scene=21#wechat_redirect">E.1. Lebesgue measure</a> <a href="https://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484191&amp;idx=8&amp;sn=61b81ffe8d2fbd35a19e583694b644e6&amp;scene=21#wechat_redirect">Video Evans E1</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247486742&amp;idx=7&amp;sn=61531b89d20262e286f28682126c2e94&amp;chksm=fc16e4abcb616dbdea4672beb5cc82cf0b481af4962d1e7d48da47e5dc6ed58e84cbf38eff51&amp;scene=21#wechat_redirect">E.2. Measurable functions and integration</a> <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484195&amp;idx=1&amp;sn=918800fc248069773590ed808a2eb501&amp;chksm=e8a09cc6dfd715d008c3602c230b585d63f065a8501b787372629310e9b9d05cdfcd26016c16&amp;scene=21#wechat_redirect">Video Evans E2</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzU1OTQxNTUwNg==&amp;mid=2247486742&amp;idx=8&amp;sn=c7142d1a1cf82c4be3ecfd4572f21da3&amp;chksm=fc16e4abcb616dbd235533d3fdf58448aab1d384202837772898f3287327cef8fb82274fd56c&amp;scene=21#wechat_redirect">E.3. Convergence theorems for integrals</a> <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484195&amp;idx=2&amp;sn=e0c24c0b8f24c1715bd1d228e1bb9272&amp;chksm=e8a09cc6dfd715d0298a1c5348a10bf29b23343af4402a3c1906b250b1ef1a1827e28955e081&amp;scene=21#wechat_redirect">Video Evans E3</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247483878&amp;idx=1&amp;sn=419abab103a72d7d8a29a4811f857cc3&amp;chksm=e8a09e03dfd71715f59a871637309f475999660f1f5ab88f0e34eb74a57ff6438dc53465b23e&amp;scene=21#wechat_redirect">E.4. Differentiation</a> <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484195&amp;idx=3&amp;sn=ec2fdbe3c9785964c3f48e3f3d9ea1fe&amp;chksm=e8a09cc6dfd715d0e09d657ed90772c5082170c22f702916b98195b8d748e1abc76164adb1f5&amp;scene=21#wechat_redirect">Video Evans E4</a></p>
+
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247483878&amp;idx=2&amp;sn=2359df51529eae23efd8d71b8b11aaa8&amp;chksm=e8a09e03dfd71715ae561f060722bac43afa7ef721dfa527ddab5183c1ece37a9fc67900ae6c&amp;scene=21#wechat_redirect">E.5. Banach space-valued functions</a> <a href="http://mp.weixin.qq.com/s?__biz=MzIzMTU5MDUzOA==&amp;mid=2247484195&amp;idx=4&amp;sn=8bb3c7c6fa45583fd8f026249e279502&amp;chksm=e8a09cc6dfd715d07dbf210a8bf5f80535039e277195b6e35e4f83e8556503bc6d5cdb376416&amp;scene=21#wechat_redirect">Video Evans E5</a></p>
+
+<p><img src="media/15886553595868/qrcode." alt=""/></p>
+
+<p>微信扫一扫<br/>
+关注该公众号</p>
+
+
+</div>
+
+<br /><br />
+<hr />
+
+<div class="row clearfix">
+  <div class="large-6 columns">
+	<div class="text-left" style="padding:15px 0px;">
+		
+	        <a href="15893297244166.html"  title="Previous Post: Awesome Crowd Counting">&laquo; Awesome Crowd Counting</a>
+	    
+	</div>
+  </div>
+  <div class="large-6 columns">
+	<div class="text-right" style="padding:15px 0px;">
+		
+	        <a href="15699393940279.html" 
+	        title="Next Post: GSPM笔记">GSPM笔记 &raquo;</a>
+	    
+	</div>
+  </div>
+</div>
+
+<div class="row">
+<div style="padding:0px 0.93em;" class="share-comments">
+
+</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		var currentURL = '15886553595868.html';
+		$('#side-nav a').each(function(){
+			if($(this).attr('href') == currentURL){
+				$(this).parent().addClass('active');
+			}
+		});
+	});
+</script>  
+</div></div>
+
+
+<div class="page-bottom">
+  <div class="row">
+  <hr />
+  <div class="small-9 columns">
+  <p class="copyright">Copyright &copy; 2015
+Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+  <div class="small-3 columns">
+  <p class="copyright text-right"><a href="#header">TOP</a></p>
+  </div>
+   
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+    
+    
+    <script src="asset/js/foundation.min.js"></script>
+    <script src="asset/js/foundation/foundation.offcanvas.js"></script>
+    <script>
+      $(document).foundation();
+
+     
+    </script>
+    
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_SVG-full"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
+
+  </body>
+</html>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  wifi 相关 - 程序猿CubeTian
+  泛函分析习题 - 程序猿CubeTian
   
   </title>
  <meta name="description" content="众所周知，数学研究只需要一支笔和一堆草稿纸">
@@ -276,55 +276,12 @@
             <div class="large-9 medium-9 columns">
 
  <div class="markdown-body">
-<h1>wifi 相关</h1>
+<h1>泛函分析习题</h1>
 
-<h2 id="toc_0">使用大功率无线网卡抓取cap包用于密码破解（macos）</h2>
+<p>JD Ans<br/>
+<img src="media/15877052828788/IMG_1165.jpg" alt="IMG_1165"/></p>
 
-<p>1、安装aircrack-ng</p>
-
-<p>命令：brew install aircrack-ng</p>
-
-<p>注意，如果没安装brew,访问：<a href="https://brew.sh%EF%BC%8C%E9%A6%96%E9%A1%B5%E4%B8%8A%E6%9C%89%E5%AE%89%E8%A3%85brew%E7%9A%84%E5%91%BD%E4%BB%A4%EF%BC%8C%E6%88%91%E5%AE%89%E8%A3%85%E6%97%B6%EF%BC%88201706%EF%BC%89%E5%91%BD%E4%BB%A4%E5%A6%82%E4%B8%8B%EF%BC%9A">https://brew.sh，首页上有安装brew的命令，我安装时（201706）命令如下：</a></p>
-
-<p>/usr/bin/ruby -e &quot;$(curl -fsSLhttps://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</p>
-
-<p>2、添加airport快链</p>
-
-<p>命令：ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport</p>
-
-<p>3、使用mac自带的airport选取mac地址</p>
-
-<p>命令：airport -s</p>
-
-<p>选择CHANNEL的数值，比如：11</p>
-
-<p>4、监听选定的频道获取到握手的包</p>
-
-<p>命令：airport en0 sniff 11</p>
-
-<p>运行一段时间，就可以在/tmp收获以.cap结尾的分析包，结束之后会提示保存的.cap文件位置</p>
-
-<p>注意：（1）尽可能不要运行太长时间，否则.cap文件会比较大；</p>
-
-<p>（2）可以使用ctr+c结束运行(我刚开始就不知道🙈)；</p>
-
-<p>（3）如果提示权限问题，则使用 sudo airport en0 sniff 11</p>
-
-<p>5、用 aircrack-ng分析cap包</p>
-
-<p>命令：sudo aircrack-ng  /tmp/airportSniff******.cap</p>
-
-<p>找到有(1 handshake)的那一行记录，记录下BSSID（比如是:10:02:22:23:7v:6f）。</p>
-
-<p>建议直接搜索，否则能看晕，如果没有搜索到，请重新执行第4步；</p>
-
-<p>6、开始暴力破解</p>
-
-<p>命令：sudo aircrack-ng-wpojie.txt-b10:02:22:23:7v:6f/tmp/airportSniff******.cap</p>
-
-<p>注意：.txt为破解字典</p>
-
-<p>如果有碰撞到密码，程序会停止，并显示密码。</p>
+<p>这里取子列\({a_{n_k}}\)时不能够保证下一项是\(n_k+1\)</p>
 
 
 </div>
@@ -336,15 +293,15 @@
   <div class="large-6 columns">
 	<div class="text-left" style="padding:15px 0px;">
 		
-	        <a href="15679981303848.html"  title="Previous Post: sklearn 模块参考书">&laquo; sklearn 模块参考书</a>
+	        <a href="15696705812938.html"  title="Previous Post: 树莓派入门笔记">&laquo; 树莓派入门笔记</a>
 	    
 	</div>
   </div>
   <div class="large-6 columns">
 	<div class="text-right" style="padding:15px 0px;">
 		
-	        <a href="15893301279941.html" 
-	        title="Next Post: 人群计数最全资源（含代码、工具、数据集、论文、leaderboard）">人群计数最全资源（含代码、工具、数据集、论文、leaderboard） &raquo;</a>
+	        <a href="15678538813115.html" 
+	        title="Next Post: 爬虫学习">爬虫学习 &raquo;</a>
 	    
 	</div>
   </div>
@@ -357,7 +314,7 @@
 </div>
 <script type="text/javascript">
 	$(function(){
-		var currentURL = '15375337935500.html';
+		var currentURL = '15877052828788.html';
 		$('#side-nav a').each(function(){
 			if($(this).attr('href') == currentURL){
 				$(this).parent().addClass('active');

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  wifi 相关 - 程序猿CubeTian
+  Awesome Crowd Counting - 程序猿CubeTian
   
   </title>
  <meta name="description" content="众所周知，数学研究只需要一支笔和一堆草稿纸">
@@ -276,55 +276,245 @@
             <div class="large-9 medium-9 columns">
 
  <div class="markdown-body">
-<h1>wifi 相关</h1>
+<h1>Awesome Crowd Counting</h1>
 
-<h2 id="toc_0">使用大功率无线网卡抓取cap包用于密码破解（macos）</h2>
+<p><a href="http://gjy3035.github.io/blog/index.html">博客首页</a></p>
 
-<p>1、安装aircrack-ng</p>
+<ul>
+<li><a href="http://gjy3035.github.io/categories.html">分 类</a></li>
+<li><a href="http://gjy3035.github.io/tags.html">标 签</a></li>
+<li><a href="http://gjy3035.github.io/archives.html">归 档</a></li>
+<li><a href="http://gjy3035.github.io/about.html">关 于</a></li>
+<li>[回到首页](<a href="http://gjy3035.github.io/index.html">http://gjy3035.github.io/index.html</a></li>
+</ul>
 
-<p>命令：brew install aircrack-ng</p>
+<h1 id="toc_0">Awesome Crowd Counting</h1>
 
-<p>注意，如果没安装brew,访问：<a href="https://brew.sh%EF%BC%8C%E9%A6%96%E9%A1%B5%E4%B8%8A%E6%9C%89%E5%AE%89%E8%A3%85brew%E7%9A%84%E5%91%BD%E4%BB%A4%EF%BC%8C%E6%88%91%E5%AE%89%E8%A3%85%E6%97%B6%EF%BC%88201706%EF%BC%89%E5%91%BD%E4%BB%A4%E5%A6%82%E4%B8%8B%EF%BC%9A">https://brew.sh，首页上有安装brew的命令，我安装时（201706）命令如下：</a></p>
+<h2 id="toc_1">2018-04-23-Awesome Crowd Counting</h2>
 
-<p>/usr/bin/ruby -e &quot;$(curl -fsSLhttps://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</p>
+<p><a href="https://github.com/gjy3035/gjy3035.github.com/edit/master/_posts/2018-04-23-Awesome%20Crowd%20Counting.md">纠错</a>   23 Apr 2018</p>
 
-<p>2、添加airport快链</p>
+<hr/>
 
-<p>命令：ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport</p>
+<h1 id="toc_2">Awesome Crowd Counting</h1>
 
-<p>3、使用mac自带的airport选取mac地址</p>
+<h2 id="toc_3">Papers</h2>
 
-<p>命令：airport -s</p>
+<h3 id="toc_4">2018</h3>
 
-<p>选择CHANNEL的数值，比如：11</p>
+<ul>
+<li>Structured Inhomogeneous Density Map Learning for Crowd Counting (arXiv) [<a href="https://arxiv.org/pdf/1801.06642.pdf">paper</a>]</li>
+<li>Body Structure Aware Deep Crowd Counting (<strong>TIP2018</strong>) [<a href="http://mac.xmu.edu.cn/rrji/papers/IP%202018-Body.pdf">paper</a>]</li>
+<li>CSRNet: Dilated Convolutional Neural Networks for Understanding the Highly Congested Scenes (<strong>CVPR2018</strong>) [<a href="https://arxiv.org/abs/1802.10062">paper</a>]</li>
+<li>Leveraging Unlabeled Data for Crowd Counting by Learning to Rank (<strong>CVPR2018</strong>) [<a href="https://arxiv.org/abs/1803.03095">paper</a>] [<a href="https://github.com/xialeiliu/CrowdCountingCVPR18">code</a>]</li>
+<li>Crowd Counting via Adversarial Cross-Scale Consistency Pursuit (<strong>CVPR2018</strong>)</li>
+<li>DecideNet: Counting Varying Density Crowds Through Attention Guided Detection and Density (<strong>CVPR2018</strong>) [<a href="https://arxiv.org/abs/1712.06679">paper</a>]</li>
+<li>Crowd counting via scale-adaptive convolutional neural network (<strong>WACV2018</strong>) [<a href="https://arxiv.org/abs/1711.04433">paper</a>] [<a href="https://github.com/miao0913/SaCNN-CrowdCounting-Tencent_Youtu">code</a>]</li>
+</ul>
 
-<p>4、监听选定的频道获取到握手的包</p>
+<h3 id="toc_5">2017</h3>
 
-<p>命令：airport en0 sniff 11</p>
+<ul>
+<li>Spatiotemporal Modeling for Crowd Counting in Videos (<strong>ICCV2017</strong>) [<a href="https://arxiv.org/pdf/1707.07890.pdf">paper</a>]</li>
+<li>Generating High-Quality Crowd Density Maps using Contextual Pyramid CNNs (<strong>ICCV2017</strong>) [<a href="https://arxiv.org/abs/1708.00953">paper</a>]</li>
+<li>Spatiotemporal Modeling for Crowd Counting in Videos (<strong>ICCV2017</strong>) [<a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Xiong_Spatiotemporal_Modeling_for_ICCV_2017_paper.pdf">paper</a>]</li>
+<li>CNN-based Cascaded Multi-task Learning of High-level Prior and Density Estimation for Crowd Counting (<strong>AVSS2017</strong>) [<a href="https://arxiv.org/abs/1707.09605">paper</a>] [<a href="https://github.com/svishwa/crowdcount-cascaded-mtl">code</a>]</li>
+<li>Switching Convolutional Neural Network for Crowd Counting (<strong>CVPR2017</strong>) [<a href="https://arxiv.org/abs/1708.00199">paper</a>] [<a href="https://github.com/val-iisc/crowd-counting-scnn">code</a>]</li>
+<li>A <strong>Survey</strong> of Recent Advances in CNN-based Single Image Crowd Counting and Density Estimation (<strong>PR Letters</strong>) [<a href="https://arxiv.org/abs/1707.01202">paper</a>]</li>
+<li>Image Crowd Counting Using Convolutional Neural Network and Markov Random Field (arXiv) [<a href="https://arxiv.org/abs/1706.03686">paper</a>] [<a href="https://github.com/hankong/crowd-counting">code</a>]</li>
+<li>Multi-scale Convolution Neural Networks for Crowd Counting (arXiv) [<a href="https://arxiv.org/abs/1702.02359">paper</a>] [<a href="https://github.com/Ling-Bao/mscnn">code</a>]</li>
+</ul>
 
-<p>运行一段时间，就可以在/tmp收获以.cap结尾的分析包，结束之后会提示保存的.cap文件位置</p>
+<h3 id="toc_6">2016</h3>
 
-<p>注意：（1）尽可能不要运行太长时间，否则.cap文件会比较大；</p>
+<ul>
+<li>Towards perspective-free object counting with deep learning (<strong>ECCV2016</strong>) [<a href="http://agamenon.tsc.uah.es/Investigacion/gram/publications/eccv2016-onoro.pdf">paper</a>] [<a href="https://github.com/gramuah/ccnn">code</a>]</li>
+<li>Slicing Convolutional Neural Network for Crowd Video Understanding (<strong>CVPR2016</strong>) [<a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Shao_Slicing_Convolutional_Neural_CVPR_2016_paper.pdf">paper</a>] [<a href="https://github.com/amandajshao/Slicing-CNN">code</a>]</li>
+<li>CrowdNet: A Deep Convolutional Network for Dense Crowd Counting (<strong>CVPR2016</strong>) [<a href="https://arxiv.org/abs/1608.06197">paper</a>] [<a href="https://github.com/davideverona/deep-crowd-counting_crowdnet">code</a>]</li>
+<li>Single-Image Crowd Counting via Multi-Column Convolutional Neural Network (<strong>CVPR2016</strong>) [<a href="https://pdfs.semanticscholar.org/7ca4/bcfb186958bafb1bb9512c40a9c54721c9fc.pdf">paper</a>] [<a href="https://github.com/svishwa/crowdcount-mcnn">code</a>] [<a href="https://github.com/aditya-vora/crowd_counting_tensorflow">unofficial code</a>]</li>
+</ul>
 
-<p>（2）可以使用ctr+c结束运行(我刚开始就不知道🙈)；</p>
+<h3 id="toc_7">2015</h3>
 
-<p>（3）如果提示权限问题，则使用 sudo airport en0 sniff 11</p>
+<ul>
+<li>COUNT Forest: CO-voting Uncertain Number of Targets using Random Forest for Crowd Density Estimation (<strong>ICCV2015</strong>) [<a href="http://openaccess.thecvf.com/content_iccv_2015/papers/Pham_COUNT_Forest_CO-Voting_ICCV_2015_paper.pdf">paper</a>]</li>
+<li>Cross-scene Crowd Counting via Deep Convolutional Neural Networks (<strong>CVPR2015</strong>) [<a href="https://www.ee.cuhk.edu.hk/%7Exgwang/papers/zhangLWYcvpr15.pdf">paper</a>] [<a href="https://github.com/wk910930/crowd_density_segmentation">code</a>]</li>
+</ul>
 
-<p>5、用 aircrack-ng分析cap包</p>
+<h3 id="toc_8">2013</h3>
 
-<p>命令：sudo aircrack-ng  /tmp/airportSniff******.cap</p>
+<ul>
+<li>Multi-Source Multi-Scale Counting in Extremely Dense Crowd Images (<strong>CVPR2013</strong>) [<a href="http://openaccess.thecvf.com/content_cvpr_2013/papers/Idrees_Multi-source_Multi-scale_Counting_2013_CVPR_paper.pdf">paper</a>]</li>
+<li>Crossing the Line: Crowd Counting by Integer Programming with Local Features (<strong>CVPR2013</strong>) [<a href="http://openaccess.thecvf.com/content_cvpr_2013/papers/Ma_Crossing_the_Line_2013_CVPR_paper.pdf">paper</a>]</li>
+</ul>
 
-<p>找到有(1 handshake)的那一行记录，记录下BSSID（比如是:10:02:22:23:7v:6f）。</p>
+<h3 id="toc_9">2012</h3>
 
-<p>建议直接搜索，否则能看晕，如果没有搜索到，请重新执行第4步；</p>
+<ul>
+<li>Feature mining for localised crowd counting (<strong>ECCV2012</strong>) [<a href="https://pdfs.semanticscholar.org/c5ec/65e36bccf8a64050d38598511f0352653d6f.pdf">paper</a>]</li>
+</ul>
 
-<p>6、开始暴力破解</p>
+<h3 id="toc_10">2008</h3>
 
-<p>命令：sudo aircrack-ng-wpojie.txt-b10:02:22:23:7v:6f/tmp/airportSniff******.cap</p>
+<ul>
+<li>Privacy preserving crowd monitoring: Counting people without people models or tracking (<strong>CVPR 2008</strong>) [<a href="http://visal.cs.cityu.edu.hk/static/pubs/conf/cvpr08-peoplecnt.pdf">paper</a>]</li>
+</ul>
 
-<p>注意：.txt为破解字典</p>
+<h2 id="toc_11">Datasets</h2>
 
-<p>如果有碰撞到密码，程序会停止，并显示密码。</p>
+<ul>
+<li>ShanghaiTech Dataset [Link: <a href="https://www.dropbox.com/s/fipgjqxl7uj8hd5/ShanghaiTech.zip?dl=0">Dropbox</a> / <a href="https://pan.baidu.com/s/1nuAYslz">BaiduNetdisk</a>]</li>
+<li>WorldExpo’10 Dataset [<a href="http://www.ee.cuhk.edu.hk/%7Exgwang/expo.html">Link</a>]</li>
+<li>UCF CC 50 Dataset [<a href="http://crcv.ucf.edu/data/crowd_counting.php">Link</a>]</li>
+<li>Mall Dataset [<a href="http://personal.ie.cuhk.edu.hk/%7Eccloy/downloads_mall_dataset.html">Link</a>]</li>
+<li>UCSD Dataset [<a href="http://www.svcl.ucsd.edu/projects/peoplecnt/">Link</a>]</li>
+<li>SmartCity Dataset [Link: <a href="https://drive.google.com/file/d/1xqflSQv9dZ0A93_lP34pSIfcpheT2Fi8/view?usp=sharing">GoogleDrive</a> / <a href="https://pan.baidu.com/s/1pMuGyNp">BaiduNetdisk</a>]</li>
+<li>AHU-Crowd Dataset [<a href="http://cs-chan.com/downloads_crowd_dataset.html">Link</a>]</li>
+</ul>
+
+<h2 id="toc_12">Performance</h2>
+
+<p>The project is being continually updated.</p>
+
+<h3 id="toc_13">ShanghaiTech Part A</h3>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Method</th>
+<th style="text-align: left">MAE</th>
+<th style="text-align: left">MSE</th>
+<th style="text-align: left">PSNR</th>
+<th style="text-align: left">SSIM</th>
+<th style="text-align: left">Model Size</th>
+<th style="text-align: left">Params</th>
+<th style="text-align: left">Runtime (ms)</th>
+<th style="text-align: left">Pre-trained</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left"><a href="http://gjy3035.github.io/reading/Awesome-Crowd-Counting.html#DAN">DAN</a></td>
+<td style="text-align: left">81.8</td>
+<td style="text-align: left">134.7</td>
+<td style="text-align: left">-</td>
+<td style="text-align: left">-</td>
+<td style="text-align: left">-</td>
+<td style="text-align: left">-</td>
+<td style="text-align: left">-</td>
+<td style="text-align: left">-</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="http://gjy3035.github.io/reading/Awesome-Crowd-Counting.html#CSR">CSR</a></td>
+<td style="text-align: left">68.2</td>
+<td style="text-align: left">115.0</td>
+<td style="text-align: left">23.79</td>
+<td style="text-align: left">0.76</td>
+<td style="text-align: left">-</td>
+<td style="text-align: left">-</td>
+<td style="text-align: left">-</td>
+<td style="text-align: left">-</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="http://gjy3035.github.io/reading/Awesome-Crowd-Counting.html#MCNN">MCNN</a></td>
+<td style="text-align: left">110.2</td>
+<td style="text-align: left">173.2</td>
+<td style="text-align: left">21.4</td>
+<td style="text-align: left">0.52</td>
+<td style="text-align: left">0.12M</td>
+<td style="text-align: left">-</td>
+<td style="text-align: left">-</td>
+<td style="text-align: left">-</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_14">ShanghaiTech Part B</h3>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Method</th>
+<th style="text-align: left">MAE</th>
+<th style="text-align: left">MSE</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left"><a href="http://gjy3035.github.io/reading/Awesome-Crowd-Counting.html#DAN">DAN</a></td>
+<td style="text-align: left">13.2</td>
+<td style="text-align: left">20.1</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="http://gjy3035.github.io/reading/Awesome-Crowd-Counting.html#BSAD">BSAD</a></td>
+<td style="text-align: left">20.2</td>
+<td style="text-align: left">35.6</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="http://gjy3035.github.io/reading/Awesome-Crowd-Counting.html#CSR">CSR</a></td>
+<td style="text-align: left">10.6</td>
+<td style="text-align: left">16.0</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="http://gjy3035.github.io/reading/Awesome-Crowd-Counting.html#MCNN">MCNN</a></td>
+<td style="text-align: left">26.4</td>
+<td style="text-align: left">41.3</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_15">UCF_CC_50</h3>
+
+<p>| Method | MAE | MSE | | — | — | — | | <a href="http://gjy3035.github.io/reading/Awesome-Crowd-Counting.html#DAN">DAN</a> | 309.6 | 402.64 | | <a href="http://gjy3035.github.io/reading/Awesome-Crowd-Counting.html#BSAD">BSAD</a> | 409.5 | 563.7 | | <a href="http://gjy3035.github.io/reading/Awesome-Crowd-Counting.html#CSR">CSR</a> | 266.1 | 397.5 |</p>
+
+<h3 id="toc_16">WorldExpo’10</h3>
+
+<p>| Method | S1 | S2 | S3 | S4 | S5 | Avg. | | — | — | — | — | — | — | — | | <a href="http://gjy3035.github.io/reading/Awesome-Crowd-Counting.html#DAN">DAN</a> | 4.1 | 11.1 | 10.7 | 16.2 | 5.0 | 9.4 | | <a href="http://gjy3035.github.io/reading/Awesome-Crowd-Counting.html#BSAD">BSAD</a> | 4.1 | 21.7 | 11.9 | 11.0 | 3.5 | 10.5 | | <a href="http://gjy3035.github.io/reading/Awesome-Crowd-Counting.html#CSR">CSR</a> | 2.9 | 11.5 | 8.6 | 16.6 | 3.4 | 8.6 |</p>
+
+<h3 id="toc_17">UCSD</h3>
+
+<p>| Method | MAE | MSE | | — | — | — | | <a href="http://gjy3035.github.io/reading/Awesome-Crowd-Counting.html#BSAD">BSAD</a> | 1.00 | 1.40 |</p>
+
+<h2 id="toc_18">Tools</h2>
+
+<ul>
+<li>Density Map Generation from Key Points [<a href="https://github.com/aachenhang/crowdcount-mcnn/tree/master/data_preparation">Code</a>]</li>
+</ul>
+
+<p>上篇： <a href="http://gjy3035.github.io/reading/ENet.html">2017-12-28-ENet</a></p>
+
+<hr/>
+
+<p>Go!</p>
+
+<h4 id="toc_19">分 类</h4>
+
+<ul>
+<li><a href="http://gjy3035.github.io/categories.html#reading">论文笔记</a></li>
+<li><a href="http://gjy3035.github.io/categories.html#ml">机器学习</a></li>
+<li><a href="http://gjy3035.github.io/categories.html#DL">深度学习</a></li>
+<li><p><a href="http://gjy3035.github.io/categories.html#CV">计算机视觉</a></p></li>
+<li><p><a href="http://gjy3035.github.io/categories.html#env">环境&amp;配置</a></p></li>
+<li><p><a href="http://gjy3035.github.io/categories.html#coding">编程问题</a></p></li>
+<li><p><a href="http://gjy3035.github.io/categories.html#linux">Linux学习</a></p></li>
+</ul>
+
+<h4 id="toc_20">相关链接</h4>
+
+<ul>
+<li><a href="https://github.com/">GitHub</a></li>
+<li><p><a href="http://www.stackoverflow.com/">Stack Overflow</a></p></li>
+<li><ul>
+<li>*</li>
+</ul></li>
+</ul>
+
+<p>Copyright © gjy3035.github.io/blog, hosted on <a href="https://github.com/">GitHub</a>, powered by Jekyll<br/>
+<a href="http://gjy3035.github.io/atom.xml">[Feed]</a></p>
+
+<p><a href="https://www.cnzz.com/stat/website.php?web_id=1256827154" title="站长统计">站长统计</a><a href="https://www.cnzz.com/stat/website.php?web_id=1256827154" title="站长统计">站长统计</a></p>
 
 
 </div>
@@ -336,15 +526,15 @@
   <div class="large-6 columns">
 	<div class="text-left" style="padding:15px 0px;">
 		
-	        <a href="15679981303848.html"  title="Previous Post: sklearn 模块参考书">&laquo; sklearn 模块参考书</a>
+	        <a href="15882579557118.html"  title="Previous Post: ">&laquo; </a>
 	    
 	</div>
   </div>
   <div class="large-6 columns">
 	<div class="text-right" style="padding:15px 0px;">
 		
-	        <a href="15893301279941.html" 
-	        title="Next Post: 人群计数最全资源（含代码、工具、数据集、论文、leaderboard）">人群计数最全资源（含代码、工具、数据集、论文、leaderboard） &raquo;</a>
+	        <a href="15886553595868.html" 
+	        title="Next Post: Evans偏微分方程笔记/问题解答/视频讲解">Evans偏微分方程笔记/问题解答/视频讲解 &raquo;</a>
 	    
 	</div>
   </div>
@@ -357,7 +547,7 @@
 </div>
 <script type="text/javascript">
 	$(function(){
-		var currentURL = '15375337935500.html';
+		var currentURL = '15893297244166.html';
 		$('#side-nav a').each(function(){
 			if($(this).attr('href') == currentURL){
 				$(this).parent().addClass('active');
