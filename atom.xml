@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[程序猿CubeTian]]></title>
-  <link href="https://cubetian.github.io/atom.xml" rel="self"/>
-  <link href="https://cubetian.github.io/"/>
-  <updated>2020-07-19T17:35:49+08:00</updated>
-  <id>https://cubetian.github.io/</id>
+  <link href="https://cubetian.gitee.io/atom.xml" rel="self"/>
+  <link href="https://cubetian.gitee.io/"/>
+  <updated>2020-07-19T17:36:17+08:00</updated>
+  <id>https://cubetian.gitee.io/</id>
   <author>
     <name><![CDATA[]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[]]></title>
-    <link href="https://cubetian.github.io/15882579557118.html"/>
+    <link href="https://cubetian.gitee.io/15882579557118.html"/>
     <updated>2020-04-30T22:45:55+08:00</updated>
-    <id>https://cubetian.github.io/15882579557118.html</id>
+    <id>https://cubetian.gitee.io/15882579557118.html</id>
     <content type="html"><![CDATA[
 <h2 id="toc_0">备考日常素记专题篇：直和分解定理</h2>
 
@@ -98,9 +98,9 @@
   
   <entry>
     <title type="html"><![CDATA[Awesome Crowd Counting]]></title>
-    <link href="https://cubetian.github.io/15893297244166.html"/>
+    <link href="https://cubetian.gitee.io/15893297244166.html"/>
     <updated>2020-05-13T08:28:44+08:00</updated>
-    <id>https://cubetian.github.io/15893297244166.html</id>
+    <id>https://cubetian.gitee.io/15893297244166.html</id>
     <content type="html"><![CDATA[
 <p><a href="http://gjy3035.github.io/blog/index.html">博客首页</a></p>
 
@@ -345,9 +345,9 @@
   
   <entry>
     <title type="html"><![CDATA[Evans偏微分方程笔记/问题解答/视频讲解]]></title>
-    <link href="https://cubetian.github.io/15886553595868.html"/>
+    <link href="https://cubetian.gitee.io/15886553595868.html"/>
     <updated>2020-05-05T13:09:19+08:00</updated>
-    <id>https://cubetian.github.io/15886553595868.html</id>
+    <id>https://cubetian.gitee.io/15886553595868.html</id>
     <content type="html"><![CDATA[
 <p>张祖锦 小锦教学 <em>6天前</em></p>
 
@@ -626,9 +626,9 @@
   
   <entry>
     <title type="html"><![CDATA[GSPM笔记]]></title>
-    <link href="https://cubetian.github.io/15699393940279.html"/>
+    <link href="https://cubetian.gitee.io/15699393940279.html"/>
     <updated>2019-10-01T22:16:34+08:00</updated>
-    <id>https://cubetian.github.io/15699393940279.html</id>
+    <id>https://cubetian.gitee.io/15699393940279.html</id>
     <content type="html"><![CDATA[
 <p>用于微磁模拟的Gauss-Seidel投影方法</p>
 
@@ -898,9 +898,9 @@ g_{i}^{n}=\left(I-\Delta t \Delta_{h}\right)^{-1} m_{i}^{n}, \quad i=1,2,3<br/>
   
   <entry>
     <title type="html"><![CDATA[GTM 书单]]></title>
-    <link href="https://cubetian.github.io/15717326165491.html"/>
+    <link href="https://cubetian.gitee.io/15717326165491.html"/>
     <updated>2019-10-22T16:23:36+08:00</updated>
-    <id>https://cubetian.github.io/15717326165491.html</id>
+    <id>https://cubetian.gitee.io/15717326165491.html</id>
     <content type="html"><![CDATA[
 <p>1 Introduction to Axiomatic Set Theory, Gaisi Takeuti, W. M. Zaring <br/>
 2 Measure and Category, John C. Oxtoby<br/><br/>
@@ -1176,9 +1176,9 @@ g_{i}^{n}=\left(I-\Delta t \Delta_{h}\right)^{-1} m_{i}^{n}, \quad i=1,2,3<br/>
   
   <entry>
     <title type="html"><![CDATA[LATEX 定理、命题环境]]></title>
-    <link href="https://cubetian.github.io/15686818191570.html"/>
+    <link href="https://cubetian.gitee.io/15686818191570.html"/>
     <updated>2019-09-17T08:56:59+08:00</updated>
-    <id>https://cubetian.github.io/15686818191570.html</id>
+    <id>https://cubetian.gitee.io/15686818191570.html</id>
     <content type="html"><![CDATA[
 <p>在LaTex中需要有关定理、公理、命题、引理、定义等时，常用如下命令</p>
 
@@ -1357,9 +1357,9 @@ g_{i}^{n}=\left(I-\Delta t \Delta_{h}\right)^{-1} m_{i}^{n}, \quad i=1,2,3<br/>
   
   <entry>
     <title type="html"><![CDATA[MAC软件目录【20年5月】]]></title>
-    <link href="https://cubetian.github.io/15707633313339.html"/>
+    <link href="https://cubetian.gitee.io/15707633313339.html"/>
     <updated>2019-10-11T11:08:51+08:00</updated>
-    <id>https://cubetian.github.io/15707633313339.html</id>
+    <id>https://cubetian.gitee.io/15707633313339.html</id>
     <content type="html"><![CDATA[
 <p>软件导航</p>
 
@@ -1728,9 +1728,9 @@ g_{i}^{n}=\left(I-\Delta t \Delta_{h}\right)^{-1} m_{i}^{n}, \quad i=1,2,3<br/>
   
   <entry>
     <title type="html"><![CDATA[MYsql 学习教程]]></title>
-    <link href="https://cubetian.github.io/15666534139692.html"/>
+    <link href="https://cubetian.gitee.io/15666534139692.html"/>
     <updated>2019-08-24T21:30:13+08:00</updated>
-    <id>https://cubetian.github.io/15666534139692.html</id>
+    <id>https://cubetian.gitee.io/15666534139692.html</id>
     <content type="html"><![CDATA[
 
 ]]></content>
@@ -1738,9 +1738,9 @@ g_{i}^{n}=\left(I-\Delta t \Delta_{h}\right)^{-1} m_{i}^{n}, \quad i=1,2,3<br/>
   
   <entry>
     <title type="html"><![CDATA[PDE（Walter/njdx）]]></title>
-    <link href="https://cubetian.github.io/15645732861970.html"/>
+    <link href="https://cubetian.gitee.io/15645732861970.html"/>
     <updated>2019-07-31T19:41:26+08:00</updated>
-    <id>https://cubetian.github.io/15645732861970.html</id>
+    <id>https://cubetian.gitee.io/15645732861970.html</id>
     <content type="html"><![CDATA[
 <h2 id="toc_0">第四章 边界问题</h2>
 
@@ -1753,9 +1753,9 @@ g_{i}^{n}=\left(I-\Delta t \Delta_{h}\right)^{-1} m_{i}^{n}, \quad i=1,2,3<br/>
   
   <entry>
     <title type="html"><![CDATA[SAS DATA步之全揭秘]]></title>
-    <link href="https://cubetian.github.io/15685969611776.html"/>
+    <link href="https://cubetian.gitee.io/15685969611776.html"/>
     <updated>2019-09-16T09:22:41+08:00</updated>
-    <id>https://cubetian.github.io/15685969611776.html</id>
+    <id>https://cubetian.gitee.io/15685969611776.html</id>
     <content type="html"><![CDATA[
 <p>一些概念</p>
 
@@ -1837,9 +1837,9 @@ DATA步以‘DATA’语句开始（即显示的表明数据步的开始），以
   
   <entry>
     <title type="html"><![CDATA[SAS安装教程]]></title>
-    <link href="https://cubetian.github.io/15675205901094.html"/>
+    <link href="https://cubetian.gitee.io/15675205901094.html"/>
     <updated>2019-09-03T22:23:10+08:00</updated>
-    <id>https://cubetian.github.io/15675205901094.html</id>
+    <id>https://cubetian.gitee.io/15675205901094.html</id>
     <content type="html"><![CDATA[
 <p>sas统计软件是我院一门很受欢迎的课程，由于商用版过于庞大，安装激活困难，这里提供sas的另一版本，SAS University，为大学生学习的版本</p>
 
@@ -1850,9 +1850,9 @@ DATA步以‘DATA’语句开始（即显示的表明数据步的开始），以
   
   <entry>
     <title type="html"><![CDATA[SAS程序结构]]></title>
-    <link href="https://cubetian.github.io/15673304578082.html"/>
+    <link href="https://cubetian.gitee.io/15673304578082.html"/>
     <updated>2019-09-01T17:34:17+08:00</updated>
-    <id>https://cubetian.github.io/15673304578082.html</id>
+    <id>https://cubetian.gitee.io/15673304578082.html</id>
     <content type="html"><![CDATA[
 <p>DATA步-PROC步-OUTPUT步</p>
 
@@ -1967,9 +1967,9 @@ proc print;run;</p>
   
   <entry>
     <title type="html"><![CDATA[Scilab学习笔记]]></title>
-    <link href="https://cubetian.github.io/15919813496136.html"/>
+    <link href="https://cubetian.gitee.io/15919813496136.html"/>
     <updated>2020-06-13T01:02:29+08:00</updated>
-    <id>https://cubetian.github.io/15919813496136.html</id>
+    <id>https://cubetian.gitee.io/15919813496136.html</id>
     <content type="html"><![CDATA[
 <ol>
 <li><p>一些预设的变量的表示方法不同。比如圆周率pai在Matlab里面就是“pi”，而在Scilab里面要加上“%”，也就是说，调用圆周率的时候要写“%pi”。类似的还有：虚数在Matlab里可以是“i”或者“j”；而在Scilab里面为“%i”（“%j”好像不可以）。例外的是默认变量“ans”，两者都不需要加百分号。</p></li>
@@ -1990,9 +1990,9 @@ proc print;run;</p>
   
   <entry>
     <title type="html"><![CDATA[itertools 模块]]></title>
-    <link href="https://cubetian.github.io/15681237931017.html"/>
+    <link href="https://cubetian.gitee.io/15681237931017.html"/>
     <updated>2019-09-10T21:56:33+08:00</updated>
-    <id>https://cubetian.github.io/15681237931017.html</id>
+    <id>https://cubetian.gitee.io/15681237931017.html</id>
     <content type="html"><![CDATA[
 <p>在解决优化问题的过程中，经常需要遍历所有的情况，不仅需要考虑内存的问题，所需要迭代内容的生成也是一件很麻烦的事情，我曾经尝试过网格生成等方法，效果并不理想，十分复杂，直到我发现了它<br/>
 原教程地址：<a href="http://funhacks.net/2017/02/13/itertools/">高效的 itertools 模块</a><br/>
@@ -2214,9 +2214,9 @@ hello world
   
   <entry>
     <title type="html"><![CDATA[scipy 模块参考书]]></title>
-    <link href="https://cubetian.github.io/15679893433260.html"/>
+    <link href="https://cubetian.gitee.io/15679893433260.html"/>
     <updated>2019-09-09T08:35:43+08:00</updated>
-    <id>https://cubetian.github.io/15679893433260.html</id>
+    <id>https://cubetian.gitee.io/15679893433260.html</id>
     <content type="html"><![CDATA[
 <p><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/index.html">SciPy Tutorial</a></p>
 
@@ -2428,9 +2428,9 @@ k表示偏移量，正数为右移，负数为左移</p>
   
   <entry>
     <title type="html"><![CDATA[sklearn 模块参考书]]></title>
-    <link href="https://cubetian.github.io/15679981303848.html"/>
+    <link href="https://cubetian.gitee.io/15679981303848.html"/>
     <updated>2019-09-09T11:02:10+08:00</updated>
-    <id>https://cubetian.github.io/15679981303848.html</id>
+    <id>https://cubetian.gitee.io/15679981303848.html</id>
     <content type="html"><![CDATA[
 <p>sklearn 全称 scikit learn 是机器学习领域当中最知名的python模块之一</p>
 
@@ -2491,9 +2491,9 @@ k表示偏移量，正数为右移，负数为左移</p>
   
   <entry>
     <title type="html"><![CDATA[wifi 相关]]></title>
-    <link href="https://cubetian.github.io/15375337935500.html"/>
+    <link href="https://cubetian.gitee.io/15375337935500.html"/>
     <updated>2018-09-21T20:43:13+08:00</updated>
-    <id>https://cubetian.github.io/15375337935500.html</id>
+    <id>https://cubetian.gitee.io/15375337935500.html</id>
     <content type="html"><![CDATA[
 <h2 id="toc_0">使用大功率无线网卡抓取cap包用于密码破解（macos）</h2>
 
@@ -2548,9 +2548,9 @@ k表示偏移量，正数为右移，负数为左移</p>
   
   <entry>
     <title type="html"><![CDATA[人群计数最全资源（含代码、工具、数据集、论文、leaderboard）]]></title>
-    <link href="https://cubetian.github.io/15893301279941.html"/>
+    <link href="https://cubetian.gitee.io/15893301279941.html"/>
     <updated>2020-05-13T08:35:27+08:00</updated>
-    <id>https://cubetian.github.io/15893301279941.html</id>
+    <id>https://cubetian.gitee.io/15893301279941.html</id>
     <content type="html"><![CDATA[
 <h2 id="toc_0">前言</h2>
 
@@ -3652,9 +3652,9 @@ for Crowd Density Estimation (<strong>ICCV2015</strong>) [<a href="https://opena
   
   <entry>
     <title type="html"><![CDATA[从不动点定理到计算复杂性]]></title>
-    <link href="https://cubetian.github.io/15408862456484.html"/>
+    <link href="https://cubetian.gitee.io/15408862456484.html"/>
     <updated>2018-10-30T15:57:25+08:00</updated>
-    <id>https://cubetian.github.io/15408862456484.html</id>
+    <id>https://cubetian.gitee.io/15408862456484.html</id>
     <content type="html"><![CDATA[
 <h2 id="toc_0">多项式求根的库恩算法</h2>
 
@@ -3682,9 +3682,9 @@ for Crowd Density Estimation (<strong>ICCV2015</strong>) [<a href="https://opena
   
   <entry>
     <title type="html"><![CDATA[动力系统期末]]></title>
-    <link href="https://cubetian.github.io/15921125723452.html"/>
+    <link href="https://cubetian.gitee.io/15921125723452.html"/>
     <updated>2020-06-14T13:29:32+08:00</updated>
-    <id>https://cubetian.github.io/15921125723452.html</id>
+    <id>https://cubetian.gitee.io/15921125723452.html</id>
     <content type="html"><![CDATA[
 <p>同伦</p>
 
